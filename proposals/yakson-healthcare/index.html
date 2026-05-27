@@ -881,6 +881,59 @@
   .toc > *:not(.madup-mark):not(.page-no):not(.page-label) {
     position: relative; z-index: 1;
   }
+
+  /* ============================================================ */
+  /* ===== LIGHT THEME — 콘텐츠 슬라이드 + TOC (와이어트 일반 페이지) ===== */
+  /* CSS 변수 스코핑: .slide / .toc 하위 모든 컴포넌트가 자동 전환 */
+  /* (간지 .chapter / .cover / .thesis-section / #closing 은 다크 유지) */
+  /* ============================================================ */
+  .slide, .toc {
+    --bg-page: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-soft: #faf7f3;
+    --bg-elev: #f2ede5;
+    --border-soft: #e9e3d9;
+    --border-strong: #d6ccbe;
+    --text-main: #2b2620;
+    --text-sub: #6e655a;
+    --text-caption: #a09684;
+    --accent-rose: #b5616f;        /* 화이트 배경 가독성용 딥 로즈 */
+    --accent-rose-soft: rgba(181, 97, 111, 0.10);
+    --accent-beige: #9c7c54;       /* 딥 웜 골드 */
+    --accent-gold: #b89a6f;
+    --accent-warm: #bd7e73;
+    --accent-blue: #5f7488;
+    --highlight-bg: rgba(245, 184, 192, 0.50);
+  }
+  /* 화이트 카드: 다크 캔버스 위에서 떠 보이도록 그림자 강화 */
+  .slide {
+    box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+    border-color: var(--border-soft);
+  }
+  .toc {
+    box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+  }
+  /* 본문 강조어: 화이트 배경에서 핑크 하이라이트 + 딥 로즈 텍스트 */
+  .slide .highlight, .toc .highlight {
+    color: var(--accent-rose);
+  }
+  /* 표 헤더 가독성 */
+  .slide th { color: var(--accent-rose); }
+  /* funnel 화살표 마스크가 화이트 슬라이드와 자연스럽게 */
+  .slide .funnel-step::after { background: #ffffff; }
+  /* bar-fill 텍스트(딥 로즈 막대 위) 흰색으로 */
+  .slide .bar-fill { color: #ffffff; }
+  .slide .bar-fill.muted { color: var(--text-sub); }
+  /* persona / msg-axis 카드 — 화이트에서 톤 보정 */
+  .slide .persona-card.primary { background: linear-gradient(135deg, rgba(181,97,111,0.07) 0%, #ffffff 100%); }
+  .slide .persona-card.secondary { background: linear-gradient(135deg, rgba(95,116,136,0.07) 0%, #ffffff 100%); }
+  .slide .persona-card.excluded { background: var(--bg-card-soft); }
+  .slide .persona-card.primary .pc-tag,
+  .slide .persona-card.secondary .pc-tag { color: #ffffff; }
+  /* 도넛 hole = 화이트 */
+  .slide .donut::after { background: #ffffff; }
+  /* position-map us 포인트 텍스트 화이트 */
+  .slide .pm-point.us { color: #ffffff; }
 </style>
 </head>
 <body>
@@ -1112,34 +1165,34 @@
     <div class="lc-title">📈 국내 뷰티 디바이스 시장 규모 (단위: 조원)</div>
     <svg viewBox="0 0 600 200" preserveAspectRatio="none">
       <!-- Grid lines -->
-      <line x1="40" y1="20" x2="580" y2="20" stroke="#2a2724" stroke-width="0.5"/>
-      <line x1="40" y1="60" x2="580" y2="60" stroke="#2a2724" stroke-width="0.5"/>
-      <line x1="40" y1="100" x2="580" y2="100" stroke="#2a2724" stroke-width="0.5"/>
-      <line x1="40" y1="140" x2="580" y2="140" stroke="#2a2724" stroke-width="0.5"/>
-      <line x1="40" y1="180" x2="580" y2="180" stroke="#2a2724" stroke-width="0.5"/>
+      <line x1="40" y1="20" x2="580" y2="20" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="60" x2="580" y2="60" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="100" x2="580" y2="100" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="140" x2="580" y2="140" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="180" x2="580" y2="180" stroke="#e9e3d9" stroke-width="0.5"/>
       <!-- Y axis labels -->
-      <text x="32" y="24" text-anchor="end" fill="#6b6760" font-size="10">3.4</text>
-      <text x="32" y="64" text-anchor="end" fill="#6b6760" font-size="10">2.5</text>
-      <text x="32" y="104" text-anchor="end" fill="#6b6760" font-size="10">1.7</text>
-      <text x="32" y="144" text-anchor="end" fill="#6b6760" font-size="10">0.9</text>
-      <text x="32" y="184" text-anchor="end" fill="#6b6760" font-size="10">0.1</text>
+      <text x="32" y="24" text-anchor="end" fill="#a09684" font-size="10">3.4</text>
+      <text x="32" y="64" text-anchor="end" fill="#a09684" font-size="10">2.5</text>
+      <text x="32" y="104" text-anchor="end" fill="#a09684" font-size="10">1.7</text>
+      <text x="32" y="144" text-anchor="end" fill="#a09684" font-size="10">0.9</text>
+      <text x="32" y="184" text-anchor="end" fill="#a09684" font-size="10">0.1</text>
       <!-- Line (2013=0.08, 2018=0.5, 2022=1.6, 2024=1.7, 2027=2.5, 2030=3.4) -->
       <polyline points="80,185 200,160 320,108 380,104 480,60 560,20"
-                fill="none" stroke="#f5d4d8" stroke-width="2.5"/>
+                fill="none" stroke="#b5616f" stroke-width="2.5"/>
       <!-- Area fill -->
       <polygon points="80,185 200,160 320,108 380,104 480,60 560,20 560,185 80,185"
-               fill="#f5d4d8" opacity="0.1"/>
+               fill="#b5616f" opacity="0.08"/>
       <!-- Data points -->
-      <circle cx="80" cy="185" r="3.5" fill="#f5d4d8"/>
-      <circle cx="200" cy="160" r="3.5" fill="#f5d4d8"/>
-      <circle cx="320" cy="108" r="4" fill="#f5d4d8"/>
-      <circle cx="380" cy="104" r="4" fill="#f5d4d8"/>
-      <circle cx="480" cy="60" r="4.5" fill="#f5d4d8" stroke="#1a1a1a" stroke-width="2"/>
-      <circle cx="560" cy="20" r="6" fill="#f5d4d8" stroke="#1a1a1a" stroke-width="2"/>
+      <circle cx="80" cy="185" r="3.5" fill="#b5616f"/>
+      <circle cx="200" cy="160" r="3.5" fill="#b5616f"/>
+      <circle cx="320" cy="108" r="4" fill="#b5616f"/>
+      <circle cx="380" cy="104" r="4" fill="#b5616f"/>
+      <circle cx="480" cy="60" r="4.5" fill="#b5616f" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="560" cy="20" r="6" fill="#b5616f" stroke="#ffffff" stroke-width="2"/>
       <!-- Annotations -->
-      <text x="320" y="98" fill="#e6d8c5" font-size="10" font-weight="700">1.6조 (2022)</text>
-      <text x="480" y="50" fill="#e6d8c5" font-size="10" font-weight="700">2.5조 (2027F)</text>
-      <text x="540" y="14" fill="#f5d4d8" font-size="11" font-weight="800">3.4조 (2030F)</text>
+      <text x="320" y="98" fill="#9c7c54" font-size="10" font-weight="700">1.6조 (2022)</text>
+      <text x="480" y="50" fill="#9c7c54" font-size="10" font-weight="700">2.5조 (2027F)</text>
+      <text x="540" y="14" fill="#b5616f" font-size="11" font-weight="800">3.4조 (2030F)</text>
     </svg>
     <div class="lc-x-labels">
       <span>2013</span><span>2018</span><span>2022</span><span>2024</span><span>2027</span><span>2030</span>
