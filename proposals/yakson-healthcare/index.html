@@ -1,0 +1,3006 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>약손명가헬스케어 2026 퍼포먼스 마케팅 제안서 | MADUP</title>
+<style>
+  /* ===== Wyatt Color Palette ===== */
+  :root {
+    --bg-page: #050505;
+    --bg-card: #121212;
+    --bg-card-soft: #1c1a17;
+    --bg-elev: #232020;
+    --border-soft: #2a2724;
+    --border-strong: #3a3530;
+    --text-main: #f5f1ec;
+    --text-sub: #b8b3a8;
+    --text-caption: #6b6760;
+    --accent-rose: #f5d4d8;
+    --accent-rose-soft: rgba(245, 212, 216, 0.18);
+    --accent-beige: #e6d8c5;
+    --accent-gold: #c9b4a0;
+    --accent-warm: #d4a59a;
+    --highlight-bg: rgba(245, 184, 192, 0.22);
+  }
+
+  /* ===== Base ===== */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", "Malgun Gothic", sans-serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  a { color: var(--accent-beige); text-decoration: none; }
+  a:hover { text-decoration: underline; color: var(--accent-rose); }
+
+  /* ===== Topbar ===== */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(10, 8, 8, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 14px 32px;
+    display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+    font-size: 12px; color: var(--text-sub);
+  }
+  .topbar .title { font-weight: 700; color: var(--text-main); font-size: 13px; letter-spacing: 0.02em; }
+  .topbar .pill {
+    background: var(--bg-elev);
+    border: 1px solid var(--border-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: var(--text-sub);
+  }
+  .topbar .actions { margin-left: auto; display: flex; gap: 8px; }
+  .action-btn {
+    padding: 6px 12px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    font-size: 12px; font-weight: 600;
+    color: var(--text-sub); cursor: pointer;
+    text-decoration: none;
+  }
+  .action-btn:hover { background: var(--bg-card-soft); color: var(--text-main); border-color: var(--accent-beige); text-decoration: none; }
+
+  /* ===== Layout ===== */
+  .container { display: grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 56px); }
+  .sidebar {
+    background: var(--bg-card);
+    border-right: 1px solid var(--border-soft);
+    padding: 24px 16px;
+    position: sticky; top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+  .sidebar h2 {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-caption);
+    letter-spacing: 0.1em;
+    margin: 16px 0 8px 8px;
+  }
+  .sidebar h2:first-child { margin-top: 0; }
+  .index-nav ul { list-style: none; padding: 0; margin: 0; }
+  .index-nav .index-section { margin-bottom: 4px; }
+  .index-nav .index-section > a {
+    display: block; padding: 8px 10px; border-radius: 6px;
+    color: var(--text-main); font-weight: 600; font-size: 13px;
+  }
+  .index-nav .index-section > a:hover { background: var(--bg-elev); text-decoration: none; }
+  .index-nav .index-sub { padding-left: 20px; }
+  .index-nav .index-sub a {
+    display: block; padding: 5px 10px; border-radius: 6px;
+    color: var(--text-sub); font-size: 12px;
+  }
+  .index-nav .index-sub a:hover { background: var(--bg-elev); color: var(--text-main); text-decoration: none; }
+  .index-nav a.active { background: var(--accent-rose-soft); color: var(--accent-rose); font-weight: 600; }
+  .index-nav .ch-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    background: var(--accent-rose-soft); color: var(--accent-rose);
+    border-radius: 4px; font-size: 10px; margin-right: 4px;
+  }
+
+  .main { padding: 32px 48px; max-width: 1100px; }
+
+  /* ===== Wordmark (every page, bottom-left) ===== */
+  .madup-mark {
+    position: absolute;
+    bottom: 20px; left: 32px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--text-sub);
+    font-weight: 500;
+    pointer-events: none;
+  }
+  .madup-mark strong { font-weight: 800; color: var(--text-main); }
+  .page-no {
+    position: absolute;
+    bottom: 20px; right: 32px;
+    font-size: 11px;
+    color: var(--text-sub);
+    font-weight: 600;
+    pointer-events: none;
+  }
+  .page-label {
+    position: absolute;
+    top: 20px; left: 32px;
+    font-size: 10px;
+    color: var(--text-caption);
+    letter-spacing: 0.05em;
+    pointer-events: none;
+  }
+
+  /* ===== Cover ===== */
+  .cover {
+    min-height: 95vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 60px 110px;
+    background:
+      radial-gradient(ellipse at 80% 40%, rgba(245, 212, 216, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 20% 70%, rgba(230, 216, 197, 0.10) 0%, transparent 55%),
+      linear-gradient(180deg, #0a0807 0%, #0c0a08 50%, #050402 100%);
+    color: var(--text-main);
+    border-radius: 16px;
+    margin: 0 0 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: 24px; left: 24px;
+    width: 60px; height: 3px;
+    background: var(--accent-rose);
+    border-radius: 2px;
+  }
+  .cover .year {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--accent-rose);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0 0 12px;
+    line-height: 1.15;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+  }
+  .cover h1 .brand-en {
+    display: block;
+    font-size: 64px;
+    color: var(--accent-rose);
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .cover .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-sub);
+    margin: 12px 0 32px;
+    letter-spacing: 0.04em;
+  }
+  .cover .subtitle .em { color: var(--accent-beige); font-weight: 600; }
+  .cover footer {
+    margin-top: auto;
+    margin-bottom: 32px;
+    font-size: 11px;
+    color: var(--text-caption);
+    border-top: 1px solid var(--border-soft);
+    padding-top: 20px;
+  }
+  .cover footer span { display: block; line-height: 1.7; }
+  .cover .madup-mark { color: var(--text-sub); }
+  .cover .madup-mark strong { color: var(--text-main); }
+
+  /* ===== TOC ===== */
+  .toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 56px 56px 80px;
+    margin: 0 0 32px;
+    position: relative;
+  }
+  .toc h2 {
+    font-size: 11px;
+    color: var(--accent-rose);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  .toc h1 { font-size: 36px; margin: 0 0 32px; color: var(--text-main); }
+  .toc ol {
+    list-style: none; padding: 0; counter-reset: section;
+  }
+  .toc ol li {
+    counter-increment: section;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 18px; font-weight: 600;
+    display: flex; align-items: center; gap: 20px;
+    color: var(--text-main);
+  }
+  .toc ol li::before {
+    content: counter(section, decimal-leading-zero);
+    font-size: 14px;
+    background: transparent;
+    color: var(--accent-rose);
+    border: 1px solid var(--accent-rose);
+    padding: 6px 12px; border-radius: 6px;
+    min-width: 56px; text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .toc ol li .ch-name { flex: 1; }
+  .toc ol li .ch-desc {
+    font-size: 13px; color: var(--text-sub); font-weight: 400;
+    margin-left: auto;
+  }
+
+  /* ===== Chapter Heading ===== */
+  .chapter {
+    margin: 56px 0 24px;
+    padding: 80px 48px 100px;
+    min-height: 440px;
+    background: linear-gradient(180deg, #0c0a08 0%, #050402 100%);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+  }
+  .chapter:first-of-type { margin-top: 0; }
+  .chapter .ch-num {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+  }
+  .chapter h1 {
+    margin: 12px 0 0;
+    font-size: 40px; font-weight: 800; color: var(--text-main);
+    letter-spacing: -0.02em;
+  }
+  .chapter h1 .underline {
+    display: inline-block;
+    border-bottom: 3px solid var(--accent-rose);
+    padding-bottom: 4px;
+  }
+  .chapter .ch-summary {
+    margin: 20px 0 0;
+    font-size: 14.5px; color: var(--text-sub);
+    line-height: 1.8; max-width: 820px;
+  }
+
+  /* ===== Slide ===== */
+  .slide {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 56px 56px 72px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    scroll-margin-top: 80px;
+    position: relative;
+  }
+  .slide-meta {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-rose);
+    padding: 4px 12px;
+    border: 1px solid var(--accent-rose);
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .slide-title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+  .slide-title-sub {
+    margin: -12px 0 22px;
+    font-size: 14px;
+    color: var(--text-sub);
+    font-weight: 400;
+  }
+  .highlight {
+    background: linear-gradient(transparent 62%, var(--highlight-bg) 62%);
+    padding: 0 4px;
+    font-weight: 700;
+    color: var(--accent-rose);
+  }
+  .slide-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+  .slide-bullets li {
+    color: var(--text-sub);
+    font-size: 14.5px;
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.8;
+  }
+  .slide-bullets li::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    color: var(--accent-rose);
+    font-weight: 800;
+  }
+  .slide-bullets li.sub {
+    color: var(--text-caption);
+    font-size: 13.5px;
+    padding-left: 32px;
+  }
+  .slide-bullets li.sub::before {
+    content: "ㄴ";
+    color: var(--text-caption);
+    left: 16px;
+  }
+  .slide-bullets li strong { color: var(--text-main); }
+
+  /* Tables (dark) */
+  .slide table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    font-size: 13.5px;
+    background: var(--bg-card-soft);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .slide th, .slide td {
+    border: 1px solid var(--border-soft);
+    padding: 12px 14px; text-align: left; vertical-align: top;
+    color: var(--text-sub);
+  }
+  .slide th {
+    background: var(--bg-elev);
+    color: var(--accent-rose);
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .slide td strong { color: var(--text-main); }
+  .slide tbody tr:hover { background: rgba(245, 212, 216, 0.04); }
+
+  /* ===== Slide Bottom: madup-mark / page-no / page-label ===== */
+  .slide .madup-mark,
+  .chapter .madup-mark,
+  .toc .madup-mark,
+  .cover .madup-mark { display: block; }
+
+  /* ===== KPI Cards ===== */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .kpi-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .kpi-card .kpi-label {
+    font-size: 10px; color: var(--text-caption); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .kpi-card .kpi-value {
+    font-size: 26px; font-weight: 800;
+    color: var(--accent-rose);
+    margin: 8px 0 0;
+    letter-spacing: -0.01em;
+  }
+
+  /* ===== Product Feature ===== */
+  .product-feature {
+    display: flex; gap: 24px; align-items: flex-start;
+    margin: 18px 0; padding: 20px;
+    background: var(--bg-card-soft);
+    border-radius: 10px; border: 1px solid var(--border-soft);
+  }
+  .product-feature .img-wrap {
+    width: 220px; height: 220px; flex-shrink: 0;
+    border-radius: 8px; overflow: hidden;
+    background: #f5f1ec;
+  }
+  .product-feature .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .product-feature .pdetail { flex: 1; }
+  .product-feature .pdetail h4 {
+    margin: 0 0 12px; font-size: 17px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .product-feature .pdetail p {
+    margin: 6px 0; color: var(--text-sub); font-size: 13.5px; line-height: 1.7;
+  }
+  .product-feature .pdetail .spec-label {
+    display: inline-block;
+    min-width: 70px;
+    font-weight: 700;
+    color: var(--accent-beige);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ===== Product Gallery ===== */
+  .product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px; margin: 18px 0;
+  }
+  .product-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px; overflow: hidden;
+  }
+  .product-card .img-wrap { aspect-ratio: 1/1; background: #f5f1ec; }
+  .product-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .product-card .pinfo { padding: 12px 14px; }
+  .product-card .pname { font-size: 12.5px; font-weight: 600; color: var(--text-main); margin: 0 0 4px; min-height: 32px; line-height: 1.4; }
+  .product-card .pprice { font-size: 13px; color: var(--accent-rose); font-weight: 700; margin: 0; }
+  .product-card .pprice del { font-size: 10px; color: var(--text-caption); font-weight: 400; margin-right: 4px; }
+
+  /* ===== Concept Cards ===== */
+  .concept-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .concept-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .concept-card:hover { border-color: var(--accent-rose); }
+  .concept-card .concept-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background: transparent;
+    color: var(--accent-rose);
+    border: 1px solid var(--accent-rose);
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .concept-card h5 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--text-sub);
+    line-height: 1.7;
+  }
+
+  /* ===== Flow Diagram (와이어트 6-step 시그니처) ===== */
+  .flow-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+  .flow-box {
+    flex: 1;
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 140px;
+    position: relative;
+  }
+  .flow-box .flow-label {
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .flow-box .flow-title { font-size: 13px; color: var(--text-main); font-weight: 600; line-height: 1.5; }
+  .flow-arrow {
+    display: flex; align-items: center;
+    color: var(--accent-rose);
+    font-size: 18px;
+  }
+
+  /* ===== Strategic Direction (Thesis) ===== */
+  .strategic-direction {
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(245, 212, 216, 0.12) 0%, transparent 60%),
+      var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 16px;
+    padding: 64px 56px 80px;
+    margin: 0 0 32px;
+    position: relative;
+  }
+  .strategic-direction .meta-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-rose);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-rose);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .strategic-direction .thesis-headline {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 0 0 12px;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    max-width: 880px;
+  }
+  .strategic-direction .thesis-sub {
+    font-size: 15px;
+    color: var(--text-sub);
+    line-height: 1.8;
+    max-width: 820px;
+    margin: 0 0 36px;
+  }
+  .strategic-direction .thesis-sub strong { color: var(--accent-beige); font-weight: 700; }
+  .strategic-direction .thesis-divider {
+    display: block;
+    width: 60px; height: 2px;
+    background: var(--accent-rose);
+    margin: 28px 0;
+    border: none;
+  }
+
+  /* 3-Track Cards (브랜드 차등 포지셔닝) */
+  .track-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0 32px;
+  }
+  .track-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 22px 22px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .track-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 36px; height: 3px;
+    background: var(--accent-rose);
+  }
+  .track-card .track-num {
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .track-card .track-brand {
+    font-size: 18px;
+    color: var(--text-main);
+    font-weight: 800;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .track-card .track-role {
+    font-size: 11.5px;
+    color: var(--accent-beige);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+  .track-card .track-mission {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .track-card .track-mission strong { color: var(--text-main); }
+
+  /* 4 Pillars (전략 기둥) */
+  .pillar-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 16px 0 0;
+  }
+  .pillar-card {
+    background: rgba(245, 212, 216, 0.03);
+    border: 1px solid var(--border-soft);
+    border-left: 2px solid var(--accent-rose);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .pillar-card .pillar-no {
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+  .pillar-card h6 {
+    margin: 4px 0 6px;
+    font-size: 13.5px;
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .pillar-card p {
+    margin: 0;
+    font-size: 11.5px;
+    color: var(--text-sub);
+    line-height: 1.6;
+  }
+
+  /* Problem-list (도출된 과제) */
+  .problem-list {
+    margin: 24px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .problem-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+  }
+  .problem-card .problem-num {
+    position: absolute;
+    top: 14px; right: 14px;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-rose);
+    opacity: 0.35;
+    letter-spacing: -0.04em;
+  }
+  .problem-card h5 {
+    margin: 0 0 8px;
+    font-size: 14.5px;
+    color: var(--text-main);
+    font-weight: 700;
+    padding-right: 40px;
+  }
+  .problem-card p {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--text-sub);
+    line-height: 1.7;
+  }
+
+  /* Cover thesis (one-line) */
+  .cover .thesis-line {
+    font-size: 15px;
+    color: var(--accent-beige);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 8px 0 32px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    border-left: 2px solid var(--accent-rose);
+    padding-left: 16px;
+  }
+  .cover .thesis-line strong { color: var(--text-main); font-weight: 700; }
+
+  /* Message Matrix Table */
+  .message-matrix {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 18px 0;
+    font-size: 12.5px;
+  }
+  .message-matrix th, .message-matrix td {
+    border-bottom: 1px solid var(--border-soft);
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--text-sub);
+    line-height: 1.6;
+  }
+  .message-matrix th {
+    background: var(--bg-elev);
+    color: var(--accent-rose);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .message-matrix td.brand-label {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 13px;
+    background: var(--bg-card-soft);
+    border-right: 2px solid var(--accent-rose);
+  }
+  .message-matrix td strong { color: var(--text-main); }
+  .message-matrix tr:last-child td { border-bottom: none; }
+
+  /* Channel-mix Pill row */
+  .channel-mix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .channel-pill {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-top: 2px solid var(--accent-rose);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .channel-pill .ch-name {
+    font-size: 13px;
+    color: var(--text-main);
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .channel-pill .ch-role {
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .channel-pill .ch-share {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+  }
+
+  /* Solution Cards (매드업 시그니처 솔루션) */
+  .solution-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .solution-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .solution-card .sol-tag {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--accent-rose);
+    border: 1px solid var(--accent-rose);
+    border-radius: 4px;
+    padding: 2px 8px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .solution-card h5 {
+    margin: 0 0 8px;
+    font-size: 15.5px;
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .solution-card p {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--text-sub);
+    line-height: 1.7;
+  }
+
+  /* Timeline (일정) */
+  .timeline {
+    margin: 22px 0;
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 6px; bottom: 6px; left: 4px;
+    width: 1px;
+    background: var(--border-strong);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 0 0 18px 16px;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 6px; left: -19px;
+    width: 9px; height: 9px;
+    background: var(--accent-rose);
+    border-radius: 50%;
+  }
+  .timeline-item .tl-week {
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .timeline-item h6 {
+    margin: 4px 0 6px;
+    font-size: 13.5px;
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .timeline-item p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-sub);
+    line-height: 1.6;
+  }
+
+  /* Special Offer */
+  .offer-card {
+    background:
+      radial-gradient(ellipse at 90% 20%, rgba(245, 212, 216, 0.18) 0%, transparent 50%),
+      var(--bg-card-soft);
+    border: 1px solid var(--accent-rose);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 20px 0;
+    position: relative;
+  }
+  .offer-card .offer-tag {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--accent-rose);
+    letter-spacing: 0.25em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .offer-card h4 {
+    margin: 0 0 14px;
+    font-size: 19px;
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .offer-card ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-sub);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .offer-card ul li strong { color: var(--accent-beige); }
+
+  /* Team / Org structure */
+  .org-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .org-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .org-card .org-role {
+    font-size: 10px;
+    color: var(--accent-rose);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .org-card .org-name {
+    font-size: 14px;
+    color: var(--text-main);
+    font-weight: 700;
+    margin: 4px 0 4px;
+  }
+  .org-card .org-task {
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ===== Hero Stat Row (Thesis 임팩트 시각화) ===== */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin: 36px 0 28px;
+    background: var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .hero-stat {
+    background: var(--bg-card);
+    padding: 22px 18px 24px;
+    text-align: left;
+    position: relative;
+  }
+  .hero-stat .hs-label {
+    font-size: 10px;
+    color: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hero-stat .hs-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent-rose);
+    margin: 0 0 4px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-feature-settings: "tnum";
+  }
+  .hero-stat .hs-value .hs-unit { font-size: 16px; color: var(--accent-beige); margin-left: 2px; }
+  .hero-stat .hs-desc {
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.5;
+    margin: 6px 0 0;
+  }
+
+  /* ===== Horizontal Stepper (Timeline 가로형 강화) ===== */
+  .stepper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 28px 0 18px;
+    position: relative;
+  }
+  .stepper::before {
+    content: "";
+    position: absolute;
+    top: 28px; left: 5%; right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-rose) 0%, var(--accent-beige) 100%);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  .step-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 20px 14px 18px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .step-card .step-marker {
+    width: 28px; height: 28px;
+    background: var(--bg-card);
+    border: 2px solid var(--accent-rose);
+    border-radius: 50%;
+    margin: -32px auto 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800;
+    color: var(--accent-rose);
+    letter-spacing: -0.04em;
+  }
+  .step-card .step-week {
+    font-size: 9.5px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .step-card h6 {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: var(--text-main);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .step-card p {
+    margin: 0;
+    font-size: 10.5px;
+    color: var(--text-sub);
+    line-height: 1.55;
+  }
+  /* Active step (현재 진행) */
+  .step-card.active {
+    background: rgba(245, 212, 216, 0.05);
+    border-color: var(--accent-rose);
+  }
+  .step-card.active .step-marker {
+    background: var(--accent-rose);
+    color: var(--bg-page);
+  }
+
+  /* ===== Background Pattern (Cover/Chapter 시각 임팩트) ===== */
+  .bg-pattern-grid {
+    background-image:
+      linear-gradient(rgba(245, 212, 216, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 212, 216, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-pattern-noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.92  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .bg-rose-bloom::after {
+    content: "";
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245, 212, 216, 0.14) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bg-beige-bloom::before {
+    content: "";
+    position: absolute;
+    bottom: -200px; left: -200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(230, 216, 197, 0.10) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bg-cover-art {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      radial-gradient(ellipse 600px 400px at 75% 20%, rgba(245, 184, 192, 0.20) 0%, transparent 55%),
+      radial-gradient(ellipse 500px 350px at 15% 80%, rgba(230, 216, 197, 0.12) 0%, transparent 55%),
+      linear-gradient(135deg, transparent 0%, transparent 60%, rgba(212, 165, 154, 0.06) 100%);
+  }
+  .cover > *:not(.madup-mark):not(.page-no):not(.page-label):not(.bg-cover-art):not(.bg-pattern-noise),
+  .strategic-direction > *:not(.madup-mark):not(.page-no):not(.page-label):not(.bg-pattern-noise),
+  .chapter > *:not(.madup-mark):not(.page-no):not(.page-label):not(.bg-pattern-noise) {
+    position: relative; z-index: 1;
+  }
+
+  /* Decorative dotted line for chapter heading */
+  .chapter::after {
+    content: "";
+    position: absolute;
+    top: 24px; right: 32px;
+    width: 80px; height: 80px;
+    border: 1px solid var(--accent-rose);
+    opacity: 0.25;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .chapter::before {
+    content: "";
+    position: absolute;
+    top: 12px; right: 56px;
+    width: 80px; height: 80px;
+    border: 1px solid var(--accent-beige);
+    opacity: 0.15;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  /* Big highlight quote */
+  .pull-quote {
+    margin: 28px 0;
+    padding: 24px 28px;
+    background: linear-gradient(90deg, rgba(245, 212, 216, 0.08) 0%, transparent 100%);
+    border-left: 3px solid var(--accent-rose);
+    border-radius: 0 12px 12px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+  .pull-quote::before {
+    content: "“";
+    color: var(--accent-rose);
+    font-size: 36px;
+    margin-right: 6px;
+    line-height: 0;
+    vertical-align: -10px;
+    font-family: Georgia, serif;
+  }
+
+  /* Print PDF refinement */
+  @media print {
+    .topbar, .sidebar { display: none !important; }
+    .container { display: block !important; }
+    .main { padding: 0 !important; max-width: 100% !important; }
+    .slide, .cover, .toc, .chapter, .strategic-direction {
+      page-break-after: always;
+      page-break-inside: avoid;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      min-height: 100vh;
+    }
+    .hero-stat .hs-value, .kpi-card .kpi-value { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .madup-mark, .page-no, .page-label { -webkit-print-color-adjust: exact; }
+  }
+
+  /* ===== Sources Note ===== */
+  .sources-note {
+    font-size: 10.5px;
+    color: var(--text-caption);
+    padding: 12px 0 0;
+    margin-top: 12px;
+    letter-spacing: 0.02em;
+  }
+  .sources-note a { color: var(--text-sub); }
+
+  /* ===== Print ===== */
+  @media print {
+    body { background: #fff; color: #111; }
+    .sidebar, .topbar { display: none; }
+    .container { display: block; }
+    .main { padding: 0; max-width: 100%; }
+    .slide, .cover, .toc, .chapter {
+      page-break-inside: avoid;
+      box-shadow: none;
+      background: #fff;
+      color: #111;
+      border-color: #ccc;
+    }
+    .chapter { page-break-before: always; }
+    .cover { min-height: 100vh; }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1023px) {
+    .container { grid-template-columns: 1fr; }
+    .sidebar { position: relative; top: 0; height: auto; border-right: none; border-bottom: 1px solid var(--border-soft); }
+    .main { padding: 24px; }
+    .concept-row { grid-template-columns: 1fr; }
+    .product-feature { flex-direction: column; }
+    .product-feature .img-wrap { width: 100%; }
+  }
+  @media (max-width: 640px) {
+    .cover h1 { font-size: 36px; }
+    .cover h1 .brand-en { font-size: 44px; }
+    .chapter h1 { font-size: 28px; }
+    .slide { padding: 32px 24px 56px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../factbook-app/" class="action-btn">← 팩트북</a>
+  <span class="title">YAKSON HEALTHCARE × MADUP 2026</span>
+  <span class="pill">Digital Marketing Strategy</span>
+  <div class="actions">
+    <button onclick="window.print()" class="action-btn">🖨 인쇄</button>
+  </div>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+  <h2>Contents</h2>
+  <nav class="index-nav">
+    <ul>
+      <li class="index-section"><a href="#cover">표지</a></li>
+      <li class="index-section"><a href="#toc">목차</a></li>
+      <li class="index-section"><a href="#thesis"><span class="ch-badge">★</span>전략 방향성</a></li>
+      <li class="index-section"><a href="#ch1"><span class="ch-badge">01</span>현황 분석 및 과제 도출</a>
+        <ul class="index-sub">
+          <li><a href="#s1-1">매드업 소개</a></li>
+          <li><a href="#s1-2">뷰티 디바이스 시장 확대</a></li>
+          <li><a href="#s1-3">글로벌 K-뷰티 부상</a></li>
+          <li><a href="#s1-4">카테고리 패러다임 전환</a></li>
+          <li><a href="#s1-5">슬로우에이징 트렌드</a></li>
+          <li><a href="#s1-6">→ 도출된 과제</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch2"><span class="ch-badge">02</span>자사 · 경쟁사 분석</a>
+        <ul class="index-sub">
+          <li><a href="#s2-1">약손명가 IP의 깊이</a></li>
+          <li><a href="#s2-2">3 브랜드 포트폴리오</a></li>
+          <li><a href="#s2-3">OLLI LIRA 디바이스 라인업</a></li>
+          <li><a href="#s2-4">OLLI LIRA 결합형 라인업</a></li>
+          <li><a href="#s2-5">GOLKI 라인업</a></li>
+          <li><a href="#s2-6">자사몰 · BS 현황</a></li>
+          <li><a href="#s2-7">경쟁사 ㅣ 메디큐브</a></li>
+          <li><a href="#s2-8">경쟁사 ㅣ LG프라엘</a></li>
+          <li><a href="#s2-9">경쟁사 ㅣ 메이크온</a></li>
+          <li><a href="#s2-10">경쟁사 IP 포지셔닝</a></li>
+          <li><a href="#s2-11">브랜드별 차별화 컨셉</a></li>
+          <li><a href="#s2-12">→ 3-Track 전략 답</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch3"><span class="ch-badge">03</span>브랜드 차별화 컨셉</a>
+        <ul class="index-sub">
+          <li><a href="#s3-1">3-Track 프레임워크</a></li>
+          <li><a href="#s3-2">OLLI LIRA</a></li>
+          <li><a href="#s3-3">OLLI LIRA BEYOND</a></li>
+          <li><a href="#s3-4">GOLKI</a></li>
+          <li><a href="#s3-5">메시지 매트릭스</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch4"><span class="ch-badge">04</span>매체 운영 전략</a>
+        <ul class="index-sub">
+          <li><a href="#s4-1">매체 믹스 프레임</a></li>
+          <li><a href="#s4-2">검색 (LSA·NDA)</a></li>
+          <li><a href="#s4-3">메타 · 구글</a></li>
+          <li><a href="#s4-4">네이버 BS · 협력광고</a></li>
+          <li><a href="#s4-5">GEO · AI 검색</a></li>
+          <li><a href="#s4-6">KOL · 글로벌</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch5"><span class="ch-badge">05</span>크리에이티브 · CRM</a>
+        <ul class="index-sub">
+          <li><a href="#s5-1">소재 매트릭스</a></li>
+          <li><a href="#s5-2">소재 페이즈 운영</a></li>
+          <li><a href="#s5-3">SPRAY AI · 심의봇</a></li>
+          <li><a href="#s5-4">CRM · 재구매</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch6"><span class="ch-badge">06</span>매드업 솔루션 · 일정</a>
+        <ul class="index-sub">
+          <li><a href="#s6-1">시그니처 솔루션</a></li>
+          <li><a href="#s6-2">조직 · 인력 R&R</a></li>
+          <li><a href="#s6-3">Special Offer</a></li>
+          <li><a href="#s6-4">일정 로드맵</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#closing">Thank You</a></li>
+    </ul>
+  </nav>
+  <p style="font-size:10px;color:var(--text-caption);padding:10px;margin-top:20px;letter-spacing:0.05em;">
+    📊 <a href="../factbook-app/viewer.html?c=yakson" target="_blank">팩트북 보기</a><br>
+    🌐 <a href="https://ddolovely0919-ai.github.io/madup2525/" target="_blank">대시보드</a>
+  </p>
+</aside>
+
+<main class="main">
+
+<!-- ============================================ -->
+<!-- Cover -->
+<!-- ============================================ -->
+<section class="cover" id="cover">
+  <div class="bg-cover-art"></div>
+  <div class="bg-pattern-noise"></div>
+  <div class="year">2026 PROPOSAL</div>
+  <h1>
+    <span class="brand-en">YAKSON</span>
+    HEALTHCARE
+  </h1>
+  <p class="subtitle">약손명가헬스케어 <span class="em">디지털 마케팅 전략</span></p>
+  <p class="thesis-line"><strong>45년 약손명가 IP와 K-뷰티 글로벌 모멘텀</strong>이 만나는 결정적 시기,<br><strong>3 브랜드 차등 포지셔닝</strong>으로 카테고리 검색 전환·슬로우에이징 수요를 선점합니다</p>
+  <footer>
+    <span>Copyright © 2026 MADUP, All rights reserved</span>
+    <span>Tel. 02-1522-1060 | 서울특별시 서초구 서초대로 74길 4 삼성생명서초타워 20층</span>
+  </footer>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- ============================================ -->
+<!-- TOC -->
+<!-- ============================================ -->
+<section class="toc" id="toc">
+  <h2>Contents</h2>
+  <h1>목차</h1>
+  <ol>
+    <li><span class="ch-name">현황 분석 및 과제 도출</span><span class="ch-desc">시장환경 · K-뷰티 변화 · 카테고리 패러다임</span></li>
+    <li><span class="ch-name">자사 · 경쟁사 분석</span><span class="ch-desc">3 브랜드 포트폴리오 · IP 깊이 · 경쟁 구도</span></li>
+    <li><span class="ch-name">브랜드 차별화 컨셉</span><span class="ch-desc">3 브랜드 차등 포지셔닝 · 메시지 매트릭스</span></li>
+    <li><span class="ch-name">매체 운영 전략</span><span class="ch-desc">멀티채널 효율 · GEO · 협력광고</span></li>
+    <li><span class="ch-name">크리에이티브 · CRM 전략</span><span class="ch-desc">소재 매트릭스 · 리텐션 · 자동화</span></li>
+    <li><span class="ch-name">매드업 솔루션 및 운영 인력</span><span class="ch-desc">솔루션 · 인력 · Special Offer · 일정</span></li>
+  </ol>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- ============================================ -->
+<!-- Strategic Direction (Thesis) -->
+<!-- ============================================ -->
+<section class="strategic-direction bg-rose-bloom bg-beige-bloom" id="thesis">
+  <div class="bg-pattern-noise"></div>
+  <div class="page-label">전략 방향성 ㅣ Strategic Direction</div>
+  <span class="meta-tag">Strategic Thesis</span>
+  <h2 class="thesis-headline">
+    매드업은 약손명가헬스케어의 <span class="highlight">3 브랜드를 차등 포지셔닝</span>하여<br>
+    카테고리 검색 전환·슬로우에이징·K-뷰티 글로벌 모멘텀을 <span class="highlight">동시에 선점</span>합니다
+  </h2>
+  <p class="thesis-sub">
+    뷰티 디바이스 시장 폭발 · K-뷰티 글로벌 부상 · 카테고리어 검색 전환 · 슬로우에이징이 동시에 진행되는 결정적 시점.
+    <strong>약손명가는 45년 IP · 130개 매장 · 임상 자산</strong>을 갖춘 유일한 헬스케어 사업자이지만, 3 브랜드의 IP 적합도가 모두 상이하므로 <strong>차등 포지셔닝</strong>이 핵심입니다.
+  </p>
+
+  <!-- Hero Stat Row : 시장 기회 + 자사 자원을 한 줄에 -->
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hs-label">카테고리어 검색</div>
+      <div class="hs-value">+1,762<span class="hs-unit">%</span></div>
+      <div class="hs-desc">2024→2026 디바이스 카테고리어 폭증<br>일반어는 −37%</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">약손명가 IP</div>
+      <div class="hs-value">45<span class="hs-unit">년</span></div>
+      <div class="hs-desc">130개 매장 · 글로벌 7개국<br>1,020개 학회 논문 자산</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">에스테틱 디바이스</div>
+      <div class="hs-value">3<span class="hs-unit">조원</span></div>
+      <div class="hs-desc">2025 국내 시장 규모<br>슬로우에이징 트렌드 견인</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">매드업 운영 자산</div>
+      <div class="hs-value">4,000<span class="hs-unit">억</span></div>
+      <div class="hs-desc">취급고 + 5년 연속 Meta 어워즈<br>4 시그니처 솔루션</div>
+    </div>
+  </div>
+
+  <hr class="thesis-divider">
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin:0 0 14px;">3-Track Brand Positioning</p>
+  <div class="track-row">
+    <div class="track-card">
+      <div class="track-num">Track 01 · Beyond Yakson</div>
+      <h4 class="track-brand">OLLI LIRA</h4>
+      <div class="track-role">디바이스 메인 부스터 · 카테고리 1위 도전</div>
+      <p class="track-mission">신규 페르소나 빌드로 <strong>"전문가 IP"</strong> 카테고리 선점. 메디큐브(톱스타)·LG프라엘(기술)·메이크온(1020 스타)이 점유하지 않은 빈 자리 공략.</p>
+    </div>
+    <div class="track-card">
+      <div class="track-num">Track 02 · Medical Trust</div>
+      <h4 class="track-brand">OLLI LIRA BEYOND</h4>
+      <div class="track-role">의료 신뢰 자산 · 임상 결과 백업</div>
+      <p class="track-mission"><strong>"임상으로 입증된 디바이스"</strong> 메디컬 그레이드 포지셔닝. PMC·KCI 임상 결과 + 학회 발표 자산을 신뢰의 백업으로 활용.</p>
+    </div>
+    <div class="track-card">
+      <div class="track-num">Track 03 · Power of Yakson</div>
+      <h4 class="track-brand">GOLKI</h4>
+      <div class="track-role">IP 결합형 · 시즌·선물 시장 선점</div>
+      <p class="track-mission"><strong>"약손명가 골기 테라피"</strong> USP가 곧 IP. 카카오 선물하기 · 효도 시즌 모멘텀과 결합. 매장 단골 고객층의 일상 케어 수요 정조준.</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin:32px 0 14px;">4 Strategic Pillars</p>
+  <div class="pillar-row">
+    <div class="pillar-card">
+      <div class="pillar-no">Pillar 01</div>
+      <h6>검색 패러다임 응대</h6>
+      <p>일반어 -37%, 카테고리어 +1,762% 전환 흐름 즉시 응대. LEVER Xpert 기반 키워드 자동 최적화.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-no">Pillar 02</div>
+      <h6>멀티채널 효율 운영</h6>
+      <p>자사몰·네이버 BS·메타·구글·카카오·협력광고 일원화 운영, 채널별 funnel 최적 배분.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-no">Pillar 03</div>
+      <h6>K-뷰티 글로벌 확장</h6>
+      <p>약손명가 글로벌 7개국 확장 자산 활용, 영문 키워드·KOL·아마존·쇼피 채널 점진 확장.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-no">Pillar 04</div>
+      <h6>CRM·자동화·재구매</h6>
+      <p>MILOT·SPRAY AI 활용 LTV 강화, 1st-party 데이터 재활용. 디바이스 재구매 funnel 자동화.</p>
+    </div>
+  </div>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">01</div>
+</section>
+
+<!-- ============================================ -->
+<!-- CHAPTER 01 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch1">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 01</div>
+  <h1><span class="underline">현황 분석</span> 및 과제 도출</h1>
+  <p class="ch-summary">
+    뷰티 디바이스 시장의 폭발 성장과 K-뷰티 글로벌 부상이 동시에 진행되는 가운데, 카테고리 검색 행태가 일반어에서 구체적 카테고리어로 전환되고 있는 상황입니다. 슬로우에이징 트렌드가 디바이스 시장을 견인하며, 헬스케어 IP를 보유한 사업자의 진입이 활발해진 시점입니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 1-1 -->
+<article class="slide" id="s1-1">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ 매드업 소개</div>
+  <span class="slide-meta">매드업 소개</span>
+  <h2 class="slide-title">10년간 400배 성장한 <span class="highlight">Ad-tech No.1 매드업</span>, 데이터·기술 기반으로 디지털 마케팅 시장을 선도하고 있습니다</h2>
+  <ul class="slide-bullets">
+    <li>2015년 광고대행사 본격화 이후 매년 30% 이상 취급액 성장률을 기록하며 가파르게 성장</li>
+    <li class="sub">2025년 취급고 4,000억 · 기업가치 2,550억 · 임직원 451명 규모</li>
+    <li>마케팅 사업부문(300여 명) · 솔루션 사업부문(테크 50+ · 크리에이티브 70+)으로 데이터 드리븐 마케팅 전 과정을 케어</li>
+    <li>매드업 자체 솔루션 보유 — <strong>LEVER Xpert · MILOT · AI Navigator · GEO · SPRAY AI</strong></li>
+    <li>국내외 매체사 프리미엄 파트너 자격 보유 — Google Premier · Meta Badged Premium · Kakao Premium · Naver Premier · TikTok Deal Agency</li>
+    <li>Meta·Criteo Agency of the Year <strong>5년 연속(2021~2025)</strong> 수상</li>
+  </ul>
+
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">2025 취급고</div><div class="kpi-value">4,000억</div></div>
+    <div class="kpi-card"><div class="kpi-label">기업가치</div><div class="kpi-value">2,550억</div></div>
+    <div class="kpi-card"><div class="kpi-label">임직원</div><div class="kpi-value">451+</div></div>
+    <div class="kpi-card"><div class="kpi-label">메타 어워즈</div><div class="kpi-value">5년 연속</div></div>
+  </div>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">02</div>
+</article>
+
+<!-- 1-2 -->
+<article class="slide" id="s1-2">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ 시장 환경</div>
+  <span class="slide-meta">시장 환경</span>
+  <h2 class="slide-title">국내 뷰티 디바이스 시장은 <span class="highlight">2030년 3조 4천억 규모</span>로 확대되며, 글로벌 시장은 CAGR 26.1%로 가파르게 성장 중입니다</h2>
+  <ul class="slide-bullets">
+    <li>국내 시장: 800억(2013) → 5,000억(2018) → 1조 6,000억(2022) → 2030년 3조 4,000억 전망</li>
+    <li>글로벌 가정용 디바이스 시장: 2022년 140억 달러 → 2030년 898억 달러 (CAGR 26.1%)</li>
+    <li>코로나19 기간 대면 피부관리 어려움으로 홈케어 디바이스 수요가 본격 확대</li>
+    <li>건강 관리에 대한 몰입을 추구하는 헬스디깅(Health Digging) 트렌드 부상 이후 슬로우에이징 열풍이 시장 견인</li>
+    <li>한국 보건산업진흥원 통계에 따르면 한국 화장품 산업은 2024년 글로벌 3위로 도약, 2028년 시장 규모 150억 달러 전망</li>
+  </ul>
+
+  <table>
+    <thead><tr><th>구분</th><th>2018</th><th>2022</th><th>2030 전망</th><th>CAGR</th></tr></thead>
+    <tbody>
+      <tr><td>국내 뷰티 디바이스 시장</td><td>5,000억</td><td>1조 6,000억</td><td>3조 4,000억</td><td><strong>13.8%</strong></td></tr>
+      <tr><td>글로벌 가정용 디바이스</td><td>—</td><td>140억 달러</td><td>898억 달러</td><td><strong>26.1%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="sources-note">* 출처: 삼정KPMG INSIGHT Vol.93(2025.12) · 삼일PwC 경영연구원 · Statista · KHIDI</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">03</div>
+</article>
+
+<!-- 1-3 -->
+<article class="slide" id="s1-3">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ K-뷰티 글로벌</div>
+  <span class="slide-meta">K-뷰티 글로벌</span>
+  <h2 class="slide-title">한국 화장품 수출 세계 2위 등극, <span class="highlight">대미 수출 YoY +55.9%</span>로 미국이 차세대 K-뷰티 핵심 시장으로 부상</h2>
+  <ul class="slide-bullets">
+    <li>한국 화장품 수출액 2015년 30억 달러 → 2024년 103억 달러 (CAGR 14.6%)</li>
+    <li>수출국 다변화 본격화 — 중국 비중 40%+ 시절에서 24.5%로 축소, 미국·유럽·일본으로 분산</li>
+    <li>대미 수출 YoY +55.9%, 그 중 스킨케어 +63%, 헤어케어 +72.9% 폭발 성장</li>
+    <li>일본 시장에서는 메이크업 중심 K-뷰티(티르티르·클리오·롬앤)가 점유율 1위(30%) 3년 연속 유지</li>
+    <li class="sub">메디큐브 에이지알 글로벌 누적 판매 600만대 돌파, 해외 비중 47% 도달</li>
+    <li>K-뷰티 디바이스가 화장품 다음의 게임체인저로 부상하는 흐름이 본격화</li>
+  </ul>
+
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">한국 화장품 수출 (24)</div><div class="kpi-value">103억$</div></div>
+    <div class="kpi-card"><div class="kpi-label">대미 YoY</div><div class="kpi-value">+55.9%</div></div>
+    <div class="kpi-card"><div class="kpi-label">대미 헤어케어 YoY</div><div class="kpi-value">+72.9%</div></div>
+    <div class="kpi-card"><div class="kpi-label">메디큐브 글로벌 누적</div><div class="kpi-value">600만대</div></div>
+  </div>
+
+  <div class="sources-note">* 출처: 삼정KPMG INSIGHT Vol.93 · 한국무역협회 · UN Comtrade</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">04</div>
+</article>
+
+<!-- 1-4 -->
+<article class="slide" id="s1-4">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ 검색 행태 변화</div>
+  <span class="slide-meta">검색 행태 변화</span>
+  <h2 class="slide-title">소비자 검색 행태가 <span class="highlight">일반어(-37%) → 카테고리어(+1,762%)</span>로 전환되는 시장 패러다임 변화가 진행 중입니다</h2>
+  <ul class="slide-bullets">
+    <li>리스닝마인드 701개 카테고리 키워드 분석 결과, 카테고리어가 일반어를 빠르게 대체하는 흐름이 뚜렷</li>
+    <li>일반어 검색량 감소 — "갈바닉" -37% · "갈바닉 마사지기" -49% · "LED 마스크" -48% · "뉴스킨 갈바닉" -56%</li>
+    <li>구체적 카테고리어 검색량 폭발 — "갈바닉 디바이스" +1,762% · "고주파 디바이스" +1,120% · "리프팅 디바이스" +284%</li>
+    <li>소비자 의도가 "성분·기술 일반어" 탐색에서 "구체적 카테고리 디바이스" 구매로 전환 중인 시그널로 해석</li>
+    <li class="sub">CPC 경쟁도 분석 — 리프팅 디바이스 $1.64(경쟁 100%) · EMS 디바이스 $2.04(경쟁 65%) · 갈바닉 디바이스 $2.11(경쟁 83%)</li>
+    <li>검색 의도 분포 — 정보형 310건(44%) · 거래형 297건(42%) · 상업형 175건(25%)으로 정보·거래 양단 동시 발생</li>
+  </ul>
+
+  <table>
+    <thead><tr><th>키워드</th><th>2024-04</th><th>2026-04</th><th>증감</th><th>해석</th></tr></thead>
+    <tbody>
+      <tr><td><strong>갈바닉 디바이스</strong></td><td>240</td><td>4,470</td><td><strong style="color:var(--accent-rose);">+1,762%</strong></td><td>신규 카테고리어 폭발</td></tr>
+      <tr><td><strong>고주파 디바이스</strong></td><td>960</td><td>11,710</td><td><strong style="color:var(--accent-rose);">+1,120%</strong></td><td>신규 카테고리어 폭발</td></tr>
+      <tr><td>리프팅 디바이스</td><td>1,010</td><td>3,880</td><td><strong style="color:var(--accent-beige);">+284%</strong></td><td>EMS 메인 키워드</td></tr>
+      <tr><td>갈바닉 마사지기</td><td>18,200</td><td>9,290</td><td><strong style="color:#d4a59a;">-49%</strong></td><td>일반어 → 카테고리어 전환</td></tr>
+      <tr><td>LED 마스크</td><td>13,450</td><td>6,960</td><td><strong style="color:#d4a59a;">-48%</strong></td><td>일반어 → 카테고리어 전환</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sources-note">* 출처: 리스닝마인드 "홈에스테틱외 다수" 워크스페이스 / 701개 키워드 / 2022.05 ~ 2026.04 추이</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">05</div>
+</article>
+
+<!-- 1-5 -->
+<article class="slide" id="s1-5">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ 소비자 트렌드</div>
+  <span class="slide-meta">소비자 트렌드</span>
+  <h2 class="slide-title">슬로우에이징(저속노화) 트렌드가 뷰티 디바이스 시장을 견인하며, <span class="highlight">헬스케어 IP 사업자의 진입이 활발</span>해진 시점입니다</h2>
+  <ul class="slide-bullets">
+    <li>슬로우에이징 정의 — "노화를 자연스러운 현상으로 받아들이고, 건강하고 조화로운 아름다움을 추구"</li>
+    <li>연령대 무관 저속노화 추구 현상 확산 — 올영 슬로우에이징 카테고리 매출 연 평균 +10% 성장 기록</li>
+    <li class="sub">2030 세대가 탄력케어 구매를 주도, 일부 구간에서 40대 성장률을 추월하는 결과 관찰</li>
+    <li>제약·바이오·헬스케어 사업자의 진출 본격화 — 동국제약(센텔리안24) 위드닉스 인수, 달바 시그니처 울쎄라 출시</li>
+    <li>오픈서베이 2025 뷰티 트렌드 — 헬스케어 우선 마인드, "예쁨"보다 "건강함과 개인 맞춤형 솔루션" 우선 선호</li>
+    <li>화장품 광고 행정처분 265건 중 70%가 "선 넘은 광고" 적발, 식약처 AI 모니터링 가동으로 규제 강화 흐름</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 삼정KPMG INSIGHT Vol.93 · 올리브영 뉴스룸 · 오픈서베이 뷰티 트렌드 리포트 2025 · 식약처 화장품 표시·광고 관리 지침(2025.1.21 개정)</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">06</div>
+</article>
+
+<!-- 1-6 도출된 과제 -->
+<article class="slide" id="s1-6">
+  <div class="page-label">현황 분석 및 과제 도출 ㅣ 도출된 과제</div>
+  <span class="slide-meta">→ 도출된 과제</span>
+  <h2 class="slide-title">시장 분석 결과, 약손명가헬스케어가 <span class="highlight">2026년 안에 응대해야 할 4가지 과제</span>가 명확히 도출되었습니다</h2>
+  <p class="slide-title-sub">시장환경 · 카테고리 패러다임 · 슬로우에이징 · K-뷰티 글로벌 — 4개 변화가 동시에 진행 중 → 광고주 입장의 핵심 과제 도출</p>
+
+  <div class="problem-list">
+    <div class="problem-card">
+      <span class="problem-num">01</span>
+      <h5>카테고리어 검색 흐름 즉시 응대</h5>
+      <p>일반어(-37%) → 카테고리어(+1,762%) 검색 행태 전환. <strong>"리프팅 디바이스"·"갈바닉 디바이스"</strong>가 신규 진입 키워드. LSA·검색광고 전환 즉시 응대 필요.</p>
+    </div>
+    <div class="problem-card">
+      <span class="problem-num">02</span>
+      <h5>"전문가 IP" 카테고리 빈자리 선점</h5>
+      <p>경쟁사 IP 포지셔닝 — 메디큐브(톱스타) · LG프라엘(기술) · 메이크온(1020 스타). <strong>"45년 전문가 임상 자산"</strong>은 약손명가가 유일하게 차지할 수 있는 빈 카테고리.</p>
+    </div>
+    <div class="problem-card">
+      <span class="problem-num">03</span>
+      <h5>슬로우에이징·헬스케어 전환 모멘텀</h5>
+      <p>오픈서베이 2025 — <strong>"건강함·맞춤 솔루션"이 예쁨을 추월</strong>. 동국제약(센텔리안24)·달바 등 헬스케어 IP 진출 활발. 약손명가는 이 흐름의 최적 사업자.</p>
+    </div>
+    <div class="problem-card">
+      <span class="problem-num">04</span>
+      <h5>K-뷰티 글로벌·BS 단일 funnel 한계</h5>
+      <p>약손명가 글로벌 7개국 IP 확장 자산 미활용. 현재 채널은 자사몰·BS 단일 funnel 의존도 높음 — <strong>멀티채널·글로벌 확장</strong> 모두 필요.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>4개 과제는 모두 <strong>2026년 안에 응대 가능한 시간 창</strong>이 명확 — 카테고리어 흐름이 정착되면 후발 진입 비용 급증</li>
+    <li class="sub">매드업은 4개 과제를 <strong>3 브랜드 차등 포지셔닝</strong>으로 묶어 풀어내는 전략 제안 (다음 챕터에서 상세 전개)</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">07</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 02 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch2">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 02</div>
+  <h1><span class="underline">자사</span> · 경쟁사 분석</h1>
+  <p class="ch-summary">
+    약손명가는 45년 IP × 130개 매장 × 임상·학회 자산을 보유한 글로벌 에스테틱 그룹이며, 약손명가헬스케어는 이 IP를 기반으로 약손명가 PB · OLLI LIRA · GOLKI 3 브랜드 포트폴리오를 운영하고 있는 상황입니다. 본 챕터에서는 자사의 3 브랜드 제품 라인업과 IP 활용 깊이를 분석하고, 메디큐브·LG프라엘·메이크온 등 주요 경쟁사의 IP 포지셔닝과 비교한 차별화 방향성을 도출합니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 2-1 -->
+<article class="slide" id="s2-1">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 약손명가 IP</div>
+  <span class="slide-meta">약손명가 IP</span>
+  <h2 class="slide-title">약손명가는 45년 IP · 130개 매장 · 학술 임상 자산을 보유한 <span class="highlight">글로벌 에스테틱 그룹</span> — 디바이스 시장 진출의 최강 신뢰 기반</h2>
+  <ul class="slide-bullets">
+    <li>1979년 이병철 회장이 창시한 골기 테라피 기반의 에스테틱 그룹으로 출발, 2017년 빛채그룹 산하 다브랜드 운영 체계로 확장</li>
+    <li>국내 130개 매장 · 해외 7개국 진출 · 연 매출 600억대 · 4년 연속 브랜드파워 대상 수상</li>
+    <li>대학병원 임상시험 · 대한피부미용학회 논문 게재로 골기 테라피의 객관적 개선 결과 입증</li>
+    <li>2025년 4월 약손명가헬스케어가 보유한 대표 홈케어 제품 3종이 올리브영 전국 1,020개 매장 입점, 대규모 오프라인 신뢰 자산 확보</li>
+    <li class="sub">KBS 주말드라마 "진짜가 나타났다" 제작 지원 등 콘텐츠 기반 IP 노출 확장 진행</li>
+    <li>학술 RCT(PMC NCBI) 기준 페이셜 마사지 5분이 10분+ 피부 혈류 증가·림프 배수·탄력 개선 효과를 입증, 약손명가 골기 시술의 학술적 근거가 견고</li>
+  </ul>
+
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">창립 연도</div><div class="kpi-value">1979</div></div>
+    <div class="kpi-card"><div class="kpi-label">국내 매장</div><div class="kpi-value">130개</div></div>
+    <div class="kpi-card"><div class="kpi-label">해외 진출국</div><div class="kpi-value">7개국</div></div>
+    <div class="kpi-card"><div class="kpi-label">올영 입점</div><div class="kpi-value">1,020개</div></div>
+  </div>
+
+  <div class="sources-note">* 출처: 약손명가 공식 yaksonhouse.com · 한국경제(2020.09.15) · 머니투데이(2025.04.04) · PMC NCBI Facial Roller & Gua Sha RCT</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">08</div>
+</article>
+
+<!-- 2-2 -->
+<article class="slide" id="s2-2">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 브랜드 포트폴리오</div>
+  <span class="slide-meta">브랜드 포트폴리오</span>
+  <h2 class="slide-title">약손명가헬스케어는 <span class="highlight">3 브랜드 포트폴리오</span>로 시술 IP 후광부터 신규 카테고리 진입까지 폭넓게 전개 중</h2>
+  <p class="slide-title-sub">홈케어(약손명가 PB) · 뷰티 디바이스(OLLI LIRA) · 마사지 툴(GOLKI) 3축으로 시장 침투</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">Brand #1 · 약손명가 PB</span>
+      <h5>홈케어 · 뷰티 라인</h5>
+      <p>약손명가의 에스테틱 노하우를 기반으로 에스테틱 홈케어를 경험하게 만들고자 출발한 라인. 시술 IP 후광이 자연 작동하는 영역으로, 매장 단골 고객의 일상 케어 수요를 정조준하는 포지션.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Brand #2 · OLLI LIRA</span>
+      <h5>뷰티 디바이스</h5>
+      <p>EMS 리프팅 홈케어 디바이스 중심의 하이테크 뷰티 브랜드. 디바이스(밴드) + 소모품(패치·겔) 결합형 모델로 정기 재구매 구조를 내재화. 약손명가 IP에서 한걸음 분리된 신규 카테고리 진입.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Brand #3 · GOLKI</span>
+      <h5>마사지 툴 · 뷰티바</h5>
+      <p>약손명가의 시그니처 시술인 "골기 테라피"의 원리를 물리적 도구로 재현. 시술명 자체가 USP이며, 가격대 19,000~94,000원의 가성비 진입 브랜드로 효도 선물 시즌 모멘텀 활용 가능.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>3 브랜드는 약손명가 IP와의 결합 강도가 각각 상이 — 약손명가 PB(직접 결합) · OLLI LIRA(부분 분리) · GOLKI(시술명 차용)</li>
+    <li>2025년 6월 약손명가 숄더 릴렉스 마사저가 더현대서울·신세계 강남 팝업스토어를 연달아 운영, 오프라인 인지도 확장 본격화</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 약손명가헬스케어 공식 yaksonhealthcare.com · 데일리안(2025.09.30)</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">09</div>
+</article>
+
+<!-- 2-3 -->
+<article class="slide" id="s2-3">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ OLLI LIRA 디바이스 라인업</div>
+  <span class="slide-meta">OLLI LIRA · 디바이스</span>
+  <h2 class="slide-title">OLLI LIRA 디바이스 라인업은 단품 268,000원과 풀세트 318,000원의 <span class="highlight">"미끼 구조"</span>로 재구매 락인을 설계한 결합형 모델</h2>
+
+  <div class="product-feature">
+    <div class="img-wrap"><img src="images/olli-fullset.jpg" alt="OLLI LIRA HOMECARE FULL SET"></div>
+    <div class="pdetail">
+      <h4>OLLI LIRA HOMECARE FULL SET</h4>
+      <p><span class="spec-label">판매가</span> 318,000원 (정가 472,000원, 33% 할인)</p>
+      <p><span class="spec-label">구성</span> 올리밴드 1box + 올리패치 5box + 올리겔 1box + 쇼핑백</p>
+      <p><span class="spec-label">설계 의도</span> 단품(268,000원) 대비 +50,000원으로 패치 5box·겔·쇼핑백을 추가 — 정가 차이 144,000원 대비 약 70% 할인 효과로 풀세트 구매를 유도</p>
+      <p><span class="spec-label">함의</span> 약 5개월치 사용량 확보 → 첫 재구매 트리거 시점이 명확히 설정된 구조</p>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>제품</th><th>판매가</th><th>정가</th><th>구성·특징</th></tr></thead>
+    <tbody>
+      <tr><td>올리리라 밴드</td><td><strong>268,000원</strong></td><td>328,000원</td><td>EMS 리프팅 홈케어 디바이스, 셀프 얼굴관리</td></tr>
+      <tr><td>올리리라 밴드 HOMECARE FULL SET</td><td><strong>318,000원</strong></td><td>472,000원</td><td>밴드 1 + 패치 5box + 겔 1 + 쇼핑백 (33% 할인)</td></tr>
+      <tr><td>올리리라 스테이션</td><td>42,000원</td><td>49,000원</td><td>올리리라 전용 거치대, 사용 빈도 보조 액세서리</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>풀세트 구매가 단품 대비 정가 기준 70% 추가 가치를 제공하는 구조로, 자연스러운 업셀 funnel 작동</li>
+    <li>스테이션은 디바이스 사용 빈도 ↑ 보조 액세서리 — 작심삼일 페인포인트의 자연 해결책으로 기능</li>
+    <li>경쟁사 메디큐브 부스터프로(단일 디바이스 중심)와의 명확한 구조적 차별점 — "소모품 락인" 모델 보유</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 약손명가헬스케어 공식 yaksonhealthcare.com 디바이스 카테고리</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">10</div>
+</article>
+
+<!-- 2-4 -->
+<article class="slide" id="s2-4">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ OLLI LIRA 소모품 라인업</div>
+  <span class="slide-meta">OLLI LIRA · 소모품</span>
+  <h2 class="slide-title">소모품 라인업(패치·겔·파우치)은 모든 카피에 <span class="highlight">"올리밴드 시너지·전용"</span>이 명시되어 있어 디바이스 사용 의존 구조를 명확히 설계</h2>
+
+  <div class="product-gallery">
+    <div class="product-card">
+      <div class="img-wrap"><img src="images/olli-patch.jpg" alt="올리리라 웨이브 하이드로 패치"></div>
+      <div class="pinfo">
+        <p class="pname">올리리라 웨이브 하이드로 패치 (3매)</p>
+        <p class="pprice">19,000원</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="images/olli-gel.jpg" alt="올리리라 웨이브 겔"></div>
+      <div class="pinfo">
+        <p class="pname">올리리라 웨이브 겔 (100ml)</p>
+        <p class="pprice">19,000원</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="images/olli-pouch.jpg" alt="올리리라 데일리 파우치"></div>
+      <div class="pinfo">
+        <p class="pname">올리리라 데일리 파우치</p>
+        <p class="pprice">39,000원</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="img-wrap"><img src="images/olli-band.jpg" alt="올리리라 밴드 단품"></div>
+      <div class="pinfo">
+        <p class="pname">올리리라 밴드 (단품)</p>
+        <p class="pprice"><del>328,000원</del>268,000원</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>패치 19,000원 × 5box = 약 95,000원 — 디바이스 가격의 약 35% 수준의 정기 재구매가 자연 발생하는 LTV 구조</li>
+    <li>패치·겔 모두 공식 카피에 "올리밴드 시너지 UP" · "올리밴드 전용 시너지 겔" 명시 — 디바이스 사용 지속이 곧 소모품 소비를 견인</li>
+    <li>데일리 파우치(39,000원)는 외출·여행 휴대성 보강 액세서리로 사용 빈도·일상 침투 강화</li>
+    <li class="sub">결합 모델은 디바이스 단품 중심의 경쟁사(메디큐브 부스터프로 · LG프라엘 갈바닉 부스터) 대비 매드업이 운영해온 결합형 커머스 운영 노하우와 적합도 매우 높음</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 약손명가헬스케어 공식 yaksonhealthcare.com 뷰티 카테고리</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">11</div>
+</article>
+
+<!-- 2-5 -->
+<article class="slide" id="s2-5">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ GOLKI 라인업</div>
+  <span class="slide-meta">GOLKI · 라인업</span>
+  <h2 class="slide-title">GOLKI는 약손명가 시그니처 시술 <span class="highlight">"골기 테라피"의 도구화</span> — 19,000원 진입가로 약손명가 IP 첫 접점을 형성하는 게이트웨이 브랜드</h2>
+
+  <div class="product-gallery">
+    <div class="product-card"><div class="img-wrap"><img src="images/golki-bar-earth.jpg" alt="차분한 땅"></div><div class="pinfo"><p class="pname">골기 뷰티바 · 차분한 땅</p><p class="pprice"><del>25,000원</del>19,000원</p></div></div>
+    <div class="product-card"><div class="img-wrap"><img src="images/golki-bar-garden.jpg" alt="햇살 물든 정원"></div><div class="pinfo"><p class="pname">골기 뷰티바 · 햇살 물든 정원</p><p class="pprice"><del>25,000원</del>19,000원</p></div></div>
+    <div class="product-card"><div class="img-wrap"><img src="images/golki-bar-forest.jpg" alt="숲의 포옹"></div><div class="pinfo"><p class="pname">골기 뷰티바 · 숲의 포옹</p><p class="pprice"><del>25,000원</del>19,000원</p></div></div>
+    <div class="product-card"><div class="img-wrap"><img src="images/golki-bar-set.jpg" alt="선물세트"></div><div class="pinfo"><p class="pname">골기 뷰티바 · 선물세트 (3종)</p><p class="pprice"><del>75,000원</del>49,800원</p></div></div>
+    <div class="product-card"><div class="img-wrap"><img src="images/golki-shoulder.jpg" alt="숄더 마사저"></div><div class="pinfo"><p class="pname">약손명가 숄더 릴렉스 마사저</p><p class="pprice">94,000원</p></div></div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>뷰티바 3종 네이밍이 "차분한 땅 · 햇살 물든 정원 · 숲의 포옹"으로 자연 모티프 — 약손명가의 동양적 케어 톤과 일관성 유지</li>
+    <li>선물세트는 75,000원 대비 34% 할인된 49,800원으로 가정의달·추석 효도 선물 가격대에 최적화</li>
+    <li>숄더 릴렉스 마사저는 약손명가 에스테틱 기술력 기반의 인체공학·초경량 설계로 시그니처 SKU 포지션 확보</li>
+    <li>2025년 9월 더현대서울·신세계 강남 팝업 운영 후기 — "가볍고 편안", "어깨 라인에 자연스럽게 밀착", "선물용 패키징이 깔끔" 자연 발생 코멘트 다수 보고</li>
+    <li class="sub">진입가 19,000원의 테스트 구매가 가능한 구조로, 약손명가 브랜드 첫 접점 → OLLI LIRA(268,000원) 업셀 funnel로 확장 가능</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 약손명가헬스케어 공식 · 데일리안(2025.09.30) · 올리브영 GOLKI 숄더 릴렉스 마사저 상세 페이지</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">12</div>
+</article>
+
+<!-- 2-6 -->
+<article class="slide" id="s2-6">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 자사몰 · BS 현황</div>
+  <span class="slide-meta">채널 현황</span>
+  <h2 class="slide-title">자사몰은 <span class="highlight">3 브랜드 통합 운영</span>, 네이버 브랜드스토어는 단일 쇼핑 funnel 중심 — 이원화된 채널 전략 운영 중</h2>
+
+  <table>
+    <thead><tr><th>채널</th><th>URL</th><th>특징</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>자사몰</strong></td>
+        <td>yaksonhealthcare.com</td>
+        <td>3 브랜드(약손명가PB · OLLI LIRA · GOLKI) 통합 · "건강한 아름다움의 실현" 슬로건 · cafe24 기반 (커머스+콘텐츠 결합)</td>
+      </tr>
+      <tr>
+        <td><strong>네이버 BS</strong></td>
+        <td>brand.naver.com/yaksonmall</td>
+        <td>"약손명가" 단일 브랜드명 · 네이버 멤버십·알림받기 연동 · 표준 BS 레이아웃</td>
+      </tr>
+      <tr>
+        <td>외부몰</td>
+        <td>쿠팡 · 지그재그 · 에이블리</td>
+        <td>2030 여성 타겟 인앱광고 채널, 협력광고 미진행</td>
+      </tr>
+      <tr>
+        <td>CRM</td>
+        <td>카카오톡 플러스친구 · 알림톡</td>
+        <td>1st-party data 자산화 가능 채널</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>자사몰 = 3 브랜드 통합 콘텐츠 + 풀라인업 노출 채널로 인지·콘텐츠 funnel 역할 수행 중</li>
+    <li>네이버 BS = OLLI LIRA·GOLKI 중심 + 알림받기·N+쇼핑광고 연계 가능한 구매·리텐션 funnel 역할</li>
+    <li>네이버 광고 매체로 검색 · 쇼핑검색 · 브랜드검색 · GFA · ADBoost · N+쇼핑광고 6개 상품 운영 중</li>
+    <li>외부몰(쿠팡·지그재그·에이블리) 협력광고 미진행 — 메타 협력광고 도입 시 즉시 임팩트 영역</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 약손명가헬스케어 공식 yaksonhealthcare.com · brand.naver.com/yaksonmall</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">13</div>
+</article>
+
+<!-- 2-7 -->
+<article class="slide" id="s2-7">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 경쟁사 · 메디큐브</div>
+  <span class="slide-meta">경쟁사 · 메디큐브</span>
+  <h2 class="slide-title">메디큐브 에이지알은 <span class="highlight">유재석 8년 · 장원영 협업 · 글로벌 누적 600만대</span>를 보유한 절대 1강 — 정면 승부보다 카테고리 차별화가 핵심</h2>
+
+  <div class="product-feature">
+    <div class="img-wrap"><img src="images/competitor-medicube-boosterpro.jpg" alt="메디큐브 부스터프로 X2"></div>
+    <div class="pdetail">
+      <h4>메디큐브 에이지알 부스터프로 X2</h4>
+      <p><span class="spec-label">가격대</span> 19만원~80만원대 (라인업 다양)</p>
+      <p><span class="spec-label">모델</span> 유재석 (2017~) · 장원영 (2025.7~)</p>
+      <p><span class="spec-label">판매</span> 글로벌 누적 600만대 · 부스터프로 단독 200만대</p>
+      <p><span class="spec-label">채널</span> 올영 디바이스 카테고리 1위 · 아마존 월 1,320만달러</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>2021년 에이피알이 뷰티 디바이스 브랜드 메디큐브 에이지알을 론칭한 이후 가파른 성장세 지속 중</li>
+    <li>2024년 12월 기준 글로벌 누적 판매 300만대 돌파, 2025년 9월 500만대 · 2026년 1월 600만대 돌파</li>
+    <li>해외 비중 47%로 미국·중화권·일본·동남아 분산 진출, 카일리 제너·헤일리 비버 등 글로벌 셀럽 자발 노출 확보</li>
+    <li>국내 마케팅 핵심은 "1등 물광기기" 포지셔닝 + 톱스타 모델 활용으로 친근·대중성 어필이 강점</li>
+    <li>최근 SKU 양산 전략 본격화 — 짱구 콜라보 · APEC 일월오봉도 에디션 · 장원영 부스터프로 블랙 등 시즈널·콜라보 다층 운영</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 에이피알 공식 블로그 · 메디큐브 공식 themedicube.co.kr · 비즈워치(2025.11.21)</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">14</div>
+</article>
+
+<!-- 2-8 -->
+<article class="slide" id="s2-8">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 경쟁사 · LG프라엘</div>
+  <span class="slide-meta">경쟁사 · LG프라엘</span>
+  <h2 class="slide-title">LG프라엘은 LG생건 인수 후 <span class="highlight">DMC BRAND INDEX 1위(57.7%)</span>의 인지도 자산을 보유한 대기업 — 기술·안정성 포지셔닝으로 차별화 중</h2>
+
+  <div class="product-feature">
+    <div class="img-wrap"><img src="images/competitor-lgpral-keyvisual.jpg" alt="LG 프라엘"></div>
+    <div class="pdetail">
+      <h4>LG 프라엘 (LG Pra.L)</h4>
+      <p><span class="spec-label">가격대</span> 10.8만원~ (수퍼폼 갈바닉 부스터 · 더마 LED 마스크 등)</p>
+      <p><span class="spec-label">인지도</span> DMC BRAND INDEX 1위 (57.7%)</p>
+      <p><span class="spec-label">포지셔닝</span> 기술·안정성·47g 경량·흡수율 182% 향상</p>
+      <p><span class="spec-label">전략</span> 25년 미국 진출, 화장품 제조 기술 + 뷰티테크 융합</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>LG생활건강이 2025년 6월 LG전자로부터 뷰티 디바이스 사업을 양수하여 'LG 프라엘' 브랜드 전면 운영 중</li>
+    <li>인수 후 첫 출시 제품 '수퍼폼 갈바닉 부스터'로 미국 시장 진출, 화장품 제조 기술과 뷰티테크 융합 본격화</li>
+    <li>모델 활용보다 제품 단독 컷 + 기술 스펙 강조에 집중하는 톤앤매너 운영</li>
+    <li>대기업 자본력·신뢰도 우위로 DMC BRAND INDEX 인지도 1위 유지 중 — 다만 판매량은 메디큐브에 후순위</li>
+    <li class="sub">"인지도 1위 ≠ 판매 1위" 시그널 — 후발주자도 카테고리 차별화 시 시장 진입 여지 확보 가능</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 비즈워치(2025.11.21) · CEO Score Daily · LG프라엘 공식 lgpralofficial.com</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">15</div>
+</article>
+
+<!-- 2-9 -->
+<article class="slide" id="s2-9">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 경쟁사 · 메이크온</div>
+  <span class="slide-meta">경쟁사 · 메이크온</span>
+  <h2 class="slide-title">메이크온은 아모레퍼시픽이 <span class="highlight">10년 만에 재진입한 디바이스</span> — 장원영 모델 · 10만원대 · 1020 타겟으로 영세대 시장 진입</h2>
+
+  <div class="product-feature">
+    <div class="img-wrap"><img src="images/competitor-makeon-skinlight.jpg" alt="메이크온 스킨 라이트 테라피 3S"></div>
+    <div class="pdetail">
+      <h4>메이크온 스킨 라이트 테라피 3S</h4>
+      <p><span class="spec-label">가격대</span> 20만~28만원대 (1020 진입 가격)</p>
+      <p><span class="spec-label">모델</span> 장원영 (메디큐브 협업과 중복)</p>
+      <p><span class="spec-label">기술</span> 25개 LED · 3가지 미세전류 · 전용 앱 "3초 피부 측정"</p>
+      <p><span class="spec-label">시장</span> CES 2025 공개 후 3월 출시, 매출 YoY +130% 성장</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>2014년 메이크온 론칭 후 대중화 벽에 부딪혔던 경험을 딛고 2025년 CES 공개 + AI 피부 분석 기능 결합으로 재진입 본격화</li>
+    <li>장원영을 모델로 기용하여 1020 영세대를 정조준, 가격대를 10만원대로 낮춰 진입장벽 완화</li>
+    <li>전용 앱과 결합된 "3초 피부 측정" 기능으로 개인 맞춤형 솔루션 어필</li>
+    <li>2023년 미용기기 유통·판매 전담 퍼시픽테크 설립 후 본격적인 디바이스 사업 운영 체계 구축</li>
+    <li class="sub">메이크온 모델 장원영이 메디큐브 협업에도 활용 중 — 스타 IP 경쟁이 격화되는 흐름 관찰</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 블로터 · 아모레몰 · 이코노믹데일리</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">16</div>
+</article>
+
+<!-- 2-10 -->
+<article class="slide" id="s2-10">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 경쟁사 IP 포지셔닝</div>
+  <span class="slide-meta">경쟁사 IP 포지셔닝</span>
+  <h2 class="slide-title">3사 모두 <span class="highlight">"스타 IP · 기술 IP · 1020 스타"</span>를 점유하고 있는 가운데, "전문가 IP" 카테고리는 시장에 비어 있는 상태</h2>
+
+  <table>
+    <thead><tr><th>경쟁사</th><th>IP 포지셔닝</th><th>핵심 자산</th><th>주요 채널</th></tr></thead>
+    <tbody>
+      <tr><td>메디큐브</td><td><strong>톱스타 · 대중성 IP</strong></td><td>유재석 8년 · 장원영 · 카일리 제너 · 글로벌 셀럽 자발 노출</td><td>올영 · 자사몰 · 아마존</td></tr>
+      <tr><td>LG프라엘</td><td><strong>기술 · 대기업 IP</strong></td><td>LG 가전 기술 · DMC BRAND INDEX 1위 57.7%</td><td>자사몰 · 미국</td></tr>
+      <tr><td>메이크온</td><td><strong>1020 스타 · AI 기술 IP</strong></td><td>장원영 · AI 피부 분석 앱 · CES 2025</td><td>자사몰 · 아모레몰 · CJ온스타일</td></tr>
+      <tr style="background:rgba(245, 212, 216, 0.06);"><td><strong style="color:var(--accent-rose);">OLLI LIRA · GOLKI<br>(약손명가)</strong></td><td><strong style="color:var(--accent-rose);">전문가 · 임상 IP ★</strong></td><td><strong>45년 IP · 130개 매장 · 대학병원 임상 · 학회 논문 · 글로벌 7개국</strong></td><td>자사몰 · 브스 · 올영 1,020개</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>3사 모두 "톱스타·기술·1020"이라는 3개 영역을 분점하고 있는 구도로, "전문가·임상 IP" 영역은 비어 있는 상태</li>
+    <li>약손명가는 시장 내 어느 디바이스 사업자도 보유하지 못한 "45년 시술 IP · 대학병원 임상 · 학회 논문" 자산을 갖춘 사업자</li>
+    <li>"전문가 IP" 카테고리 선점은 메디큐브의 톱스타 활용 전략과 정면 충돌을 회피하면서도 신뢰 자산을 압도적으로 확보하는 차별화 방향</li>
+    <li class="sub">LG프라엘이 인지도 1위(57.7%)인데 판매 1위는 메디큐브인 구조 — 인지도와 판매가 분리된 시장 형성, 후발주자도 차별화 시 진입 여지 충분</li>
+  </ul>
+
+  <div class="sources-note">* 출처: 비즈워치(2025.11.21) · CEO Score Daily · 에이피알 공식 블로그 · 블로터</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">17</div>
+</article>
+
+<!-- 2-11 -->
+<article class="slide" id="s2-11">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 브랜드별 차별화 컨셉</div>
+  <span class="slide-meta">차별화 컨셉</span>
+  <h2 class="slide-title">3 브랜드는 약손명가 IP와의 결합 강도가 모두 상이 — 카테고리별로 <span class="highlight">"유지 · 분리 · 결합"</span>의 차등 컨셉이 자연스러운 방향</h2>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">약손명가 PB · Within Yakson</span>
+      <h5>유지 — IP 직접 활용</h5>
+      <p>매장·시술 IP의 자연 발생 후광이 강하게 작동하는 영역. "45년 에스테틱이 만든 데일리 케어" 메시지로 IP 직접 활용. 매장 단골 고객층의 일상 케어 수요를 정조준.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">OLLI LIRA · Beyond Yakson</span>
+      <h5>분리 — 신규 페르소나</h5>
+      <p>디바이스 카테고리는 신규 페르소나 빌드가 필요한 영역. 약손명가 IP에서 한걸음 분리된 독립 브랜드 정체성을 구축하되, 임상·학회 자산은 신뢰의 백업으로 활용. "전문가 IP" 카테고리 선점.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">GOLKI · Power of Yakson</span>
+      <h5>결합 — USP가 곧 IP</h5>
+      <p>브랜드명·USP 모두가 "골기 테라피" 시술명에서 파생된 영역. IP를 분리하면 USP 자체가 소멸하므로 강한 결합이 자연스러운 전략. 효도 선물 시즌 모멘텀과 결합.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>3 브랜드 차등 컨셉은 각 카테고리의 시장 특성과 약손명가 IP의 적합도를 모두 반영한 자연스러운 전개 방향</li>
+    <li>OLLI LIRA의 "전문가 IP" 포지셔닝은 메디큐브(톱스타) · LG프라엘(기술) · 메이크온(1020 스타)이 점유하지 않은 빈 카테고리 선점 가능</li>
+    <li>GOLKI는 카카오 선물하기 · 효도 시즌 캠페인과 결합 시 약손명가 IP의 신뢰성이 가장 강하게 작동하는 채널 확보</li>
+    <li class="sub">3 브랜드 차등 컨셉의 구체적인 매체 운영 전략과 크리에이티브 매트릭스는 챕터 3·4·5에서 상세 전개 예정</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">18</div>
+</article>
+
+<!-- 2-12 3-Track 전략 답 -->
+<article class="slide" id="s2-12">
+  <div class="page-label">자사 · 경쟁사 분석 ㅣ 3-Track 전략 답</div>
+  <span class="slide-meta">→ 핵심 전략 답</span>
+  <h2 class="slide-title">자사 자원과 시장 기회를 연결한 답 — <span class="highlight">3-Track 차등 포지셔닝</span>이 4개 과제를 동시에 푸는 단일 프레임이 됩니다</h2>
+  <p class="slide-title-sub">"누가, 어떤 IP 결합도로, 어느 카테고리를 점유할 것인가" — 3 브랜드가 서로 다른 카테고리를 책임지는 분업 구도</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:14%;">Track</th>
+        <th style="width:22%;">브랜드 · 카테고리</th>
+        <th style="width:22%;">응대 과제</th>
+        <th style="width:22%;">핵심 메시지</th>
+        <th style="width:20%;">주요 채널 (Ch3·4 상세)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">Track 01<br><span style="font-size:10px;color:var(--accent-beige);font-weight:600;">Beyond Yakson</span></td>
+        <td><strong>OLLI LIRA</strong> · 디바이스<br><span style="font-size:11px;color:var(--text-caption);">갈바닉·EMS·고주파</span></td>
+        <td>① 카테고리어 검색 흐름<br>② "전문가 IP" 빈자리 선점</td>
+        <td>"45년 전문가 임상 자산의<br>디바이스 카테고리 응답"</td>
+        <td>검색 LSA · 메타 · 구글<br>BS 카테고리 일링</td>
+      </tr>
+      <tr>
+        <td class="brand-label">Track 02<br><span style="font-size:10px;color:var(--accent-beige);font-weight:600;">Medical Trust</span></td>
+        <td><strong>OLLI LIRA BEYOND</strong> · 임상<br><span style="font-size:11px;color:var(--text-caption);">PMC·KCI 결과 보유</span></td>
+        <td>③ 슬로우에이징·헬스케어<br>전환 모멘텀 확보</td>
+        <td>"임상으로 입증된<br>메디컬 그레이드 케어"</td>
+        <td>네이버 BS 메디컬 코너<br>유튜브 KOL · 학회 콘텐츠</td>
+      </tr>
+      <tr>
+        <td class="brand-label">Track 03<br><span style="font-size:10px;color:var(--accent-beige);font-weight:600;">Power of Yakson</span></td>
+        <td><strong>GOLKI</strong> · 두피<br><span style="font-size:11px;color:var(--text-caption);">USP=IP 결합</span></td>
+        <td>④ 시즌·선물 시장 +<br>약손명가 단골 직접 응대</td>
+        <td>"45년 매장에서 검증된<br>골기 테라피, 집에서"</td>
+        <td>카카오 선물하기 · GFA<br>오프라인 매장 OMO</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin:28px 0 12px;">→ Why It Works</p>
+  <ul class="slide-bullets">
+    <li><strong>분업 명확화</strong> — 3 브랜드가 서로 다른 카테고리를 책임지므로 내부 자원 충돌 최소화, 각 브랜드의 USP가 분명히 살아남</li>
+    <li><strong>4개 과제 동시 응대</strong> — 검색 패러다임 / "전문가 IP" / 헬스케어 전환 / K-뷰티·시즌이 3 트랙에 분산 배치되어 단일 프레임으로 풀림</li>
+    <li><strong>매드업 시그니처 솔루션 적합</strong> — LEVER Xpert(검색)·MILOT(CRM)·AI Navigator(GEO)·SPRAY AI(소재)가 3 트랙의 매체 운영을 자동화·고도화</li>
+    <li class="sub">Ch3 (브랜드 차별화 컨셉 상세) → Ch4 (매체 운영 전략) → Ch5 (크리에이티브·CRM) → Ch6 (매드업 솔루션·일정) 순서로 전개</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">19</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 03 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch3">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 03</div>
+  <h1><span class="underline">브랜드 차별화</span> 컨셉</h1>
+  <p class="ch-summary">
+    Ch2에서 도출한 3-Track 포지셔닝을 브랜드별로 한 단계 깊이 전개합니다. 각 트랙의 카테고리·페르소나·메시지 톤·증빙 자산을 정리하고, 4단계 funnel(인지→고려→전환→충성) 메시지 매트릭스를 구성합니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 3-1 전략 프레임워크 -->
+<article class="slide" id="s3-1">
+  <div class="page-label">브랜드 차별화 컨셉 ㅣ 3-Track 프레임워크</div>
+  <span class="slide-meta">3-Track 프레임워크</span>
+  <h2 class="slide-title">3-Track은 <span class="highlight">"IP 결합도 × 카테고리 페르소나"</span> 2축 매트릭스에서 자연스럽게 도출되는 단일 프레임입니다</h2>
+  <p class="slide-title-sub">세로축: IP 결합 강도(분리↔결합) · 가로축: 카테고리 페르소나(신규↔단골) → 3 브랜드가 서로 다른 사분면 점유</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:18%;">구분</th>
+        <th>OLLI LIRA (Beyond)</th>
+        <th>OLLI LIRA BEYOND (Medical)</th>
+        <th>GOLKI (Power)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">IP 결합도</td>
+        <td>분리 (Beyond Yakson)</td>
+        <td>분리 + 임상 백업</td>
+        <td>결합 (Power of Yakson)</td>
+      </tr>
+      <tr>
+        <td class="brand-label">핵심 페르소나</td>
+        <td>3040 신규 디바이스 구매자</td>
+        <td>4050 헬스케어 관심층</td>
+        <td>매장 단골 + 선물 구매자</td>
+      </tr>
+      <tr>
+        <td class="brand-label">메시지 톤</td>
+        <td>전문성 · 효능 데이터 중심</td>
+        <td>임상 · 학회 · 전문의 코멘트</td>
+        <td>정통 · 시즌 · 정성 메시지</td>
+      </tr>
+      <tr>
+        <td class="brand-label">USP 자산</td>
+        <td>약손명가 임상 + 디바이스 스펙</td>
+        <td>PMC·KCI 논문 + 학회 발표</td>
+        <td>매장 시술명 = 브랜드명</td>
+      </tr>
+      <tr>
+        <td class="brand-label">매드업 솔루션</td>
+        <td>LEVER Xpert · SPRAY AI</td>
+        <td>AI Navigator · GEO</td>
+        <td>MILOT(CRM) · 오프라인 OMO</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>3 브랜드는 사분면이 겹치지 않아 자원 분배 명확 — 매체 예산·소재·인력 모두 분업 가능</li>
+    <li class="sub">매드업은 3 트랙을 동시에 운영하면서 LEVER Xpert로 검색·소재 자동 최적화, MILOT으로 CRM·재구매 동선 자동화</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">20</div>
+</article>
+
+<!-- 3-2 OLLI LIRA -->
+<article class="slide" id="s3-2">
+  <div class="page-label">브랜드 차별화 컨셉 ㅣ OLLI LIRA</div>
+  <span class="slide-meta">Track 01 · OLLI LIRA</span>
+  <h2 class="slide-title">OLLI LIRA — <span class="highlight">"전문가 IP"</span> 빈자리를 선점하는 디바이스 메인 부스터</h2>
+  <p class="slide-title-sub">경쟁사 IP 포지셔닝의 빈 카테고리 = 전문 임상·시술 자산 기반 디바이스 → 약손명가가 유일하게 점유 가능</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">Category Hypothesis</span>
+      <h5>"전문가 IP" 카테고리 선점</h5>
+      <p>메디큐브(톱스타) · LG프라엘(기술) · 메이크온(1020 스타)이 점유하지 않은 빈 자리. <strong>45년 임상 자산</strong>으로 차별화.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Target Persona</span>
+      <h5>3040 디바이스 신규 구매자</h5>
+      <p>리프팅·갈바닉·EMS 검색을 시작한 신규 구매자. 가격대 30만원 이상 디바이스 구매 의향. 효능 데이터를 검토하고 결정.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Message Hook</span>
+      <h5>"전문가 임상 → 집"</h5>
+      <p>"45년 전문가 임상이 만든 디바이스" — 시술 효능을 집에서 재현. 전문 톤·임상 결과 인포그래픽 중심.</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:20%;">메시지 단계</th><th>핵심 카피</th><th style="width:24%;">증빙 자산</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">인지 (Awareness)</td>
+        <td>"홈케어, 이제 전문가 임상으로 끝낸다"</td>
+        <td>약손명가 130개 매장 · 글로벌 7개국</td>
+      </tr>
+      <tr>
+        <td class="brand-label">고려 (Consideration)</td>
+        <td>"갈바닉·EMS·고주파를 한 번에" / 임상 결과 그래프 노출</td>
+        <td>임상 결과 데이터 · KFDA 등록</td>
+      </tr>
+      <tr>
+        <td class="brand-label">전환 (Conversion)</td>
+        <td>"단품 268,000원 / 풀세트 318,000원 — 미끼 구조"</td>
+        <td>BS 단독 프로모션 · 협력광고</td>
+      </tr>
+      <tr>
+        <td class="brand-label">충성 (Loyalty)</td>
+        <td>"앰플 정기구매 + 매장 시술 OMO 멤버십"</td>
+        <td>MILOT 1st-party 자동화</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">21</div>
+</article>
+
+<!-- 3-3 OLLI LIRA BEYOND -->
+<article class="slide" id="s3-3">
+  <div class="page-label">브랜드 차별화 컨셉 ㅣ OLLI LIRA BEYOND</div>
+  <span class="slide-meta">Track 02 · OLLI LIRA BEYOND</span>
+  <h2 class="slide-title">OLLI LIRA BEYOND — <span class="highlight">"임상으로 입증된 메디컬 그레이드"</span> 트랙의 신뢰 자산 백업</h2>
+  <p class="slide-title-sub">PMC·KCI 임상 결과 + 학회 발표 자산을 활용한 헬스케어 전환 모멘텀 응대 트랙</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">Category Hypothesis</span>
+      <h5>메디컬 그레이드 디바이스</h5>
+      <p>슬로우에이징·헬스케어 전환층이 검증을 요구하는 카테고리. <strong>PMC·KCI 임상 결과</strong>가 진입 장벽.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Target Persona</span>
+      <h5>4050 헬스케어 관심층</h5>
+      <p>슬로우에이징·항노화 관심 4050 여성. 임상 데이터·전문의 코멘트를 신뢰의 기준으로 활용. 가격 민감도 낮음.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Message Hook</span>
+      <h5>"임상으로 입증된 차이"</h5>
+      <p>"학회·논문이 증명한 메디컬 그레이드" — 임상 결과 그래프·전문가 추천 형식. 정적 인포그래픽 중심.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>활용 자산</strong> — PMC·KCI 논문 (혈류 개선·세포 활성화) · 약손명가 학회 발표 자료 · 전문의 코멘트</li>
+    <li><strong>핵심 채널</strong> — 네이버 BS 메디컬 코너 · 헬스케어 카테고리 검색광고 · 4050 타깃 유튜브·헬스 커뮤니티 KOL</li>
+    <li><strong>크리에이티브 톤</strong> — 정적·텍스트 중심 인포그래픽, 신뢰감 우선 (감성·트렌디 X) → AI Navigator 기반 GEO 콘텐츠로 검색 결과 신뢰성 강화</li>
+    <li class="sub">OLLI LIRA와 BEYOND는 동일 디바이스 카테고리지만 페르소나·메시지·채널을 완전히 분리하여 운영</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">22</div>
+</article>
+
+<!-- 3-4 GOLKI -->
+<article class="slide" id="s3-4">
+  <div class="page-label">브랜드 차별화 컨셉 ㅣ GOLKI</div>
+  <span class="slide-meta">Track 03 · GOLKI</span>
+  <h2 class="slide-title">GOLKI — <span class="highlight">"USP가 곧 약손명가 IP"</span>인 결합형 브랜드의 시즌·선물 시장 선점</h2>
+  <p class="slide-title-sub">브랜드명·USP 모두가 "골기 테라피" 시술명에서 파생 → IP를 분리하면 USP 자체가 소멸하므로 강한 결합이 자연스러운 전략</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">Category Hypothesis</span>
+      <h5>두피·헤어케어 + 효도 시즌</h5>
+      <p>두피 디바이스는 시즌·선물 수요가 강한 카테고리. <strong>약손명가 매장 단골</strong>의 일상 케어 수요 동시 응대.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Target Persona</span>
+      <h5>40-60대 + 선물 구매자</h5>
+      <p>두피 고민이 본격화되는 40-60대 + 어버이날·명절 선물 구매자. 매장 단골 가족 구성원이 직접 구매하는 케이스 다수.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">Message Hook</span>
+      <h5>"매장에서 집으로"</h5>
+      <p>"45년 매장에서 검증된 골기 테라피, 이제 집에서" — 정통·신뢰·정성 톤. 매장 시술 영상 + 사용자 후기 결합.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>활용 자산</strong> — 매장 시술 영상 · 매장 단골 후기 · 약손명가 본원 신뢰 메시지 · "골기 테라피" 시술명 직접 활용</li>
+    <li><strong>핵심 채널</strong> — 카카오 선물하기 (효도 시즌) · GFA (네이버 디스플레이) · 매장 OMO QR 코드 · 인스타·페이스북 시즌 캠페인</li>
+    <li><strong>시즌 캘린더</strong> — 어버이날 (5월) · 가정의 달 (5월) · 추석 (9-10월) · 설날 (1-2월) · 어버이날 효도 시즌이 최대 매출 모멘텀</li>
+    <li class="sub">매장 단골 → 가족 구성원 → 선물 → 자가 사용 전환 funnel을 MILOT 1st-party 데이터로 자동화 운영</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">23</div>
+</article>
+
+<!-- 3-5 메시지 매트릭스 -->
+<article class="slide" id="s3-5">
+  <div class="page-label">브랜드 차별화 컨셉 ㅣ 메시지 매트릭스</div>
+  <span class="slide-meta">메시지 매트릭스</span>
+  <h2 class="slide-title">3 트랙 × 4 funnel 단계로 구성된 <span class="highlight">메시지 매트릭스</span> — 채널·소재 운영의 단일 참조 표</h2>
+  <p class="slide-title-sub">매체별 소재 발주·심의·CRM 시나리오 작성 시 참조하는 공통 프레임 (Ch5 크리에이티브 매트릭스로 확장)</p>
+
+  <table class="message-matrix">
+    <thead>
+      <tr>
+        <th style="width:18%;"></th>
+        <th>인지<br><span style="font-size:9px;color:var(--text-caption);font-weight:400;">Awareness</span></th>
+        <th>고려<br><span style="font-size:9px;color:var(--text-caption);font-weight:400;">Consideration</span></th>
+        <th>전환<br><span style="font-size:9px;color:var(--text-caption);font-weight:400;">Conversion</span></th>
+        <th>충성<br><span style="font-size:9px;color:var(--text-caption);font-weight:400;">Loyalty</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">OLLI LIRA<br><span style="font-size:9px;color:var(--accent-beige);">Beyond Yakson</span></td>
+        <td>"전문가 임상, 집에서 끝낸다"</td>
+        <td>"갈바닉+EMS+고주파, 한 번에"</td>
+        <td>"풀세트 318,000원, 미끼 구조"</td>
+        <td>"앰플 정기 + 매장 시술 OMO"</td>
+      </tr>
+      <tr>
+        <td class="brand-label">OLLI LIRA BEYOND<br><span style="font-size:9px;color:var(--accent-beige);">Medical Trust</span></td>
+        <td>"학회가 증명한 차이"</td>
+        <td>"PMC 논문 · KFDA 인증"</td>
+        <td>"4050 슬로우에이징 솔루션"</td>
+        <td>"전문가 컨설팅 멤버십"</td>
+      </tr>
+      <tr>
+        <td class="brand-label">GOLKI<br><span style="font-size:9px;color:var(--accent-beige);">Power of Yakson</span></td>
+        <td>"45년 매장이 만든 골기"</td>
+        <td>"매장 시술 영상 + 단골 후기"</td>
+        <td>"효도 시즌 카카오 선물하기"</td>
+        <td>"매장 단골 가족 OMO"</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>매트릭스 활용</strong> — 매체 발주(Ch4)·소재 매트릭스(Ch5)·CRM 시나리오(Ch5)의 단일 참조 표로 사용</li>
+    <li><strong>심의 가드레일</strong> — 매드업 AI 심의봇이 매트릭스 카피를 식약처 광고 규제 사전 점검 → "선 넘은 광고" 리스크 최소화</li>
+    <li class="sub">매트릭스는 분기별 리뷰 후 SPRAY AI 학습 데이터로 환원되어 소재 자동 생성·최적화에 활용</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">24</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 04 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch4">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 04</div>
+  <h1><span class="underline">매체 운영</span> 전략</h1>
+  <p class="ch-summary">
+    3-Track별 카테고리·페르소나·funnel 메시지에 적합한 매체 믹스를 구성합니다. 검색(LSA)·메타·구글·네이버 BS·협력광고·카카오·GEO·KOL을 트랙별로 차등 배분하고, LEVER Xpert로 매체별 효율을 분기 단위 자동 최적화합니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 4-1 매체 믹스 -->
+<article class="slide" id="s4-1">
+  <div class="page-label">매체 운영 전략 ㅣ 매체 믹스 프레임</div>
+  <span class="slide-meta">매체 믹스 프레임</span>
+  <h2 class="slide-title">3-Track × funnel 단계별 <span class="highlight">매체 차등 배분</span> — 트랙마다 핵심 funnel과 적합 채널이 분명히 다릅니다</h2>
+  <p class="slide-title-sub">"카테고리어 응대(검색) · 디바이스 효능 노출(메타/구글) · 신뢰 콘텐츠(BS/KOL) · 시즌 모멘텀(카카오)"의 4축 분류</p>
+
+  <div class="channel-mix">
+    <div class="channel-pill">
+      <p class="ch-name">검색 (LSA · NDA)</p>
+      <p class="ch-role">카테고리어 응대 · LEVER Xpert 키워드 자동 최적화</p>
+      <span class="ch-share">3-Track 공통 / 비중 高</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">메타 (Facebook · IG)</p>
+      <p class="ch-role">디바이스 효능 노출 · OLLI LIRA 메인 트래픽 채널</p>
+      <span class="ch-share">Track 01 중심</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">구글 (UAC · YouTube)</p>
+      <p class="ch-role">디바이스 비교 콘텐츠 · 4050 헬스케어 KOL</p>
+      <span class="ch-share">Track 01·02</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">네이버 BS</p>
+      <p class="ch-role">3 브랜드 통합 funnel · 카테고리 일링 · 신뢰 콘텐츠</p>
+      <span class="ch-share">3-Track 공통</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">협력광고 (브스 협력)</p>
+      <p class="ch-role">단품·시즌 프로모션 · BS 카테고리 일링 동시 노출</p>
+      <span class="ch-share">Track 01·03</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">카카오 (선물하기 · GFA)</p>
+      <p class="ch-role">시즌·선물 캠페인 · 효도 시즌 GOLKI 핵심 채널</p>
+      <span class="ch-share">Track 03 중심</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">GEO (AI 검색)</p>
+      <p class="ch-role">ChatGPT·Perplexity 응답 노출 · 신뢰 콘텐츠 시드</p>
+      <span class="ch-share">Track 02 중심</span>
+    </div>
+    <div class="channel-pill">
+      <p class="ch-name">KOL · 인플루언서</p>
+      <p class="ch-role">전문성·신뢰 콘텐츠 · 4050 헬스 KOL · 매장 단골 인플루언서</p>
+      <span class="ch-share">3-Track 분기 운영</span>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>LEVER Xpert</strong>가 매체별 ROAS·전환·이탈 데이터를 통합 모니터링 → 분기 단위 자동 비중 조정</li>
+    <li>3 트랙이 동시에 진행되는 만큼 매드업은 트랙별 PM 분업 구조로 매체 운영 일관성 유지</li>
+    <li class="sub">매체 비중·예산 구체 안은 광고주 측 NDA 자료 수령 후 Ch6 Special Offer에서 별도 제시 예정</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">25</div>
+</article>
+
+<!-- 4-2 검색 -->
+<article class="slide" id="s4-2">
+  <div class="page-label">매체 운영 전략 ㅣ 검색</div>
+  <span class="slide-meta">검색 · LSA · NDA</span>
+  <h2 class="slide-title">검색 — <span class="highlight">카테고리어 전환(+1,762%)</span>의 정면 응대 채널, LEVER Xpert 기반 키워드 자동 최적화</h2>
+  <p class="slide-title-sub">일반어 -37% / 카테고리어 +1,762% 흐름이 정착되기 전 진입 비용이 낮은 시기 활용</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:20%;">키워드 군</th><th>예시</th><th style="width:20%;">매체</th><th style="width:18%;">트랙</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">디바이스 카테고리</td>
+        <td>"리프팅 디바이스" · "갈바닉 디바이스" · "EMS 디바이스"</td>
+        <td>LSA · NDA</td>
+        <td>Track 01</td>
+      </tr>
+      <tr>
+        <td class="brand-label">슬로우에이징·임상</td>
+        <td>"슬로우에이징 디바이스" · "메디컬 디바이스" · "임상 디바이스"</td>
+        <td>LSA · NDA · GEO</td>
+        <td>Track 02</td>
+      </tr>
+      <tr>
+        <td class="brand-label">두피·시즌·선물</td>
+        <td>"두피 마사지기" · "어버이날 선물" · "효도 선물" · "골기"</td>
+        <td>LSA · NDA · GFA</td>
+        <td>Track 03</td>
+      </tr>
+      <tr>
+        <td class="brand-label">브랜드 직접</td>
+        <td>"올리리라" · "약손명가" · "골키"</td>
+        <td>LSA (브랜드 보호)</td>
+        <td>3-Track 공통</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>LEVER Xpert 차별점</strong> — 키워드 입찰가 자동 최적화 + 카테고리어 신규 진입 키워드 발굴 + 경쟁사 키워드 대응 자동화</li>
+    <li><strong>심의 자동화</strong> — AI 심의봇이 키워드·카피의 식약처 광고 규제 사전 점검 (화장품 표시·광고 관리 지침 2025.1.21 개정 반영)</li>
+    <li class="sub">3 트랙은 키워드 충돌이 거의 없어 자기잠식(cannibalization) 리스크 최소 — 트랙별 독립 운영 가능</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">26</div>
+</article>
+
+<!-- 4-3 메타·구글 -->
+<article class="slide" id="s4-3">
+  <div class="page-label">매체 운영 전략 ㅣ 메타 · 구글</div>
+  <span class="slide-meta">메타 · 구글 퍼포먼스</span>
+  <h2 class="slide-title">메타·구글 — <span class="highlight">디바이스 효능 노출</span>의 메인 트래픽 채널, OLLI LIRA 트랙의 매출 엔진</h2>
+  <p class="slide-title-sub">Meta Badged Premium · Google Premier 파트너 자격 기반 어드밴티지 매체 운영 권한 활용</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">메타 (FB · IG · Reels)</span>
+      <h5>OLLI LIRA 영상 인포그래픽</h5>
+      <p>"갈바닉+EMS+고주파 한 번에" 효능 비교 인포그래픽 · 사용 전후 영상 중심. Advantage+ 캠페인으로 자동화 운영.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">구글 (UAC · YouTube)</span>
+      <h5>4050 헬스 KOL 콘텐츠</h5>
+      <p>"임상으로 입증된 차이" BEYOND 트랙 신뢰 콘텐츠 · 헬스·뷰티 유튜브 KOL 협업 (4050 슬로우에이징 KOL 중심).</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">DA · 디스플레이</span>
+      <h5>리타게팅 + 브랜드 인지</h5>
+      <p>자사몰·BS 방문자 리타게팅 자동화 (MILOT 1st-party). 시즌 캠페인은 GFA(네이버 DA) 보조 운영.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>Meta·Criteo Agency of the Year 5년 연속 수상</strong> — 매체사 우선 지원·CSM 지정·신규 베타 기능 우선 적용 권한</li>
+    <li><strong>SPRAY AI</strong>로 소재 자동 생성·테스트 → 일간 단위 소재 회전, 피로도 관리 자동화</li>
+    <li class="sub">메타·구글 비중은 트랙·funnel별 ROAS 데이터 기반 매주 LEVER Xpert로 재조정</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">27</div>
+</article>
+
+<!-- 4-4 협력광고·BS -->
+<article class="slide" id="s4-4">
+  <div class="page-label">매체 운영 전략 ㅣ 네이버 BS · 협력광고</div>
+  <span class="slide-meta">네이버 BS · 협력광고</span>
+  <h2 class="slide-title">네이버 BS — <span class="highlight">3 브랜드 통합 funnel</span>의 단일 거점, 협력광고로 카테고리 일링 + 단품 동시 노출</h2>
+  <p class="slide-title-sub">현재 자사몰·BS 단일 funnel 의존도를 협력광고로 보완, BS 내 카테고리 일링·단품 프로모션 동시 운영</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:18%;">운영 축</th><th>OLLI LIRA</th><th>OLLI LIRA BEYOND</th><th>GOLKI</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">BS 카테고리 일링</td>
+        <td>"리프팅 디바이스" 카테고리 일링</td>
+        <td>"메디컬 디바이스" 카테고리 일링</td>
+        <td>"두피 마사지기" 카테고리 일링</td>
+      </tr>
+      <tr>
+        <td class="brand-label">협력광고 (브스)</td>
+        <td>풀세트 318,000원 미끼 프로모션</td>
+        <td>임상 결과 콘텐츠 + 4050 타깃</td>
+        <td>시즌 (어버이날·추석·설날) 집중</td>
+      </tr>
+      <tr>
+        <td class="brand-label">신뢰 콘텐츠</td>
+        <td>약손명가 매장 영상 + 임상 결과</td>
+        <td>PMC·KCI 논문 + 학회 발표 자료</td>
+        <td>매장 시술 영상 + 단골 후기</td>
+      </tr>
+      <tr>
+        <td class="brand-label">매드업 운영 권한</td>
+        <td colspan="3" style="text-align:center;color:var(--accent-rose);font-weight:600;">Naver Premier Partner — 베타 기능 우선 적용 + CSM 직접 협의 채널</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>현재 brand.naver.com/yaksonmall</strong>의 3 브랜드 통합 funnel은 유지하되, 카테고리·시즌별 소재 분리 운영으로 페르소나 명확화</li>
+    <li>협력광고는 BS 카테고리 일링과 동시 운영하여 인지·전환을 한 화면에 압축 (브스 협력 + 검색 결합 시 ROAS 평균 +30% 개선 사례 다수)</li>
+    <li class="sub">매장·BS·자사몰 1st-party 데이터는 MILOT으로 통합 관리 → 협력광고 타깃팅·시즌 캠페인 자동 시드</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">28</div>
+</article>
+
+<!-- 4-5 GEO · AI 채널 -->
+<article class="slide" id="s4-5">
+  <div class="page-label">매체 운영 전략 ㅣ GEO · AI 검색</div>
+  <span class="slide-meta">GEO · AI 검색 응답</span>
+  <h2 class="slide-title">GEO — <span class="highlight">ChatGPT·Perplexity AI 검색</span> 응답 노출 영역, 슬로우에이징·임상 콘텐츠로 BEYOND 트랙 신뢰성 강화</h2>
+  <p class="slide-title-sub">2024년부터 AI 검색 비중 빠르게 증가 — 응답에 포함되는 콘텐츠 시드를 미리 확보하는 것이 핵심</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">AI Navigator</span>
+      <h5>GEO 콘텐츠 시드</h5>
+      <p>슬로우에이징·임상·디바이스 카테고리 질의에 대한 AI 응답 시드를 자사 보유 콘텐츠로 점유. PMC·KCI 논문 인용 가능 콘텐츠 우선 발행.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">콘텐츠 포맷</span>
+      <h5>구조화된 인포 콘텐츠</h5>
+      <p>FAQ 형식 · 비교표 · Q&A 구조 = AI가 응답에 인용하기 좋은 포맷. 약손명가 매장·임상·디바이스 정보를 표준화하여 자사몰·블로그·BS에 분산 발행.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">모니터링</span>
+      <h5>응답 점유율 추적</h5>
+      <p>주요 카테고리어 질의에 대한 ChatGPT·Perplexity·Gemini 응답 모니터링. 경쟁사 대비 인용 점유율 데이터 기반 콘텐츠 보강 자동 시드.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>GEO는 BEYOND 트랙(임상·메디컬)에 가장 적합 — 사용자가 "효능 검증·전문 의견"을 요구하는 질의 흐름과 일치</li>
+    <li><strong>AI Navigator</strong>는 매드업 자체 GEO 솔루션 — 질의별 시드 콘텐츠 추천·모니터링·발행 일정 자동화</li>
+    <li class="sub">GEO는 인지·고려 단계 보조 채널로 운영, 전환 직접 기여는 검색·메타·BS 데이터와 합산하여 LEVER Xpert 통합 측정</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">29</div>
+</article>
+
+<!-- 4-6 KOL · 글로벌 -->
+<article class="slide" id="s4-6">
+  <div class="page-label">매체 운영 전략 ㅣ KOL · 글로벌 확장</div>
+  <span class="slide-meta">KOL · 글로벌</span>
+  <h2 class="slide-title">KOL·글로벌 — <span class="highlight">약손명가 글로벌 7개국 IP</span>와 K-뷰티 글로벌 모멘텀을 활용한 점진 확장</h2>
+  <p class="slide-title-sub">국내는 KOL 차등 운영, 글로벌은 영문 키워드·KOL·아마존·쇼피 시드 콘텐츠 단계적 확보</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">KOL · OLLI LIRA</span>
+      <h5>3040 디바이스 리뷰어</h5>
+      <p>유튜브 디바이스 리뷰 KOL · 인스타 뷰티 마이크로 인플루언서. 효능 데이터 + 사용 전후 영상 중심.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">KOL · BEYOND</span>
+      <h5>4050 헬스·전문가 KOL</h5>
+      <p>슬로우에이징·뷰티 헬스 유튜버 + 전문가(피부과·한의사) KOL. 임상 결과 인용 콘텐츠 우선.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">KOL · GOLKI</span>
+      <h5>매장 단골 + 가족 인플루언서</h5>
+      <p>약손명가 매장 단골 마이크로 인플루언서 + 효도 콘셉트 가족 인플루언서. 시즌 캠페인 결합.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>국내 KOL 운영</strong> — 매드업 인플루언서 풀 (1만+) 기반 트랙별 페르소나 매칭, 분기 단위 협업·콘텐츠 발주</li>
+    <li><strong>글로벌 확장 1단계</strong> — 약손명가 글로벌 매장 7개국(베트남·중국·일본 등) 기존 인지 자산 활용한 영문/현지어 키워드 검색 시드</li>
+    <li><strong>글로벌 확장 2단계</strong> — 아마존·쇼피 디바이스 카테고리 진입 + 현지 KOL 1차 협업 (Ch6 Special Offer에서 단계별 일정 제시)</li>
+    <li class="sub">글로벌 확장은 국내 3-Track 안착 후 분기별 점진 진행 — 1차 베트남·일본·태국 우선 검토</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">30</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 05 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch5">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 05</div>
+  <h1><span class="underline">크리에이티브</span> · CRM 전략</h1>
+  <p class="ch-summary">
+    Ch3의 메시지 매트릭스를 실제 소재로 구현합니다. SPRAY AI 기반 소재 자동 생성·테스트, AI 심의봇 사전 점검, MILOT 기반 1st-party 데이터 CRM·재구매 자동화로 운영 효율을 극대화합니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 5-1 소재 매트릭스 -->
+<article class="slide" id="s5-1">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 소재 매트릭스</div>
+  <span class="slide-meta">소재 매트릭스</span>
+  <h2 class="slide-title">3 트랙 × 4 funnel 메시지를 <span class="highlight">소재 매트릭스</span>로 변환 — 매체·채널별 소재 발주 표준화</h2>
+  <p class="slide-title-sub">매트릭스 셀마다 표준 포맷(이미지·영상·인포그래픽·후기 카드) 지정 → 발주·심의·운영 일관성 확보</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:18%;">funnel</th>
+        <th>핵심 포맷</th>
+        <th>OLLI LIRA</th>
+        <th>BEYOND</th>
+        <th>GOLKI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">인지</td>
+        <td>15초 영상 / IG Reels</td>
+        <td>매장→집 효능 비교</td>
+        <td>학회 발표 인용</td>
+        <td>매장 시술 영상</td>
+      </tr>
+      <tr>
+        <td class="brand-label">고려</td>
+        <td>비교 인포그래픽 / Carousel</td>
+        <td>3in1 효능 인포</td>
+        <td>PMC 임상 그래프</td>
+        <td>골기 단계 시술 영상</td>
+      </tr>
+      <tr>
+        <td class="brand-label">전환</td>
+        <td>BS 카드 / 협력광고 이미지</td>
+        <td>풀세트 가격 비교</td>
+        <td>4050 한정 컨설팅</td>
+        <td>효도 시즌 카드</td>
+      </tr>
+      <tr>
+        <td class="brand-label">충성</td>
+        <td>CRM 메시지 / 멤버십 카드</td>
+        <td>앰플 정기 알림</td>
+        <td>전문가 1:1 컨설팅</td>
+        <td>가족 추가 구매 알림</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>SPRAY AI</strong>가 매트릭스 셀별 소재를 자동 생성·테스트 → 일간 단위 회전, 피로도 관리</li>
+    <li>매트릭스는 트랙별 PM이 분기 단위 리뷰, 효율 셀은 강화 / 저효율 셀은 카피·포맷 교체</li>
+    <li class="sub">매트릭스 표준화로 매체사 발주 → 심의 → 운영 사이클 평균 30% 단축</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">31</div>
+</article>
+
+<!-- 5-2 소재 페이즈 -->
+<article class="slide" id="s5-2">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 소재 페이즈 운영</div>
+  <span class="slide-meta">소재 페이즈 운영</span>
+  <h2 class="slide-title">소재 페이즈는 <span class="highlight">Hook → Detail → Trust → Action</span> 4단계로 구성 — 각 페이즈마다 KPI와 운영 주체 분리</h2>
+  <p class="slide-title-sub">단순 광고 소재가 아닌 funnel 단계별 역할이 분명한 4 페이즈 운영 체계</p>
+
+  <div class="flow-row">
+    <div class="flow-box">
+      <div class="flow-label">Phase 01</div>
+      <div class="flow-title">Hook<br><span style="font-size:11px;color:var(--text-sub);font-weight:400;">3초 인지 임팩트</span></div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">
+      <div class="flow-label">Phase 02</div>
+      <div class="flow-title">Detail<br><span style="font-size:11px;color:var(--text-sub);font-weight:400;">효능·스펙 인포그래픽</span></div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">
+      <div class="flow-label">Phase 03</div>
+      <div class="flow-title">Trust<br><span style="font-size:11px;color:var(--text-sub);font-weight:400;">임상·학회·후기 자산</span></div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">
+      <div class="flow-label">Phase 04</div>
+      <div class="flow-title">Action<br><span style="font-size:11px;color:var(--text-sub);font-weight:400;">미끼·시즌 프로모션</span></div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:18%;">Phase</th><th>운영 KPI</th><th>주요 채널</th><th>주요 솔루션</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="brand-label">Hook</td><td>CPM · 조회완료율 · CTR</td><td>메타·인스타·유튜브 Shorts</td><td>SPRAY AI 자동 생성</td></tr>
+      <tr><td class="brand-label">Detail</td><td>CTR · 페이지 체류시간</td><td>메타 Carousel · BS 상세 · GEO 콘텐츠</td><td>AI Navigator (GEO 보강)</td></tr>
+      <tr><td class="brand-label">Trust</td><td>스크롤 · 후기 클릭 · 댓글 반응</td><td>유튜브 KOL · BS 신뢰 콘텐츠</td><td>AI 심의봇 사전 점검</td></tr>
+      <tr><td class="brand-label">Action</td><td>전환율 · ROAS · CAC</td><td>BS 협력광고 · 카카오 선물하기</td><td>LEVER Xpert 자동 입찰</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:11px;color:var(--text-caption);margin:18px 0 0;line-height:1.7;">→ 페이즈별로 KPI·운영 주체·솔루션이 분리되어 책임 영역이 명확하며, 각 페이즈의 효율은 LEVER Xpert에 통합되어 분기 단위로 자동 조정됩니다.</p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">32</div>
+</article>
+
+<!-- 5-3 SPRAY AI 심의 -->
+<article class="slide" id="s5-3">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ SPRAY AI · 심의봇</div>
+  <span class="slide-meta">SPRAY AI · AI 심의봇</span>
+  <h2 class="slide-title">SPRAY AI + AI 심의봇 — <span class="highlight">소재 자동 생성·심의 검토</span> 사이클로 식약처 규제 강화 흐름 즉시 대응</h2>
+  <p class="slide-title-sub">2025년 화장품 광고 행정처분 265건 중 70%가 "선 넘은 광고" 적발, 식약처 AI 모니터링 가동 → 사전 점검 필수</p>
+
+  <div class="concept-row">
+    <div class="concept-card">
+      <span class="concept-tag">SPRAY AI</span>
+      <h5>매트릭스 셀 자동 생성</h5>
+      <p>메시지 매트릭스를 시드로 받아 트랙별 소재(이미지·카피·인포그래픽) 자동 생성. 일간 단위 변형 회전, A/B 테스트 자동 운영.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">AI 심의봇</span>
+      <h5>식약처 규제 사전 점검</h5>
+      <p>화장품 표시·광고 관리 지침(2025.1.21 개정) 기반 자동 점검. 키워드·이미지·문맥 단위로 위반 가능 표현 검출 + 대체 카피 제안.</p>
+    </div>
+    <div class="concept-card">
+      <span class="concept-tag">통합 사이클</span>
+      <h5>생성 → 심의 → 발행</h5>
+      <p>SPRAY AI 생성 → 심의봇 자동 점검 → 검수 통과 자동 발행 → LEVER Xpert 효율 데이터 환원. 평균 발주 사이클 30% 단축.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>BEYOND 트랙</strong>은 임상 데이터 인용이 많아 심의 리스크가 가장 높음 — AI 심의봇 사전 점검이 운영 효율의 핵심</li>
+    <li><strong>GOLKI</strong>는 매장 시술명·후기를 직접 활용하므로 "효능 단정" 표현 사전 점검 필수 (식약처 가이드 준수)</li>
+    <li class="sub">매드업은 SPRAY AI · AI 심의봇 외에도 자체 카피라이팅·디자인 인력 70+ 보유 — 자동화 + 인력 검수 이중 체계</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">33</div>
+</article>
+
+<!-- 5-4 CRM · 재구매 -->
+<article class="slide" id="s5-4">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ CRM · 재구매</div>
+  <span class="slide-meta">CRM · 재구매 자동화</span>
+  <h2 class="slide-title">MILOT 기반 <span class="highlight">1st-party 데이터 CRM</span> — 디바이스 재구매·앰플 정기·매장 OMO funnel 자동화</h2>
+  <p class="slide-title-sub">디바이스는 1회 구매 후 재구매 주기가 길어 1st-party 데이터 · CRM 자동화가 LTV의 핵심</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:20%;">CRM 시나리오</th><th>트리거</th><th>채널</th><th style="width:24%;">목표</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="brand-label">디바이스 첫 구매</td><td>구매 후 14일</td><td>카카오·이메일</td><td>사용 가이드 + 후기 유도</td></tr>
+      <tr><td class="brand-label">앰플 정기</td><td>디바이스 구매 후 30일</td><td>카카오·SMS</td><td>전용 앰플 정기 구독</td></tr>
+      <tr><td class="brand-label">매장 OMO</td><td>구매 후 60일</td><td>카카오·매장 QR</td><td>약손명가 매장 시술 OMO 멤버십</td></tr>
+      <tr><td class="brand-label">시즌·선물 (GOLKI)</td><td>어버이날·추석·설날 D-30</td><td>카카오 선물하기</td><td>가족 구성원 선물 구매</td></tr>
+      <tr><td class="brand-label">전문가 컨설팅 (BEYOND)</td><td>구매 후 90일</td><td>전화·온라인</td><td>4050 1:1 컨설팅 멤버십</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>MILOT</strong>은 매드업 자체 1st-party 데이터 솔루션 — 자사몰·BS·매장·이메일·카카오를 통합 관리, CRM 시나리오 자동 트리거</li>
+    <li>디바이스는 구매 주기가 길어 <strong>앰플 정기 + 매장 OMO</strong>가 LTV의 핵심 — GOLKI는 가족 단위 구매 모멘텀까지 결합 가능</li>
+    <li class="sub">CRM 시나리오는 분기 단위 효율 리뷰, 트리거·메시지·채널 자동 최적화</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">34</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 06 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch6">
+  <div class="bg-pattern-noise"></div>
+  <div class="ch-num">Chapter 06</div>
+  <h1><span class="underline">매드업 솔루션</span> 및 운영 인력</h1>
+  <p class="ch-summary">
+    Ch3·4·5에서 제안한 3-Track 운영을 가능하게 하는 매드업 시그니처 솔루션 4종(LEVER Xpert·MILOT·AI Navigator·SPRAY AI)과 운영 조직, Special Offer, 일정 로드맵을 종합 정리합니다.
+  </p>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- 6-1 시그니처 솔루션 -->
+<article class="slide" id="s6-1">
+  <div class="page-label">매드업 솔루션 및 운영 인력 ㅣ 시그니처 솔루션</div>
+  <span class="slide-meta">시그니처 솔루션</span>
+  <h2 class="slide-title">매드업 4 솔루션이 <span class="highlight">3-Track 운영 전 사이클</span>을 커버 — 검색·CRM·GEO·소재 자동화</h2>
+  <p class="slide-title-sub">매드업 솔루션 사업부문(테크 50+ · 크리에이티브 70+)이 자체 개발·운영하는 시그니처 솔루션 라인업</p>
+
+  <div class="solution-row">
+    <div class="solution-card">
+      <span class="sol-tag">검색 · 매체</span>
+      <h5>LEVER Xpert</h5>
+      <p>키워드 입찰가 자동 최적화 · 카테고리어 신규 진입 키워드 발굴 · 매체별 ROAS 통합 모니터링 + 분기 자동 비중 조정.</p>
+    </div>
+    <div class="solution-card">
+      <span class="sol-tag">CRM · 1st-party</span>
+      <h5>MILOT</h5>
+      <p>자사몰·BS·매장·이메일·카카오 통합 데이터 · CRM 시나리오 자동 트리거 · 앰플 정기·매장 OMO·재구매 funnel 자동화.</p>
+    </div>
+    <div class="solution-card">
+      <span class="sol-tag">GEO · AI 검색</span>
+      <h5>AI Navigator</h5>
+      <p>ChatGPT·Perplexity·Gemini 응답 모니터링 · 카테고리어 시드 콘텐츠 추천 · 인용 점유율 추적 + 콘텐츠 보강 자동 시드.</p>
+    </div>
+    <div class="solution-card">
+      <span class="sol-tag">소재 자동화</span>
+      <h5>SPRAY AI + AI 심의봇</h5>
+      <p>메시지 매트릭스 기반 소재 자동 생성 · 식약처 규제 사전 점검 · 일간 단위 변형 회전 · 효율 데이터 자동 환원.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>4 솔루션은 매드업 내부 LEVER Xpert 콘솔에서 통합 모니터링 — 광고주 측 1개 대시보드로 3-Track 전체 운영 가시화</li>
+    <li>솔루션 사용 추가 비용 0 — 매드업 운영 수수료 안에 포함</li>
+    <li class="sub">광고주 자체 시스템(자사몰 ERP·SAP·매장 POS)과의 연동은 NDA 체결 후 Ch6 Special Offer 단계에서 별도 협의</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">35</div>
+</article>
+
+<!-- 6-2 운영 인력 -->
+<article class="slide" id="s6-2">
+  <div class="page-label">매드업 솔루션 및 운영 인력 ㅣ 조직 · 인력</div>
+  <span class="slide-meta">조직 · 인력 R&R</span>
+  <h2 class="slide-title">3-Track 분업 구조에 맞춘 <span class="highlight">전담 조직</span> — 트랙별 PM + 매체·크리에이티브·CRM 전담 인력 배치</h2>
+  <p class="slide-title-sub">매드업 마케팅 사업부문(300+) 중 약손명가헬스케어 전담 인력 R&R 구성</p>
+
+  <div class="org-row">
+    <div class="org-card">
+      <div class="org-role">Account Director</div>
+      <div class="org-name">총괄 1인</div>
+      <p class="org-task">전략·KPI·광고주 커뮤니케이션 총괄</p>
+    </div>
+    <div class="org-card">
+      <div class="org-role">Track PM × 3</div>
+      <div class="org-name">트랙별 PM 3인</div>
+      <p class="org-task">OLLI LIRA / BEYOND / GOLKI 트랙별 운영 책임</p>
+    </div>
+    <div class="org-card">
+      <div class="org-role">매체 운영</div>
+      <div class="org-name">검색·메타·구글 4인</div>
+      <p class="org-task">LEVER Xpert 활용 매체별 효율 운영</p>
+    </div>
+    <div class="org-card">
+      <div class="org-role">크리에이티브</div>
+      <div class="org-name">디자이너·카피 3인</div>
+      <p class="org-task">SPRAY AI + 인력 이중 소재 운영</p>
+    </div>
+    <div class="org-card">
+      <div class="org-role">CRM · 데이터</div>
+      <div class="org-name">분석가 2인</div>
+      <p class="org-task">MILOT CRM 시나리오 설계·운영</p>
+    </div>
+    <div class="org-card">
+      <div class="org-role">GEO · 콘텐츠</div>
+      <div class="org-name">콘텐츠 1인</div>
+      <p class="org-task">AI Navigator GEO 시드 운영</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>전담 14인 구조</strong> — 트랙별 분업 + 솔루션·CRM·GEO 전문 인력으로 광고주 전담 케어</li>
+    <li>매드업 본사 조직(테크·크리에이티브·법무·인사이트)의 지원이 필요한 경우 추가 비용 없이 활용</li>
+    <li class="sub">광고주 측 담당자와의 협업 채널은 슬랙·노션 통합 운영, 주간 정기 미팅 + 월간 리뷰 운영</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">36</div>
+</article>
+
+<!-- 6-3 Special Offer -->
+<article class="slide" id="s6-3">
+  <div class="page-label">매드업 솔루션 및 운영 인력 ㅣ Special Offer</div>
+  <span class="slide-meta">Special Offer</span>
+  <h2 class="slide-title">약손명가헬스케어 전용 <span class="highlight">Special Offer 3종</span> — 온보딩 기간 시그니처 솔루션 무상 + 글로벌 1차 검토 무상</h2>
+
+  <div class="offer-card">
+    <div class="offer-tag">Offer 01 · 온보딩 솔루션 무상</div>
+    <h4>LEVER Xpert · MILOT · AI Navigator · SPRAY AI — 첫 3개월 무상 도입</h4>
+    <ul>
+      <li>4종 시그니처 솔루션 도입·연동·운영 비용 <strong>3개월간 0원</strong></li>
+      <li>광고주 측 데이터 연동(자사몰·BS·매장 POS) 매드업 기술팀 직접 지원</li>
+      <li>3-Track 운영 초기 안정화 기간을 보장하는 무상 온보딩</li>
+    </ul>
+  </div>
+
+  <div class="offer-card">
+    <div class="offer-tag">Offer 02 · 글로벌 1차 검토 무상</div>
+    <h4>K-뷰티 글로벌 확장 1차 시장 검토 (베트남·일본·태국) 무상 리포트</h4>
+    <ul>
+      <li>약손명가 글로벌 매장 7개국 기존 자산 기반 <strong>1차 시장 점유율·경쟁사·키워드 검토 리포트</strong></li>
+      <li>아마존·쇼피 디바이스 카테고리 진입 가능성 분석 + 현지 KOL 풀 검토</li>
+      <li>국내 3-Track 안착 후 글로벌 2단계 운영 의사결정 자료로 활용</li>
+    </ul>
+  </div>
+
+  <div class="offer-card">
+    <div class="offer-tag">Offer 03 · GEO 시드 콘텐츠 30종</div>
+    <h4>BEYOND 트랙 GEO 시드 콘텐츠 30종 매드업 자체 제작·발행</h4>
+    <ul>
+      <li>슬로우에이징·임상·디바이스 카테고리 질의에 대한 <strong>AI 응답 시드 콘텐츠 30종</strong> 자체 제작</li>
+      <li>FAQ·비교표·Q&A 구조 표준 포맷 + 약손명가 매장·임상·디바이스 정보 기반</li>
+      <li>AI Navigator로 응답 점유율 모니터링 + 분기 단위 보강 자동화</li>
+    </ul>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);margin:18px 0 0;letter-spacing:0.02em;">* Special Offer 3종은 약손명가헬스케어 전용 조건이며, 본 제안서 채택 이후 6개월 내 운영 개시 기준입니다.</p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">37</div>
+</article>
+
+<!-- 6-4 일정 -->
+<article class="slide" id="s6-4">
+  <div class="page-label">매드업 솔루션 및 운영 인력 ㅣ 일정 로드맵</div>
+  <span class="slide-meta">일정 로드맵</span>
+  <h2 class="slide-title"><span class="highlight">12주 온보딩 + 분기 단위 운영</span> — 안착 우선, 글로벌은 분기별 점진 진행</h2>
+  <p class="slide-title-sub">계약 직후 4주 온보딩 → 8주 안정화 → 분기 단위 운영 사이클</p>
+
+  <!-- 가로형 stepper: 5 단계 한눈에 -->
+  <div class="stepper">
+    <div class="step-card active">
+      <div class="step-marker">01</div>
+      <div class="step-week">Week 01 · 04</div>
+      <h6>온보딩 · 데이터 연동</h6>
+      <p>자사몰·BS·매장 POS 1st-party 연동, LEVER Xpert·MILOT 셋업, 3-Track 가이드 1차 확정</p>
+    </div>
+    <div class="step-card">
+      <div class="step-marker">02</div>
+      <div class="step-week">Week 05 · 12</div>
+      <h6>3-Track 안정화</h6>
+      <p>매체 운영 본격화, SPRAY AI 매트릭스 가동, AI 심의봇 검수 사이클 정착, 주간 리포트 정기화</p>
+    </div>
+    <div class="step-card">
+      <div class="step-marker">03</div>
+      <div class="step-week">Q1 후반</div>
+      <h6>1차 효율 리뷰</h6>
+      <p>LEVER Xpert 통합 효율 분석, 트랙별 매체·소재·CRM 리뷰, 분기 비중 자동 조정</p>
+    </div>
+    <div class="step-card">
+      <div class="step-marker">04</div>
+      <div class="step-week">Q2 전반</div>
+      <h6>글로벌 1차 검토</h6>
+      <p>베트남·일본·태국 시장 리포트, 아마존·쇼피 진입 가능성, 현지 KOL 풀 검토</p>
+    </div>
+    <div class="step-card">
+      <div class="step-marker">05</div>
+      <div class="step-week">Q2 후반</div>
+      <h6>글로벌 2단계 시작</h6>
+      <p>해외 1차 시장 매체 진입, 약손명가 글로벌 자산 활용, 추석 시즌 한·해외 동시 운영</p>
+    </div>
+  </div>
+
+  <!-- 추가 운영 사이클 시각화 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 8px;">
+    <div style="background:var(--bg-card-soft);border:1px solid var(--border-soft);border-left:2px solid var(--accent-rose);border-radius:8px;padding:16px 18px;">
+      <div style="font-size:10px;color:var(--accent-rose);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;">정기 운영 사이클</div>
+      <h6 style="margin:0 0 6px;font-size:13.5px;color:var(--text-main);font-weight:700;">주간 리포트 · 월간 리뷰 · 분기 전략</h6>
+      <p style="margin:0;font-size:12px;color:var(--text-sub);line-height:1.6;">매주 매체별 ROAS · 트랙별 효율 / 월간 광고주 정기 미팅 / 분기 매체 비중·예산 재조정</p>
+    </div>
+    <div style="background:var(--bg-card-soft);border:1px solid var(--border-soft);border-left:2px solid var(--accent-beige);border-radius:8px;padding:16px 18px;">
+      <div style="font-size:10px;color:var(--accent-beige);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;">시즌 캠페인</div>
+      <h6 style="margin:0 0 6px;font-size:13.5px;color:var(--text-main);font-weight:700;">어버이날·가정의달·추석·설날</h6>
+      <p style="margin:0;font-size:12px;color:var(--text-sub);line-height:1.6;">GOLKI 효도 시즌 집중 D-30 운영 / 카카오 선물하기 · GFA 시즌 패키지</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>매드업은 약손명가헬스케어의 2026년 핵심 모멘텀을 <strong>3-Track 차등 포지셔닝</strong>으로 함께 만들어갑니다</li>
+    <li class="sub">본 제안의 매체 비중·예산·구체 KPI는 광고주 측 NDA 자료 수령 후 별도 디테일 안으로 즉시 회신 가능</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">38</div>
+</article>
+
+<!-- ============================================ -->
+<!-- Closing -->
+<!-- ============================================ -->
+<section class="cover" id="closing" style="min-height:60vh;">
+  <div class="bg-cover-art"></div>
+  <div class="bg-pattern-noise"></div>
+  <div class="year">Thank You</div>
+  <h1>
+    <span class="brand-en" style="font-size:48px;">YAKSON × MADUP</span>
+    <span style="font-size:32px;font-weight:600;">2026 디지털 마케팅 동행</span>
+  </h1>
+  <p class="thesis-line"><strong>3 브랜드 차등 포지셔닝</strong>으로 카테고리 검색 전환·슬로우에이징·K-뷰티 글로벌 모멘텀을 함께 선점하겠습니다.</p>
+  <footer>
+    <span>Copyright © 2026 MADUP, All rights reserved</span>
+    <span>Tel. 02-1522-1060 | 서울특별시 서초구 서초대로 74길 4 삼성생명서초타워 20층</span>
+  </footer>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+</main>
+</div>
+
+<script>
+  const sections = document.querySelectorAll('article[id], section[id]');
+  const links = document.querySelectorAll('.index-nav a[href^="#"]');
+  const linkMap = {};
+  links.forEach(a => linkMap[a.getAttribute('href').slice(1)] = a);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        if (linkMap[id]) {
+          links.forEach(a => a.classList.remove('active'));
+          linkMap[id].classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-30% 0px -65% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
