@@ -935,15 +935,18 @@
   /* position-map us 포인트 텍스트 화이트 */
   .slide .pm-point.us { color: #ffffff; }
 </style>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
 <header class="topbar">
-  <a href="../factbook-app/" class="action-btn">← 팩트북</a>
+  <a href="https://ddolovely0919-ai.github.io/madup2525/index.html" class="action-btn">← 팩트북</a>
   <span class="title">OLLI LIRA × MADUP 2026</span>
   <span class="pill">v2.0 · 1.5 페르소나 정합</span>
   <span class="pill">Pro 신제품 전략</span>
   <div class="actions">
+    <button id="btn-export-pptx" class="action-btn" title="제안서 전체를 PowerPoint(.pptx)로 다운로드">⬇ PPT 다운로드</button>
     <button onclick="window.print()" class="action-btn">🖨 인쇄</button>
   </div>
 </header>
@@ -1023,8 +1026,8 @@
     </ul>
   </nav>
   <p style="font-size:10px;color:var(--text-caption);padding:10px;margin-top:20px;letter-spacing:0.05em;">
-    📊 <a href="../factbook-app/viewer.html?c=yakson" target="_blank">팩트북 99 슬라이드</a><br>
-    🌐 <a href="https://ddolovely0919-ai.github.io/madup2525/" target="_blank">대시보드</a>
+    📊 <a href="https://ddolovely0919-ai.github.io/madup2525/viewer.html?c=yakson" target="_blank">팩트북 99 슬라이드</a><br>
+    🌐 <a href="https://ddolovely0919-ai.github.io/madup2525/index.html" target="_blank">대시보드</a>
   </p>
 </aside>
 
@@ -3003,6 +3006,88 @@
     });
   }, { rootMargin: '-30% 0px -65% 0px' });
   sections.forEach(s => observer.observe(s));
+
+  // ============================================================
+  // PPT 다운로드 — html2canvas(섹션 캡처) → PptxGenJS(16:9 슬라이드)
+  // 다크 간지 / 화이트 콘텐츠 디자인을 그대로 이미지로 보존
+  // ============================================================
+  const exportBtn = document.getElementById('btn-export-pptx');
+  exportBtn.addEventListener('click', exportProposalPPTX);
+
+  function sectionBg(el) {
+    // 다크 페이지: cover / thesis-section / chapter / #closing
+    if (el.classList.contains('cover') || el.classList.contains('thesis-section')
+        || el.classList.contains('chapter') || el.id === 'closing') return '050505';
+    return 'FFFFFF'; // 화이트 콘텐츠 (slide / toc)
+  }
+
+  async function exportProposalPPTX() {
+    if (typeof PptxGenJS === 'undefined' || typeof html2canvas === 'undefined') {
+      alert('라이브러리 로드 중입니다. 잠시 후 다시 시도해주세요.');
+      return;
+    }
+    const btn = exportBtn;
+    const original = btn.textContent;
+    btn.disabled = true;
+
+    // 캡처 대상: main 안의 모든 섹션·아티클 (문서 순서)
+    const targets = Array.from(document.querySelectorAll('.main > section, .main > article'));
+    const pptx = new PptxGenJS();
+    pptx.defineLayout({ name: 'A4LAND', width: 11.69, height: 8.27 });
+    pptx.layout = 'LAYOUT_WIDE'; // 13.333 x 7.5
+    pptx.title = 'OLLI LIRA × MADUP 2026 디지털 마케팅 제안';
+    pptx.author = 'MADUP';
+    pptx.company = 'MADUP';
+
+    const SLIDE_W = 13.333, SLIDE_H = 7.5;
+    const MARGIN = 0.25;
+
+    try {
+      for (let i = 0; i < targets.length; i++) {
+        const el = targets[i];
+        btn.textContent = `⏳ PPT 생성 ${i + 1}/${targets.length}`;
+
+        const bg = sectionBg(el);
+        const canvas = await html2canvas(el, {
+          scale: 1.6,
+          backgroundColor: '#' + bg,
+          useCORS: true,
+          logging: false,
+          windowWidth: el.scrollWidth,
+        });
+        const imgData = canvas.toDataURL('image/jpeg', 0.92);
+
+        const slide = pptx.addSlide();
+        slide.background = { color: bg };
+
+        // 이미지 비율 유지하며 슬라이드 안에 contain 배치 (중앙)
+        const imgAspect = canvas.width / canvas.height;
+        const areaW = SLIDE_W - MARGIN * 2;
+        const areaH = SLIDE_H - MARGIN * 2;
+        const areaAspect = areaW / areaH;
+        let w, h;
+        if (imgAspect > areaAspect) { w = areaW; h = w / imgAspect; }
+        else { h = areaH; w = h * imgAspect; }
+        const x = (SLIDE_W - w) / 2;
+        const y = (SLIDE_H - h) / 2;
+        slide.addImage({ data: imgData, x, y, w, h });
+
+        // 메모리 해제 여유
+        await new Promise(r => setTimeout(r, 30));
+      }
+
+      const today = new Date().toISOString().slice(0, 10);
+      btn.textContent = '⏳ 파일 저장 중...';
+      await pptx.writeFile({ fileName: `OLLI_LIRA_MADUP_제안서_${today}.pptx` });
+      btn.textContent = '✓ 다운로드 완료';
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2500);
+    } catch (err) {
+      console.error('PPT 생성 실패:', err);
+      alert('PPT 생성 실패: ' + err.message);
+      btn.textContent = original;
+      btn.disabled = false;
+    }
+  }
 </script>
 
 </body>
