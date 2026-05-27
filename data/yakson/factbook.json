@@ -12,7 +12,7 @@
     "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강"
   },
   "stats": {
-    "auto": 80,
+    "auto": 82,
     "progress": 1,
     "client": 5,
     "madup": 8
@@ -134,64 +134,58 @@
     {
       "id": "thesis",
       "chapter": "sec-intro",
-      "meta": "🎯 비딩 핵심 명제 (THESIS)",
+      "meta": "🎯 비딩 핵심 명제 (THESIS) — 2026-05-27 광고주 IP 축소 결정 반영",
       "status": "auto",
       "intro": true,
-      "title": "약손명가 IP는 무기지만, <span class=\"highlight\">쥐는 법이 승패를 결정한다</span> — 매드업의 제안: \"IP를 빼지 마세요. <span class=\"highlight\">쓰는 법을 바꾸세요</span>\"",
+      "title": "광고주 결정 = <span class=\"highlight\">약손명가 IP 축소 + OLLI LIRA·GOLKI 독립 브랜딩</span> — 매드업의 제안: \"<span class=\"highlight\">IP를 빼지 말고, 단계적으로 이양하라</span>\" / 46년 임상 자산을 추상화 형태로만 보존, 브랜드 독립성은 즉시 확보",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>광고주 미팅록의 핵심 고민</strong>: <em>\"약손명가의 OOO로 인식, IP를 이제는 빼야할 시점\"</em> → 매드업 답: <strong>IP의 문제가 아니라 사용법의 문제</strong>"
+          "html": "ㄴ <strong>광고주 확정 결정 (PDF 2026-05-26 공유 자료 p.5)</strong>: <em>\"약손명가 IP 중심의 매출 확대 전략 운영해왔으나, <strong>약손명가 IP 축소 운영 예정</strong>으로 약손PB 제품 외 OLLI LIRA·GOLKI의 브랜딩 필요\"</em>"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>① IP는 여전히 유효 (검증된 성공 패턴)</strong>: 메디큐브(점유율 32% 1위)·클래시스(슈링크홈)·동국제약(위드닉스) 모두 \"전문가 IP → 가정용 디바이스\" 패턴으로 1위 → <strong>한국 디바이스 시장 성공률 1, 2위 진입 패턴</strong>"
+          "html": "ㄴ <strong>매드업 진단 — 축소는 옳은 결정이나 \"폐기\"는 위험</strong>: 닥터자르트 케이스 (정점 6,326억 → 1/3 추락) = 모기업 IP 과의존 / 동국제약 마데카 = IP 자산 \"추상화 유지\"로 헬스케어 3,164억 견인 → <span class=\"highlight\">IP를 빼는 게 아니라 \"이양\"하는 것이 정답</span>"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>② 인디 난립 속 차별화 자산</strong>: 인디 브랜드 38% 견인 시대(베인), 약손명가 = 46년·130매장·7년 연속 브랜드파워 대상 = <strong>인디가 절대 못 가지는 IP</strong>"
-        },
-        {
-          "type": "indent-1",
-          "html": "ㄴ <strong>③ 시장 정합성</strong>: 시술기·디바이스·메디컬 에스테틱 동반 폭증 → \"에스테틱 출신\" = 카니발 아닌 시너지 카테고리"
+          "html": "ㄴ <strong>핵심 자산 보존 영역 (축소해도 안 되는 것)</strong>: 46년 임상 노하우·골기테라피 1979년 헤리티지·전문가 권위 = 신생 인디가 절대 못 가지는 차별화 → 추상화 형태로만 유지"
         },
         {
           "type": "indent-2",
-          "html": "ㄴㄴ <strong>경고 — 닥터자르트 케이스</strong>: 정점 6,326억 → 1/3 추락(2,329억) + 영업적자 / 원인 = 오너 IP 의존 + 메가브랜드 그늘 + 카테고리 확장 실패 / <strong>광고주에 동일 위험 시그널 발현 중 🚨</strong>"
+          "html": "ㄴㄴ <strong>축소·이양해야 하는 것</strong>: 브랜드명 직접 노출(\"약손명가의 OOO\") · 본가 매장 IP 활용 funnel · 약손명가 시술 직접 인증 표현"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>매드업 4대 IP 사용 전략</strong>: ① <span class=\"highlight\">추상화</span> (\"46년 에스테틱 노하우 계승\") ② <span class=\"highlight\">라인별 차등</span> (디바이스 분리·PB·골기 유지) ③ <span class=\"highlight\">워딩 격상</span> (\"메디컬 에스테틱\") ④ <span class=\"highlight\">시술 격상</span> (\"병원 시술 사이 매일 케어\")"
+          "html": "▶ <strong>매드업 4대 IP 축소·이양 가이드</strong>: ① <span class=\"highlight\">단계적 이양 (2026 12개월 로드맵)</span> ② <span class=\"highlight\">라인별 차등 가속</span> (OLLI/GOLKI 즉시 분리, PB만 약손명가 IP 유지) ③ <span class=\"highlight\">추상 자산 보존</span> (\"46년 에스테틱 노하우\" 추상화 유지) ④ <span class=\"highlight\">독립 페르소나 신설</span> (OLLI = 디바이스+홈케어·오프라인 전개 / GOLKI = 마사지·괄사 헤리티지)"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>비딩 전체 스토리라인</strong>: \"광고주의 IP 딜레마 진단 → 매드업 4대 원칙 제안 → 채널·크리에이티브·CRM 실행안 → KPI(BS ROAS 500%/카플친 +200%) 달성 경로\" 5단 서사"
+          "html": "▶ <strong>비딩 전체 스토리라인 (5단 서사)</strong>: \"광고주의 IP 축소 결정 진단 → 매드업 4대 이양 가이드 → 신제품 5종·OLLI 오프라인 전개 실행안 → 채널·크리에이티브·CRM 실행 (6월 BS 중심 전환) → KPI 달성 경로\""
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>정량 근거 지도</strong>: 본 명제는 Ch1(s1-22 검증 공식·s1-23 4원칙) + Ch2(s2-1a IP 4채널 매트릭스·s2-1b 어필 효과 검증) + 챕터별 summary 6장에서 정량적으로 입증"
+          "html": "▶ <strong>정량 근거 지도</strong>: 본 명제는 Ch1(s1-22 검증 공식·s1-23 4원칙) + Ch2(s2-1a IP 4채널 매트릭스·s2-1b 어필 효과 검증) + s4-9 광고 카피 5종에서 정량적으로 입증"
         }
       ],
       "sources": [
-        { "label": "광고주 RFP·미팅록 (2026-04)", "url": "" },
+        { "label": "광고주 PDF 공유 자료 (2026-05-26) p.5 IP 축소 결정", "url": "" },
         { "label": "Economy Chosun: 닥터자르트 부진 분석", "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html" },
-        { "label": "메디큐브 공식: 에이지알 에스테틱 전문기술", "url": "https://themedicube.co.kr/age-r/main2.html" },
-        { "label": "팜이데일리: 동국제약 마데카·위드닉스", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" },
-        { "label": "메디포뉴스: 클래시스 슈링크홈 1주 완판", "url": "https://www.medifonews.com/news/article.html?no=209637" }
+        { "label": "팜이데일리: 동국제약 마데카·위드닉스", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" }
       ],
       "chart": {
         "type": "compare",
-        "title": "🔑 매드업 4대 IP 사용 원칙 — \"빼는 게 아니라 쓰는 법을 바꾼다\"",
+        "title": "🔑 매드업 4대 IP 축소·이양 가이드 (광고주 결정 정합)",
         "items": [
-          { "label": "원칙 ① 추상화", "value": "46년 에스테틱 노하우 계승", "sub": "❌ \"약손명가가 만든\" → ✅ \"클리닉의 손길을 5분만에\"", "tone": "highlight" },
-          { "label": "원칙 ② 라인별 차등", "value": "디바이스 분리 / PB·골기 유지", "sub": "올리리라(부분 분리) · 약손명가 PB(유지) · 골기(유지)", "tone": "primary" },
-          { "label": "원칙 ③ 워딩 격상", "value": "메디컬 에스테틱·임상", "sub": "❌ \"에스테틱\" → ✅ \"메디컬 에스테틱·46년 임상\" (메디큐브 \"메디\" 원리)", "tone": "accent" },
-          { "label": "원칙 ④ 시술 관계 격상", "value": "병원 시술 사이 매일 케어", "sub": "❌ \"병원 대신 집에서\" (격하) → ✅ \"시술 효과 유지·증폭\" (격상)", "tone": "success" }
+          { "label": "원칙 ① 단계적 이양", "value": "2026 12개월 로드맵", "sub": "Q1: OLLI·GOLKI 자체 브랜드 헤드라인 확립 / Q2: 약손명가 IP 노출 50% 감소 / Q3-Q4: 추상화 표현만 유지 (\"46년 노하우\")", "tone": "highlight" },
+          { "label": "원칙 ② 라인별 차등 가속", "value": "OLLI/GOLKI 즉시 분리 · PB 유지", "sub": "OLLI LIRA = 디바이스+홈케어 독립 / GOLKI = 마사지·괄사 헤리티지 독립 / 약손PB만 약손명가 IP 유지 (소비자 신뢰 자산)", "tone": "primary" },
+          { "label": "원칙 ③ 추상 자산 보존", "value": "임상·헤리티지·전문가 권위", "sub": "❌ \"약손명가가 만든\" 직접 인용 → ✅ \"46년 에스테틱 임상\" / \"국내 NO.1 에스테틱 노하우\" / \"47년 테라피 헤리티지\" (PDF p.7 직접 표현)", "tone": "accent" },
+          { "label": "원칙 ④ 독립 페르소나 신설", "value": "OLLI = 라이프스타일 / GOLKI = 셀프케어 의식", "sub": "OLLI LIRA = \"전문가급 리프팅 리추얼\" + 오프라인 전개 / GOLKI = \"장인의 골기테라피 헤리티지\" 셀프 의식 (PDF p.3 직접 톤)", "tone": "success" }
         ],
-        "footnote": "* 본 4대 원칙은 매드업 비딩 전체 메시지의 마스터 프레임 — 모든 광고 카피·소재·랜딩이 이 4축 안에서 운영"
+        "footnote": "* 본 4대 가이드는 광고주 2026-05-26 IP 축소 결정에 정합 — 모든 광고 카피·소재·랜딩이 이 4축 안에서 운영"
       },
-      "sourceNote": "* 출처: 광고주 RFP·미팅록 + 시장 벤치마크 (s1-22 / s1-23 / s2-1a / s2-1b 정량 근거)",
-      "body": "<table>\n      <thead><tr><th>비딩 단계</th><th>약손명가 IP의 역할</th><th>매드업 적용</th></tr></thead>\n      <tbody>\n        <tr><td>① 진단 (Ch1·Ch2)</td><td>\"빼야할 시점\" 광고주 위기감 = 닥터자르트 패턴 위험 시그널</td><td>IP 어필 5대 잇점 정량 검증 → 2/5만 성공</td></tr>\n        <tr><td>② 명제 (현재 슬라이드)</td><td>IP 유효성 3대 근거 + 4대 사용 원칙</td><td>\"빼지 마세요, 쓰는 법을 바꾸세요\"</td></tr>\n        <tr><td>③ 실행 (Ch3·Ch4·Ch5)</td><td>4대 원칙이 매체·소재·CRM·채널에 일관 적용</td><td>ADVoost · 메타 협력광고 · 카플친 · AI 심의봇</td></tr>\n        <tr><td>④ 입증 (Ch6·Appendix)</td><td>리스닝마인드 클러스터·MAU·매드업 사례로 정량 입증</td><td>RFP 7과업 풀 커버리지 + KPI 달성 경로</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑤ 결론 (PT 클로징)</strong></td><td><strong>약손명가 IP × 매드업 4대 원칙 = 인디 디바이스 시장의 진정한 차별화</strong></td><td><strong>\"이거 매드업이 제일 잘하는 것\" 5포인트</strong></td></tr>\n      </tbody>\n    </table>"
+      "sourceNote": "* 출처: 광고주 PDF 2026-05-26 공유 자료 + 벤치마크 (닥터자르트/동국제약) + s1-22/s1-23/s4-9 정량 근거",
+      "body": "<table>\n      <thead><tr><th>비딩 단계</th><th>약손명가 IP 처리</th><th>매드업 적용</th></tr></thead>\n      <tbody>\n        <tr><td>① 진단 (Ch1·Ch2)</td><td>광고주 IP 축소 결정 확인 / 닥터자르트 vs 동국제약 벤치마크</td><td>IP 어필 5대 잇점 검증 → 2/5만 성공 (s2-1b)</td></tr>\n        <tr><td>② 명제 (현재 슬라이드)</td><td>IP \"폐기\"가 아닌 \"단계적 이양\" 권유</td><td>4대 축소·이양 가이드</td></tr>\n        <tr><td>③ 실행 (Ch3·Ch4·Ch5)</td><td>OLLI/GOLKI 독립 헤드라인 / PB만 IP 유지</td><td>ADVoost · 카플친 · 광고 카피 5종 (s4-9)</td></tr>\n        <tr><td>④ 입증 (Ch6·Appendix)</td><td>리스닝마인드 클러스터·MAU로 이양 효과 측정</td><td>RFP 7과업 풀 커버리지 + 6월 BS 전환 정합</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑤ 결론 (PT 클로징)</strong></td><td><strong>광고주 IP 축소 의지 × 매드업 4대 이양 가이드 = 안전한 브랜드 독립 + 임상 자산 보존</strong></td><td><strong>\"이거 매드업이 제일 잘하는 것\" 5포인트 (IP 전환 + 신제품 5종 + OLLI 오프라인 + 6월 BS 전환 + CRM 리텐션)</strong></td></tr>\n      </tbody>\n    </table>"
     },
     {
       "id": "s1-1",
@@ -2284,47 +2278,55 @@
     {
       "id": "s1-23",
       "chapter": "ch1",
-      "meta": "포지셔닝 · 4대 IP 전략",
+      "meta": "포지셔닝 · 4대 IP 축소·이양 가이드 (광고주 결정 정합)",
       "status": "auto",
       "intro": false,
-      "title": "단, <span class=\"highlight\">닥터자르트 케이스</span>는 경계 — 정점 후 매출 1/3 추락 / 약손명가헬스케어 4대 IP 전략 원칙",
+      "title": "광고주 IP 축소 결정에 정합한 <span class=\"highlight\">4대 이양 가이드</span> — 닥터자르트 폐기 함정 + 동국제약 추상화 성공 양극단의 안전 경로",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>닥터자르트 경계 케이스</strong>: 2015년 863억 → 2019년 6,326억 (7배 성장) → <strong>2023년 2,329억 (1/3로 감소)</strong>, 영업이익 적자 전환"
+          "html": "ㄴ <strong>광고주 결정 (PDF 2026-05-26 p.5)</strong>: \"약손명가 IP 축소 운영 예정으로 약손PB 외 OLLI LIRA / GOLKI의 브랜딩 필요\" — <strong>IP 폐기가 아닌 축소·이양</strong>"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 실패 원인: ① 오너 IP 의존 한계 ② 메가브랜드(에스티로더) 그늘 ③ 카테고리 확장 실패"
+          "html": "ㄴ <strong>경계 — 닥터자르트 \"급격한 분리\" 함정</strong>: 2015년 863억 → 2019년 6,326억(7배) → <strong>2023년 2,329억(1/3 추락)</strong> + 영업적자 / 원인 = 모기업(에스티로더) 그늘 + 카테고리 확장 실패 + 오너 IP 의존"
         },
         {
-          "type": "indent-2",
-          "html": "ㄴㄴ <strong>약손명가헬스케어 위험 시그널</strong>: 미팅록 \"개별 브랜드 인지 좋지 않음, 약손명가의 OOO로 인식\" = 정확히 동일 위험"
-        },
-        {
-          "type": "arrow",
-          "html": "▶ <strong>원칙 ①</strong>: \"약손명가 직접 인용\" 대신 <span class=\"highlight\">\"46년 에스테틱 노하우 계승\" / \"클리닉의 손길을 5분만에\"</span> 추상화 — 본가 OOO 인식 회피"
+          "type": "indent-1",
+          "html": "ㄴ <strong>벤치마크 — 동국제약 \"추상화 유지\" 성공</strong>: 마데카 약 IP를 위드닉스 디바이스로 이양 / 25년 매출 9,269억(+14%) / 헬스케어 부문 3,164억 / <strong>약손명가헬스케어의 정확한 따라가야 할 모델</strong>"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>원칙 ②</strong>: 라인별 IP 활용도 <strong>차등</strong> — 올리리라(디바이스) 부분 분리 / 약손명가 PB(홈케어) IP 유지 / 골기(마사지) IP 유지"
+          "html": "▶ <strong>가이드 ① 단계적 이양 (12개월 로드맵)</strong>: Q1 = OLLI/GOLKI 자체 브랜드 헤드라인 확립 / Q2 = 약손명가 IP 직접 노출 50% 감소 / Q3-Q4 = \"46년 에스테틱 노하우\" 추상 표현만 유지"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>원칙 ③</strong>: 워딩 격상 — \"<span class=\"highlight\">에스테틱 임상 / 메디컬 에스테틱</span>\" (일반 피부관리실 연상 X) — 메디큐브의 \"메디\" 워딩 격상과 동일 원리"
+          "html": "▶ <strong>가이드 ② 라인별 차등 (PDF p.5 정합)</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>OLLI LIRA = <strong>즉시 독립</strong> (홈케어 디바이스 → 홈케어 전반 → 오프라인 전개)"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>원칙 ④</strong>: 시술 vs 디바이스 \"격하 No, 격상 Yes\" — \"<span class=\"highlight\">병원 대신</span>\"이 아닌 <span class=\"highlight\">\"병원 시술 사이 매일 케어\"</span> / \"시술 효과 유지·증폭\""
+          "html": "GOLKI = <strong>독립 + 헤리티지 추상화</strong> (\"약손명가 장인의 골기테라피\" → \"장인의 골기테라피\")"
+        },
+        {
+          "type": "arrow",
+          "html": "약손PB = <strong>IP 유지</strong> (\"약손명가\"·\"47년 테라피 노하우\" 직접 노출 OK — 소비자 신뢰 자산) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>가이드 ③ 추상화 표현 (PDF p.7 직접 인용)</strong>: <span class=\"highlight\">\"국내 NO.1 에스테틱 노하우\"</span> · <span class=\"highlight\">\"47년 테라피 노하우\"</span> · <span class=\"highlight\">\"YAKSON SLIMMING™ Complex 자사 독자 슬리밍 컴플렉스\"</span> = 광고주 자체 표현 그대로 활용 가능"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>가이드 ④ 독립 페르소나 신설</strong>: OLLI LIRA = \"전문가급 리프팅 리추얼\" 라이프스타일 톤 (PDF p.2 직접 인용) / GOLKI = \"장인의 골기테라피 헤리티지\" 셀프 의식 톤 (PDF p.3 직접 인용)"
         }
       ],
       "sources": [
-        { "label": "Economy Chosun: 1조에 샀는데 매출 뚝, 닥터자르트 부진", "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html" },
-        { "label": "한경 마켓인사이트: 피부과 의사 화장품 닥터자르트 성공", "url": "https://marketinsight.hankyung.com/apps.free/free.news.view?aid=2018072448121&category=" },
-        { "label": "에이피알 블로그: 메디큐브 안전성 차별화", "url": "https://apr-blog.com/beauty-compliance" }
+        { "label": "광고주 PDF 공유 자료 2026-05-26 (p.5 IP 축소 결정 / p.7 자체 표현)", "url": "" },
+        { "label": "Economy Chosun: 닥터자르트 부진", "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html" },
+        { "label": "팜이데일리: 동국제약 위드닉스 헬스케어 성장", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" }
       ],
-      "sourceNote": "* 출처: <a href=\"https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html\" target=\"_blank\">Economy Chosun</a>, <a href=\"https://marketinsight.hankyung.com/apps.free/free.news.view?aid=2018072448121&category=\" target=\"_blank\">한경 마켓인사이트</a>",
-      "body": "<table>\n      <thead><tr><th>원칙</th><th>❌ 회피</th><th>✅ 채택</th><th>벤치마크</th></tr></thead>\n      <tbody>\n        <tr><td>① IP 인용 방식</td><td>\"약손명가가 만든 디바이스\"</td><td>\"46년 에스테틱 노하우가 가정으로\"</td><td>닥터자르트 회피 / 동국제약 마데카 정합</td></tr>\n        <tr><td>② 라인별 IP 차등</td><td>전 라인 일관 IP 노출</td><td>디바이스 부분 분리 / PB·골기 IP 유지</td><td>광고주 미팅록 합의 영역</td></tr>\n        <tr><td>③ 워딩 격상</td><td>\"에스테틱\" 단독 사용</td><td>\"에스테틱 임상 / 메디컬 에스테틱\"</td><td>메디큐브 \"메디\" 격상</td></tr>\n        <tr><td>④ 시술 관계</td><td>\"병원 대신 집에서\" (격하)</td><td>\"병원 시술 사이 매일 케어\" (격상)</td><td>클래시스 슈링크홈 정합</td></tr>\n      </tbody>\n    </table>"
+      "sourceNote": "* 출처: 광고주 PDF 2026-05-26 + 벤치마크(닥터자르트/동국제약) — IP 축소 결정에 정합한 매드업 가이드",
+      "body": "<table>\n      <thead><tr><th>가이드</th><th>약손PB</th><th>OLLI LIRA</th><th>GOLKI</th></tr></thead>\n      <tbody>\n        <tr><td>① 단계적 이양 (12개월)</td><td>IP 유지 지속</td><td>Q1 즉시 독립</td><td>Q1 즉시 독립 + 헤리티지 추상화</td></tr>\n        <tr><td>② 라인별 차등</td><td>\"약손명가 47년 테라피\" 직접 노출 OK</td><td>\"전문가급 리프팅 리추얼\" 자체 브랜드</td><td>\"장인의 골기테라피\" 헤리티지</td></tr>\n        <tr><td>③ 추상화 표현 (PDF 원문)</td><td>\"YAKSON SLIMMING™ Complex\"</td><td>\"홈케어 리프팅 리추얼\"</td><td>\"장인의 시그니처 관리 도구\"</td></tr>\n        <tr><td>④ 독립 페르소나</td><td>퍼스널케어·바디라인·붓기관리</td><td>라이프스타일·홈케어·오프라인</td><td>셀프케어 의식·헤리티지</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>벤치마크</strong></td><td><strong>동국제약 마데카 추상화</strong></td><td><strong>닥터자르트 함정 회피</strong></td><td><strong>동국제약 약 IP 추상화</strong></td></tr>\n      </tbody>\n    </table>"
     },
     {
       "id": "s1-summary",
@@ -2576,6 +2578,68 @@
       "sources": [],
       "sourceNote": "* 출처: 미팅록 (2026-04 인바운드 미팅) + 리스닝마인드 (s6-1, s6-1a) + 자체 캡처 분석 (s2-1a) + KPMG/PMC 학술 근거 (s1-15d)",
       "body": "<p><strong>📋 기대 잇점 vs 실제 어필 효과 (5대 영역)</strong></p>\n    <table>\n      <thead>\n        <tr><th>#</th><th>기대했던 잇점</th><th>실제 어필 효과</th><th>판정</th><th>근거</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>1</td>\n          <td><strong>오프라인 IP 신뢰 (130개 매장 후광)</strong></td>\n          <td>약손명가 매장 키워드 자연 발생 검색 풍부 (송도·광명·송파·광교·대구·포항 등)</td>\n          <td style=\"background:#dcfce7;color:#166534;\">✅ <strong>성공</strong></td>\n          <td>리스닝마인드 498개 브랜드 클러스터 中 <strong>매장 클러스터가 최대 비중</strong> (s6-1a)</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td><strong>시술 IP 후광 (양악·윤곽·비대칭 케어)</strong></td>\n          <td>\"약손명가 양악 관리·비대칭·신부 마사지\" 키워드 클러스터 풍부</td>\n          <td style=\"background:#dcfce7;color:#166534;\">✅ <strong>성공</strong></td>\n          <td>리스닝마인드 시술 키워드 클러스터 활성 (s6-1a B 클러스터)</td>\n        </tr>\n        <tr>\n          <td>3</td>\n          <td><strong>디바이스 인지도 후광 (IP가 OLLI LIRA·GOLKI로 전이)</strong></td>\n          <td>\"OLLI LIRA\"·\"올리리라\" 키워드 검색량 미미 · 약손명가 인지도가 디바이스로 <strong>전이 실패</strong></td>\n          <td style=\"background:#fee2e2;color:#991b1b;\">❌ <strong>미흡</strong></td>\n          <td>리스닝마인드 카테고리 701개 키워드 중 <strong>\"올리리라\" 0건 검색 노출</strong> (s6-1)</td>\n        </tr>\n        <tr>\n          <td>4</td>\n          <td><strong>임상·학회 IP 신뢰 (대학병원 임상·논문)</strong></td>\n          <td>제품 페이지·광고에서 \"임상 근거\"·\"학회 논문\" 메시지 거의 미활용 — <strong>강력한 자산을 잠재만 시킴</strong></td>\n          <td style=\"background:#fee2e2;color:#991b1b;\">❌ <strong>미흡 (가장 큰 손실)</strong></td>\n          <td>자사몰·BS 제품 페이지 캡처 분석 → \"에스테틱 기술력 기반\" 정도만 표기, 임상 직접 인용 없음</td>\n        </tr>\n        <tr>\n          <td>5</td>\n          <td><strong>창업자·인물 IP 후광 (이병철 대표)</strong></td>\n          <td>\"약손명가 이병철·대표·대표 전남편\" 클러스터 검색 발생 / 단 광고·콘텐츠 직접 활용은 미흡</td>\n          <td style=\"background:#fef9c3;color:#854d0e;\">⚠️ <strong>부분 성공</strong></td>\n          <td>리스닝마인드 클러스터 E (인물) 활성, 그러나 광고 콘텐츠 미연계</td>\n        </tr>\n      </tbody>\n    </table>\n\n    <p style=\"margin-top:18px;\"><strong>🎯 종합 평가: IP 어필 효과 60% 성공 + 40% 미흡</strong></p>\n    <ul>\n      <li>✅ <strong>오프라인 자산</strong>: 매장·시술 IP는 자연 발생 검색으로 정상 작동 (매드업이 추가 손댈 영역 X)</li>\n      <li>❌ <strong>디바이스 전이</strong>: 약손명가 인지도가 OLLI LIRA·GOLKI로 전이되지 않음 (디바이스 신생 카테고리이므로 자연스러운 결과)</li>\n      <li>❌ <strong>임상·학회 자산</strong>: <strong>가장 큰 잠재 자산을 거의 활용 못 함</strong> — 매드업 비딩 시 즉시 어필 가능한 영역</li>\n    </ul>\n\n    <p style=\"margin-top:18px;\"><strong>🔄 미팅록 \"IP 빼야할 시점\" 발언의 정확한 해석</strong></p>\n    <ul>\n      <li>광고주 의도: <strong>\"약손명가 IP를 빼야 한다\"가 아니라 \"약손명가 IP에만 의존하지 말고 개별 브랜드 페르소나를 키우자\"</strong>로 해석해야 함</li>\n      <li>근거: 매장·시술 IP는 이미 잘 작동 (✅) → 굳이 뺄 이유 없음 / 디바이스에서만 IP 후광이 약함 → 디바이스 자체 인지도를 키워야 함</li>\n      <li><strong>매드업 권장 전략 = 카테고리별 IP 활용도 차등</strong> (s2-1):\n        <ul style=\"margin:4px 0;padding-left:18px;\">\n          <li>약손명가 PB (홈케어): <strong>IP 유지·강화</strong> (시술 IP 후광 활용)</li>\n          <li>OLLI LIRA (디바이스): <strong>IP 분리·독립 페르소나 구축</strong> + 임상 자산만 백업 인용</li>\n          <li>GOLKI (마사지): <strong>골기테라피 시술명 IP 유지</strong> (USP 자체가 IP)</li>\n        </ul>\n      </li>\n    </ul>\n\n    <p style=\"margin-top:18px;\"><strong>💎 비딩 결정적 메시지 후보</strong></p>\n    <blockquote style=\"border-left:3px solid #0f766e;padding:10px 14px;background:#f0fdfa;color:#134e4a;font-size:14px;border-radius:0 6px 6px 0;\">\n      <strong>\"약손명가 IP는 빼는 게 아니라, 잠겨있던 임상·학회 자산을 푸는 것 — 매드업이 OLLI LIRA 광고에 약손명가의 진짜 신뢰 자산을 명시적으로 연결하겠습니다.\"</strong>\n    </blockquote>\n    <p style=\"margin-top:8px;font-size:13px;color:#4b5563;\">→ 광고주가 \"IP 활용 의도\"는 인정하면서도 \"분리 욕구\"는 디바이스 영역에서만 적용되도록 합의 도출 가능</p>"
+    },
+    {
+      "id": "s2-pb-new",
+      "chapter": "ch2",
+      "meta": "⭐ 자사 · 약손PB 2026 신제품 5종 (PDF 2026-05-26 공유)",
+      "status": "auto",
+      "intro": false,
+      "title": "약손PB 2026 신제품 5종 — <span class=\"highlight\">올영 타겟 패치 2종 + 첫 클렌징 카테고리 2종 + 리프팅 패치 확장 1종</span> / 매드업 광고 운영 영역의 직접 자산",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>① 가뿐한 복부패치</strong> (여리한패치 리뉴얼) — 림프형 수액 원형 패치 + 0.5mm 초슬림 + 온열(버닝) 케어 + YAKSON SLIMMING™ Complex / <strong>올영 채널 타겟</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>② 가뿐한 멀티패치</strong> (가제) — 승모근 지압 돌기 패치 + 47년 테라피 노하우 + 골기지압포인트 + 마그네슘설페이트·디옥시콜로이트·토르말린·멘톨 쿨링 / <strong>올영 채널 타겟</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>③ 약손 브이핏 리프팅 패치</strong> (브이한패치 확장) — <strong>임상 검증 4대 효과</strong>: 일시적 안면 붓기 완화 / 일시적 턱라인·턱밑 리프팅 개선 / 1회 사용 직후 쿨링 / 피부 저자극 + 고탄력 스트레칭 면 시트 96% 순면"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>④ 듀얼 멜팅 클렌징 오일</strong> — 자사 <strong>첫 클렌징 제품</strong> + 스팀 히팅 공법 + 78% 스킨케어 성분 + Pink Melting Oil 2층상 + AHA/BHA/PHA + 12 비타민·스쿠알란 / <strong>공식 채널 중심</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⑤ 포어 블러링 팩 클렌저</strong> — 약(미)산성 pH 4.85 + 살리실산 5000ppm(여드름 개선 기능성) + 나이아신아마이드 1000ppm + 알부틴 100ppm + 무화과 추출물·핑크 탄산 버블 / <strong>공식 채널 중심</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ① 올영 신규 채널 확대</strong>: 가뿐한 복부·멀티패치 = 올영 타겟 출시 → 25.4 올영 1020매장 입점 기반 위에 신제품 2종 추가 = <strong>오프라인 채널 확장 가속 (s5-3·s5-4 외부몰 영역 보강 필요)</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ② 클렌징 카테고리 신규 진입</strong>: 자사 첫 클렌징 = <strong>약손PB 라인 다각화 시그널</strong> → 디바이스(올리리라)·홈케어(약손PB)·마사지(골기) 3카테고리 → +클렌징 4카테고리로 확장"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ③ 임상 검증 직접 활용 가능</strong>: 브이핏 패치의 \"임상 검증 4대 효과\" = <strong>광고 카피 ② (s4-9) 임상 정량 트랙</strong>에 즉시 활용 → 메이크온·달바 압도 가능"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ④ \"YAKSON SLIMMING™ Complex\"</strong> = 광고주 자체 워딩 → IP 축소·이양 후에도 활용 가능한 <strong>독자 기술 브랜드 자산</strong> (s1-23 가이드 ③ 추상화 표현)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>광고 운영 시점</strong>: 5종 모두 2026 출시 예정 → 매드업 비딩 시작 시점(6월 BS 전환)부터 신제품 광고 동시 진행 필요 / 사전 콘텐츠·키비주얼 준비 시급"
+        }
+      ],
+      "gallery": [
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "가뿐한 복부패치 (NEW)", "price": "림프 수액형 · 0.5mm · 온열 · 올영 타겟", "tag": "약손PB 리뉴얼" },
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "가뿐한 멀티패치 (NEW)", "price": "승모근 지압 돌기 · 47년 테라피 · 올영 타겟", "tag": "약손PB NEW" },
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "약손 브이핏 리프팅 패치 (확장)", "price": "임상 검증 4대 효과 · 96% 순면 · 쿨링", "tag": "🔑 임상 정량 활용" },
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "듀얼 멜팅 클렌징 오일 (NEW)", "price": "자사 첫 클렌징 · 스팀 히팅 · 78% 스킨케어", "tag": "신규 카테고리" },
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "포어 블러링 팩 클렌저 (NEW)", "price": "pH 4.85 · 살리실산 5000ppm · 알부틴", "tag": "신규 카테고리" }
+      ],
+      "sources": [
+        { "label": "광고주 PDF 공유 자료 2026-05-26 (p.5-9)", "url": "" }
+      ],
+      "sourceNote": "* 출처: 광고주 PDF 2026-05-26 p.5(채널 매핑)·p.6(가뿐한 복부패치)·p.7(가뿐한 멀티패치)·p.8(클렌징 오일)·p.9(팩 클렌저)·p.10(브이핏 패치) 직접 인용",
+      "body": "<table>\n      <thead><tr><th>신제품</th><th>분류</th><th>핵심 USP</th><th>전개 채널</th><th>매드업 광고 영역</th></tr></thead>\n      <tbody>\n        <tr><td><strong>가뿐한 복부패치</strong></td><td>약손PB 리뉴얼</td><td>림프 수액형·0.5mm·온열</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr><td><strong>가뿐한 멀티패치</strong></td><td>약손PB NEW</td><td>승모근 지압·47년 테라피</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>약손 브이핏 리프팅 패치</strong></td><td>약손PB 확장</td><td><strong>임상 검증 4대 효과</strong></td><td>공식몰·올영</td><td><strong>광고 카피 ② 임상 정량 직접 활용</strong></td></tr>\n        <tr><td>듀얼 멜팅 클렌징 오일</td><td>신규 카테고리</td><td>스팀 히팅·78% 스킨케어</td><td>공식 채널</td><td>공식몰·메타·구글 검색 콘텐츠</td></tr>\n        <tr><td>포어 블러링 팩 클렌저</td><td>신규 카테고리</td><td>pH 4.85·살리실산·나이아신아마이드·알부틴</td><td>공식 채널</td><td>공식몰·매드업 SPRAY AI 성분 시각화</td></tr>\n      </tbody>\n    </table>"
     },
     {
       "id": "s2-2",
@@ -2840,6 +2904,77 @@
       ],
       "sources": [],
       "sourceNote": "* 작성자: WebSearch 1차 + 광고주 자료 받은 후 본격 보강"
+    },
+    {
+      "id": "s2-olli-offline",
+      "chapter": "ch2",
+      "meta": "⭐ 자사 · OLLI LIRA 오프라인 사업 전개 전략 (PDF 2026-05-26 결정)",
+      "status": "auto",
+      "intro": false,
+      "title": "OLLI LIRA = 단순 D2C 디바이스 브랜드 X → <span class=\"highlight\">홈케어 제품 전반 (디바이스+스킨케어) + 오프라인 사업 전개</span>로 확장 결정 / 매드업 O2O·OOH·매장 모객 신규 광고 영역 필요",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>광고주 결정 (PDF 2026-05-26 p.5 직접 인용)</strong>: <em>\"OLLI LIRA의 경우 홈케어 디바이스 브랜드 >> 홈케어 제품(디바이스, 스킨케어 등) 전반의 브랜드 확장 및 <strong>오프라인 사업 전개 예정</strong>으로 오프라인 모객 관점에서의 전략 필요\"</em>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>의미 전환</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>이전 = D2C 디바이스 단품 (자사몰·BS·외부몰 중심)"
+        },
+        {
+          "type": "indent-1",
+          "html": "현재 = 디바이스 + 패치 + 겔 + (신규)센텔라/콜라겐 패치 = 결합형 락인 모델"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>2026 신규 = 디바이스+스킨케어 전반 + 오프라인 매장</strong> = 종합 라이프스타일 브랜드 </li></ul>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>벤치마크</strong>: 메이크온 팝업스토어 (Lever 분석 11장 중 5장이 팝업 백드롭) = 셀럽 IP 부재 우회 전략으로 오프라인 체험형 강한 마케팅 / 매드업 메이크온 학습 모델"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 제안 O2O·오프라인 광고 4대 영역</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>지역 타게팅 디지털 광고</strong>: 매장 반경 3-5km 모바일·인스타·메타 타게팅 + 매장 위치 자동 노출 (드라이브투스토어)"
+        },
+        {
+          "type": "arrow",
+          "html": "② <strong>O2O 픽업·예약 통합</strong>: 자사몰·BS 결제 → 매장 픽업 또는 매장 무료 체험 → 자사몰 재구매 funnel"
+        },
+        {
+          "type": "arrow",
+          "html": "③ <strong>OOH·옥외광고 + 디지털 시너지</strong>: 핵심 상권(강남·홍대·성수) 옥외 + 디지털 QR 연동 → 매장 유도 + 브랜드 인지도"
+        },
+        {
+          "type": "arrow",
+          "html": "④ <strong>팝업스토어 콘텐츠 광고</strong>: 메이크온 모델 따라 팝업 \"체험 콘텐츠\" 영상 → 인스타·릴스·유튜브 쇼츠로 확산 (Lever 메이크온 1·2·4·5번 슬라이드 패턴) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>주의 — 본가 약손명가 매장 130개와 카니발 회피</strong>: OLLI LIRA 오프라인 = <strong>본가와 별도 컨셉</strong> (디바이스 + 라이프스타일 체험 중심 / 본가 = 시술·테라피 중심) → 카니발 X, 시너지 O"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 채널 확장 시그널</strong>: 기존 RFP \"공식몰·BS·외부몰·CRM\" 4채널 → <strong>+오프라인 모객 = 5채널</strong> 운영 / 광고 예산 재배분 검토 필요 (특히 매장 오픈 시점 집중 투입)"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🏬 매드업 OLLI LIRA O2O·오프라인 광고 4영역 (신규 제안)",
+        "items": [
+          { "label": "영역 ① 지역 타게팅", "value": "매장 반경 3-5km 디지털", "sub": "모바일·인스타·메타 지역 타겟 + 드라이브투스토어 자동 노출", "tone": "highlight" },
+          { "label": "영역 ② O2O 픽업·예약", "value": "온오프 통합 funnel", "sub": "자사몰·BS 결제 → 매장 픽업/체험 → 자사몰 재구매 (재구매율 10% KPI 직접 응답)", "tone": "primary" },
+          { "label": "영역 ③ OOH 디지털 시너지", "value": "옥외+QR 연동", "sub": "강남·홍대·성수 핵심 상권 옥외 + QR 매장 유도 + 브랜드 인지도 폭증", "tone": "accent" },
+          { "label": "영역 ④ 팝업 콘텐츠", "value": "체험 영상 확산", "sub": "메이크온 학습: 팝업 백드롭 + 라이프스타일 모델 → 인스타·릴스 확산", "tone": "success" }
+        ],
+        "footnote": "* 본가 약손명가 매장(130개)과 OLLI LIRA 매장은 컨셉 분리 (테라피 vs 라이프스타일 체험) — 카니발 회피"
+      },
+      "sources": [
+        { "label": "광고주 PDF 공유 자료 2026-05-26 p.5 OLLI LIRA 오프라인 결정", "url": "" },
+        { "label": "Lever Xpert 메이크온 팝업 5장 (s4-6)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8" }
+      ],
+      "sourceNote": "* 출처: 광고주 PDF 2026-05-26 p.5 + 메이크온 팝업 벤치마크(s4-6) + 매드업 O2O·OOH 운영 경험 통합 제안",
+      "body": "<table>\n      <thead><tr><th>OLLI LIRA 단계</th><th>채널·매체</th><th>매드업 솔루션</th><th>KPI 영향</th></tr></thead>\n      <tbody>\n        <tr><td>① 매장 오픈 사전 인지</td><td>지역 디지털 + OOH</td><td>지역 타게팅 메타·인스타 + 옥외</td><td>브랜드 인지도 폭증</td></tr>\n        <tr><td>② 매장 모객</td><td>드라이브투스토어 + QR</td><td>매드업 지역광고 운영 + 자사몰 연동</td><td>매장 방문자수</td></tr>\n        <tr><td>③ 매장→자사몰 funnel</td><td>O2O 픽업·체험</td><td>고객 데이터 통합 + CRM 알림톡 시리즈</td><td><strong>재구매율 10% 직접 응답</strong></td></tr>\n        <tr><td>④ 팝업 콘텐츠 확산</td><td>인스타·릴스·유튜브 쇼츠</td><td>매드업 SPRAY AI 체험 영상</td><td>인지도 + 카플친 +200%</td></tr>\n      </tbody>\n    </table>"
     },
     {
       "id": "s2-5",
@@ -4173,26 +4308,42 @@
     {
       "id": "s5-1",
       "chapter": "ch5",
-      "meta": "채널 · 브랜드스토어",
+      "meta": "⭐ 채널 · 브랜드스토어 (6월 BS 중심 전환 타이밍 정합)",
       "status": "auto",
       "intro": false,
-      "title": "ADVoost — 통합 애셋 자동 소재 생성으로 운영 효율화, 브랜드스토어 광고주 강력 권장",
+      "title": "🚨 광고주 결정 = <span class=\"highlight\">6월부터 전체 BS 중심 운영 전환 예정</span> (PDF 2026-05-26) — 매드업 ADVoost + 쇼핑 프로모션 베타가 이 시점 정확히 정합 / 비딩 시작 = BS 운영 첫 달",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ ADVoost = ADBoost 정식 명칭 (RFP 표기 \"ADBoost\"와 동일)"
+          "html": "ㄴ <strong>광고주 결정 (PDF p.4 직접 인용)</strong>: <em>\"공식 채널인 [공식몰/브랜드스토어]를 광고 매체 별 구분하여 운영 > <strong>6월부터 전체 브랜드스토어 중심 운영 전환 예정</strong>\"</em>"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 통합 애셋 기반으로 다양한 소재 자동 생성, 한 번 등록으로 GFA 전 지면 광고 집행"
+          "html": "ㄴ <strong>예산 비중 정합</strong>: 공식몰 35% / <strong>BS 25%</strong> / 외부몰 40% / CRM 월 2-300만 — BS ROAS 500% KPI = 가장 도전적 + 광고주 의지 표명 (RFP)"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 자동 최적화 기능 — 효율적인 성과 운영"
+          "html": "ㄴ <strong>효율 순위 (PDF 확인)</strong>: 브스 > 외부몰 > 공식몰 — BS 중심 전환은 효율 데이터 기반 합리적 결정"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>ADVoost</strong> = ADBoost 정식 명칭 / 통합 애셋 자동 소재 생성, 한 번 등록으로 GFA 전 지면 광고 집행 / 자동 최적화"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>매드업 활용</strong>: ADVoost 운영 + LEVER Xpert 자동 소재 등록 + AI 기획안 생성 — 광고주 단독 운영 대비 운영 속도 N배"
+          "html": "▶ <strong>매드업 6월 첫 달 전략</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>Week 1-2: 광고주 BS 운영 진단 + ADVoost 셋업 (LEVER Xpert 자동 소재 등록 + AI 기획안)"
+        },
+        {
+          "type": "arrow",
+          "html": "Week 3-4: 5종 광고 카피(s4-9) × ADVoost 자동 생성 = 15개 소재 풀 운영"
+        },
+        {
+          "type": "arrow",
+          "html": "월말: 효율 분석 → 7월 예산 재배분 + 신제품 2종(가뿐한 복부·멀티패치) 올영 동시 진행 </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>BS ROAS 500% 달성 경로</strong>: ADVoost 자동 최적화 + s5-2 쇼핑 프로모션 베타 + s5-6 AI 심의봇 + 결합형 라인업 패키지(밴드+패치+겔) 리스팅 + 신제품 5종 동시 노출"
         }
       ],
       "sources": [
