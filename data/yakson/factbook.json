@@ -15,7 +15,7 @@
     "auto": 80,
     "progress": 1,
     "client": 5,
-    "madup": 4
+    "madup": 7
   },
   "chapters": [
     {
@@ -3844,6 +3844,211 @@
         { "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
       ],
       "sourceNote": "* 출처: Lever Xpert 47개 소재 분석(s4-4) + 매드업 SPRAY AI · 크리에이티브 매트릭스 도구 결합 제안"
+    },
+    {
+      "id": "s4-6",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 도구 · Lever Xpert 메이크온 단독 분석 (11장)",
+      "status": "madup",
+      "intro": false,
+      "title": "메이크온은 \"<span class=\"highlight\">KAIST 공동 연구 + 임상 정량 + AI 진단 앱 + 팝업스토어</span>\" 4축 — 메디큐브의 셀럽 IP 우회 전략 / 약손명가가 학습할 \"학술 신뢰\" 모델",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>수집</strong>: Lever Xpert \"메이크온\" 검색 결과 11장 분석 (sid=6984, 2026-05-27 캡처)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>메이크온 6대 메시지 패턴</strong> (메디큐브와 다른 톤): <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>학술 R&D 신뢰</strong>: \"아모레 × KAIST 공동 연구, 논문 등재\" + 마이크로 LED 3,770개"
+        },
+        {
+          "type": "indent-1",
+          "html": "② <strong>임상 정량 데이터</strong>: \"사용 직후 모공 부피 -19.5%·+363%·6.5↑·각질 10층 속보습\""
+        },
+        {
+          "type": "indent-1",
+          "html": "③ <strong>AI 진단 앱 결합</strong>: 태블릿 인터페이스 + 디바이스 = 디지털 개인화 ⭐ 메디큐브 미점유"
+        },
+        {
+          "type": "indent-1",
+          "html": "④ <strong>팝업스토어 오프라인 체험</strong>: 11장 중 5장이 팝업 백드롭 (Smart Efficiency·Personalized Wellness·Balanced Living·Visible Results 4대 가치)"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑤ <strong>카툰 일러스트 친근감</strong>: 학술 신뢰를 카툰화 (\"논문까지 등재됨\" 친근 톤) — 메디큐브 셀럽 vs 메이크온 친근"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑥ <strong>시즌·선물 마케팅</strong>: \"평생 탄력을 선물하세요\" (연말) + 리뷰 평점 4.68점 노출 + \"써본 사람 100% 인정\" </li></ul>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>주요 모델 라인업</strong>: ONCARE (LED 마스크 종합) / ONFACE (헬멧형 LED 마스크) / 스킨라이트 (휴대용)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>메디큐브 vs 메이크온 차이</strong>: 메디큐브 = 셀럽(김희선·장원영) + 1등 5관왕 / 메이크온 = <span class=\"highlight\">학술 신뢰(KAIST 논문) + AI 디지털 + 친근 카툰</span> → 메이크온은 \"셀럽 IP 못 따라가니 학술·기술로 우회\" 전략 = <strong>약손명가의 학습 모델</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>약손명가가 차용할 수 있는 패턴</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>✅ <strong>학술 신뢰</strong>: \"약손명가 46년 임상 케이스 X건\" / 외부 연구기관 협업 (KIST·아모레랩 등)"
+        },
+        {
+          "type": "arrow",
+          "html": "✅ <strong>임상 정량</strong>: 부위별 % 개선 데이터 (모공·탄력·V라인) — 메이크온이 검증한 톤"
+        },
+        {
+          "type": "arrow",
+          "html": "✅ <strong>친근 카툰 일러스트</strong>: 결합형 락인(밴드+패치+겔) 정당성 콘텐츠를 카툰화 → 메디큐브 vs 메이크온 톤 사이에서 약손명가는 \"진지+친근\" 차별 가능"
+        },
+        {
+          "type": "arrow",
+          "html": "❌ <strong>회피</strong>: 팝업스토어 오프라인 마케팅 = 본가 130매장 채널 카니발 위험 / AI 앱 = 4년차 스타트업이 단기 구축 어려움 — 디지털 콘텐츠 중심 전략 권장 </li></ul>"
+        }
+      ],
+      "gallery": [
+        { "src": "images/lever/메이크온-10.jpg", "alt": "메이크온 KAIST 카툰", "name": "메이크온 — \"아모레 × KAIST 공동 연구, 논문까지 등재\"", "price": "학술 신뢰 + 카툰 일러스트 친근감", "tag": "🔑 패턴 ① 학술 R&D" },
+        { "src": "images/lever/메이크온-3.jpg", "alt": "메이크온 ONCARE 기술 비교", "name": "ONCARE — \"개발 초기 vs 아모레 기술력\"", "price": "점발광 → 면발광 / 마이크로 LED 3,770개", "tag": "패턴 ① 학술 R&D" },
+        { "src": "images/lever/메이크온-9.jpg", "alt": "메이크온 팝업 임상", "name": "팝업 — \"모공 부피 -19.5% / +363%\"", "price": "임상 정량 데이터 + 팝업 디스플레이", "tag": "🔑 패턴 ② 임상 정량" },
+        { "src": "images/lever/메이크온-6.jpg", "alt": "메이크온 AI 진단 앱", "name": "메이크온 — \"AI 진단 앱 + 디바이스\"", "price": "태블릿 인터페이스로 개인화 (메디큐브 미점유)", "tag": "🔑 패턴 ③ AI 앱" },
+        { "src": "images/lever/메이크온-5.jpg", "alt": "메이크온 팝업 4대 가치", "name": "팝업 — \"Visible Results · Smart Efficiency · Balanced Living\"", "price": "4대 가치 + 모델 라이프스타일", "tag": "패턴 ④ 팝업 마케팅" },
+        { "src": "images/lever/메이크온-1.jpg", "alt": "메이크온 팝업 베네핏", "name": "팝업 BENEFIT — \"3' Set Scan / 3' Minute Care\"", "price": "디바이스 + 마스크팩 + 20-30% 혜택", "tag": "패턴 ④ 팝업 + 라인업" },
+        { "src": "images/lever/메이크온-11.jpg", "alt": "메이크온 ONFACE 연말 선물", "name": "ONFACE — \"평생 탄력을 선물하세요\"", "price": "KAIST 특허 + 리뷰 4.68점 + 연말 선물", "tag": "패턴 ⑥ 시즌 + 신뢰" },
+        { "src": "images/lever/메이크온-7.jpg", "alt": "메이크온 ONFACE Sarang", "name": "ONFACE — \"Sarang's Natural Glow\"", "price": "모델 콜라보 + LED 마스크", "tag": "패턴 ⑥ 모델·라이프스타일" }
+      ],
+      "sources": [
+        { "label": "Lever Xpert \"메이크온\" 검색 (sid=6984)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8" }
+      ],
+      "sourceNote": "* 출처: Lever Xpert \"메이크온\" 검색 결과 11장 (2026-05-27 캡처) · 모든 카드 alt=\"Makeon 메이크온\"으로 단일 브랜드 결과"
+    },
+    {
+      "id": "s4-7",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 도구 · Lever Xpert 메디큐브 한국 깊이 분석 (15장 중 8장 선별)",
+      "status": "madup",
+      "intro": false,
+      "title": "메디큐브 한국 광고는 단순 셀럽이 아닌 <span class=\"highlight\">자사 신구 비교 + 스킨 단면 기술 시각화 + 주차별 루틴 가이드 + 부위별 효과 비교</span>까지 정교화 — 후발주자가 학습할 \"입증 기반 콘텐츠\" 표준",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>수집</strong>: Lever Xpert \"뷰티디바이스\" 검색에서 메디큐브 한국(에이지알 포함) 28장 분석"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>발견한 5가지 정교화 패턴</strong> (셀럽 IP 외 추가): <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>자사 신구 모델 비교</strong>: \"부스터프로 X2 vs 부스터글로우 차이점 총정리\" — 신모델 출시 시 카피 표준"
+        },
+        {
+          "type": "indent-1",
+          "html": "② <strong>스킨 단면 기술 시각화</strong>: \"일반 뷰티 디바이스 vs 부스터프로 X2\" microscopic 비교 + \"듀얼 타겟 독자기술\" 차별화"
+        },
+        {
+          "type": "indent-1",
+          "html": "③ <strong>4주차 연예인 풀코스 루틴</strong>: \"마지막 주차에는 4가지 모드(에어샷·부스터·MC·더마샷) 다 사용\" + STEP 1~4 가이드 ⭐ <strong>강력 학습 패턴</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "④ <strong>부위별 효과 Before/After</strong>: 윤곽튜닝 vs 윤곽튜닝+광탄력 2분할 비교 (\"#2. 효과\" 시리즈)"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑤ <strong>3종 라인업 고민별 선택 가이드</strong>: \"부스터 글로우(물광·진정) / 부프 X2(모공·탄력) / 콤보(컨디션→모공·탄력)\" </li></ul>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>+ 사용꿀팁·라이프스타일 셀카 + 7가지 모드 다이얼 가이드</strong> = 메디큐브는 광고 1장에 \"왜 사야 하나·어떻게 써야 하나·어떤 효과인가\"를 모두 압축 = 후발주자가 따라가야 할 콘텐츠 표준"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>약손명가 즉시 차용 가능한 3대 표준</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>✅ <strong>4주차 루틴 가이드</strong>: 결합형(밴드+패치+겔) \"4주 챌린지\" 콘텐츠 = 작심삼일 정면 해결 + 패치/겔 정기재구매 자연 유도"
+        },
+        {
+          "type": "arrow",
+          "html": "✅ <strong>스킨 단면 시각화</strong>: \"일반 EMS vs 약손명가 EMS+에스테틱 노하우\" 단면 비교 = 결합형 효능 정당성"
+        },
+        {
+          "type": "arrow",
+          "html": "✅ <strong>3종 고민별 선택 가이드</strong>: 약손명가 라인업(올리리라 디바이스 / PB 홈케어 / 골기 마사지) 3종 선택 가이드 카피 → 라인업 시너지 어필"
+        },
+        {
+          "type": "arrow",
+          "html": "❌ <strong>회피</strong>: 자사 신구 비교 (4년차 스타트업이라 신구 비교할 모델 없음 - 첫 모델 단계) — 대신 \"<span class=\"highlight\">시술 vs 디바이스</span>\" 비교로 대체 </li></ul>"
+        }
+      ],
+      "gallery": [
+        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "메디큐브 4주차 연예인 루틴", "name": "에이지알 — \"4주차 연예인 풀코스 루틴\"", "price": "STEP 1~4 모드별 가이드 + 부위별 효과", "tag": "🔑 패턴 ③ 주차별 루틴" },
+        { "src": "images/lever/메디큐브-medicube-10.jpg", "alt": "메디큐브 단면 비교", "name": "Booster Pro X2 — \"듀얼 타겟 독자기술\"", "price": "일반 디바이스 vs 부스터프로 단면 시각화", "tag": "🔑 패턴 ② 단면 기술" },
+        { "src": "images/lever/메디큐브-medicube-5.jpg", "alt": "부스터프로 X2 vs 글로우", "name": "에이지알 — \"부스터프로 X2 vs 글로우 차이점\"", "price": "자사 신구 모델 비교 (NEW 강조)", "tag": "패턴 ① 자사 신구 비교" },
+        { "src": "images/lever/메디큐브-medicube-1.jpg", "alt": "윤곽튜닝 효과 비교", "name": "에이지알 — \"#2. 효과 윤곽튜닝 vs +광탄력\"", "price": "Before/After 2분할 부위별 비교", "tag": "패턴 ④ 효과 비교" },
+        { "src": "images/lever/메디큐브-medicube-2.jpg", "alt": "메디큐브 라인업 가이드", "name": "메디큐브 — \"피부 고민별 맞춤 선택\"", "price": "글로우 / 부프 X2 / 콤보 3종 × 효과 표", "tag": "패턴 ⑤ 라인업 가이드" },
+        { "src": "images/lever/메디큐브-medicube-4.jpg", "alt": "메디큐브 사용꿀팁", "name": "메디큐브 — \"#사용꿀팁 1 — 7가지 모드\"", "price": "모드별 기능 매트릭스 (물광·꺼진팔자·늘어진윤곽…)", "tag": "패턴 + 기능 가이드" },
+        { "src": "images/lever/메디큐브-medicube-7.jpg", "alt": "메디큐브 실사용 셀카", "name": "메디큐브 — 실사용 셀카 Before/After", "price": "일반인 모델 + 부위별 사용 장면", "tag": "패턴 + 라이프스타일" },
+        { "src": "images/lever/메디큐브-medicube-13.jpg", "alt": "메디큐브 라이프스타일", "name": "메디큐브 — 미니 디바이스 라이프스타일", "price": "1020 진입템 캐주얼 셀카", "tag": "패턴 + 미니 라이프스타일" }
+      ],
+      "sources": [
+        { "label": "Lever Xpert \"뷰티디바이스\" 검색 메디큐브 한국 28장", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: Lever Xpert (2026-05-27 캡처) · 메디큐브 한국 28장 중 패턴 다양성 기준 8장 선별"
+    },
+    {
+      "id": "s4-8",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 도구 · Lever Xpert 후발주자 그룹 분석 (듀얼소닉·달바·쿠쿠·센텔리안·레스노베)",
+      "status": "madup",
+      "intro": false,
+      "title": "후발주자 5사 = \"<span class=\"highlight\">시간 단축·할인·임상·교육·라인업</span>\" 5가지 비대칭 전략 — 약손명가는 \"임상+교육\"의 듀얼 결합이 차별화 골든존",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>후발주자 USP 매트릭스</strong> (Lever Xpert 검색 결과 분석 종합): <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>듀얼소닉 (HIFU 7장)</strong>: \"매일 5분이면 끝\" 시간 단축 + 41% 할인 + \"탄력의 한 끗 차이\" 단일 USP"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>달바 (디바이스 6장)</strong>: 부위별 % 임상 (이마 48.5%·팔자 38%·턱라인 33.4%) + 10일 무료체험 + 글로벌 \"Celebrities' red carpet secret\""
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>쿠쿠전자 (3장)</strong>: \"메디킨하이 깊이 차별화\" (눈가 1.5mm / 얼굴 3.0mm / 바디 4.5mm) + 35% 특가 + 한정수량 — <strong>스펙 수치 차별화</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>센텔리안24 마데카 (1장)</strong>: \"고분자 앰플 손으로 바르면?\" Q&A 교육형 + EP+초음파 흡수촉진 메커니즘 — <strong>약 IP 기반 사용 정당성 교육</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>레스노베 (1장)</strong>: 5종 라인업 프리미엄 카탈로그 (보라 배경, 미감 강조) — 프리미엄 진입 시도 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>패턴 분석</strong>: 후발주자들은 메디큐브의 셀럽·1등 전략을 정면 추격하지 않고 <strong>각자 단일 USP로 비대칭 차별화</strong> — 단, 5사 모두 부분적 (시간 OR 임상 OR 깊이 OR 교육 OR 프리미엄) → <span class=\"highlight\">2개 이상 USP를 결합한 브랜드 부재 = 약손명가 진입 기회</span>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>약손명가헬스케어 추천 USP 결합</strong>: <strong>임상(달바) + 교육(센텔리안) + 시간(듀얼소닉) 3종 결합</strong> → \"46년 임상 데이터 부위별 % + 결합형 정당성 교육 + 매일 5분 결합형 루틴\" 단일 메시지에 압축"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>가성비·할인 전략 (쿠쿠·달바·듀얼소닉 사용)</strong>: 광고주 매출 56억 시장 사이즈 고려 시 출시 초기 35-41% 할인 + 10일 무료체험 = 진입 장벽 파괴 — 4년차 스타트업의 매출 점프업 필수 전술"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>피해야 할 함정</strong>: 레스노베·셀리턴처럼 단순 \"프리미엄 미감 카탈로그\"만으로는 인지도 점프 어려움 — 매드업은 \"미감 + 정량 데이터 + 결합형 락인\" 3박자 콘텐츠 운영 필요"
+        }
+      ],
+      "gallery": [
+        { "src": "images/lever/듀얼소닉-2.jpg", "alt": "듀얼소닉 5분", "name": "듀얼소닉 — \"매일 5분이면 끝\"", "price": "시간 단축 + 즉시 구매 CTA", "tag": "듀얼소닉 — 시간 단축" },
+        { "src": "images/lever/듀얼소닉-3.jpg", "alt": "듀얼소닉 알토", "name": "듀얼소닉 알토 — \"탄력의 한 끗 차이\"", "price": "단일 USP + 41% 할인", "tag": "듀얼소닉 — 할인" },
+        { "src": "images/lever/듀얼소닉-1.jpg", "alt": "듀얼소닉 라인업", "name": "듀얼소닉 — 4종 라인업 + Gift", "price": "라인업 카탈로그 + 사은품", "tag": "듀얼소닉 — 라인업" },
+        { "src": "images/lever/달바-2.jpg", "alt": "달바 임상 부위별", "name": "달바 — \"부위별 % 개선 임상\"", "price": "이마 48.5%·팔자 38%·턱라인 33.4% + 10일 무료체험", "tag": "🔑 달바 — 임상 정량" },
+        { "src": "images/lever/달바-1.jpg", "alt": "달바 매일 사용", "name": "달바 — \"꾸준히 매일 사용하도록 설계\"", "price": "네이버 배송 콜라보 + 트리플샷", "tag": "달바 — 꾸준함" },
+        { "src": "images/lever/d-alba-global-1.jpg", "alt": "달바 글로벌", "name": "d'Alba — \"Celebrities' red carpet secret\"", "price": "글로벌 영어 + 2 mins lift + -37%", "tag": "달바 — 글로벌 셀럽" },
+        { "src": "images/lever/종합생활가전-쿠쿠전자-1.jpg", "alt": "쿠쿠 깊이 차별화", "name": "쿠쿠 메디킨하이 — \"깊이가 다른\"", "price": "눈가 1.5mm / 얼굴 3.0mm / 바디 4.5mm + 35% 특가", "tag": "쿠쿠 — 스펙 깊이" },
+        { "src": "images/lever/센텔리안24-마데카-프라임-1.jpg", "alt": "센텔리안 Q&A 교육", "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"", "price": "EP+초음파 흡수촉진 메커니즘 교육", "tag": "🔑 센텔리안 — 교육형" },
+        { "src": "images/lever/레스노베-res-novae-1.jpg", "alt": "레스노베 프리미엄 라인업", "name": "레스노베 — 5종 프리미엄 카탈로그", "price": "보라 배경 미감 강조 (프리미엄 진입)", "tag": "레스노베 — 프리미엄 미감" }
+      ],
+      "sources": [
+        { "label": "Lever Xpert \"뷰티디바이스\" 검색 후발주자 18장", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: Lever Xpert (2026-05-27 캡처) · 듀얼소닉 3 + 달바 3 + 쿠쿠 1 + 센텔리안 1 + 레스노베 1 = 9장 종합 분석"
     },
     {
       "id": "s4-summary",
