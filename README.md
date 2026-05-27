@@ -158,7 +158,7 @@ data/<client>/factbook.json
 
 | 광고주 | 변형 | 팩트북 | 제안서 | Status |
 |---|---|---|---|---|
-| **약손명가헬스케어** | ② 다중 브랜드형 | 74 슬라이드 | [38 슬라이드 + PDF](proposals/yakson-healthcare/) | 65 / 1 / 5 / 3 |
+| **약손명가헬스케어** | ② 다중 브랜드형 | 74 슬라이드 | [42 슬라이드 + PDF](proposals/yakson-healthcare/) | 65 / 1 / 5 / 3 |
 
 ## ⚙️ 기술 스택
 

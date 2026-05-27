@@ -1159,6 +1159,308 @@
     .madup-mark, .page-no, .page-label { -webkit-print-color-adjust: exact; }
   }
 
+  /* ===== Creative Guideline Components ===== */
+
+  /* Tone Card (3-Track Visual Direction) */
+  .tone-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .tone-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .tone-mood {
+    height: 88px;
+    position: relative;
+    overflow: hidden;
+  }
+  .tone-mood.mood-olli {
+    background:
+      radial-gradient(circle at 70% 40%, rgba(245, 212, 216, 0.35) 0%, transparent 60%),
+      linear-gradient(135deg, #2a2622 0%, #18161a 100%);
+  }
+  .tone-mood.mood-beyond {
+    background:
+      radial-gradient(circle at 30% 50%, rgba(180, 200, 220, 0.18) 0%, transparent 60%),
+      linear-gradient(135deg, #14181f 0%, #0a0c11 100%);
+  }
+  .tone-mood.mood-golki {
+    background:
+      radial-gradient(circle at 50% 40%, rgba(230, 216, 197, 0.30) 0%, transparent 60%),
+      linear-gradient(135deg, #2b2418 0%, #1a1410 100%);
+  }
+  .tone-mood .mood-label {
+    position: absolute;
+    bottom: 12px; left: 14px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+  }
+  .tone-body {
+    padding: 18px 18px 20px;
+  }
+  .tone-body .tone-brand {
+    font-size: 14px;
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .tone-body .tone-keyword {
+    font-size: 11px;
+    color: var(--accent-rose);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+  .tone-body .tone-desc {
+    font-size: 12px;
+    color: var(--text-sub);
+    line-height: 1.7;
+    margin: 0 0 12px;
+  }
+  .tone-body .tone-desc strong { color: var(--text-main); }
+  .tone-attrs {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 12px;
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.7;
+  }
+  .tone-attrs li {
+    display: flex;
+    gap: 8px;
+    padding: 2px 0;
+  }
+  .tone-attrs li b {
+    min-width: 56px;
+    color: var(--accent-beige);
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Color Swatch Row */
+  .swatch-row {
+    display: flex;
+    gap: 6px;
+    margin: 10px 0 6px;
+  }
+  .swatch {
+    flex: 1;
+    height: 32px;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .swatch::after {
+    content: attr(data-hex);
+    position: absolute;
+    bottom: -16px; left: 0;
+    font-size: 9px;
+    color: var(--text-caption);
+    letter-spacing: 0.04em;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+
+  /* Do/Don't Cards (카피 가이드) */
+  .copy-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .copy-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px;
+    position: relative;
+  }
+  .copy-card.do { border-left: 3px solid var(--accent-rose); }
+  .copy-card.dont { border-left: 3px solid #6b3838; }
+  .copy-card .copy-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .copy-card.do .copy-tag { color: var(--accent-rose); }
+  .copy-card.dont .copy-tag { color: #d4858a; }
+  .copy-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .copy-card li {
+    font-size: 12.5px;
+    color: var(--text-sub);
+    line-height: 1.65;
+    padding: 8px 0 8px 22px;
+    border-bottom: 1px dashed var(--border-soft);
+    position: relative;
+  }
+  .copy-card li:last-child { border-bottom: none; }
+  .copy-card.do li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-rose);
+    font-weight: 800;
+  }
+  .copy-card.dont li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #d4858a;
+    font-weight: 800;
+  }
+  .copy-card .copy-example {
+    display: block;
+    background: var(--bg-elev);
+    padding: 8px 12px;
+    margin: 4px 0 0;
+    border-radius: 4px;
+    font-size: 11.5px;
+    color: var(--text-main);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* Format Spec Table (채널별 규격) */
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .format-spec {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .format-spec .fs-channel {
+    font-size: 10px;
+    color: var(--accent-rose);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .format-spec h6 {
+    margin: 0 0 8px;
+    font-size: 13.5px;
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .format-spec .fs-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.6;
+  }
+  .format-spec .fs-specs li {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .format-spec .fs-specs li span { color: var(--accent-beige); font-weight: 600; }
+
+  /* Key Visual Concept Card */
+  .kv-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .kv-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .kv-preview {
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+  }
+  .kv-preview.kv-olli {
+    background:
+      radial-gradient(circle at 30% 50%, rgba(245, 212, 216, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 75% 35%, rgba(212, 165, 154, 0.22) 0%, transparent 55%),
+      linear-gradient(135deg, #1e1a18 0%, #2a2422 60%, #14110f 100%);
+  }
+  .kv-preview.kv-beyond {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(200, 220, 240, 0.10) 0%, transparent 60%),
+      linear-gradient(180deg, #181c24 0%, #0c0e14 100%);
+  }
+  .kv-preview.kv-golki {
+    background:
+      radial-gradient(circle at 40% 40%, rgba(230, 216, 197, 0.30) 0%, transparent 55%),
+      radial-gradient(circle at 70% 65%, rgba(201, 180, 160, 0.20) 0%, transparent 50%),
+      linear-gradient(135deg, #1e1a16 0%, #2a2218 60%, #1a1410 100%);
+  }
+  .kv-preview .kv-tag {
+    position: absolute;
+    top: 14px; left: 14px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.92);
+    text-transform: uppercase;
+  }
+  .kv-preview .kv-headline {
+    position: absolute;
+    bottom: 14px; left: 14px;
+    right: 14px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.95);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .kv-info {
+    padding: 16px 18px 18px;
+  }
+  .kv-info h6 {
+    margin: 0 0 6px;
+    font-size: 13.5px;
+    color: var(--text-main);
+    font-weight: 700;
+  }
+  .kv-info p {
+    margin: 0;
+    font-size: 11.5px;
+    color: var(--text-sub);
+    line-height: 1.7;
+  }
+  .kv-info .kv-ref {
+    display: block;
+    font-size: 10px;
+    color: var(--text-caption);
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+  .kv-info .kv-ref b { color: var(--accent-beige); font-weight: 700; }
+
   /* ===== Sources Note ===== */
   .sources-note {
     font-size: 10.5px;
@@ -1272,8 +1574,12 @@
         <ul class="index-sub">
           <li><a href="#s5-1">소재 매트릭스</a></li>
           <li><a href="#s5-2">소재 페이즈 운영</a></li>
-          <li><a href="#s5-3">SPRAY AI · 심의봇</a></li>
-          <li><a href="#s5-4">CRM · 재구매</a></li>
+          <li><a href="#s5-3">톤앤매너 가이드 <span style="color:var(--accent-rose);font-size:9px;">NEW</span></a></li>
+          <li><a href="#s5-4">카피 가이드 <span style="color:var(--accent-rose);font-size:9px;">NEW</span></a></li>
+          <li><a href="#s5-5">포맷 · 채널 규격 <span style="color:var(--accent-rose);font-size:9px;">NEW</span></a></li>
+          <li><a href="#s5-6">키비주얼 컨셉 <span style="color:var(--accent-rose);font-size:9px;">NEW</span></a></li>
+          <li><a href="#s5-7">SPRAY AI · 심의봇</a></li>
+          <li><a href="#s5-8">CRM · 재구매</a></li>
         </ul>
       </li>
       <li class="index-section"><a href="#ch6"><span class="ch-badge">06</span>매드업 솔루션 · 일정</a>
@@ -2687,8 +2993,367 @@
   <div class="page-no">32</div>
 </article>
 
-<!-- 5-3 SPRAY AI 심의 -->
+<!-- 5-3 톤앤매너 가이드 -->
 <article class="slide" id="s5-3">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 톤앤매너 가이드</div>
+  <span class="slide-meta">Visual Direction</span>
+  <h2 class="slide-title">3-Track별 <span class="highlight">톤앤매너</span> — 같은 광고주 안에서도 페르소나·카테고리가 다르므로 시각 언어를 명확히 분리</h2>
+  <p class="slide-title-sub">컬러 · 무드 · 타이포그래피 · 구도가 모두 트랙별로 차등 — 소재 발주 시 단일 참조 표</p>
+
+  <div class="tone-row">
+    <div class="tone-card">
+      <div class="tone-mood mood-olli">
+        <span class="mood-label">Track 01 · OLLI LIRA</span>
+      </div>
+      <div class="tone-body">
+        <div class="tone-brand">OLLI LIRA</div>
+        <div class="tone-keyword">Modern · Tech-Forward · Premium</div>
+        <p class="tone-desc"><strong>"전문가 임상의 차세대 디바이스"</strong> — 정제된 모던 톤, 차가운 메탈릭 + 따뜻한 로즈골드 액센트, 효능 데이터 그래픽 중심</p>
+        <div class="swatch-row">
+          <span class="swatch" data-hex="#1a1a1c" style="background:#1a1a1c;"></span>
+          <span class="swatch" data-hex="#d4a59a" style="background:#d4a59a;"></span>
+          <span class="swatch" data-hex="#f5d4d8" style="background:#f5d4d8;"></span>
+          <span class="swatch" data-hex="#e0e0e0" style="background:#e0e0e0;"></span>
+        </div>
+        <ul class="tone-attrs">
+          <li><b>Typo</b> <span>Pretendard 800 · 영문 산세리프</span></li>
+          <li><b>Mood</b> <span>임상실 + 부드러운 조명</span></li>
+          <li><b>구도</b> <span>제품 클로즈업 + 효능 인포</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-mood mood-beyond">
+        <span class="mood-label">Track 02 · BEYOND</span>
+      </div>
+      <div class="tone-body">
+        <div class="tone-brand">OLLI LIRA BEYOND</div>
+        <div class="tone-keyword">Editorial · Clinical · Trusted</div>
+        <p class="tone-desc"><strong>"학회가 증명한 메디컬 그레이드"</strong> — 차분한 에디토리얼 톤, 클리닉/연구실 무드, 백그라운드 화이트 + 깊은 네이비 액센트</p>
+        <div class="swatch-row">
+          <span class="swatch" data-hex="#fafafa" style="background:#fafafa;"></span>
+          <span class="swatch" data-hex="#1a2738" style="background:#1a2738;"></span>
+          <span class="swatch" data-hex="#a8b4c4" style="background:#a8b4c4;"></span>
+          <span class="swatch" data-hex="#d4a838" style="background:#d4a838;"></span>
+        </div>
+        <ul class="tone-attrs">
+          <li><b>Typo</b> <span>Sans Serif + Serif 혼용</span></li>
+          <li><b>Mood</b> <span>임상 데이터 · 학회지 · 전문의</span></li>
+          <li><b>구도</b> <span>인포그래픽 + 전문가 인터뷰</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-mood mood-golki">
+        <span class="mood-label">Track 03 · GOLKI</span>
+      </div>
+      <div class="tone-body">
+        <div class="tone-brand">GOLKI</div>
+        <div class="tone-keyword">Heritage · Warm · Caring</div>
+        <p class="tone-desc"><strong>"45년 매장에서 검증된 정성"</strong> — 따뜻한 우드톤, 크림 · 베이지 · 골드, 가족·세대 정서 강조, 매장 시술 영상 활용</p>
+        <div class="swatch-row">
+          <span class="swatch" data-hex="#e6d8c5" style="background:#e6d8c5;"></span>
+          <span class="swatch" data-hex="#c9b4a0" style="background:#c9b4a0;"></span>
+          <span class="swatch" data-hex="#8c6f4a" style="background:#8c6f4a;"></span>
+          <span class="swatch" data-hex="#3a2a1c" style="background:#3a2a1c;"></span>
+        </div>
+        <ul class="tone-attrs">
+          <li><b>Typo</b> <span>Pretendard 600 · 한글 무게감</span></li>
+          <li><b>Mood</b> <span>매장 시술실 + 자연광 + 가족</span></li>
+          <li><b>구도</b> <span>인물 + 매장 + 시즌 패키지</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>3 트랙은 <strong>같은 광고주 안에서도 비주얼 언어가 완전히 분리</strong> — 소재가 섞이지 않아 매체별 ROAS 측정도 명확</li>
+    <li>각 트랙의 컬러·타이포 시스템은 매드업 크리에이티브 사업부문(70+) 디자이너가 분기 단위 유지·보강</li>
+    <li class="sub">3 트랙의 톤은 매드업 디자인 시스템 라이브러리에 등록되어 SPRAY AI 자동 생성 시 시드로 활용</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">33</div>
+</article>
+
+<!-- 5-4 카피 가이드 -->
+<article class="slide" id="s5-4">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 카피 가이드</div>
+  <span class="slide-meta">Verbal Identity · Copy Guide</span>
+  <h2 class="slide-title">카피 가이드 — <span class="highlight">트랙별 보이스 + 식약처 광고 규제 사전 점검</span>으로 효능 단정 리스크 차단</h2>
+  <p class="slide-title-sub">2025년 화장품 광고 행정처분 265건 중 70%가 "선 넘은 광고" 적발 → 매드업 AI 심의봇 + 카피 가이드로 사전 차단</p>
+
+  <table style="margin-bottom:20px;">
+    <thead>
+      <tr>
+        <th style="width:18%;">트랙</th>
+        <th style="width:22%;">카피 보이스</th>
+        <th>핵심 어휘</th>
+        <th style="width:28%;">금기 표현</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">OLLI LIRA</td>
+        <td>전문성 · 효능 데이터 중심 · 군더더기 없음</td>
+        <td>"임상", "효능 입증", "갈바닉+EMS+고주파", "전문가가 선택한"</td>
+        <td>"100%", "유일", "최고의 효과" — 효능 단정 X</td>
+      </tr>
+      <tr>
+        <td class="brand-label">OLLI LIRA BEYOND</td>
+        <td>중립 · 신뢰 · 학술 인용 톤</td>
+        <td>"PMC 논문", "KFDA 인증", "학회 발표", "전문의 코멘트"</td>
+        <td>"치료", "치유", "병을 낫게" — 의학적 효능 단정 X</td>
+      </tr>
+      <tr>
+        <td class="brand-label">GOLKI</td>
+        <td>정통 · 따뜻 · 세대 정서 · 매장 자산 활용</td>
+        <td>"45년", "매장에서 검증된", "골기 테라피", "정성"</td>
+        <td>"발모", "탈모 치료" — 두피 효능 단정 X</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="copy-guide">
+    <div class="copy-card do">
+      <span class="copy-tag">✓ DO</span>
+      <ul>
+        <li><strong>임상 결과 인용 시 출처 명시</strong>
+          <span class="copy-example">"PMC 논문 게재 임상 결과, 4주 사용 후 피부 탄력 개선 평균 18%"</span>
+        </li>
+        <li><strong>매장 자산·45년 IP 활용</strong>
+          <span class="copy-example">"45년 약손명가 매장에서 검증된 골기 테라피, 이제 집에서"</span>
+        </li>
+        <li><strong>객관적 스펙·기능 설명</strong>
+          <span class="copy-example">"갈바닉 5단계 · EMS 3단계 · 고주파 1단계 통합 운영"</span>
+        </li>
+        <li><strong>사용자 후기 직접 인용 (블라인드 처리)</strong>
+          <span class="copy-example">"40대 사용자 12주 사용 후기 — '매장에서 받던 케어를 집에서'"</span>
+        </li>
+      </ul>
+    </div>
+    <div class="copy-card dont">
+      <span class="copy-tag">✗ DON'T</span>
+      <ul>
+        <li><strong>의학·치료 효능 단정</strong>
+          <span class="copy-example">"탈모 치료", "주름 제거", "병 낫게" — 식약처 가이드 위반</span>
+        </li>
+        <li><strong>경쟁사 직접 비교·비방</strong>
+          <span class="copy-example">"메디큐브보다 효과 좋은", "1위 디바이스" — 비교 광고 규제</span>
+        </li>
+        <li><strong>출처 없는 통계·임상 수치</strong>
+          <span class="copy-example">"99% 만족", "10명 중 9명이 효과" — 객관적 근거 불충분</span>
+        </li>
+        <li><strong>일방향 단정·과장 형용사</strong>
+          <span class="copy-example">"세계 최초", "유일한", "완벽한 솔루션" — 과장 표현 회피</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>모든 카피</strong>는 매드업 AI 심의봇(식약처 화장품 표시·광고 관리 지침 2025.1.21 개정 기반)이 사전 점검</li>
+    <li>위반 가능 표현 검출 시 자동 대체 카피 제안 — 카피 발주 → 심의 → 발행 사이클 평균 30% 단축</li>
+    <li class="sub">카피 가이드는 분기 단위 식약처 가이드 업데이트 반영하여 자동 동기화</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">34</div>
+</article>
+
+<!-- 5-5 소재 포맷·채널 규격 -->
+<article class="slide" id="s5-5">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 포맷 · 채널 규격</div>
+  <span class="slide-meta">Format · Channel Spec</span>
+  <h2 class="slide-title">소재 포맷 5종 + <span class="highlight">매체별 규격 표준화</span> — 발주·심의·발행 사이클 자동화</h2>
+  <p class="slide-title-sub">매트릭스 셀별 포맷이 정해지면 해상도·길이·비율·심의가 모두 자동 — 매주 단위 소재 회전 가능</p>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin:18px 0 12px;">5 Core Formats</p>
+  <table>
+    <thead>
+      <tr><th style="width:18%;">포맷</th><th style="width:18%;">주 funnel</th><th style="width:22%;">활용 트랙</th><th>운영 주체 · 솔루션</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="brand-label">15초 영상 (Hook)</td>
+        <td>인지</td>
+        <td>OLLI LIRA · GOLKI</td>
+        <td>SPRAY AI 자동 생성 + 매드업 영상팀 검수</td>
+      </tr>
+      <tr>
+        <td class="brand-label">카드뉴스 (8~12장)</td>
+        <td>인지 · 고려</td>
+        <td>3-Track 공통</td>
+        <td>SPRAY AI + AI 심의봇</td>
+      </tr>
+      <tr>
+        <td class="brand-label">데이터 인포그래픽</td>
+        <td>고려 · 신뢰</td>
+        <td>BEYOND 중심</td>
+        <td>매드업 디자이너 (PMC 논문 시각화)</td>
+      </tr>
+      <tr>
+        <td class="brand-label">매장·시술 영상 (30~60초)</td>
+        <td>신뢰 · 전환</td>
+        <td>GOLKI · OLLI LIRA</td>
+        <td>약손명가 매장 협업 + 매드업 영상팀</td>
+      </tr>
+      <tr>
+        <td class="brand-label">후기 카드 / KOL 협업</td>
+        <td>신뢰 · 충성</td>
+        <td>3-Track 차등 KOL 풀</td>
+        <td>매드업 KOL 사업팀</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin:24px 0 12px;">Channel Spec — 매체별 표준 규격</p>
+  <div class="format-grid">
+    <div class="format-spec">
+      <div class="fs-channel">Meta — Feed</div>
+      <h6>이미지 + 영상</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>1:1 / 4:5</span></li>
+        <li>해상도 <span>1080×1080</span></li>
+        <li>영상 길이 <span>15s · 30s</span></li>
+        <li>심의 <span>AI 심의봇</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">Meta — Reels</div>
+      <h6>세로 영상</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>9:16</span></li>
+        <li>해상도 <span>1080×1920</span></li>
+        <li>영상 길이 <span>15s · 30s · 60s</span></li>
+        <li>심의 <span>AI 심의봇</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">YouTube — UAC</div>
+      <h6>전체 비율 호환</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>16:9 / 1:1 / 9:16</span></li>
+        <li>해상도 <span>1920×1080 외</span></li>
+        <li>영상 길이 <span>6s · 15s · 60s</span></li>
+        <li>심의 <span>구글 정책 + 심의봇</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">Naver BS</div>
+      <h6>상세 페이지 · 카드</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>1:1 / 1:1.5</span></li>
+        <li>해상도 <span>860×1290 + 1080×1080</span></li>
+        <li>영상 길이 <span>15s · 30s</span></li>
+        <li>심의 <span>네이버 BS 가이드</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">카카오 선물하기</div>
+      <h6>시즌 카드</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>1:1</span></li>
+        <li>해상도 <span>800×800</span></li>
+        <li>가독성 <span>한글 ≥18px</span></li>
+        <li>심의 <span>카카오 정책</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">GFA (네이버 DA)</div>
+      <h6>디스플레이</h6>
+      <ul class="fs-specs">
+        <li>비율 <span>1:1 / 1.91:1</span></li>
+        <li>해상도 <span>1200×1200 / 1200×628</span></li>
+        <li>영상 길이 <span>15s</span></li>
+        <li>심의 <span>네이버 광고 정책</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">검색 (LSA · NDA)</div>
+      <h6>키워드 · 확장 카피</h6>
+      <ul class="fs-specs">
+        <li>제목 <span>≤15자 (한글)</span></li>
+        <li>설명 <span>≤45자 (한글)</span></li>
+        <li>확장 <span>사이트링크 · 공지</span></li>
+        <li>심의 <span>매체별 자동 + 심의봇</span></li>
+      </ul>
+    </div>
+    <div class="format-spec">
+      <div class="fs-channel">GEO (AI 검색)</div>
+      <h6>구조화 콘텐츠</h6>
+      <ul class="fs-specs">
+        <li>포맷 <span>FAQ · Q&A · 비교표</span></li>
+        <li>길이 <span>800~1,500자</span></li>
+        <li>심의 <span>매드업 콘텐츠 가이드</span></li>
+        <li>발행 <span>AI Navigator 자동 추천</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);margin:18px 0 0;line-height:1.7;">→ 각 포맷의 규격은 SPRAY AI 자동 생성 시 시드로 사용 — 한 번 발주에 매체별 변형 자동 생성, 매주 단위 회전 가능</p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">35</div>
+</article>
+
+<!-- 5-6 키비주얼 컨셉 -->
+<article class="slide" id="s5-6">
+  <div class="page-label">크리에이티브 · CRM 전략 ㅣ 키비주얼 컨셉</div>
+  <span class="slide-meta">Key Visual Concept</span>
+  <h2 class="slide-title">3-Track <span class="highlight">키비주얼 컨셉 시안</span> — 인지·고려 단계 메인 비주얼 방향 (NDA 자료 수령 후 1차 시안 1주 내 회신)</h2>
+  <p class="slide-title-sub">트랙별 무드·컬러·헤드라인 컨셉 — 실제 시안은 매드업 크리에이티브 사업부문 디자이너 작업으로 진행</p>
+
+  <div class="kv-row">
+    <div class="kv-card">
+      <div class="kv-preview kv-olli">
+        <span class="kv-tag">Track 01 · KV</span>
+        <div class="kv-headline">"전문가 임상이<br>집에서 시작되다"</div>
+      </div>
+      <div class="kv-info">
+        <h6>OLLI LIRA Key Visual</h6>
+        <p>제품 클로즈업 + 효능 데이터 그래픽 오버레이. 무채색 베이스 + 로즈골드·핑크 액센트. 차분한 임상실 무드. 부드러운 조명·미니멀.</p>
+        <span class="kv-ref"><b>Ref</b> 메디큐브 부스터프로 · Foreo · Therabody</span>
+      </div>
+    </div>
+    <div class="kv-card">
+      <div class="kv-preview kv-beyond">
+        <span class="kv-tag">Track 02 · KV</span>
+        <div class="kv-headline">"학회가 증명한<br>메디컬 그레이드"</div>
+      </div>
+      <div class="kv-info">
+        <h6>OLLI LIRA BEYOND Key Visual</h6>
+        <p>임상 데이터 인포그래픽 + 전문의 인물·클리닉 무드. 화이트 베이스 + 네이비·골드 액센트. 신뢰감 우선, 트렌디 X. 정적·텍스트 중심.</p>
+        <span class="kv-ref"><b>Ref</b> Olay Regenerist · La Roche-Posay · 닥터자르트</span>
+      </div>
+    </div>
+    <div class="kv-card">
+      <div class="kv-preview kv-golki">
+        <span class="kv-tag">Track 03 · KV</span>
+        <div class="kv-headline">"45년 매장의<br>골기, 이제 집에서"</div>
+      </div>
+      <div class="kv-info">
+        <h6>GOLKI Key Visual</h6>
+        <p>매장 시술 장면 + 가족·세대 정서 인물 컷. 우드톤·크림·골드 컬러. 따뜻한 자연광. 시즌 캠페인 시 한복·명절 모티프 결합 가능.</p>
+        <span class="kv-ref"><b>Ref</b> 동인비 · 설화수 · 후 — 한방·정통 라인</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="pull-quote">키비주얼은 트랙별 시즌 · 캠페인 모멘텀에 따라 분기 단위 리프레시 — 약손명가 매장 단골·임상 자산을 일관되게 활용하되 화면 톤은 트랙 컨셉에 맞춰 차등 운영</p>
+
+  <ul class="slide-bullets">
+    <li><strong>1차 시안 발주</strong> — NDA 체결 후 광고주 측 제품 이미지·매장 자료 수령 → 매드업 디자이너 1주 내 1차 시안 3종 회신</li>
+    <li><strong>레퍼런스 활용</strong> — 위 ref 브랜드의 직접 모방이 아닌 톤·무드·구도 영감 추출. 약손명가 자산 중심으로 재구성</li>
+    <li class="sub">키비주얼 확정 후 SPRAY AI 시드로 등록되어 매체별 변형 자동 생성</li>
+  </ul>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">36</div>
+</article>
+
+<!-- 5-7 SPRAY AI 심의 -->
+<article class="slide" id="s5-7">
   <div class="page-label">크리에이티브 · CRM 전략 ㅣ SPRAY AI · 심의봇</div>
   <span class="slide-meta">SPRAY AI · AI 심의봇</span>
   <h2 class="slide-title">SPRAY AI + AI 심의봇 — <span class="highlight">소재 자동 생성·심의 검토</span> 사이클로 식약처 규제 강화 흐름 즉시 대응</h2>
@@ -2719,11 +3384,11 @@
   </ul>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">33</div>
+  <div class="page-no">37</div>
 </article>
 
 <!-- 5-4 CRM · 재구매 -->
-<article class="slide" id="s5-4">
+<article class="slide" id="s5-8">
   <div class="page-label">크리에이티브 · CRM 전략 ㅣ CRM · 재구매</div>
   <span class="slide-meta">CRM · 재구매 자동화</span>
   <h2 class="slide-title">MILOT 기반 <span class="highlight">1st-party 데이터 CRM</span> — 디바이스 재구매·앰플 정기·매장 OMO funnel 자동화</h2>
@@ -2749,7 +3414,7 @@
   </ul>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">34</div>
+  <div class="page-no">38</div>
 </article>
 
 <!-- ============================================ -->
@@ -2802,7 +3467,7 @@
   </ul>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">35</div>
+  <div class="page-no">39</div>
 </article>
 
 <!-- 6-2 운영 인력 -->
@@ -2852,7 +3517,7 @@
   </ul>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">36</div>
+  <div class="page-no">40</div>
 </article>
 
 <!-- 6-3 Special Offer -->
@@ -2894,7 +3559,7 @@
   <p style="font-size:11px;color:var(--text-caption);margin:18px 0 0;letter-spacing:0.02em;">* Special Offer 3종은 약손명가헬스케어 전용 조건이며, 본 제안서 채택 이후 6개월 내 운영 개시 기준입니다.</p>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">37</div>
+  <div class="page-no">41</div>
 </article>
 
 <!-- 6-4 일정 -->
@@ -2958,7 +3623,7 @@
   </ul>
 
   <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
-  <div class="page-no">38</div>
+  <div class="page-no">42</div>
 </article>
 
 <!-- ============================================ -->
