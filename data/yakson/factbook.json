@@ -6,10 +6,10 @@
     "variant": "변형 ② 다중 브랜드형",
     "ptDate": "2026-06-16(화)",
     "createdAt": "2026-04-26",
-    "updatedAt": "2026-05-27",
+    "updatedAt": "2026-05-28",
     "rfp": "연간 30억 예산, 3 브랜드(약손명가PB/OLLI LIRA/GOLKI) 통합 운영. KPI: 공식몰 ROAS 250%/브스 500%/외부몰 300%, 재구매율 10%, 카플친 +200%.",
     "owner": "매드업 비딩 TF",
-    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강"
+    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌)"
   },
   "stats": {
     "auto": 82,
@@ -169,18 +169,47 @@
         }
       ],
       "sources": [
-        { "label": "광고주 PDF 공유 자료 (2026-05-26) p.5 IP 축소 결정", "url": "" },
-        { "label": "Economy Chosun: 닥터자르트 부진 분석", "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html" },
-        { "label": "팜이데일리: 동국제약 마데카·위드닉스", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" }
+        {
+          "label": "광고주 PDF 공유 자료 (2026-05-26) p.5 IP 축소 결정",
+          "url": ""
+        },
+        {
+          "label": "Economy Chosun: 닥터자르트 부진 분석",
+          "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html"
+        },
+        {
+          "label": "팜이데일리: 동국제약 마데카·위드닉스",
+          "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656"
+        }
       ],
       "chart": {
         "type": "compare",
         "title": "🔑 매드업 4대 IP 축소·이양 가이드 (광고주 결정 정합)",
         "items": [
-          { "label": "원칙 ① 단계적 이양", "value": "2026 12개월 로드맵", "sub": "Q1: OLLI·GOLKI 자체 브랜드 헤드라인 확립 / Q2: 약손명가 IP 노출 50% 감소 / Q3-Q4: 추상화 표현만 유지 (\"46년 노하우\")", "tone": "highlight" },
-          { "label": "원칙 ② 라인별 차등 가속", "value": "OLLI/GOLKI 즉시 분리 · PB 유지", "sub": "OLLI LIRA = 디바이스+홈케어 독립 / GOLKI = 마사지·괄사 헤리티지 독립 / 약손PB만 약손명가 IP 유지 (소비자 신뢰 자산)", "tone": "primary" },
-          { "label": "원칙 ③ 추상 자산 보존", "value": "임상·헤리티지·전문가 권위", "sub": "❌ \"약손명가가 만든\" 직접 인용 → ✅ \"46년 에스테틱 임상\" / \"국내 NO.1 에스테틱 노하우\" / \"47년 테라피 헤리티지\" (PDF p.7 직접 표현)", "tone": "accent" },
-          { "label": "원칙 ④ 독립 페르소나 신설", "value": "OLLI = 라이프스타일 / GOLKI = 셀프케어 의식", "sub": "OLLI LIRA = \"전문가급 리프팅 리추얼\" + 오프라인 전개 / GOLKI = \"장인의 골기테라피 헤리티지\" 셀프 의식 (PDF p.3 직접 톤)", "tone": "success" }
+          {
+            "label": "원칙 ① 단계적 이양",
+            "value": "2026 12개월 로드맵",
+            "sub": "Q1: OLLI·GOLKI 자체 브랜드 헤드라인 확립 / Q2: 약손명가 IP 노출 50% 감소 / Q3-Q4: 추상화 표현만 유지 (\"46년 노하우\")",
+            "tone": "highlight"
+          },
+          {
+            "label": "원칙 ② 라인별 차등 가속",
+            "value": "OLLI/GOLKI 즉시 분리 · PB 유지",
+            "sub": "OLLI LIRA = 디바이스+홈케어 독립 / GOLKI = 마사지·괄사 헤리티지 독립 / 약손PB만 약손명가 IP 유지 (소비자 신뢰 자산)",
+            "tone": "primary"
+          },
+          {
+            "label": "원칙 ③ 추상 자산 보존",
+            "value": "임상·헤리티지·전문가 권위",
+            "sub": "❌ \"약손명가가 만든\" 직접 인용 → ✅ \"46년 에스테틱 임상\" / \"국내 NO.1 에스테틱 노하우\" / \"47년 테라피 헤리티지\" (PDF p.7 직접 표현)",
+            "tone": "accent"
+          },
+          {
+            "label": "원칙 ④ 독립 페르소나 신설",
+            "value": "OLLI = 라이프스타일 / GOLKI = 셀프케어 의식",
+            "sub": "OLLI LIRA = \"전문가급 리프팅 리추얼\" + 오프라인 전개 / GOLKI = \"장인의 골기테라피 헤리티지\" 셀프 의식 (PDF p.3 직접 톤)",
+            "tone": "success"
+          }
         ],
         "footnote": "* 본 4대 가이드는 광고주 2026-05-26 IP 축소 결정에 정합 — 모든 광고 카피·소재·랜딩이 이 4축 안에서 운영"
       },
@@ -2041,10 +2070,22 @@
         }
       ],
       "sources": [
-        { "label": "메디파나뉴스: 클래시스 사상 최대 실적", "url": "https://www.medipana.com/news/articleView.html?idxno=322822" },
-        { "label": "히트뉴스: 미용 의료기기 8개사 1조원 돌파", "url": "https://www.hitnews.co.kr/news/articleView.html?idxno=75177" },
-        { "label": "매거진 한경: 리프팅 시장 고속성장", "url": "https://magazine.hankyung.com/business/article/202505078027b" },
-        { "label": "대웅제약 뉴스룸: 메디컬 에스테틱 CAGR 17.3%", "url": "https://newsroom.daewoong.co.kr/archives/24219" }
+        {
+          "label": "메디파나뉴스: 클래시스 사상 최대 실적",
+          "url": "https://www.medipana.com/news/articleView.html?idxno=322822"
+        },
+        {
+          "label": "히트뉴스: 미용 의료기기 8개사 1조원 돌파",
+          "url": "https://www.hitnews.co.kr/news/articleView.html?idxno=75177"
+        },
+        {
+          "label": "매거진 한경: 리프팅 시장 고속성장",
+          "url": "https://magazine.hankyung.com/business/article/202505078027b"
+        },
+        {
+          "label": "대웅제약 뉴스룸: 메디컬 에스테틱 CAGR 17.3%",
+          "url": "https://newsroom.daewoong.co.kr/archives/24219"
+        }
       ],
       "sourceNote": "* 출처: <a href=\"https://www.medipana.com/news/articleView.html?idxno=322822\" target=\"_blank\">메디파나뉴스</a>, <a href=\"https://www.hitnews.co.kr/news/articleView.html?idxno=75177\" target=\"_blank\">히트뉴스</a>, <a href=\"https://magazine.hankyung.com/business/article/202505078027b\" target=\"_blank\">매거진 한경</a>",
       "chart": {
@@ -2052,11 +2093,36 @@
         "title": "📊 카테고리별 3년 성장 배수 (2022 → 2024-2025)",
         "subtitle": "디바이스·시술기·미용기기 모두 동반 폭증 — 피부관리실(저가 에스테틱)만 정체",
         "items": [
-          { "label": "홈 뷰티 디바이스 (에이피알)", "value": "3.4배 (1,200→4,070억)", "ratio": 1.0, "tone": "highlight" },
-          { "label": "시술기 (클래시스 슈링크)", "value": "2.4배 (1,418→3,368억)", "ratio": 0.70, "tone": "primary" },
-          { "label": "미용 의료기기 8개사 합산", "value": "+29.4% (1조563억)", "ratio": 0.50, "tone": "primary" },
-          { "label": "메디컬 에스테틱 (CAGR)", "value": "+17.3% (3.2조)", "ratio": 0.35, "tone": "success" },
-          { "label": "피부관리실 (업소 수만)", "value": "업소 +70%·매출 정체", "ratio": 0.10, "tone": "danger" }
+          {
+            "label": "홈 뷰티 디바이스 (에이피알)",
+            "value": "3.4배 (1,200→4,070억)",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "시술기 (클래시스 슈링크)",
+            "value": "2.4배 (1,418→3,368억)",
+            "ratio": 0.7,
+            "tone": "primary"
+          },
+          {
+            "label": "미용 의료기기 8개사 합산",
+            "value": "+29.4% (1조563억)",
+            "ratio": 0.5,
+            "tone": "primary"
+          },
+          {
+            "label": "메디컬 에스테틱 (CAGR)",
+            "value": "+17.3% (3.2조)",
+            "ratio": 0.35,
+            "tone": "success"
+          },
+          {
+            "label": "피부관리실 (업소 수만)",
+            "value": "업소 +70%·매출 정체",
+            "ratio": 0.1,
+            "tone": "danger"
+          }
         ],
         "footnote": "* 막대 길이는 시각적 비교용 (3년 변화 배수 기준)"
       },
@@ -2104,10 +2170,22 @@
         }
       ],
       "sources": [
-        { "label": "Brunch (ValueChampion): 피부과 vs 홈 뷰티 디바이스 가성비", "url": "https://brunch.co.kr/@valuechampion/235" },
-        { "label": "Elle Korea: 홈케어 뷰티 디바이스 상한가 직행 진짜 이유", "url": "https://www.elle.co.kr/article/1895888" },
-        { "label": "오픈서베이 뷰티 트렌드 리포트 2025", "url": "https://blog.opensurvey.co.kr/trendreport/beauty-2025/" },
-        { "label": "코스인코리아 소비자 트렌드 인덱스 (20)", "url": "https://cosinkorea.com/news/article.html?no=16092" }
+        {
+          "label": "Brunch (ValueChampion): 피부과 vs 홈 뷰티 디바이스 가성비",
+          "url": "https://brunch.co.kr/@valuechampion/235"
+        },
+        {
+          "label": "Elle Korea: 홈케어 뷰티 디바이스 상한가 직행 진짜 이유",
+          "url": "https://www.elle.co.kr/article/1895888"
+        },
+        {
+          "label": "오픈서베이 뷰티 트렌드 리포트 2025",
+          "url": "https://blog.opensurvey.co.kr/trendreport/beauty-2025/"
+        },
+        {
+          "label": "코스인코리아 소비자 트렌드 인덱스 (20)",
+          "url": "https://cosinkorea.com/news/article.html?no=16092"
+        }
       ],
       "sourceNote": "* 출처: <a href=\"https://brunch.co.kr/@valuechampion/235\" target=\"_blank\">Brunch ValueChampion</a>, <a href=\"https://www.elle.co.kr/article/1895888\" target=\"_blank\">Elle Korea</a>, <a href=\"https://blog.opensurvey.co.kr/trendreport/beauty-2025/\" target=\"_blank\">오픈서베이 2025</a>",
       "chart": {
@@ -2115,10 +2193,30 @@
         "title": "💰 시술 vs 디바이스 비용 비교 (1회 또는 6개월 기준)",
         "subtitle": "올리리라 26.8만원 ≈ 슈링크 시술 1회 비용 ≈ 디바이스 1년 사용 비용",
         "items": [
-          { "label": "슈링크 + 레이저토닝 1회", "value": "16.7만원 (1.0x)", "ratio": 0.10, "tone": "muted" },
-          { "label": "디바이스 6개월 사용", "value": "22.8만원 (1.3x)", "ratio": 0.13, "tone": "primary" },
-          { "label": "올리리라 26.8만원 (전체기간)", "value": "26.8만원 (1.6x)", "ratio": 0.16, "tone": "highlight" },
-          { "label": "프락셀 + 써마지 1회", "value": "170.5만원 (7.7x)", "ratio": 1.0, "tone": "danger" }
+          {
+            "label": "슈링크 + 레이저토닝 1회",
+            "value": "16.7만원 (1.0x)",
+            "ratio": 0.1,
+            "tone": "muted"
+          },
+          {
+            "label": "디바이스 6개월 사용",
+            "value": "22.8만원 (1.3x)",
+            "ratio": 0.13,
+            "tone": "primary"
+          },
+          {
+            "label": "올리리라 26.8만원 (전체기간)",
+            "value": "26.8만원 (1.6x)",
+            "ratio": 0.16,
+            "tone": "highlight"
+          },
+          {
+            "label": "프락셀 + 써마지 1회",
+            "value": "170.5만원 (7.7x)",
+            "ratio": 1.0,
+            "tone": "danger"
+          }
         ],
         "footnote": "* 프락셀+써마지 1회 비용으로 올리리라 풀세트 5대 구매 가능"
       },
@@ -2162,9 +2260,18 @@
         }
       ],
       "sources": [
-        { "label": "얼루어 코리아: 현시점 가장 인기있는 뷰티 디바이스", "url": "https://www.allurekorea.com/2025/08/04/현시점-가장-인기있는-뷰티-디바이스를-에디터들이" },
-        { "label": "올리브영 미용디바이스 기획전", "url": "https://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000101230100" },
-        { "label": "kcelebup: 가정용 리프팅 기기 A to Z", "url": "https://kcelebup.com/home-lifting-device-guide/" }
+        {
+          "label": "얼루어 코리아: 현시점 가장 인기있는 뷰티 디바이스",
+          "url": "https://www.allurekorea.com/2025/08/04/현시점-가장-인기있는-뷰티-디바이스를-에디터들이"
+        },
+        {
+          "label": "올리브영 미용디바이스 기획전",
+          "url": "https://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000101230100"
+        },
+        {
+          "label": "kcelebup: 가정용 리프팅 기기 A to Z",
+          "url": "https://kcelebup.com/home-lifting-device-guide/"
+        }
       ],
       "sourceNote": "* 출처: <a href=\"https://www.allurekorea.com/2025/08/04/현시점-가장-인기있는-뷰티-디바이스를-에디터들이\" target=\"_blank\">얼루어 코리아</a>, <a href=\"https://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000101230100\" target=\"_blank\">올리브영 기획전</a>",
       "body": "<table>\n      <thead><tr><th>구간</th><th>가격대</th><th>대표 제품</th><th>타겟</th><th>시장 의의</th></tr></thead>\n      <tbody>\n        <tr><td>🟢 진입템</td><td>~10만원</td><td>부스터프로 미니 플러스 · 부스터 진동 클렌저</td><td>1020 신규 유입</td><td>입문 장벽 파괴</td></tr>\n        <tr><td>🟢 라이트</td><td>10~15만원대</td><td>부스터프로 미니 (10.9만, <strong>올영 1위</strong>)</td><td>2030 진입</td><td>베스트셀러 핫존</td></tr>\n        <tr style=\"background:#fef3c7;\"><td>🟡 <strong>미들</strong></td><td><strong>20~30만원대</strong></td><td><strong>올리리라 26.8만원</strong> · 올영 리프팅 디바이스 24.6만원</td><td><strong>3040 메인</strong></td><td><strong>시장 주력 가격대</strong></td></tr>\n        <tr><td>🟠 중급</td><td>30~50만원대</td><td>메이크온 스킨라이트 35만원 · LG프라엘 라인</td><td>3040 진심형</td><td>주류</td></tr>\n        <tr><td>🔴 프리미엄</td><td>70만원~</td><td>메디큐브 더블샷 70만 · 부스터프로 80만 · 셀리턴 100만대</td><td>4050 진심형</td><td>진심형</td></tr>\n      </tbody>\n    </table>"
@@ -2172,48 +2279,80 @@
     {
       "id": "s1-21",
       "chapter": "ch1",
-      "meta": "타겟 · 연령 변화 5년",
+      "meta": "⭐ 타겟 · 매드업 페르소나 전략 결정 (2026-05-28)",
       "status": "auto",
       "intro": false,
-      "title": "디바이스 구매층 5년 진화 — <span class=\"highlight\">중장년 독점(~2020) → 3040 진입(2021~23) → 1020·4050 양방향 확장(2024~25)</span>",
+      "title": "매드업 결정 = <span class=\"highlight\">\"3040 코어 단일 집중 + 4050 시즌 보너스\"의 1.5 페르소나 운영</span> — 다층 운영 폐기, 메시지·예산 집중으로 56억 사이즈에서 효율 극대화",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>~2020</strong>: 중장년층(40-50대) 독점 — 200만원대 LED 마스크 진입장벽 高 / 고가 = 진심형 페르소나만"
+          "html": "ㄴ <strong>광고주 RFP 메인 타겟 3040</strong> = 시장 정점 페르소나(30대 이용률 35%, 전 연령 1위)와 정합 / <strong>유지</strong>"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>2021~23 (2030 진입기)</strong>: 메디큐브 에이지알 출시('21.3) + 얼리 안티에이징 / 슬로우 에이징 트렌드 → <strong>30대 이용률 35%</strong> 정점 (전 연령 1위)"
+          "html": "ㄴ <strong>매드업 1차 결정 — 다층 운영(3040+4050+1020) 폐기</strong>: 56억 사이즈 광고주에 3페르소나는 예산 분산 = 메시지 약화 / 메디큐브가 톱스타 IP로 전 연령 커버 중 → 따라가는 게임이 됨"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>2024~25 (양방향 확장기 - 현재)</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>↑ <strong>1020 진입</strong>: 10만원대 미니 + 장원영(메이크온)·카리나(메디큐브) — \"올영 성지\" 효과"
+          "html": "ㄴ <strong>매드업 2차 결정 — 3040 코어 세분화</strong>: 30대 ≠ 동질 집단 / 페인포인트별 3 세그먼트 중 <span class=\"highlight\">\"30대 후반 ~ 40대 초반 EMS 진입기\"</span>를 정조준 (잔주름·탄력 초기 신호 자각 + 시술 1-3년차)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>30대 초~중반(미혼)</strong> — RF·갈바닉 선호 / EMS 정합 △ → 메인 타겟 X"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>30대 후~40대 초(EMS 진입기) ⭐</strong> — 잔주름·탄력 초기 신호 + 시술 병행 시작 → 약손명가 IP·EMS 모두 자연 정합 = <strong>코어 페르소나</strong>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>40대(시술 병행)</strong> — 본격 항노화 → 4050 효도선물로 흡수"
         },
         {
           "type": "indent-1",
-          "html": "↑ <strong>4050 확대</strong>: 효도선물 + 시술 + 디바이스 병행 패턴 정착</li> </ul>"
+          "html": "ㄴ <strong>매드업 3차 결정 — 4050은 \"효도선물 시즌\"만 별도 캠페인 (비대칭 흡수)</strong>: 광고 타겟은 30대 자녀 / 사용 타겟은 4050 부모 → <span class=\"highlight\">광고주 RFP(3040)와 일치하면서 4050 시장도 흡수</span>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ 시즌 캘린더 = <strong>어버이날 D-30 (4월) · 추석 D-30 (9월) · 설날 D-30 (1월)</strong> 집중 운영 / 카카오 선물하기 + GFA + 인스타 3주 단위"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>연령별 페인포인트</strong>: 10대(트러블) → 20-30대(모공·예방) → 40-50대(주름·탄력·V라인 처짐)"
+          "html": "ㄴ <strong>매드업 4차 결정 — 1020은 광고 미운영 (자연 유입만)</strong>: 메이크온이 장원영으로 점유 중 + 가격대 미스매치(26.8만원 vs 1020 10만원대) + EMS는 1020 페인포인트 아님 / <strong>패치·겔 단품 SKU만 유지</strong>"
         },
         {
           "type": "arrow",
-          "html": "▶ 올리리라 RFP 메인 타겟 3040 = 시장 정점 페르소나와 정합 / 동시에 <strong>4050(EMS 친화) · 1020(미니 후속) 보너스 페르소나</strong>로 확장 여지"
+          "html": "▶ <strong>예산 분배</strong>: <span class=\"highlight\">3040 코어 80% / 4050 효도 시즌 20% / 1020 0%</span> — 단일 페르소나 집중으로 메시지·소재·매체 일관성 확보"
         },
         {
           "type": "arrow",
-          "html": "▶ 페르소나 다층화 광고 운영 시 <span class=\"highlight\">3040 메인 70% / 4050 효도 20% / 1020 진입 10%</span> 예산 분배 권장"
+          "html": "▶ <strong>EMS 약점 보완 메시지 프레임</strong>: 3040은 본능적으로 RF·갈바닉 선호 → \"EMS로 리프팅\"(4050 톤) 회피, <span class=\"highlight\">\"30대를 위한 슬로우에이징 일상 루틴\" + \"에스테틱이 만든 매일 5분\" + \"약손명가가 30대에 권하는 첫 디바이스\"</span> 3축으로 EMS 카테고리어는 후방 배치"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>모델·페르소나 캐스팅 권장</strong>: <span class=\"highlight\">동경형(카리나·장원영 톤) 1차 인지 + 매장 시술 후기 마이크로 인플루언서 2차 전환</span> 혼합 — 메디큐브/메이크온의 톱스타 단독 전략과 차별화"
         }
       ],
       "sources": [
-        { "label": "코스인코리아: 2024 뷰티 트렌드 연령대별 다양", "url": "https://www.cosinkorea.com/news/article.html?no=50800" },
-        { "label": "오픈서베이 5개년 K뷰티 트렌드", "url": "https://blog.opensurvey.co.kr/article/beauty-2021-2025/" },
-        { "label": "Goover 2024 뷰티 소비 트렌드", "url": "https://seo.goover.ai/report/202503/go-public-report-ko-b3100547-15a8-442d-9c4c-402aaad191b9-0-0.html" },
-        { "label": "아시아경제: 에이피알 1020세대, 장원영 발탁", "url": "https://www.asiae.co.kr/article/2025070808282886367" }
+        {
+          "label": "코스인코리아: 2024 뷰티 트렌드 연령대별 다양",
+          "url": "https://www.cosinkorea.com/news/article.html?no=50800"
+        },
+        {
+          "label": "오픈서베이 5개년 K뷰티 트렌드",
+          "url": "https://blog.opensurvey.co.kr/article/beauty-2021-2025/"
+        },
+        {
+          "label": "Goover 2024 뷰티 소비 트렌드",
+          "url": "https://seo.goover.ai/report/202503/go-public-report-ko-b3100547-15a8-442d-9c4c-402aaad191b9-0-0.html"
+        },
+        {
+          "label": "토스 데이터 2025 (3040 여성 실용성·개인화)",
+          "url": "https://tossads.toss.im/insights/consumer-trend-2025"
+        }
       ],
-      "sourceNote": "* 출처: <a href=\"https://www.cosinkorea.com/news/article.html?no=50800\" target=\"_blank\">코스인코리아</a>, <a href=\"https://blog.opensurvey.co.kr/article/beauty-2021-2025/\" target=\"_blank\">오픈서베이</a>, <a href=\"https://www.asiae.co.kr/article/2025070808282886367\" target=\"_blank\">아시아경제</a>",
-      "body": "<table>\n      <thead><tr><th>연령</th><th>이용률·점유</th><th>핵심 페인포인트</th><th>선호 기술</th><th>적정가 인식</th></tr></thead>\n      <tbody>\n        <tr><td>10-20대</td><td>(신규 유입 ↑)</td><td>트러블 → 탄력 → 미백 → 주름</td><td>LED · 미니 EMS</td><td>11.3만원</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>30대 ⭐</strong></td><td><strong>이용률 35% (전 연령 1위)</strong></td><td>모공 → 초기 탄력 저하</td><td>RF · HIFU 멀티</td><td><strong>12.7만원</strong></td></tr>\n        <tr><td>40대</td><td>진심형</td><td>주름 → 탄력 저하</td><td><strong>EMS · RF</strong></td><td>11.3만원</td></tr>\n        <tr><td>50대+</td><td>효도선물 수혜</td><td>처짐 → V라인 변형</td><td><strong>EMS</strong> (근육 운동)</td><td>—</td></tr>\n      </tbody>\n    </table>"
+      "sourceNote": "* 출처: <a href=\"https://www.cosinkorea.com/news/article.html?no=50800\" target=\"_blank\">코스인코리아</a>, <a href=\"https://blog.opensurvey.co.kr/article/beauty-2021-2025/\" target=\"_blank\">오픈서베이</a>, <a href=\"https://tossads.toss.im/insights/consumer-trend-2025\" target=\"_blank\">토스 데이터 2025</a> · 매드업 페르소나 전략 결정(2026-05-28)",
+      "body": "<div style=\"margin:16px 0;padding:16px 18px;background:linear-gradient(90deg,#fef3c7 0%,#fff 100%);border-left:4px solid #f59e0b;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:700;color:#92400e;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">⭐ Primary Persona · 80% 예산</div>\n  <div style=\"font-size:16px;font-weight:800;color:#111;margin-bottom:6px;\">\"Slow-aging Starter\" — 약손명가가 30대에 권하는 첫 디바이스</div>\n  <table style=\"width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;\">\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;width:120px;\">연령</td><td style=\"padding:6px 12px;color:#111;\">33–42세 여성 (30대 후반 ~ 40대 초반 코어)</td></tr>\n    <tr style=\"background:#fffbeb;\"><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">라이프 스테이지</td><td style=\"padding:6px 12px;color:#111;\">직장 7-15년차 / 시술 1-3년차 (또는 시술 입문 직전)</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">페인포인트</td><td style=\"padding:6px 12px;color:#111;\">잔주름·탄력 초기 신호 자각 / 매장 시술 부담 vs 효능 신뢰</td></tr>\n    <tr style=\"background:#fffbeb;\"><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">메인 채널</td><td style=\"padding:6px 12px;color:#111;\">인스타·유튜브·올영 + 네이버 BS</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">가격 인식</td><td style=\"padding:6px 12px;color:#111;\">26-32만원 = \"내 가치·취향 반영\" 적정대 (s1-20 미들마켓 정합)</td></tr>\n    <tr style=\"background:#fffbeb;\"><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">핵심 메시지</td><td style=\"padding:6px 12px;color:#111;font-weight:700;\">\"30대를 위한 슬로우에이징 일상 루틴 · 에스테틱이 만든 매일 5분\"</td></tr>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:16px 18px;background:linear-gradient(90deg,#dbeafe 0%,#fff 100%);border-left:4px solid #3b82f6;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:700;color:#1e40af;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">🎁 Secondary Persona · 20% 예산 · 시즌 집중</div>\n  <div style=\"font-size:16px;font-weight:800;color:#111;margin-bottom:6px;\">\"Gift Buyer Path\" — 30대 자녀 → 4050 부모님 (효도선물)</div>\n  <table style=\"width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;\">\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;width:120px;\">광고 타겟</td><td style=\"padding:6px 12px;color:#111;\"><strong>30대 자녀</strong> (광고주 RFP 3040 일치)</td></tr>\n    <tr style=\"background:#eff6ff;\"><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">사용 타겟</td><td style=\"padding:6px 12px;color:#111;\">4050 부모님 (특히 어머니)</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">시즌 캘린더</td><td style=\"padding:6px 12px;color:#111;\"><strong>어버이날 D-30(4월) · 추석 D-30(9월) · 설날 D-30(1월)</strong></td></tr>\n    <tr style=\"background:#eff6ff;\"><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">메인 채널</td><td style=\"padding:6px 12px;color:#111;\">카카오 선물하기 + GFA + 인스타 (시즌 3주 단위 집중)</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#6b7280;font-weight:600;\">핵심 메시지</td><td style=\"padding:6px 12px;color:#111;font-weight:700;\">\"부모님 시술 가는 부담, 집에서 매일\"</td></tr>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:14px 18px;background:#f9fafb;border-left:4px solid #d1d5db;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:700;color:#6b7280;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;\">❌ Excluded · 0% 예산</div>\n  <div style=\"font-size:14px;font-weight:700;color:#374151;margin-bottom:4px;\">1020 진입 — 광고 미운영, 자연 유입만</div>\n  <div style=\"font-size:12px;color:#6b7280;line-height:1.6;\">메이크온이 장원영으로 점유 중 / 가격대 미스매치(26.8만원 vs 1020 10만원대) / EMS는 1020 페인포인트 아님 → <strong>패치·겔 단품 SKU만 유지</strong>해서 자연 유입 받음</div>\n</div>\n\n<table>\n<thead><tr><th>5년 시장 진화 컨텍스트 (참조용)</th><th>설명</th></tr></thead>\n<tbody>\n<tr><td><strong>~2020</strong></td><td>중장년(40-50대) 독점 — 200만원대 LED 마스크 진입장벽 高</td></tr>\n<tr><td><strong>2021~23</strong></td><td>2030 진입기 — 메디큐브 에이지알 출시('21.3) + 30대 이용률 35% 정점</td></tr>\n<tr><td><strong>2024~25</strong></td><td>양방향 확장기 — 1020(미니·올영) + 4050(효도선물·시술 병행) 동시 확장</td></tr>\n<tr style=\"background:#fef3c7;\"><td><strong>2026 매드업 결정</strong></td><td><strong>다층 운영 폐기 → 1.5 페르소나(3040 코어 + 4050 시즌)</strong></td></tr>\n</tbody>\n</table>"
     },
     {
       "id": "s1-22",
@@ -2253,11 +2392,26 @@
         }
       ],
       "sources": [
-        { "label": "메디큐브 공식: 에이지알 에스테틱 전문기술 구현", "url": "https://themedicube.co.kr/age-r/main2.html" },
-        { "label": "메디포뉴스: 클래시스 슈링크홈 1주 1천대 완판", "url": "https://www.medifonews.com/news/article.html?no=209637" },
-        { "label": "팜이데일리: 마데카 동국제약 뷰티 디바이스", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" },
-        { "label": "뉴시스: 피부과 의사가 만든 화장품 닥터지", "url": "https://mobile.newsis.com/view.html?ar_id=NISX20220923_0002024423" },
-        { "label": "비즈트리뷴: KB증권, 동국제약 위드닉스 인수 평가", "url": "https://www.biztribune.co.kr/news/articleView.html?idxno=313539" }
+        {
+          "label": "메디큐브 공식: 에이지알 에스테틱 전문기술 구현",
+          "url": "https://themedicube.co.kr/age-r/main2.html"
+        },
+        {
+          "label": "메디포뉴스: 클래시스 슈링크홈 1주 1천대 완판",
+          "url": "https://www.medifonews.com/news/article.html?no=209637"
+        },
+        {
+          "label": "팜이데일리: 마데카 동국제약 뷰티 디바이스",
+          "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656"
+        },
+        {
+          "label": "뉴시스: 피부과 의사가 만든 화장품 닥터지",
+          "url": "https://mobile.newsis.com/view.html?ar_id=NISX20220923_0002024423"
+        },
+        {
+          "label": "비즈트리뷴: KB증권, 동국제약 위드닉스 인수 평가",
+          "url": "https://www.biztribune.co.kr/news/articleView.html?idxno=313539"
+        }
       ],
       "sourceNote": "* 출처: <a href=\"https://themedicube.co.kr/age-r/main2.html\" target=\"_blank\">메디큐브 공식</a>, <a href=\"https://www.medifonews.com/news/article.html?no=209637\" target=\"_blank\">메디포뉴스</a>, <a href=\"https://pharm.edaily.co.kr/news/read?newsId=01636726638925656\" target=\"_blank\">팜이데일리</a>, <a href=\"https://news.nate.com/view/20250402n09933\" target=\"_blank\">네이트(닥터지)</a>",
       "chart": {
@@ -2265,11 +2419,36 @@
         "title": "🏆 \"전문가 IP → 디바이스·소비재\" 한국 시장 검증 사례",
         "subtitle": "1위 메디큐브·시술기 1위 클래시스·약 IP 동국제약 모두 같은 패턴 → 약손명가헬스케어 진입 전략 정합",
         "items": [
-          { "label": "메디큐브 (디바이스 매출)", "value": "4,070억 · 점유율 32% 1위", "ratio": 1.0, "tone": "highlight" },
-          { "label": "동국제약 (헬스케어 매출)", "value": "3,164억 · CAGR +13.9%", "ratio": 0.78, "tone": "primary" },
-          { "label": "클래시스 슈링크 (시술기)", "value": "3,368억 · 슈링크홈 1주 완판", "ratio": 0.83, "tone": "primary" },
-          { "label": "닥터지 (피부과 의사 IP)", "value": "1,984억 · 로레알 인수", "ratio": 0.49, "tone": "success" },
-          { "label": "약손명가헬스케어 (광고주)", "value": "56억 · 같은 패턴 진입 중", "ratio": 0.014, "tone": "accent" }
+          {
+            "label": "메디큐브 (디바이스 매출)",
+            "value": "4,070억 · 점유율 32% 1위",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "동국제약 (헬스케어 매출)",
+            "value": "3,164억 · CAGR +13.9%",
+            "ratio": 0.78,
+            "tone": "primary"
+          },
+          {
+            "label": "클래시스 슈링크 (시술기)",
+            "value": "3,368억 · 슈링크홈 1주 완판",
+            "ratio": 0.83,
+            "tone": "primary"
+          },
+          {
+            "label": "닥터지 (피부과 의사 IP)",
+            "value": "1,984억 · 로레알 인수",
+            "ratio": 0.49,
+            "tone": "success"
+          },
+          {
+            "label": "약손명가헬스케어 (광고주)",
+            "value": "56억 · 같은 패턴 진입 중",
+            "ratio": 0.014,
+            "tone": "accent"
+          }
         ],
         "footnote": "* 모두 \"전문가 IP → 가정용 소비재\" 패턴 — 광고주가 진입한 패턴의 한국 시장 성공률 1, 2위"
       },
@@ -2321,9 +2500,18 @@
         }
       ],
       "sources": [
-        { "label": "광고주 PDF 공유 자료 2026-05-26 (p.5 IP 축소 결정 / p.7 자체 표현)", "url": "" },
-        { "label": "Economy Chosun: 닥터자르트 부진", "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html" },
-        { "label": "팜이데일리: 동국제약 위드닉스 헬스케어 성장", "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656" }
+        {
+          "label": "광고주 PDF 공유 자료 2026-05-26 (p.5 IP 축소 결정 / p.7 자체 표현)",
+          "url": ""
+        },
+        {
+          "label": "Economy Chosun: 닥터자르트 부진",
+          "url": "https://economychosun.com/site/data/html_dir/2024/11/01/2024110100023.html"
+        },
+        {
+          "label": "팜이데일리: 동국제약 위드닉스 헬스케어 성장",
+          "url": "https://pharm.edaily.co.kr/news/read?newsId=01636726638925656"
+        }
       ],
       "sourceNote": "* 출처: 광고주 PDF 2026-05-26 + 벤치마크(닥터자르트/동국제약) — IP 축소 결정에 정합한 매드업 가이드",
       "body": "<table>\n      <thead><tr><th>가이드</th><th>약손PB</th><th>OLLI LIRA</th><th>GOLKI</th></tr></thead>\n      <tbody>\n        <tr><td>① 단계적 이양 (12개월)</td><td>IP 유지 지속</td><td>Q1 즉시 독립</td><td>Q1 즉시 독립 + 헤리티지 추상화</td></tr>\n        <tr><td>② 라인별 차등</td><td>\"약손명가 47년 테라피\" 직접 노출 OK</td><td>\"전문가급 리프팅 리추얼\" 자체 브랜드</td><td>\"장인의 골기테라피\" 헤리티지</td></tr>\n        <tr><td>③ 추상화 표현 (PDF 원문)</td><td>\"YAKSON SLIMMING™ Complex\"</td><td>\"홈케어 리프팅 리추얼\"</td><td>\"장인의 시그니처 관리 도구\"</td></tr>\n        <tr><td>④ 독립 페르소나</td><td>퍼스널케어·바디라인·붓기관리</td><td>라이프스타일·홈케어·오프라인</td><td>셀프케어 의식·헤리티지</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>벤치마크</strong></td><td><strong>동국제약 마데카 추상화</strong></td><td><strong>닥터자르트 함정 회피</strong></td><td><strong>동국제약 약 IP 추상화</strong></td></tr>\n      </tbody>\n    </table>"
@@ -2431,12 +2619,30 @@
         }
       ],
       "sources": [
-        { "label": "Newswire: 골기 리프팅 밴드 누적 50만개", "url": "https://www.newswire.co.kr/newsRead.php?no=1007028" },
-        { "label": "Newswire: 약손명가헬스케어 올영 1020개 매장 입점", "url": "https://www.newswire.co.kr/newsRead.php?no=1008585" },
-        { "label": "사람인: (주)약손명가헬스케어 2024 매출 56억", "url": "https://m.saramin.co.kr/job-search/company-info-view/finance?csn=cWdHWHQxZzV4MFdwMTA5b0xpSE9OQT09" },
-        { "label": "원티드: 약손명가헬스케어 직원 22명·강남", "url": "https://www.wanted.co.kr/company/43895" },
-        { "label": "MarketBZ: 주식회사 약손명가 헬스케어 (이석진)", "url": "https://marketbz.com/companyDetail/6328702349" },
-        { "label": "나무위키: 약손명가 / 빛채그룹 구조", "url": "https://namu.wiki/w/약손명가" }
+        {
+          "label": "Newswire: 골기 리프팅 밴드 누적 50만개",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=1007028"
+        },
+        {
+          "label": "Newswire: 약손명가헬스케어 올영 1020개 매장 입점",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=1008585"
+        },
+        {
+          "label": "사람인: (주)약손명가헬스케어 2024 매출 56억",
+          "url": "https://m.saramin.co.kr/job-search/company-info-view/finance?csn=cWdHWHQxZzV4MFdwMTA5b0xpSE9OQT09"
+        },
+        {
+          "label": "원티드: 약손명가헬스케어 직원 22명·강남",
+          "url": "https://www.wanted.co.kr/company/43895"
+        },
+        {
+          "label": "MarketBZ: 주식회사 약손명가 헬스케어 (이석진)",
+          "url": "https://marketbz.com/companyDetail/6328702349"
+        },
+        {
+          "label": "나무위키: 약손명가 / 빛채그룹 구조",
+          "url": "https://namu.wiki/w/약손명가"
+        }
       ],
       "sourceNote": "* 출처: <a href=\"https://www.newswire.co.kr/newsRead.php?no=1007028\" target=\"_blank\">Newswire 골기 50만개</a>, <a href=\"https://m.saramin.co.kr/job-search/company-info-view/finance?csn=cWdHWHQxZzV4MFdwMTA5b0xpSE9OQT09\" target=\"_blank\">사람인 재무</a>, <a href=\"https://marketbz.com/companyDetail/6328702349\" target=\"_blank\">MarketBZ</a>, <a href=\"https://namu.wiki/w/약손명가\" target=\"_blank\">나무위키 약손명가</a>",
       "chart": {
@@ -2444,12 +2650,42 @@
         "title": "📏 디바이스 매출 사이즈 비교 — 광고주 vs 시장 (2024 기준)",
         "subtitle": "메디큐브 4,070억 = 1.0x 기준 → 광고주는 1/73 인디 사이즈, 차별화·니치 전략 필수",
         "items": [
-          { "label": "메디큐브 디바이스 (1위)", "value": "4,070억 (1.0x)", "ratio": 1.0, "tone": "highlight" },
-          { "label": "클래시스 시술기", "value": "3,368억 (0.83x)", "ratio": 0.83, "tone": "primary" },
-          { "label": "동국제약 헬스케어", "value": "3,164억 (0.78x)", "ratio": 0.78, "tone": "primary" },
-          { "label": "원텍 (시술기)", "value": "1,568억 (0.39x)", "ratio": 0.39, "tone": "primary" },
-          { "label": "셀리턴 (추정)", "value": "수백억대 (0.1x 추정)", "ratio": 0.10, "tone": "muted" },
-          { "label": "약손명가헬스케어 (광고주)", "value": "56억 (0.014x · 1/73)", "ratio": 0.014, "tone": "accent" }
+          {
+            "label": "메디큐브 디바이스 (1위)",
+            "value": "4,070억 (1.0x)",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "클래시스 시술기",
+            "value": "3,368억 (0.83x)",
+            "ratio": 0.83,
+            "tone": "primary"
+          },
+          {
+            "label": "동국제약 헬스케어",
+            "value": "3,164억 (0.78x)",
+            "ratio": 0.78,
+            "tone": "primary"
+          },
+          {
+            "label": "원텍 (시술기)",
+            "value": "1,568억 (0.39x)",
+            "ratio": 0.39,
+            "tone": "primary"
+          },
+          {
+            "label": "셀리턴 (추정)",
+            "value": "수백억대 (0.1x 추정)",
+            "ratio": 0.1,
+            "tone": "muted"
+          },
+          {
+            "label": "약손명가헬스케어 (광고주)",
+            "value": "56억 (0.014x · 1/73)",
+            "ratio": 0.014,
+            "tone": "accent"
+          }
         ],
         "footnote": "* 정면 승부 불가능 → \"차별화·니치 + 인지도 폭증 + 결합형 락인\" 전략으로 50→300억 점프 미션"
       },
@@ -2629,14 +2865,47 @@
         }
       ],
       "gallery": [
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "가뿐한 복부패치 (NEW)", "price": "림프 수액형 · 0.5mm · 온열 · 올영 타겟", "tag": "약손PB 리뉴얼" },
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "가뿐한 멀티패치 (NEW)", "price": "승모근 지압 돌기 · 47년 테라피 · 올영 타겟", "tag": "약손PB NEW" },
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "약손 브이핏 리프팅 패치 (확장)", "price": "임상 검증 4대 효과 · 96% 순면 · 쿨링", "tag": "🔑 임상 정량 활용" },
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "듀얼 멜팅 클렌징 오일 (NEW)", "price": "자사 첫 클렌징 · 스팀 히팅 · 78% 스킨케어", "tag": "신규 카테고리" },
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "신제품 컨셉 참조", "name": "포어 블러링 팩 클렌저 (NEW)", "price": "pH 4.85 · 살리실산 5000ppm · 알부틴", "tag": "신규 카테고리" }
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "신제품 컨셉 참조",
+          "name": "가뿐한 복부패치 (NEW)",
+          "price": "림프 수액형 · 0.5mm · 온열 · 올영 타겟",
+          "tag": "약손PB 리뉴얼"
+        },
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "신제품 컨셉 참조",
+          "name": "가뿐한 멀티패치 (NEW)",
+          "price": "승모근 지압 돌기 · 47년 테라피 · 올영 타겟",
+          "tag": "약손PB NEW"
+        },
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "신제품 컨셉 참조",
+          "name": "약손 브이핏 리프팅 패치 (확장)",
+          "price": "임상 검증 4대 효과 · 96% 순면 · 쿨링",
+          "tag": "🔑 임상 정량 활용"
+        },
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "신제품 컨셉 참조",
+          "name": "듀얼 멜팅 클렌징 오일 (NEW)",
+          "price": "자사 첫 클렌징 · 스팀 히팅 · 78% 스킨케어",
+          "tag": "신규 카테고리"
+        },
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "신제품 컨셉 참조",
+          "name": "포어 블러링 팩 클렌저 (NEW)",
+          "price": "pH 4.85 · 살리실산 5000ppm · 알부틴",
+          "tag": "신규 카테고리"
+        }
       ],
       "sources": [
-        { "label": "광고주 PDF 공유 자료 2026-05-26 (p.5-9)", "url": "" }
+        {
+          "label": "광고주 PDF 공유 자료 2026-05-26 (p.5-9)",
+          "url": ""
+        }
       ],
       "sourceNote": "* 출처: 광고주 PDF 2026-05-26 p.5(채널 매핑)·p.6(가뿐한 복부패치)·p.7(가뿐한 멀티패치)·p.8(클렌징 오일)·p.9(팩 클렌저)·p.10(브이핏 패치) 직접 인용",
       "body": "<table>\n      <thead><tr><th>신제품</th><th>분류</th><th>핵심 USP</th><th>전개 채널</th><th>매드업 광고 영역</th></tr></thead>\n      <tbody>\n        <tr><td><strong>가뿐한 복부패치</strong></td><td>약손PB 리뉴얼</td><td>림프 수액형·0.5mm·온열</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr><td><strong>가뿐한 멀티패치</strong></td><td>약손PB NEW</td><td>승모근 지압·47년 테라피</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>약손 브이핏 리프팅 패치</strong></td><td>약손PB 확장</td><td><strong>임상 검증 4대 효과</strong></td><td>공식몰·올영</td><td><strong>광고 카피 ② 임상 정량 직접 활용</strong></td></tr>\n        <tr><td>듀얼 멜팅 클렌징 오일</td><td>신규 카테고리</td><td>스팀 히팅·78% 스킨케어</td><td>공식 채널</td><td>공식몰·메타·구글 검색 콘텐츠</td></tr>\n        <tr><td>포어 블러링 팩 클렌저</td><td>신규 카테고리</td><td>pH 4.85·살리실산·나이아신아마이드·알부틴</td><td>공식 채널</td><td>공식몰·매드업 SPRAY AI 성분 시각화</td></tr>\n      </tbody>\n    </table>"
@@ -2962,16 +3231,42 @@
         "type": "compare",
         "title": "🏬 매드업 OLLI LIRA O2O·오프라인 광고 4영역 (신규 제안)",
         "items": [
-          { "label": "영역 ① 지역 타게팅", "value": "매장 반경 3-5km 디지털", "sub": "모바일·인스타·메타 지역 타겟 + 드라이브투스토어 자동 노출", "tone": "highlight" },
-          { "label": "영역 ② O2O 픽업·예약", "value": "온오프 통합 funnel", "sub": "자사몰·BS 결제 → 매장 픽업/체험 → 자사몰 재구매 (재구매율 10% KPI 직접 응답)", "tone": "primary" },
-          { "label": "영역 ③ OOH 디지털 시너지", "value": "옥외+QR 연동", "sub": "강남·홍대·성수 핵심 상권 옥외 + QR 매장 유도 + 브랜드 인지도 폭증", "tone": "accent" },
-          { "label": "영역 ④ 팝업 콘텐츠", "value": "체험 영상 확산", "sub": "메이크온 학습: 팝업 백드롭 + 라이프스타일 모델 → 인스타·릴스 확산", "tone": "success" }
+          {
+            "label": "영역 ① 지역 타게팅",
+            "value": "매장 반경 3-5km 디지털",
+            "sub": "모바일·인스타·메타 지역 타겟 + 드라이브투스토어 자동 노출",
+            "tone": "highlight"
+          },
+          {
+            "label": "영역 ② O2O 픽업·예약",
+            "value": "온오프 통합 funnel",
+            "sub": "자사몰·BS 결제 → 매장 픽업/체험 → 자사몰 재구매 (재구매율 10% KPI 직접 응답)",
+            "tone": "primary"
+          },
+          {
+            "label": "영역 ③ OOH 디지털 시너지",
+            "value": "옥외+QR 연동",
+            "sub": "강남·홍대·성수 핵심 상권 옥외 + QR 매장 유도 + 브랜드 인지도 폭증",
+            "tone": "accent"
+          },
+          {
+            "label": "영역 ④ 팝업 콘텐츠",
+            "value": "체험 영상 확산",
+            "sub": "메이크온 학습: 팝업 백드롭 + 라이프스타일 모델 → 인스타·릴스 확산",
+            "tone": "success"
+          }
         ],
         "footnote": "* 본가 약손명가 매장(130개)과 OLLI LIRA 매장은 컨셉 분리 (테라피 vs 라이프스타일 체험) — 카니발 회피"
       },
       "sources": [
-        { "label": "광고주 PDF 공유 자료 2026-05-26 p.5 OLLI LIRA 오프라인 결정", "url": "" },
-        { "label": "Lever Xpert 메이크온 팝업 5장 (s4-6)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8" }
+        {
+          "label": "광고주 PDF 공유 자료 2026-05-26 p.5 OLLI LIRA 오프라인 결정",
+          "url": ""
+        },
+        {
+          "label": "Lever Xpert 메이크온 팝업 5장 (s4-6)",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8"
+        }
       ],
       "sourceNote": "* 출처: 광고주 PDF 2026-05-26 p.5 + 메이크온 팝업 벤치마크(s4-6) + 매드업 O2O·OOH 운영 경험 통합 제안",
       "body": "<table>\n      <thead><tr><th>OLLI LIRA 단계</th><th>채널·매체</th><th>매드업 솔루션</th><th>KPI 영향</th></tr></thead>\n      <tbody>\n        <tr><td>① 매장 오픈 사전 인지</td><td>지역 디지털 + OOH</td><td>지역 타게팅 메타·인스타 + 옥외</td><td>브랜드 인지도 폭증</td></tr>\n        <tr><td>② 매장 모객</td><td>드라이브투스토어 + QR</td><td>매드업 지역광고 운영 + 자사몰 연동</td><td>매장 방문자수</td></tr>\n        <tr><td>③ 매장→자사몰 funnel</td><td>O2O 픽업·체험</td><td>고객 데이터 통합 + CRM 알림톡 시리즈</td><td><strong>재구매율 10% 직접 응답</strong></td></tr>\n        <tr><td>④ 팝업 콘텐츠 확산</td><td>인스타·릴스·유튜브 쇼츠</td><td>매드업 SPRAY AI 체험 영상</td><td>인지도 + 카플친 +200%</td></tr>\n      </tbody>\n    </table>"
@@ -3885,17 +4180,68 @@
         }
       ],
       "gallery": [
-        { "src": "images/lever/메디큐브-에이지알-1.jpg", "alt": "메디큐브 에이지알 1등 5관왕", "name": "메디큐브 에이지알 — \"이미 입증된 전문성\"", "price": "김희선 + 1등 5관왕 + 타임스퀘어", "tag": "패턴 ① 사회적 증거" },
-        { "src": "images/lever/메디큐브-medicube-2.jpg", "alt": "메디큐브 라인업 가이드", "name": "메디큐브 — \"피부 고민별 맞춤 선택\"", "price": "글로우 / 부프x2 / 콤보 3종", "tag": "패턴 ② 라인업 가이드" },
-        { "src": "images/lever/medicube-japan-2.jpg", "alt": "메디큐브 일본 신구 비교", "name": "메디큐브 일본 — \"6つの進化\"", "price": "구모델 vs 신모델 6항목", "tag": "패턴 ③ 신구 진화" },
-        { "src": "images/lever/medicube-1.jpg", "alt": "메디큐브 글로벌 5 LED", "name": "Medicube — \"SKINCARE DEVICE WITH 5 LED\"", "price": "5색 LED 다중 기능 시각화", "tag": "패턴 ④ 기능 시각화" },
-        { "src": "images/lever/달바-2.jpg", "alt": "달바 임상 부위별 %", "name": "달바 — \"부위별 % 개선 임상\"", "price": "이마 48.5%·팔자 38% + 10일 무료체험", "tag": "🔑 패턴 ⑤ 임상 정량 (시장 여백)" },
-        { "src": "images/lever/듀얼소닉-2.jpg", "alt": "듀얼소닉 매일 5분", "name": "듀얼소닉 — \"매일 5분이면 끝\"", "price": "시간 단축 + 즉시 구매 CTA", "tag": "패턴 ⑥ 시간 단축" },
-        { "src": "images/lever/메디큐브-에이지알-3.jpg", "alt": "에이지알 무이자 할부", "name": "에이지알 — \"무이자 12개월 월 2만원대\"", "price": "한번 사면 평생 + 할부 가성비", "tag": "패턴 ⑦ 할부·체험" },
-        { "src": "images/lever/센텔리안24-마데카-프라임-1.jpg", "alt": "센텔리안24 교육형 Q&A", "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"", "price": "EP+초음파 흡수촉진 메커니즘 교육", "tag": "🔑 시장 여백 (Q&A 교육형)" }
+        {
+          "src": "images/lever/메디큐브-에이지알-1.jpg",
+          "alt": "메디큐브 에이지알 1등 5관왕",
+          "name": "메디큐브 에이지알 — \"이미 입증된 전문성\"",
+          "price": "김희선 + 1등 5관왕 + 타임스퀘어",
+          "tag": "패턴 ① 사회적 증거"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-2.jpg",
+          "alt": "메디큐브 라인업 가이드",
+          "name": "메디큐브 — \"피부 고민별 맞춤 선택\"",
+          "price": "글로우 / 부프x2 / 콤보 3종",
+          "tag": "패턴 ② 라인업 가이드"
+        },
+        {
+          "src": "images/lever/medicube-japan-2.jpg",
+          "alt": "메디큐브 일본 신구 비교",
+          "name": "메디큐브 일본 — \"6つの進化\"",
+          "price": "구모델 vs 신모델 6항목",
+          "tag": "패턴 ③ 신구 진화"
+        },
+        {
+          "src": "images/lever/medicube-1.jpg",
+          "alt": "메디큐브 글로벌 5 LED",
+          "name": "Medicube — \"SKINCARE DEVICE WITH 5 LED\"",
+          "price": "5색 LED 다중 기능 시각화",
+          "tag": "패턴 ④ 기능 시각화"
+        },
+        {
+          "src": "images/lever/달바-2.jpg",
+          "alt": "달바 임상 부위별 %",
+          "name": "달바 — \"부위별 % 개선 임상\"",
+          "price": "이마 48.5%·팔자 38% + 10일 무료체험",
+          "tag": "🔑 패턴 ⑤ 임상 정량 (시장 여백)"
+        },
+        {
+          "src": "images/lever/듀얼소닉-2.jpg",
+          "alt": "듀얼소닉 매일 5분",
+          "name": "듀얼소닉 — \"매일 5분이면 끝\"",
+          "price": "시간 단축 + 즉시 구매 CTA",
+          "tag": "패턴 ⑥ 시간 단축"
+        },
+        {
+          "src": "images/lever/메디큐브-에이지알-3.jpg",
+          "alt": "에이지알 무이자 할부",
+          "name": "에이지알 — \"무이자 12개월 월 2만원대\"",
+          "price": "한번 사면 평생 + 할부 가성비",
+          "tag": "패턴 ⑦ 할부·체험"
+        },
+        {
+          "src": "images/lever/센텔리안24-마데카-프라임-1.jpg",
+          "alt": "센텔리안24 교육형 Q&A",
+          "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"",
+          "price": "EP+초음파 흡수촉진 메커니즘 교육",
+          "tag": "🔑 시장 여백 (Q&A 교육형)"
+        }
       ],
       "sources": [
-        { "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: Lever Xpert 크리에이티브 라이브러리 \"뷰티디바이스\" 검색 47개 소재 분석 (2026-05-27 캡처)"
     },
@@ -3968,15 +4314,38 @@
         "type": "compare",
         "title": "🎨 매드업 제안 크리에이티브 4트랙 (시장 여백 정조준)",
         "items": [
-          { "label": "트랙 A · 임상 정량형", "value": "부위별 % 개선 + 46년 임상 IP", "sub": "벤치 = 달바 / 우위 포인트 = 약손명가 임상 자산 압도", "tone": "highlight" },
-          { "label": "트랙 B · 교육형 Q&A", "value": "결합형 정당성 (밴드+패치+겔)", "sub": "벤치 = 센텔리안24 / 우위 포인트 = 결합형 자체가 USP", "tone": "primary" },
-          { "label": "트랙 C · 시술→가정 전환", "value": "에스테틱 노하우 진화 서사", "sub": "벤치 = 없음 (미점유 영역) / 약손명가 단독 가능", "tone": "accent" },
-          { "label": "트랙 D · 락인 시각화", "value": "재구매·LTV 정량 강조", "sub": "벤치 = 메디큐브 \"한번 사면 평생\" / 우위 포인트 = 정기재구매 강제 모델", "tone": "success" }
+          {
+            "label": "트랙 A · 임상 정량형",
+            "value": "부위별 % 개선 + 46년 임상 IP",
+            "sub": "벤치 = 달바 / 우위 포인트 = 약손명가 임상 자산 압도",
+            "tone": "highlight"
+          },
+          {
+            "label": "트랙 B · 교육형 Q&A",
+            "value": "결합형 정당성 (밴드+패치+겔)",
+            "sub": "벤치 = 센텔리안24 / 우위 포인트 = 결합형 자체가 USP",
+            "tone": "primary"
+          },
+          {
+            "label": "트랙 C · 시술→가정 전환",
+            "value": "에스테틱 노하우 진화 서사",
+            "sub": "벤치 = 없음 (미점유 영역) / 약손명가 단독 가능",
+            "tone": "accent"
+          },
+          {
+            "label": "트랙 D · 락인 시각화",
+            "value": "재구매·LTV 정량 강조",
+            "sub": "벤치 = 메디큐브 \"한번 사면 평생\" / 우위 포인트 = 정기재구매 강제 모델",
+            "tone": "success"
+          }
         ],
         "footnote": "* 4트랙은 매드업 4대 IP 원칙(thesis 슬라이드)과 정합 · 매드업 SPRAY AI로 트랙별 소재 효율 A/B 정량 검증 후 운영"
       },
       "sources": [
-        { "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: Lever Xpert 47개 소재 분석(s4-4) + 매드업 SPRAY AI · 크리에이티브 매트릭스 도구 결합 제안"
     },
@@ -4042,17 +4411,68 @@
         }
       ],
       "gallery": [
-        { "src": "images/lever/메이크온-10.jpg", "alt": "메이크온 KAIST 카툰", "name": "메이크온 — \"아모레 × KAIST 공동 연구, 논문까지 등재\"", "price": "학술 신뢰 + 카툰 일러스트 친근감", "tag": "🔑 패턴 ① 학술 R&D" },
-        { "src": "images/lever/메이크온-3.jpg", "alt": "메이크온 ONCARE 기술 비교", "name": "ONCARE — \"개발 초기 vs 아모레 기술력\"", "price": "점발광 → 면발광 / 마이크로 LED 3,770개", "tag": "패턴 ① 학술 R&D" },
-        { "src": "images/lever/메이크온-9.jpg", "alt": "메이크온 팝업 임상", "name": "팝업 — \"모공 부피 -19.5% / +363%\"", "price": "임상 정량 데이터 + 팝업 디스플레이", "tag": "🔑 패턴 ② 임상 정량" },
-        { "src": "images/lever/메이크온-6.jpg", "alt": "메이크온 AI 진단 앱", "name": "메이크온 — \"AI 진단 앱 + 디바이스\"", "price": "태블릿 인터페이스로 개인화 (메디큐브 미점유)", "tag": "🔑 패턴 ③ AI 앱" },
-        { "src": "images/lever/메이크온-5.jpg", "alt": "메이크온 팝업 4대 가치", "name": "팝업 — \"Visible Results · Smart Efficiency · Balanced Living\"", "price": "4대 가치 + 모델 라이프스타일", "tag": "패턴 ④ 팝업 마케팅" },
-        { "src": "images/lever/메이크온-1.jpg", "alt": "메이크온 팝업 베네핏", "name": "팝업 BENEFIT — \"3' Set Scan / 3' Minute Care\"", "price": "디바이스 + 마스크팩 + 20-30% 혜택", "tag": "패턴 ④ 팝업 + 라인업" },
-        { "src": "images/lever/메이크온-11.jpg", "alt": "메이크온 ONFACE 연말 선물", "name": "ONFACE — \"평생 탄력을 선물하세요\"", "price": "KAIST 특허 + 리뷰 4.68점 + 연말 선물", "tag": "패턴 ⑥ 시즌 + 신뢰" },
-        { "src": "images/lever/메이크온-7.jpg", "alt": "메이크온 ONFACE Sarang", "name": "ONFACE — \"Sarang's Natural Glow\"", "price": "모델 콜라보 + LED 마스크", "tag": "패턴 ⑥ 모델·라이프스타일" }
+        {
+          "src": "images/lever/메이크온-10.jpg",
+          "alt": "메이크온 KAIST 카툰",
+          "name": "메이크온 — \"아모레 × KAIST 공동 연구, 논문까지 등재\"",
+          "price": "학술 신뢰 + 카툰 일러스트 친근감",
+          "tag": "🔑 패턴 ① 학술 R&D"
+        },
+        {
+          "src": "images/lever/메이크온-3.jpg",
+          "alt": "메이크온 ONCARE 기술 비교",
+          "name": "ONCARE — \"개발 초기 vs 아모레 기술력\"",
+          "price": "점발광 → 면발광 / 마이크로 LED 3,770개",
+          "tag": "패턴 ① 학술 R&D"
+        },
+        {
+          "src": "images/lever/메이크온-9.jpg",
+          "alt": "메이크온 팝업 임상",
+          "name": "팝업 — \"모공 부피 -19.5% / +363%\"",
+          "price": "임상 정량 데이터 + 팝업 디스플레이",
+          "tag": "🔑 패턴 ② 임상 정량"
+        },
+        {
+          "src": "images/lever/메이크온-6.jpg",
+          "alt": "메이크온 AI 진단 앱",
+          "name": "메이크온 — \"AI 진단 앱 + 디바이스\"",
+          "price": "태블릿 인터페이스로 개인화 (메디큐브 미점유)",
+          "tag": "🔑 패턴 ③ AI 앱"
+        },
+        {
+          "src": "images/lever/메이크온-5.jpg",
+          "alt": "메이크온 팝업 4대 가치",
+          "name": "팝업 — \"Visible Results · Smart Efficiency · Balanced Living\"",
+          "price": "4대 가치 + 모델 라이프스타일",
+          "tag": "패턴 ④ 팝업 마케팅"
+        },
+        {
+          "src": "images/lever/메이크온-1.jpg",
+          "alt": "메이크온 팝업 베네핏",
+          "name": "팝업 BENEFIT — \"3' Set Scan / 3' Minute Care\"",
+          "price": "디바이스 + 마스크팩 + 20-30% 혜택",
+          "tag": "패턴 ④ 팝업 + 라인업"
+        },
+        {
+          "src": "images/lever/메이크온-11.jpg",
+          "alt": "메이크온 ONFACE 연말 선물",
+          "name": "ONFACE — \"평생 탄력을 선물하세요\"",
+          "price": "KAIST 특허 + 리뷰 4.68점 + 연말 선물",
+          "tag": "패턴 ⑥ 시즌 + 신뢰"
+        },
+        {
+          "src": "images/lever/메이크온-7.jpg",
+          "alt": "메이크온 ONFACE Sarang",
+          "name": "ONFACE — \"Sarang's Natural Glow\"",
+          "price": "모델 콜라보 + LED 마스크",
+          "tag": "패턴 ⑥ 모델·라이프스타일"
+        }
       ],
       "sources": [
-        { "label": "Lever Xpert \"메이크온\" 검색 (sid=6984)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8" }
+        {
+          "label": "Lever Xpert \"메이크온\" 검색 (sid=6984)",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6984&q=%EB%A9%94%EC%9D%B4%ED%81%AC%EC%98%A8"
+        }
       ],
       "sourceNote": "* 출처: Lever Xpert \"메이크온\" 검색 결과 11장 (2026-05-27 캡처) · 모든 카드 alt=\"Makeon 메이크온\"으로 단일 브랜드 결과"
     },
@@ -4110,17 +4530,68 @@
         }
       ],
       "gallery": [
-        { "src": "images/lever/메디큐브-에이지알-5.jpg", "alt": "메디큐브 4주차 연예인 루틴", "name": "에이지알 — \"4주차 연예인 풀코스 루틴\"", "price": "STEP 1~4 모드별 가이드 + 부위별 효과", "tag": "🔑 패턴 ③ 주차별 루틴" },
-        { "src": "images/lever/메디큐브-medicube-10.jpg", "alt": "메디큐브 단면 비교", "name": "Booster Pro X2 — \"듀얼 타겟 독자기술\"", "price": "일반 디바이스 vs 부스터프로 단면 시각화", "tag": "🔑 패턴 ② 단면 기술" },
-        { "src": "images/lever/메디큐브-medicube-5.jpg", "alt": "부스터프로 X2 vs 글로우", "name": "에이지알 — \"부스터프로 X2 vs 글로우 차이점\"", "price": "자사 신구 모델 비교 (NEW 강조)", "tag": "패턴 ① 자사 신구 비교" },
-        { "src": "images/lever/메디큐브-medicube-1.jpg", "alt": "윤곽튜닝 효과 비교", "name": "에이지알 — \"#2. 효과 윤곽튜닝 vs +광탄력\"", "price": "Before/After 2분할 부위별 비교", "tag": "패턴 ④ 효과 비교" },
-        { "src": "images/lever/메디큐브-medicube-2.jpg", "alt": "메디큐브 라인업 가이드", "name": "메디큐브 — \"피부 고민별 맞춤 선택\"", "price": "글로우 / 부프 X2 / 콤보 3종 × 효과 표", "tag": "패턴 ⑤ 라인업 가이드" },
-        { "src": "images/lever/메디큐브-medicube-4.jpg", "alt": "메디큐브 사용꿀팁", "name": "메디큐브 — \"#사용꿀팁 1 — 7가지 모드\"", "price": "모드별 기능 매트릭스 (물광·꺼진팔자·늘어진윤곽…)", "tag": "패턴 + 기능 가이드" },
-        { "src": "images/lever/메디큐브-medicube-7.jpg", "alt": "메디큐브 실사용 셀카", "name": "메디큐브 — 실사용 셀카 Before/After", "price": "일반인 모델 + 부위별 사용 장면", "tag": "패턴 + 라이프스타일" },
-        { "src": "images/lever/메디큐브-medicube-13.jpg", "alt": "메디큐브 라이프스타일", "name": "메디큐브 — 미니 디바이스 라이프스타일", "price": "1020 진입템 캐주얼 셀카", "tag": "패턴 + 미니 라이프스타일" }
+        {
+          "src": "images/lever/메디큐브-에이지알-5.jpg",
+          "alt": "메디큐브 4주차 연예인 루틴",
+          "name": "에이지알 — \"4주차 연예인 풀코스 루틴\"",
+          "price": "STEP 1~4 모드별 가이드 + 부위별 효과",
+          "tag": "🔑 패턴 ③ 주차별 루틴"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-10.jpg",
+          "alt": "메디큐브 단면 비교",
+          "name": "Booster Pro X2 — \"듀얼 타겟 독자기술\"",
+          "price": "일반 디바이스 vs 부스터프로 단면 시각화",
+          "tag": "🔑 패턴 ② 단면 기술"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-5.jpg",
+          "alt": "부스터프로 X2 vs 글로우",
+          "name": "에이지알 — \"부스터프로 X2 vs 글로우 차이점\"",
+          "price": "자사 신구 모델 비교 (NEW 강조)",
+          "tag": "패턴 ① 자사 신구 비교"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-1.jpg",
+          "alt": "윤곽튜닝 효과 비교",
+          "name": "에이지알 — \"#2. 효과 윤곽튜닝 vs +광탄력\"",
+          "price": "Before/After 2분할 부위별 비교",
+          "tag": "패턴 ④ 효과 비교"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-2.jpg",
+          "alt": "메디큐브 라인업 가이드",
+          "name": "메디큐브 — \"피부 고민별 맞춤 선택\"",
+          "price": "글로우 / 부프 X2 / 콤보 3종 × 효과 표",
+          "tag": "패턴 ⑤ 라인업 가이드"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-4.jpg",
+          "alt": "메디큐브 사용꿀팁",
+          "name": "메디큐브 — \"#사용꿀팁 1 — 7가지 모드\"",
+          "price": "모드별 기능 매트릭스 (물광·꺼진팔자·늘어진윤곽…)",
+          "tag": "패턴 + 기능 가이드"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-7.jpg",
+          "alt": "메디큐브 실사용 셀카",
+          "name": "메디큐브 — 실사용 셀카 Before/After",
+          "price": "일반인 모델 + 부위별 사용 장면",
+          "tag": "패턴 + 라이프스타일"
+        },
+        {
+          "src": "images/lever/메디큐브-medicube-13.jpg",
+          "alt": "메디큐브 라이프스타일",
+          "name": "메디큐브 — 미니 디바이스 라이프스타일",
+          "price": "1020 진입템 캐주얼 셀카",
+          "tag": "패턴 + 미니 라이프스타일"
+        }
       ],
       "sources": [
-        { "label": "Lever Xpert \"뷰티디바이스\" 검색 메디큐브 한국 28장", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "Lever Xpert \"뷰티디바이스\" 검색 메디큐브 한국 28장",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: Lever Xpert (2026-05-27 캡처) · 메디큐브 한국 28장 중 패턴 다양성 기준 8장 선별"
     },
@@ -4170,18 +4641,75 @@
         }
       ],
       "gallery": [
-        { "src": "images/lever/듀얼소닉-2.jpg", "alt": "듀얼소닉 5분", "name": "듀얼소닉 — \"매일 5분이면 끝\"", "price": "시간 단축 + 즉시 구매 CTA", "tag": "듀얼소닉 — 시간 단축" },
-        { "src": "images/lever/듀얼소닉-3.jpg", "alt": "듀얼소닉 알토", "name": "듀얼소닉 알토 — \"탄력의 한 끗 차이\"", "price": "단일 USP + 41% 할인", "tag": "듀얼소닉 — 할인" },
-        { "src": "images/lever/듀얼소닉-1.jpg", "alt": "듀얼소닉 라인업", "name": "듀얼소닉 — 4종 라인업 + Gift", "price": "라인업 카탈로그 + 사은품", "tag": "듀얼소닉 — 라인업" },
-        { "src": "images/lever/달바-2.jpg", "alt": "달바 임상 부위별", "name": "달바 — \"부위별 % 개선 임상\"", "price": "이마 48.5%·팔자 38%·턱라인 33.4% + 10일 무료체험", "tag": "🔑 달바 — 임상 정량" },
-        { "src": "images/lever/달바-1.jpg", "alt": "달바 매일 사용", "name": "달바 — \"꾸준히 매일 사용하도록 설계\"", "price": "네이버 배송 콜라보 + 트리플샷", "tag": "달바 — 꾸준함" },
-        { "src": "images/lever/d-alba-global-1.jpg", "alt": "달바 글로벌", "name": "d'Alba — \"Celebrities' red carpet secret\"", "price": "글로벌 영어 + 2 mins lift + -37%", "tag": "달바 — 글로벌 셀럽" },
-        { "src": "images/lever/종합생활가전-쿠쿠전자-1.jpg", "alt": "쿠쿠 깊이 차별화", "name": "쿠쿠 메디킨하이 — \"깊이가 다른\"", "price": "눈가 1.5mm / 얼굴 3.0mm / 바디 4.5mm + 35% 특가", "tag": "쿠쿠 — 스펙 깊이" },
-        { "src": "images/lever/센텔리안24-마데카-프라임-1.jpg", "alt": "센텔리안 Q&A 교육", "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"", "price": "EP+초음파 흡수촉진 메커니즘 교육", "tag": "🔑 센텔리안 — 교육형" },
-        { "src": "images/lever/레스노베-res-novae-1.jpg", "alt": "레스노베 프리미엄 라인업", "name": "레스노베 — 5종 프리미엄 카탈로그", "price": "보라 배경 미감 강조 (프리미엄 진입)", "tag": "레스노베 — 프리미엄 미감" }
+        {
+          "src": "images/lever/듀얼소닉-2.jpg",
+          "alt": "듀얼소닉 5분",
+          "name": "듀얼소닉 — \"매일 5분이면 끝\"",
+          "price": "시간 단축 + 즉시 구매 CTA",
+          "tag": "듀얼소닉 — 시간 단축"
+        },
+        {
+          "src": "images/lever/듀얼소닉-3.jpg",
+          "alt": "듀얼소닉 알토",
+          "name": "듀얼소닉 알토 — \"탄력의 한 끗 차이\"",
+          "price": "단일 USP + 41% 할인",
+          "tag": "듀얼소닉 — 할인"
+        },
+        {
+          "src": "images/lever/듀얼소닉-1.jpg",
+          "alt": "듀얼소닉 라인업",
+          "name": "듀얼소닉 — 4종 라인업 + Gift",
+          "price": "라인업 카탈로그 + 사은품",
+          "tag": "듀얼소닉 — 라인업"
+        },
+        {
+          "src": "images/lever/달바-2.jpg",
+          "alt": "달바 임상 부위별",
+          "name": "달바 — \"부위별 % 개선 임상\"",
+          "price": "이마 48.5%·팔자 38%·턱라인 33.4% + 10일 무료체험",
+          "tag": "🔑 달바 — 임상 정량"
+        },
+        {
+          "src": "images/lever/달바-1.jpg",
+          "alt": "달바 매일 사용",
+          "name": "달바 — \"꾸준히 매일 사용하도록 설계\"",
+          "price": "네이버 배송 콜라보 + 트리플샷",
+          "tag": "달바 — 꾸준함"
+        },
+        {
+          "src": "images/lever/d-alba-global-1.jpg",
+          "alt": "달바 글로벌",
+          "name": "d'Alba — \"Celebrities' red carpet secret\"",
+          "price": "글로벌 영어 + 2 mins lift + -37%",
+          "tag": "달바 — 글로벌 셀럽"
+        },
+        {
+          "src": "images/lever/종합생활가전-쿠쿠전자-1.jpg",
+          "alt": "쿠쿠 깊이 차별화",
+          "name": "쿠쿠 메디킨하이 — \"깊이가 다른\"",
+          "price": "눈가 1.5mm / 얼굴 3.0mm / 바디 4.5mm + 35% 특가",
+          "tag": "쿠쿠 — 스펙 깊이"
+        },
+        {
+          "src": "images/lever/센텔리안24-마데카-프라임-1.jpg",
+          "alt": "센텔리안 Q&A 교육",
+          "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"",
+          "price": "EP+초음파 흡수촉진 메커니즘 교육",
+          "tag": "🔑 센텔리안 — 교육형"
+        },
+        {
+          "src": "images/lever/레스노베-res-novae-1.jpg",
+          "alt": "레스노베 프리미엄 라인업",
+          "name": "레스노베 — 5종 프리미엄 카탈로그",
+          "price": "보라 배경 미감 강조 (프리미엄 진입)",
+          "tag": "레스노베 — 프리미엄 미감"
+        }
       ],
       "sources": [
-        { "label": "Lever Xpert \"뷰티디바이스\" 검색 후발주자 18장", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "Lever Xpert \"뷰티디바이스\" 검색 후발주자 18장",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: Lever Xpert (2026-05-27 캡처) · 듀얼소닉 3 + 달바 3 + 쿠쿠 1 + 센텔리안 1 + 레스노베 1 = 9장 종합 분석"
     },
@@ -4255,7 +4783,10 @@
         }
       ],
       "sources": [
-        { "label": "Lever Xpert \"뷰티디바이스\" + \"메이크온\" 58장 분석", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "Lever Xpert \"뷰티디바이스\" + \"메이크온\" 58장 분석",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: Chapter 4 슬라이드 종합 (s4-1 ~ s4-8 통합) · Lever Xpert 58장 광고 소재 분석 (2026-05-27 캡처)",
       "body": "<table>\n      <thead><tr><th>크리에이티브 축</th><th>대표 브랜드</th><th>핵심 패턴</th><th>약손명가 응전</th></tr></thead>\n      <tbody>\n        <tr><td>① 셀럽 + 정교화</td><td>메디큐브 (29장)</td><td>유재석·장원영·카일리 + 4주차 루틴 + 단면 시각화 + 자사 신구 비교</td><td>셀럽 회피 · 4주 챌린지 + 단면 시각화 직접 차용</td></tr>\n        <tr><td>② 기술·스펙</td><td>LG프라엘</td><td>갈바닉·파동·LED · BRAND INDEX 1위 57.7%</td><td>스펙 대신 \"46년 임상 + 시술 노하우\" 우위</td></tr>\n        <tr><td>③ KAIST + AI + 팝업</td><td>메이크온 (11장)</td><td>아모레 × KAIST 공동연구·논문 + 마이크로 LED 3,770 + AI 진단 앱 + 팝업 5장 + 카툰</td><td>학술 신뢰 모델 응용 + 카툰 친근 톤 결합</td></tr>\n        <tr><td>④ 비대칭 단일 USP</td><td>듀얼소닉·달바·쿠쿠·센텔리안·레스노베 (9장)</td><td>시간 / 임상 % / 깊이 mm / Q&A 교육 / 프리미엄 미감 — 단일 USP</td><td>임상+교육+시술전환+락인 <strong>4중 결합</strong></td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑤ 시장 여백 (단독)</strong></td><td><strong>약손명가헬스케어</strong></td><td><strong>임상 정량 + Q&A 교육 + 시술→가정 전환 + 결합형 락인 = 2축 이상 결합 브랜드 부재</strong></td><td><strong>매드업 4트랙 USP + SPRAY AI A/B 검증 운영</strong></td></tr>\n      </tbody>\n    </table>"
@@ -4305,18 +4836,52 @@
         "type": "compare",
         "title": "📝 매드업 광고 카피·시안 5종 — 4트랙 USP × Lever 시장 여백 결합",
         "items": [
-          { "label": "카피 ① 가성비 메인", "value": "\"써마지 한 번이면, 올리리라 평생\"", "sub": "트랙 D(락인) + 시술 격상 / 시술 vs 디바이스 1.0x vs 7.7x 비용 비교 시각화 / 매체: 메타·유튜브 인지", "tone": "highlight" },
-          { "label": "카피 ② 임상 정량", "value": "\"이마 처짐 48.5%·팔자 33%·V라인 38% — 46년 약손명가 임상이 만든 EMS\"", "sub": "트랙 A(임상) + 메이크온·달바 학습 / 부위별 % 인포그래픽 / 매체: 외부몰·브스 디스플레이", "tone": "primary" },
-          { "label": "카피 ③ 결합형 정당성", "value": "\"밴드만 쓰면 부족합니다 — 패치·겔이 왜 필요한지 약손명가가 답합니다\"", "sub": "트랙 B(교육) + 결합형 락인 / Q&A 카툰 + EP+초음파 흡수촉진 시각화(센텔리안 학습) / 매체: 자사몰 랜딩·블로그", "tone": "accent" },
-          { "label": "카피 ④ 시술→가정 전환", "value": "\"30년 시술 전문가가 만든 가정용 리프팅 — 클리닉의 손길을 5분만에\"", "sub": "트랙 C(전환 서사) + 워딩 격상 / 시술 사이사이 케어 영상 + 모델 셀카 / 매체: 인스타·릴스", "tone": "success" },
-          { "label": "카피 ⑤ 4주 챌린지", "value": "\"약손명가 4주 챌린지 — 1주차 모공·2주차 탄력·3주차 윤곽·4주차 풀코스\"", "sub": "트랙 D(락인) + 메디큐브 4주차 루틴 직접 차용 / STEP 가이드 인포그래픽 / 매체: 카플친 알림톡·CRM 시리즈", "tone": "warning" }
+          {
+            "label": "카피 ① 가성비 메인",
+            "value": "\"써마지 한 번이면, 올리리라 평생\"",
+            "sub": "트랙 D(락인) + 시술 격상 / 시술 vs 디바이스 1.0x vs 7.7x 비용 비교 시각화 / 매체: 메타·유튜브 인지",
+            "tone": "highlight"
+          },
+          {
+            "label": "카피 ② 임상 정량",
+            "value": "\"이마 처짐 48.5%·팔자 33%·V라인 38% — 46년 약손명가 임상이 만든 EMS\"",
+            "sub": "트랙 A(임상) + 메이크온·달바 학습 / 부위별 % 인포그래픽 / 매체: 외부몰·브스 디스플레이",
+            "tone": "primary"
+          },
+          {
+            "label": "카피 ③ 결합형 정당성",
+            "value": "\"밴드만 쓰면 부족합니다 — 패치·겔이 왜 필요한지 약손명가가 답합니다\"",
+            "sub": "트랙 B(교육) + 결합형 락인 / Q&A 카툰 + EP+초음파 흡수촉진 시각화(센텔리안 학습) / 매체: 자사몰 랜딩·블로그",
+            "tone": "accent"
+          },
+          {
+            "label": "카피 ④ 시술→가정 전환",
+            "value": "\"30년 시술 전문가가 만든 가정용 리프팅 — 클리닉의 손길을 5분만에\"",
+            "sub": "트랙 C(전환 서사) + 워딩 격상 / 시술 사이사이 케어 영상 + 모델 셀카 / 매체: 인스타·릴스",
+            "tone": "success"
+          },
+          {
+            "label": "카피 ⑤ 4주 챌린지",
+            "value": "\"약손명가 4주 챌린지 — 1주차 모공·2주차 탄력·3주차 윤곽·4주차 풀코스\"",
+            "sub": "트랙 D(락인) + 메디큐브 4주차 루틴 직접 차용 / STEP 가이드 인포그래픽 / 매체: 카플친 알림톡·CRM 시리즈",
+            "tone": "warning"
+          }
         ],
         "footnote": "* 5종 카피는 매드업 SPRAY AI A/B 검증 후 효율 상위 2-3종을 메인 운영 + 나머지는 시즌·페르소나별 보조 활용"
       },
       "sources": [
-        { "label": "thesis 슬라이드 (4대 IP 원칙)", "url": "" },
-        { "label": "s1-19 시술 vs 디바이스 비용", "url": "https://brunch.co.kr/@valuechampion/235" },
-        { "label": "s4-4 ~ s4-8 Lever 분석", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+        {
+          "label": "thesis 슬라이드 (4대 IP 원칙)",
+          "url": ""
+        },
+        {
+          "label": "s1-19 시술 vs 디바이스 비용",
+          "url": "https://brunch.co.kr/@valuechampion/235"
+        },
+        {
+          "label": "s4-4 ~ s4-8 Lever 분석",
+          "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
+        }
       ],
       "sourceNote": "* 출처: thesis 4대 IP 원칙 + s4-4~s4-8 Lever 58장 분석 + s1-19 가성비 데이터 + 약손명가 자사 USP 통합",
       "body": "<table>\n      <thead><tr><th>카피</th><th>메인 트랙</th><th>보조 트랙</th><th>학습 출처</th><th>매드업 도구</th></tr></thead>\n      <tbody>\n        <tr><td>① 가성비 \"써마지 한번이면 올리리라 평생\"</td><td>D 락인 시각화</td><td>시술 격상 / 가성비</td><td>s1-19 (1.0x vs 7.7x)</td><td>SPRAY AI 인포그래픽</td></tr>\n        <tr><td>② 임상 정량 \"부위별 %\"</td><td>A 임상 정량</td><td>학술 신뢰</td><td>메이크온 / 달바</td><td>SPRAY AI 그래픽 + AI 심의봇</td></tr>\n        <tr><td>③ 결합형 정당성 Q&A</td><td>B 교육형</td><td>락인 시각화</td><td>센텔리안 마데카</td><td>SPRAY AI 카툰</td></tr>\n        <tr><td>④ 시술→가정 전환</td><td>C 전환 서사</td><td>워딩 격상</td><td>미점유 영역 (단독)</td><td>SPRAY AI 셀카·릴스</td></tr>\n        <tr><td>⑤ 4주 챌린지</td><td>D 락인 시각화</td><td>꾸준함 / CRM 락인</td><td>메디큐브 4주차 루틴</td><td>카플친 시리즈 + CRM</td></tr>\n      </tbody>\n    </table>\n    <p><strong>📌 다음 단계 (PT 클로징)</strong>: 5종 카피 시안 × 3종 시각 톤(모델·인포그래픽·카툰) = <strong>15개 소재</strong>를 매드업 SPRAY AI로 자동 생성 → A/B 효율 검증 → BS ROAS 500%·외부몰 ROAS 300%·카플친 +200% 달성 경로</p>"
