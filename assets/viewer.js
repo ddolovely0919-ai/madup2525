@@ -202,6 +202,7 @@ function renderSlide(s) {
   if (s.siteGallery && s.siteGallery.length) html += renderSiteGallery(s.siteGallery);
   if (s.wordcloud && s.wordcloud.length) html += renderWordcloud(s.wordcloud);
   if (s.reviews && s.reviews.length) html += renderReviews(s.reviews);
+  if (s.chart) html += renderChart(s.chart);
   if (s.body) html += `<div class="slide-body" data-field="body" contenteditable="false">${s.body}</div>`;
 
   // footer
@@ -276,6 +277,59 @@ function renderWordcloud(words) {
   for (const w of words) {
     html += `<span class="wc-${w.size || 'md'} wc-${w.color || 'neutral'}">${escapeAttr(w.text)}</span>`;
   }
+  html += '</div>';
+  return html;
+}
+
+// ==========================================================================
+// 차트 컴포넌트 (가로 막대 hbar / 비교 강조 매트릭스 등)
+// ==========================================================================
+function renderChart(chart) {
+  if (!chart || !chart.type) return '';
+  if (chart.type === 'hbar') return renderHBar(chart);
+  if (chart.type === 'compare') return renderCompare(chart);
+  return '';
+}
+
+function renderHBar(chart) {
+  // chart.items: [{label, value, ratio (0~1), tone, note?}]
+  let html = '<div class="fb-chart hbar">';
+  if (chart.title) html += `<div class="fb-chart-title">${escapeHtml(chart.title)}</div>`;
+  if (chart.subtitle) html += `<div class="fb-chart-subtitle">${escapeHtml(chart.subtitle)}</div>`;
+  html += '<ul class="fb-hbar-list">';
+  for (const item of chart.items || []) {
+    const ratio = Math.max(0.015, Math.min(1, Number(item.ratio) || 0));
+    const tone = item.tone || 'primary';
+    html += `<li class="fb-hbar-row tone-${tone}">
+      <div class="fb-hbar-label">${item.label || ''}</div>
+      <div class="fb-hbar-track">
+        <div class="fb-hbar-fill" style="width:${(ratio * 100).toFixed(2)}%"></div>
+        <span class="fb-hbar-value">${item.value || ''}</span>
+      </div>
+      ${item.note ? `<div class="fb-hbar-note">${item.note}</div>` : ''}
+    </li>`;
+  }
+  html += '</ul>';
+  if (chart.footnote) html += `<div class="fb-chart-footnote">${escapeHtml(chart.footnote)}</div>`;
+  html += '</div>';
+  return html;
+}
+
+function renderCompare(chart) {
+  // chart.items: [{label, value, tone, sub?}]  — 4사분면 비교 카드
+  let html = '<div class="fb-chart compare">';
+  if (chart.title) html += `<div class="fb-chart-title">${escapeHtml(chart.title)}</div>`;
+  html += '<div class="fb-compare-grid">';
+  for (const item of chart.items || []) {
+    const tone = item.tone || 'primary';
+    html += `<div class="fb-compare-card tone-${tone}">
+      <div class="fb-compare-label">${item.label || ''}</div>
+      <div class="fb-compare-value">${item.value || ''}</div>
+      ${item.sub ? `<div class="fb-compare-sub">${item.sub}</div>` : ''}
+    </div>`;
+  }
+  html += '</div>';
+  if (chart.footnote) html += `<div class="fb-chart-footnote">${escapeHtml(chart.footnote)}</div>`;
   html += '</div>';
   return html;
 }

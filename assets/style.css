@@ -586,6 +586,151 @@ body[data-edit="on"] .slide-actions { display: flex; }
   .slide-title { font-size: 18px; }
 }
 
+/* ===== Charts (fb-chart) ===== */
+.fb-chart {
+  margin: 18px 0 6px;
+  padding: 18px 20px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+.fb-chart-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.fb-chart-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+.fb-chart-footnote {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Horizontal Bar */
+.fb-chart.hbar { background: #fafbfc; }
+.fb-hbar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fb-hbar-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+.fb-hbar-label {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+.fb-hbar-track {
+  position: relative;
+  height: 26px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fb-hbar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+.fb-hbar-value {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  z-index: 1;
+  white-space: nowrap;
+}
+.fb-hbar-row.tone-primary   .fb-hbar-fill { background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%); }
+.fb-hbar-row.tone-highlight .fb-hbar-fill { background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%); }
+.fb-hbar-row.tone-success   .fb-hbar-fill { background: linear-gradient(90deg, #15803d 0%, #22c55e 100%); }
+.fb-hbar-row.tone-warning   .fb-hbar-fill { background: linear-gradient(90deg, #b45309 0%, #f59e0b 100%); }
+.fb-hbar-row.tone-danger    .fb-hbar-fill { background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%); }
+.fb-hbar-row.tone-muted     .fb-hbar-fill { background: linear-gradient(90deg, #6b7280 0%, #9ca3af 100%); }
+.fb-hbar-row.tone-accent    .fb-hbar-fill { background: linear-gradient(90deg, #6d28d9 0%, #a855f7 100%); }
+.fb-hbar-row.tone-highlight .fb-hbar-label { color: #92400e; font-weight: 700; }
+.fb-hbar-row.tone-danger    .fb-hbar-label { color: #991b1b; font-weight: 700; }
+.fb-hbar-row.tone-highlight .fb-hbar-value { color: #92400e; }
+.fb-hbar-row.tone-danger    .fb-hbar-value { color: #991b1b; }
+.fb-hbar-note {
+  grid-column: 2;
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+/* Compare 4사분면 카드 */
+.fb-chart.compare { background: #fafbfc; }
+.fb-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.fb-compare-card {
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+.fb-compare-card.tone-primary   { border-left-color: #0f766e; }
+.fb-compare-card.tone-highlight { border-left-color: #f59e0b; background: #fffbeb; }
+.fb-compare-card.tone-success   { border-left-color: #22c55e; }
+.fb-compare-card.tone-warning   { border-left-color: #f59e0b; }
+.fb-compare-card.tone-danger    { border-left-color: #ef4444; background: #fef2f2; }
+.fb-compare-card.tone-muted     { border-left-color: #9ca3af; }
+.fb-compare-card.tone-accent    { border-left-color: #a855f7; }
+.fb-compare-label {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.fb-compare-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+.fb-compare-card.tone-highlight .fb-compare-value { color: #92400e; }
+.fb-compare-card.tone-danger    .fb-compare-value { color: #991b1b; }
+.fb-compare-sub {
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .fb-hbar-row { grid-template-columns: 120px 1fr; gap: 10px; }
+  .fb-hbar-label { font-size: 11px; }
+}
+
 /* ===== Print ===== */
 @media print {
   .sidebar, .topbar, .slide-actions { display: none; }
