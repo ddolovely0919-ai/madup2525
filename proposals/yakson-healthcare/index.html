@@ -936,7 +936,6 @@
   .slide .pm-point.us { color: #ffffff; }
 </style>
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
@@ -946,7 +945,7 @@
   <span class="pill">v2.0 · 1.5 페르소나 정합</span>
   <span class="pill">Pro 신제품 전략</span>
   <div class="actions">
-    <button id="btn-export-pptx" class="action-btn" title="제안서 전체를 PowerPoint(.pptx)로 다운로드">⬇ PPT 다운로드</button>
+    <button id="btn-export-pptx" class="action-btn" title="제안서를 편집 가능한 PowerPoint(.pptx)로 다운로드 — 텍스트·표·차트 수정 가능">⬇ PPT (편집가능)</button>
     <button onclick="window.print()" class="action-btn">🖨 인쇄</button>
   </div>
 </header>
@@ -3008,84 +3007,281 @@
   sections.forEach(s => observer.observe(s));
 
   // ============================================================
-  // PPT 다운로드 — html2canvas(섹션 캡처) → PptxGenJS(16:9 슬라이드)
-  // 다크 간지 / 화이트 콘텐츠 디자인을 그대로 이미지로 보존
+  // PPT 다운로드 — PptxGenJS 네이티브 (편집 가능)
+  // 텍스트=텍스트박스 / 표=PPT표 / 차트=PPT 차트(막대·선·파이) / 다이어그램=표
+  // 다크 간지 ↔ 화이트 콘텐츠 톤 유지
   // ============================================================
   const exportBtn = document.getElementById('btn-export-pptx');
   exportBtn.addEventListener('click', exportProposalPPTX);
 
-  function sectionBg(el) {
-    // 다크 페이지: cover / thesis-section / chapter / #closing
-    if (el.classList.contains('cover') || el.classList.contains('thesis-section')
-        || el.classList.contains('chapter') || el.id === 'closing') return '050505';
-    return 'FFFFFF'; // 화이트 콘텐츠 (slide / toc)
+  const SW = 13.333, SH = 7.5, MX = 0.55, CW = 13.333 - 0.55 * 2;
+  const FONT = 'Pretendard';
+  const clean = (s) => (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const numOf = (s) => { const m = (s || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+  const isDark = (el) => el.classList.contains('cover') || el.classList.contains('thesis-section')
+    || el.classList.contains('chapter') || el.id === 'closing';
+
+  function palette(dark) {
+    return dark
+      ? { bg: '0A0807', txt: 'F5F1EC', sub: 'B8B3A8', cap: '6B6760', rose: 'F5D4D8', beige: 'E6D8C5', soft: '1A1816', line: '2A2724' }
+      : { bg: 'FFFFFF', txt: '2B2620', sub: '6E655A', cap: 'A09684', rose: 'B5616F', beige: '9C7C54', soft: 'FAF7F3', line: 'E9E3D9' };
+  }
+
+  function addFooter(slide, C, pageEl) {
+    slide.addText([{ text: 'DIGITAL MARKETING GROUP ', options: { color: C.cap } }, { text: 'MADUP', options: { color: C.txt, bold: true } }],
+      { x: MX, y: 7.08, w: 7, h: 0.3, fontSize: 8, charSpacing: 2, fontFace: FONT });
+    if (pageEl) slide.addText(clean(pageEl.textContent), { x: SW - 1.5, y: 7.08, w: 1, h: 0.3, fontSize: 9, color: C.cap, align: 'right', fontFace: FONT });
+  }
+
+  // HTML <table> → PptxGenJS rows
+  function tableRows(tbl, C) {
+    const rows = [];
+    tbl.querySelectorAll('tr').forEach(tr => {
+      const cells = [];
+      tr.querySelectorAll('th,td').forEach(cell => {
+        const isH = cell.tagName === 'TH';
+        cells.push({
+          text: clean(cell.textContent),
+          options: { fontSize: 8.5, fontFace: FONT, color: isH ? C.rose : C.sub, bold: isH, fill: { color: isH ? C.soft : C.bg }, valign: 'middle', align: 'left' }
+        });
+      });
+      if (cells.length) rows.push(cells);
+    });
+    return rows;
+  }
+
+  function buildSlide(pptx, el) {
+    const dark = isDark(el);
+    const C = palette(dark);
+    const slide = pptx.addSlide();
+    slide.background = { color: C.bg };
+    addFooter(slide, C, el.querySelector('.page-no'));
+
+    if (el.classList.contains('cover') || el.id === 'closing') return buildCover(slide, el, C);
+    if (el.classList.contains('thesis-section')) return buildThesis(slide, el, C);
+    if (el.classList.contains('chapter')) return buildChapter(slide, el, C);
+    if (el.classList.contains('toc')) return buildTOC(slide, el, C);
+    return buildContent(slide, el, C);
+  }
+
+  function buildCover(slide, el, C) {
+    const year = el.querySelector('.year'), h1 = el.querySelector('h1'),
+      sub = el.querySelector('.subtitle'), thesis = el.querySelector('.thesis-line');
+    if (year) slide.addText(clean(year.textContent), { x: MX, y: 1.3, w: CW, h: 0.4, fontSize: 13, color: C.rose, bold: true, charSpacing: 3, fontFace: FONT });
+    slide.addText(clean(h1 ? h1.textContent : ''), { x: MX, y: 2.0, w: CW, h: 1.4, fontSize: 42, color: C.rose, bold: true, fontFace: FONT });
+    if (sub) slide.addText(clean(sub.textContent), { x: MX, y: 3.5, w: CW, h: 0.6, fontSize: 18, color: C.sub, fontFace: FONT });
+    if (thesis) slide.addText(clean(thesis.textContent), { x: MX, y: 4.3, w: CW - 1, h: 1.2, fontSize: 15, color: C.beige, fontFace: FONT, valign: 'top' });
+  }
+
+  function buildChapter(slide, el, C) {
+    const eye = el.querySelector('.ch-eyebrow'), decl = el.querySelector('.declaration'),
+      dsub = el.querySelector('.declaration-sub'), title = el.querySelector('.ch-title'),
+      summ = el.querySelector('.ch-summary'), concl = el.querySelector('.ch-conclusion');
+    if (eye) slide.addText(clean(eye.textContent), { x: MX, y: 0.7, w: CW, h: 0.35, fontSize: 12, color: C.rose, bold: true, charSpacing: 2, fontFace: FONT });
+    if (decl) slide.addText(clean(decl.textContent), { x: MX, y: 1.5, w: CW - 0.5, h: 1.8, fontSize: 30, color: C.txt, bold: true, fontFace: FONT, valign: 'top', lineSpacingMultiple: 1.1 });
+    if (dsub) slide.addText(clean(dsub.textContent), { x: MX, y: 3.5, w: CW - 1, h: 0.7, fontSize: 14, color: C.beige, fontFace: FONT, valign: 'top' });
+    if (title) slide.addText(clean(title.textContent), { x: MX, y: 4.5, w: CW, h: 0.5, fontSize: 20, color: C.txt, bold: true, fontFace: FONT });
+    if (summ) slide.addText(clean(summ.textContent), { x: MX, y: 5.1, w: CW - 0.5, h: 1.0, fontSize: 11, color: C.sub, fontFace: FONT, valign: 'top' });
+    if (concl) slide.addText(clean(concl.textContent), { x: MX, y: 6.2, w: CW - 0.5, h: 0.6, fontSize: 11, color: C.rose, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+  }
+
+  function buildThesis(slide, el, C) {
+    const tag = el.querySelector('.meta-tag'), h2 = el.querySelector('h2'),
+      tsub = el.querySelector('.thesis-sub');
+    if (tag) slide.addText(clean(tag.textContent), { x: MX, y: 0.55, w: CW, h: 0.35, fontSize: 11, color: C.rose, bold: true, charSpacing: 2, fontFace: FONT });
+    if (h2) slide.addText(clean(h2.textContent), { x: MX, y: 1.05, w: CW - 0.5, h: 1.3, fontSize: 26, color: C.txt, bold: true, fontFace: FONT, valign: 'top' });
+    if (tsub) slide.addText(clean(tsub.textContent), { x: MX, y: 2.5, w: CW - 0.5, h: 0.9, fontSize: 12, color: C.sub, fontFace: FONT, valign: 'top' });
+    // 3 결정 (msg-axis) → 3-칸 표
+    const cards = el.querySelectorAll('.msg-axis-card');
+    if (cards.length) {
+      const head = [], body = [];
+      cards.forEach(c => {
+        head.push({ text: clean(c.querySelector('h5')?.textContent), options: { fontSize: 11, bold: true, color: C.rose, fill: { color: C.soft }, fontFace: FONT, align: 'center' } });
+        body.push({ text: clean(c.querySelector('.ma-desc')?.textContent) + '\n\n' + clean(c.querySelector('.ma-detail')?.textContent), options: { fontSize: 9, color: C.sub, fontFace: FONT, valign: 'top' } });
+      });
+      slide.addTable([head, body], { x: MX, y: 3.6, w: CW, colW: Array(cards.length).fill(CW / cards.length), rowH: [0.5, 1.6], border: { type: 'solid', color: C.line, pt: 0.5 } });
+    }
+  }
+
+  function buildTOC(slide, el, C) {
+    slide.addText('목차 · CONTENTS', { x: MX, y: 0.6, w: CW, h: 0.6, fontSize: 28, color: C.txt, bold: true, fontFace: FONT });
+    const rows = [];
+    el.querySelectorAll('ol li').forEach((li, i) => {
+      rows.push([
+        { text: String(i + 1).padStart(2, '0'), options: { fontSize: 12, bold: true, color: C.rose, align: 'center', valign: 'middle', fontFace: FONT } },
+        { text: clean(li.querySelector('.ch-name')?.textContent), options: { fontSize: 13, bold: true, color: C.txt, valign: 'middle', fontFace: FONT } },
+        { text: clean(li.querySelector('.ch-desc')?.textContent), options: { fontSize: 10, color: C.sub, valign: 'middle', fontFace: FONT } }
+      ]);
+    });
+    slide.addTable(rows, { x: MX, y: 1.6, w: CW, colW: [1.2, 4.5, CW - 5.7], rowH: 0.62, border: { type: 'solid', color: C.line, pt: 0.5 } });
+  }
+
+  function buildContent(slide, el, C) {
+    let y = 0.4;
+    const meta = el.querySelector('.slide-meta'), title = el.querySelector('.slide-title'), tsub = el.querySelector('.slide-title-sub');
+    if (meta) { slide.addText(clean(meta.textContent), { x: MX, y, w: CW, h: 0.3, fontSize: 10, color: C.rose, bold: true, charSpacing: 1, fontFace: FONT }); y += 0.36; }
+    if (title) { const t = clean(title.textContent); const th = Math.min(1.3, 0.42 + t.length / 70 * 0.34); slide.addText(t, { x: MX, y, w: CW, h: th, fontSize: 17, color: C.txt, bold: true, fontFace: FONT, valign: 'top' }); y += th + 0.08; }
+    if (tsub) { slide.addText(clean(tsub.textContent), { x: MX, y, w: CW, h: 0.5, fontSize: 11, color: C.sub, fontFace: FONT, valign: 'top' }); y += 0.5; }
+
+    // 본문 블록 순회
+    const blocks = el.querySelectorAll(':scope > ul.slide-bullets, :scope > table, :scope > .bar-chart, :scope > .line-chart, :scope > .donut-row, :scope > .hero-metric-row, :scope > .msg-axis, :scope > .funnel-row, :scope > .persona-card, :scope > .position-map, :scope > .season-cal, :scope > .bridge');
+    blocks.forEach(b => { if (y > 6.7) return; y = addBlock(slide, b, C, y); });
+  }
+
+  function addBlock(slide, b, C, y) {
+    try {
+      // 불릿
+      if (b.matches('ul.slide-bullets')) {
+        const items = [...b.querySelectorAll('li')].map(li => ({
+          text: clean(li.textContent),
+          options: { bullet: { indent: li.classList.contains('sub') ? 26 : 14 }, color: li.classList.contains('sub') ? C.cap : C.sub, fontSize: 10.5, paraSpaceAfter: 4, fontFace: FONT }
+        }));
+        const h = Math.min(2.6, items.length * 0.33);
+        slide.addText(items, { x: MX, y, w: CW, h, valign: 'top', fontFace: FONT });
+        return y + h + 0.15;
+      }
+      // 표
+      if (b.matches('table')) {
+        const rows = tableRows(b, C);
+        if (!rows.length) return y;
+        const h = Math.min(3.0, rows.length * 0.34);
+        slide.addTable(rows, { x: MX, y, w: CW, autoPage: false, border: { type: 'solid', color: C.line, pt: 0.5 }, valign: 'middle' });
+        return y + h + 0.18;
+      }
+      // 막대 차트 → PPT 막대 차트(숫자) or 표
+      if (b.matches('.bar-chart')) {
+        const rows = [...b.querySelectorAll('.bar-row')].map(r => ({ label: clean(r.querySelector('.bar-label')?.textContent), val: clean(r.querySelector('.bar-value')?.textContent) }));
+        const nums = rows.map(r => numOf(r.val));
+        if (rows.length && nums.every(n => n !== null)) {
+          const h = Math.min(3.0, 0.6 + rows.length * 0.4);
+          slide.addChart('bar', [{ name: '값', labels: rows.map(r => r.label), values: nums }],
+            { x: MX, y, w: CW, h, barDir: 'bar', showValue: true, dataLabelColor: C.txt, dataLabelFontFace: FONT, dataLabelFontSize: 9, chartColors: [C.rose.replace('#', '')], catAxisLabelColor: C.sub, valAxisHidden: true, showLegend: false, catAxisLabelFontFace: FONT, catAxisLabelFontSize: 9 });
+          return y + h + 0.18;
+        } else {
+          const tr = [[{ text: '지표', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }, { text: '값', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }]];
+          rows.forEach(r => tr.push([{ text: r.label, options: { fontSize: 9, color: C.sub, fontFace: FONT } }, { text: r.val, options: { fontSize: 9, color: C.txt, bold: true, fontFace: FONT } }]));
+          const h = Math.min(2.6, tr.length * 0.34);
+          slide.addTable(tr, { x: MX, y, w: 7, colW: [4.5, 2.5], border: { type: 'solid', color: C.line, pt: 0.5 } });
+          return y + h + 0.18;
+        }
+      }
+      // 라인 차트 → PPT 선 차트 (시장 규모)
+      if (b.matches('.line-chart')) {
+        const h = 2.7;
+        slide.addChart('line', [{ name: '시장규모(조원)', labels: ['2013', '2018', '2022', '2024', '2027', '2030'], values: [0.08, 0.5, 1.6, 1.7, 2.5, 3.4] }],
+          { x: MX, y, w: CW, h, chartColors: [C.rose.replace('#', '')], showValue: true, dataLabelColor: C.txt, dataLabelFontSize: 9, dataLabelFontFace: FONT, lineSize: 3, showLegend: false, catAxisLabelColor: C.sub, valAxisLabelColor: C.sub, catAxisLabelFontFace: FONT, lineDataSymbol: 'circle' });
+        return y + h + 0.18;
+      }
+      // 도넛 → PPT 파이 차트 (점유율)
+      if (b.matches('.donut-row')) {
+        const labels = [], values = [];
+        b.querySelectorAll('.donut-legend li').forEach(li => {
+          const nm = clean(li.querySelector('.lg-name')?.textContent);
+          const vl = numOf(li.querySelector('.lg-value')?.textContent);
+          if (nm && vl !== null) { labels.push(nm.slice(0, 18)); values.push(vl); }
+        });
+        if (values.length) {
+          const h = 3.0;
+          slide.addChart('doughnut', [{ name: '점유율', labels, values }],
+            { x: MX, y, w: CW, h, showLegend: true, legendPos: 'r', legendColor: C.sub, legendFontFace: FONT, showValue: true, dataLabelColor: 'FFFFFF', dataLabelFontSize: 9, holeSize: 55, chartColors: ['B5616F', 'C08A7D', '9C7C54', '5F7488', 'C9C0B2'] });
+          return y + h + 0.18;
+        }
+        return y;
+      }
+      // Hero metric → 표 (지표/값/설명)
+      if (b.matches('.hero-metric-row')) {
+        const head = [], val = [], desc = [];
+        b.querySelectorAll('.hero-metric').forEach(m => {
+          head.push({ text: clean(m.querySelector('.hm-label')?.textContent), options: { fontSize: 9, color: C.cap, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          val.push({ text: clean(m.querySelector('.hm-value')?.textContent), options: { fontSize: 18, bold: true, color: C.rose, align: 'center', fontFace: FONT } });
+          desc.push({ text: clean(m.querySelector('.hm-desc')?.textContent), options: { fontSize: 8, color: C.sub, align: 'center', valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        slide.addTable([head, val, desc], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.35, 0.6, 0.7], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + 1.85;
+      }
+      // msg-axis (3축 카드) → 표
+      if (b.matches('.msg-axis')) {
+        const head = [], body = [];
+        b.querySelectorAll('.msg-axis-card').forEach(c => {
+          head.push({ text: clean(c.querySelector('h5')?.textContent), options: { fontSize: 10, bold: true, color: C.rose, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          body.push({ text: clean(c.querySelector('.ma-desc')?.textContent) + '\n' + clean(c.querySelector('.ma-detail')?.textContent), options: { fontSize: 8.5, color: C.sub, valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        const h = 2.0;
+        slide.addTable([head, body], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.5, 1.4], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + h + 0.15;
+      }
+      // funnel → 표
+      if (b.matches('.funnel-row')) {
+        const head = [], body = [];
+        b.querySelectorAll('.funnel-step').forEach(st => {
+          head.push({ text: clean(st.querySelector('h6')?.textContent), options: { fontSize: 10, bold: true, color: C.rose, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          body.push({ text: clean(st.querySelector('p')?.textContent), options: { fontSize: 8.5, color: C.sub, align: 'center', valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        slide.addTable([head, body], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.45, 0.9], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + 1.5;
+      }
+      // persona-card → 텍스트 블록
+      if (b.matches('.persona-card')) {
+        const tag = clean(b.querySelector('.pc-tag')?.textContent);
+        const nm = clean(b.querySelector('.pc-name')?.textContent);
+        const dsc = clean(b.querySelector('.pc-desc')?.textContent);
+        slide.addText([
+          { text: tag + '  ', options: { fontSize: 9, bold: true, color: C.rose } },
+          { text: nm + '\n', options: { fontSize: 13, bold: true, color: C.txt } },
+          { text: dsc, options: { fontSize: 9.5, color: C.sub } }
+        ], { x: MX, y, w: CW, h: 1.1, fontFace: FONT, valign: 'top', fill: { color: C.soft }, line: { color: C.line, pt: 0.5 } });
+        return y + 1.2;
+      }
+      // position-map → 포인트 표
+      if (b.matches('.position-map')) {
+        const tr = [[{ text: '브랜드 · 포지션', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }]];
+        b.querySelectorAll('.pm-point').forEach(p => tr.push([{ text: clean(p.textContent), options: { fontSize: 9, color: C.sub, fontFace: FONT } }]));
+        const h = Math.min(2.6, tr.length * 0.32);
+        slide.addTable(tr, { x: MX, y, w: 6, border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + h + 0.18;
+      }
+      // season-cal → 블록 텍스트
+      if (b.matches('.season-cal')) {
+        const blocks = [...b.querySelectorAll('.sc-block')].map(s => clean(s.textContent)).join('   ·   ');
+        slide.addText('시즌: ' + blocks, { x: MX, y, w: CW, h: 0.6, fontSize: 11, color: C.txt, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+        return y + 0.75;
+      }
+      // bridge → 로즈 박스
+      if (b.matches('.bridge')) {
+        slide.addText('→ NEXT  ' + clean(b.textContent).replace(/^→ NEXT/, ''), { x: MX, y: Math.max(y, 6.3), w: CW, h: 0.7, fontSize: 10.5, color: C.rose, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+        return y + 0.8;
+      }
+    } catch (e) { console.warn('block skip', e); }
+    return y;
   }
 
   async function exportProposalPPTX() {
-    if (typeof PptxGenJS === 'undefined' || typeof html2canvas === 'undefined') {
-      alert('라이브러리 로드 중입니다. 잠시 후 다시 시도해주세요.');
-      return;
-    }
-    const btn = exportBtn;
-    const original = btn.textContent;
+    if (typeof PptxGenJS === 'undefined') { alert('PptxGenJS 로드 중입니다. 잠시 후 다시 시도해주세요.'); return; }
+    const btn = exportBtn, original = btn.textContent;
     btn.disabled = true;
-
-    // 캡처 대상: main 안의 모든 섹션·아티클 (문서 순서)
-    const targets = Array.from(document.querySelectorAll('.main > section, .main > article'));
-    const pptx = new PptxGenJS();
-    pptx.defineLayout({ name: 'A4LAND', width: 11.69, height: 8.27 });
-    pptx.layout = 'LAYOUT_WIDE'; // 13.333 x 7.5
-    pptx.title = 'OLLI LIRA × MADUP 2026 디지털 마케팅 제안';
-    pptx.author = 'MADUP';
-    pptx.company = 'MADUP';
-
-    const SLIDE_W = 13.333, SLIDE_H = 7.5;
-    const MARGIN = 0.25;
-
     try {
+      const pptx = new PptxGenJS();
+      pptx.layout = 'LAYOUT_WIDE';
+      pptx.title = 'OLLI LIRA × MADUP 2026 디지털 마케팅 제안';
+      pptx.author = 'MADUP'; pptx.company = 'MADUP';
+      const targets = Array.from(document.querySelectorAll('.main > section, .main > article'));
       for (let i = 0; i < targets.length; i++) {
-        const el = targets[i];
-        btn.textContent = `⏳ PPT 생성 ${i + 1}/${targets.length}`;
-
-        const bg = sectionBg(el);
-        const canvas = await html2canvas(el, {
-          scale: 1.6,
-          backgroundColor: '#' + bg,
-          useCORS: true,
-          logging: false,
-          windowWidth: el.scrollWidth,
-        });
-        const imgData = canvas.toDataURL('image/jpeg', 0.92);
-
-        const slide = pptx.addSlide();
-        slide.background = { color: bg };
-
-        // 이미지 비율 유지하며 슬라이드 안에 contain 배치 (중앙)
-        const imgAspect = canvas.width / canvas.height;
-        const areaW = SLIDE_W - MARGIN * 2;
-        const areaH = SLIDE_H - MARGIN * 2;
-        const areaAspect = areaW / areaH;
-        let w, h;
-        if (imgAspect > areaAspect) { w = areaW; h = w / imgAspect; }
-        else { h = areaH; w = h * imgAspect; }
-        const x = (SLIDE_W - w) / 2;
-        const y = (SLIDE_H - h) / 2;
-        slide.addImage({ data: imgData, x, y, w, h });
-
-        // 메모리 해제 여유
-        await new Promise(r => setTimeout(r, 30));
+        btn.textContent = `⏳ ${i + 1}/${targets.length}`;
+        buildSlide(pptx, targets[i]);
+        if (i % 6 === 0) await new Promise(r => setTimeout(r, 10));
       }
-
       const today = new Date().toISOString().slice(0, 10);
-      btn.textContent = '⏳ 파일 저장 중...';
-      await pptx.writeFile({ fileName: `OLLI_LIRA_MADUP_제안서_${today}.pptx` });
+      btn.textContent = '⏳ 저장 중...';
+      await pptx.writeFile({ fileName: `OLLI_LIRA_MADUP_제안서_편집가능_${today}.pptx` });
       btn.textContent = '✓ 다운로드 완료';
       setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2500);
     } catch (err) {
       console.error('PPT 생성 실패:', err);
       alert('PPT 생성 실패: ' + err.message);
-      btn.textContent = original;
-      btn.disabled = false;
+      btn.textContent = original; btn.disabled = false;
     }
   }
 </script>
