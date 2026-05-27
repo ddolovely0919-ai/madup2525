@@ -9,10 +9,10 @@
     "updatedAt": "2026-05-28",
     "rfp": "연간 30억 예산, 3 브랜드(약손명가PB/OLLI LIRA/GOLKI) 통합 운영. KPI: 공식몰 ROAS 250%/브스 500%/외부몰 300%, 재구매율 10%, 카플친 +200%.",
     "owner": "매드업 비딩 TF",
-    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌)"
+    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌) · A단계 연쇄 업데이트(s1-4·s1-10·s1-13·s4-9·s5-summary)"
   },
   "stats": {
-    "auto": 82,
+    "auto": 84,
     "progress": 1,
     "client": 5,
     "madup": 8
@@ -330,30 +330,50 @@
     {
       "id": "s1-4",
       "chapter": "ch1",
-      "meta": "타겟",
+      "meta": "타겟 · 3040 여성 (Slow-aging Starter)",
       "status": "auto",
       "intro": false,
-      "title": "3040 여성: \"실용성 + 개인화\" 핵심 키워드",
+      "title": "3040 여성 핵심 코어 = <span class=\"highlight\">\"Slow-aging Starter\" 페르소나</span> (33-42세) — \"실용성 + 개인화 + 매일 루틴\"이 키워드, EMS 약점은 메시지 프레임으로 보완",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ 뷰티 디바이스 핵심 구매층 = 30대 여성 (아모레 메이크온도 동일)"
+          "html": "ㄴ <strong>뷰티 디바이스 핵심 구매층 = 30대 여성</strong> (토스 2025·아모레 메이크온 동일) / 30대 이용률 35% 정점 = 전 연령 1위"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 토스 데이터 2025: 뷰티·구독·개인화 트렌드 결합 가속"
+          "html": "ㄴ <strong>3040 코어 세분화</strong>: 일반적 3040이 아닌 <span class=\"highlight\">\"33-42세 EMS 진입기\"</span> 정조준 — 잔주름·탄력 초기 신호 자각 + 시술 1-3년차 / 약손명가 IP·EMS 모두 자연 정합 (s1-21 결정)"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 3040 여성은 제품 선택 시 실용성·디자인·품질 + \"내 가치·취향 반영\" 최우선시"
+          "html": "ㄴ <strong>토스 2025 데이터</strong>: 뷰티·구독·개인화 트렌드 결합 가속 → \"개인화된 일상 루틴\" 메시지 톤 정합"
         },
         {
-          "type": "arrow",
-          "html": "▶ 올리리라 신제품 런칭 시 \"단순 기능 소구 No, 라이프스타일·취향 맥락 소구\""
+          "type": "indent-1",
+          "html": "ㄴ <strong>3040 여성 구매 의사결정 기준</strong>: 실용성·디자인·품질 + \"내 가치·취향 반영\" 최우선 / 단순 기능 소구 X → 라이프스타일·취향 맥락 소구"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>EMS 카테고리 약점 (3040은 본능적으로 RF·갈바닉 선호)</strong> → 매드업 메시지 프레임으로 보완:"
         },
         {
           "type": "indent-2",
-          "html": "ㄴㄴ 카리나(메디큐브) / 장원영(메이크온) 같은 페르소나형 모델 활용 검토 필요"
+          "html": "ㄴㄴ ① <strong>\"30대를 위한 슬로우에이징 일상 루틴\"</strong> — 예방 차원으로 재정의"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ② <strong>\"에스테틱이 만든 매일 5분\"</strong> — 약손명가 IP × 짧은 시간 = 직장인 친화"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ③ <strong>\"약손명가가 30대에 권하는 첫 디바이스\"</strong> — 권위 IP + 진입 장벽 낮춤"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>모델 캐스팅 권장</strong>: <span class=\"highlight\">동경형(카리나·장원영 톤) 1차 인지 + 매장 시술 후기 마이크로 인플루언서 2차 전환</span> 혼합 — 메디큐브/메이크온의 톱스타 단독 전략과 차별화"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>예산 분배</strong>: <span class=\"highlight\">3040 코어 80%</span> (s1-21 1.5 페르소나 결정) + 4050 시즌 20% (s1-13) + 1020 0%"
         }
       ],
       "sources": [
@@ -366,7 +386,7 @@
           "url": "https://www.careet.net/1667"
         }
       ],
-      "sourceNote": "* 출처: <a href=\"https://tossads.toss.im/insights/consumer-trend-2025\" target=\"_blank\">토스 데이터 2025</a>, <a href=\"https://www.careet.net/1667\" target=\"_blank\">Careet 3040 스테레오 타입</a>"
+      "sourceNote": "* 출처: <a href=\"https://tossads.toss.im/insights/consumer-trend-2025\" target=\"_blank\">토스 데이터 2025</a>, <a href=\"https://www.careet.net/1667\" target=\"_blank\">Careet 3040</a> · 매드업 1.5 페르소나 결정(s1-21) 정합"
     },
     {
       "id": "s1-5",
@@ -628,59 +648,83 @@
     {
       "id": "s1-10",
       "chapter": "ch1",
-      "meta": "소비자 인식 · 연령별",
+      "meta": "소비자 인식 · 연령별 + 매드업 결정 정합",
       "status": "auto",
       "intro": false,
-      "title": "2030은 RF·갈바닉·HIFU 멀티테크 선호 / 4050은 EMS 슬로우 에이징 — 올리리라 EMS는 4050 친화적, 3040 어필 메시지 보강 필요",
+      "title": "2030은 RF·갈바닉·HIFU 선호 / 4050은 EMS 슬로우에이징 — <span class=\"highlight\">매드업 1.5 페르소나 결정으로 EMS 약점을 메시지 프레임 3축으로 해결</span>",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>2030 슬로우 에이징 트렌드</strong> — 노화 \"예방\"이 키워드, RF(고주파)·HIFU·갈바닉 멀티 테크 기본 스펙"
+          "html": "ㄴ <strong>연령별 카테고리 선호 (시장 데이터)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ LED → 탄력·주름·미백 (전 연령)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>EMS → 리프팅·근육 (4050 강세)</strong> ← 올리리라 본성"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ RF → 콜라겐·잔주름 완화 (2030 강세) — 갈바닉 디바이스 검색 +1,762% 폭증 카테고리"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ 갈바닉 → 스킨케어 흡수율 (LG프라엘 어필 포인트)"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>4050 선호 = EMS 디바이스</strong> — 얼굴 근육 운동, 탄력·V라인 윤곽 관리"
+          "html": "ㄴ <strong>2030 슬로우에이징 트렌드</strong>: 노화 \"예방\"이 키워드, RF·HIFU·갈바닉 멀티테크 기본 스펙 인식"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 카테고리별 효능 인식: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>LED → 탄력·주름·미백 (전 연령)"
+          "html": "ㄴ <strong>4050 EMS 선호</strong>: 얼굴 근육 운동·탄력·V라인 윤곽 관리 = 효도선물 카테고리와 결합 (s1-13)"
         },
         {
           "type": "indent-1",
-          "html": "EMS → 리프팅·근육 (4050 강세)"
+          "html": "ㄴ <strong>딜레마</strong>: 광고주 RFP는 3040 메인 / 올리리라는 EMS = 4050 친화 → <span class=\"highlight\">매드업 1.5 페르소나 결정으로 해결</span> (s1-21):"
         },
         {
-          "type": "indent-1",
-          "html": "RF → 콜라겐 생성·잔주름 완화 (2030 강세)"
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>3040 코어 80%</strong> — \"33-42 EMS 진입기\" 정조준 + 메시지 프레임 3축으로 EMS 카테고리어 후방 배치"
         },
         {
-          "type": "indent-1",
-          "html": "갈바닉 → 스킨케어 흡수율 (LG프라엘 어필 포인트)"
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>4050 시즌 20%</strong> — 효도선물 시즌(어버이날·추석·설날)만 별도 캠페인"
         },
         {
           "type": "arrow",
-          "html": "▶ 올리리라(EMS 밴드)는 <strong>4050 페르소나에 자연 적합</strong> — 단, 3040 RFP 타겟 어필 위해 \"예방 차원의 슬로우 에이징\" + \"근육 케어 일상 루틴\" 메시지 필요"
+          "html": "▶ <strong>매드업 메시지 프레임 3축</strong> (EMS 약점 보완):"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ① <span class=\"highlight\">\"30대를 위한 슬로우에이징 일상 루틴\"</span> — \"EMS로 리프팅\"(4050 톤) 회피"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ② <span class=\"highlight\">\"에스테틱이 만든 매일 5분\"</span> — 약손명가 IP × 직장인 일상 결합"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ③ <span class=\"highlight\">\"약손명가가 30대에 권하는 첫 디바이스\"</span> — 진입 장벽 낮춤 + 권위 IP"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>하반기 신제품 출시</strong> 시 RF/갈바닉 등 멀티테크 결합 검토 가치 — 2030 확장 기회"
+          "html": "▶ <strong>하반기 신제품 검토</strong> (s6-1과 정합): \"갈바닉 디바이스\" +1,762% / \"고주파 디바이스\" +1,120% 폭증 카테고리 = RF·갈바닉 결합 디바이스 진입 골든타임 = 2030 확장 + 3040 코어 강화 동시 효과"
         }
       ],
       "sources": [
         {
-          "label": "엘르",
-          "url": "https://www.elle.co.kr/article/1897846"
+          "label": "오픈서베이 2025 뷰티 트렌드",
+          "url": "https://blog.opensurvey.co.kr/article/beauty-2025-2/"
         },
         {
-          "label": "시그니처 메디컬그룹",
-          "url": "https://signaturemg.co.kr/news_view.php?cate=2&cate_sub=&idx=3379"
-        },
-        {
-          "label": "뷰티코리아뉴스",
-          "url": "http://www.bkn24.com/news/articleView.html?idxno=14170"
+          "label": "코스인코리아 디바이스 동향",
+          "url": "https://cosinkorea.com/news/article.html?no=16092"
         }
       ],
-      "sourceNote": "* 출처: <a href=\"https://www.elle.co.kr/article/1897846\" target=\"_blank\">엘르</a>, <a href=\"https://signaturemg.co.kr/news_view.php?cate=2&cate_sub=&idx=3379\" target=\"_blank\">시그니처 메디컬그룹</a>, <a href=\"http://www.bkn24.com/news/articleView.html?idxno=14170\" target=\"_blank\">뷰티코리아뉴스</a>"
+      "sourceNote": "* 출처: <a href=\"https://blog.opensurvey.co.kr/article/beauty-2025-2/\" target=\"_blank\">오픈서베이 2025</a>, <a href=\"https://cosinkorea.com/news/article.html?no=16092\" target=\"_blank\">코스인코리아</a> · 매드업 1.5 페르소나(s1-21) + 메시지 프레임 3축 정합"
     },
     {
       "id": "s1-11",
@@ -1435,55 +1479,95 @@
     {
       "id": "s1-13",
       "chapter": "ch1",
-      "meta": "소비자 인식 · 선물 수요",
+      "meta": "Secondary Persona · 효도선물 시즌 액션 플랜",
       "status": "auto",
       "intro": false,
-      "title": "뷰티 디바이스는 \"효도 선물\" 카테고리 안착 — 4050 부모님 + 가정의달/추석 모멘텀이 핵심 판매 기회",
+      "title": "Secondary Persona <span class=\"highlight\">\"Gift Buyer Path\"</span> — 30대 자녀 광고 타겟 / 4050 부모 사용 타겟의 듀얼 구조, 시즌 D-30 3회 집중 운영으로 비대칭 흡수",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ 어버이날(5월)·추석(9-10월) 명절 시즌 = LED 마스크·뷰티 디바이스가 효도 선물 상위 카테고리로 안착"
+          "html": "ㄴ <strong>듀얼 타겟 프레임</strong> (s1-21 1.5 페르소나 결정):"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>광고 타겟 = 30대 자녀</strong> — 광고주 RFP(3040) 완벽 일치 / 인스타·카카오·GFA로 도달"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>사용 타겟 = 4050 부모님 (특히 어머니)</strong> — 약손명가 매장 단골 자연 정합"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 부모님 타겟 인기 제품: PDRN 안티에이징·LED 마스크·EMS 디바이스"
+          "html": "ㄴ <strong>시즌 캘린더 — D-30 3회 집중</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>어버이날 D-30 (4월 첫째주~5월 첫째주)</strong> = 연간 최대 시즌 / 캠페인 비중 50%"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>추석 D-30 (8월 중순~9월 중순)</strong> = 효도선물 2위 시즌 / 캠페인 비중 35%"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>설날 D-30 (12월 중순~1월 중순)</strong> = 효도선물 3위 시즌 / 캠페인 비중 15%"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ \"피부 탄력·주름 개선이 필요한 부모님\" 메시지 일관 — 미디어·커머스 채널 공통"
+          "html": "ㄴ <strong>시즌별 핵심 채널 매핑</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <span class=\"highlight\">카카오 선물하기</span> — 시즌 핵심 채널, 부모님 선물 카테고리 자연 진입 / 카플친 +200% KPI 동시 견인"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <span class=\"highlight\">GFA + 메타</span> — 30대 자녀 도달 (인스타 피드·릴스 + 네이버 디스플레이)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <span class=\"highlight\">자사몰 + BS</span> — 시즌 한정 \"효도 패키지 SKU\" 운영 (선물 포장 + 카드 + 부모님 매뉴얼 + 매장 1:1 컨설팅 쿠폰)"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ 카카오 선물하기·다나와 추석선물 검색에서 뷰티 디바이스 상위 노출"
+          "html": "ㄴ <strong>핵심 메시지</strong> (3040 자녀 → 4050 부모 톤):"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ \"부모님 시술 가는 부담, 집에서 매일\" — 약손명가 매장 시술 인지도 활용"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ \"45년 약손명가가 부모님께 권하는 디바이스\" — 권위 IP × 효도 정서"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ \"매장 한 번 모시는 대신, 매일 5분\" — 시술 격상(s4-9 thesis와 정합)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>차별화 자산 (메디큐브 대비)</strong>: 약손명가 \"건강·시술 전문성\" 신뢰 = 4050 부모님 신뢰 카테고리 정합 — 메디큐브의 \"유재석 대중성\"보다 효도선물 카테고리 적합"
         },
         {
           "type": "arrow",
-          "html": "▶ 올리리라 EMS 밴드 = <strong>\"40+ 부모님 효도 선물\" 페르소나 추가 적합</strong> — 광고주 3040 메인 타겟 외 보너스 모멘텀"
+          "html": "▶ <strong>예산</strong>: 연 광고비의 <span class=\"highlight\">20%</span> = 4050 시즌 캠페인 / 시즌별 3주 집중 운영 (s1-21 결정)"
         },
         {
           "type": "arrow",
-          "html": "▶ 가정의달·추석·연말 시기 캠페인 강화 + <strong>카플친 \"선물하기\" 기능 결합</strong> 검토 → RFP 카플친 +200% KPI 동시 견인"
-        },
-        {
-          "type": "arrow",
-          "html": "▶ \"선물 포장 + 카드 + 부모님 매뉴얼\" 패키지 차별화 가능 (메디큐브 대비 약손명가의 \"건강·시술 전문성\" 신뢰 자산 활용)"
+          "html": "▶ <strong>패키지 차별화</strong>: 시즌 한정 SKU = 디바이스 + 선물 포장 + 매뉴얼 + 매장 컨설팅 쿠폰 결합 → 가격 인상 없이 가치 인지 강화"
         }
       ],
       "sources": [
         {
-          "label": "다나와 2025 추석선물",
-          "url": "https://prod.danawa.com/list/?cate=21254541"
+          "label": "카카오 선물하기 시즌 트렌드",
+          "url": "https://gift.kakao.com"
         },
         {
-          "label": "Trip 어버이날 선물",
-          "url": "https://kr.trip.com/blog/mother-day-kr/"
-        },
-        {
-          "label": "원데이원 추석선물세트 Best4",
-          "url": "https://v.daum.net/v/GKPOw15rlk"
+          "label": "다나와 추석선물 검색 트렌드",
+          "url": "https://danawa.com"
         }
       ],
-      "sourceNote": "* 출처: <a href=\"https://prod.danawa.com/list/?cate=21254541\" target=\"_blank\">다나와 2025 추석선물</a>, <a href=\"https://kr.trip.com/blog/mother-day-kr/\" target=\"_blank\">Trip 어버이날 선물</a>, <a href=\"https://v.daum.net/v/GKPOw15rlk\" target=\"_blank\">원데이원 추석선물세트 Best4</a>"
+      "sourceNote": "* 출처: 카카오 선물하기 · 다나와 시즌 트렌드 · 매드업 1.5 페르소나(s1-21) Secondary 액션 플랜"
     },
     {
       "id": "s1-14",
@@ -4794,11 +4878,35 @@
     {
       "id": "s4-9",
       "chapter": "ch4",
-      "meta": "⭐ 매드업 제안 · 4트랙 광고 카피·시안 5종 구체화",
+      "meta": "⭐ 매드업 제안 · 4트랙 광고 카피 시안 6종 + 4050 시즌 변형 (2026-05-28 페르소나 정합성 보강)",
       "status": "madup",
       "intro": false,
-      "title": "매드업 4트랙 USP × 광고 카피 5종 시안 — <span class=\"highlight\">Lever Xpert 58장 분석에서 발견한 시장 여백을 단일 메시지로 압축</span> / PT 클로징·소재 운영 가이드의 직접 자산",
+      "title": "매드업 4트랙 USP × 광고 카피 <span class=\"highlight\">6종 + 4050 시즌 변형 5종 = 총 11종</span> — Slow-aging Starter 정합성 우수 4종 유지 / 1종 톤 격상 / 1종 신규 추가 / 4050 듀얼 변형 추가",
       "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⭐ 2026-05-28 페르소나 정합성 재검토 결과</strong> (s1-21 1.5 페르소나 결정 적용):"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>유지 (정합성 우수)</strong>: 카피 ①·③·④ — \"시술 vs 디바이스\" \"학습형 구매\" \"시술→가정 전환\"이 Slow-aging Starter(33-42 EMS 진입기·시술 1-3년차)의 직접 페인포인트와 1:1 매핑"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>변형 추가</strong>: 카피 ② — Slow-aging Starter 자가 사용 / Gift Buyer Path(4050 부모님) <strong>듀얼 변형안</strong> 운영"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>톤 조정</strong>: 카피 ⑤ \"4주 챌린지\" → <span class=\"highlight\">\"12주 슬로우에이징 루틴\"</span>으로 격상 (33-42 직장인 친화·1020 톤 회피)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>신규 카피 ⑥ 권장</strong>: <span class=\"highlight\">\"약손명가가 30대에 권하는 첫 디바이스\"</span> 진입 카피 — 메시지 프레임 3축(s1-4·s1-10) 직접 반영, 권위 IP + 진입 장벽 낮춤"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>4050 시즌 변형 5종</strong>: 모든 카피의 \"효도선물 시즌\" 변형안 도출 — 30대 자녀 광고 → 4050 부모 사용 톤(s1-13 액션 플랜)"
+        },
         {
           "type": "indent-1",
           "html": "ㄴ <strong>카피 작성 원칙 (Lever 분석 종합)</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>thesis 4대 IP 원칙 정합</strong>: 추상화(\"46년 노하우\") · 라인별 차등 · 워딩 격상(\"메디컬 에스테틱\") · 시술 격상(\"병원 시술 사이\")"
@@ -4884,7 +4992,65 @@
         }
       ],
       "sourceNote": "* 출처: thesis 4대 IP 원칙 + s4-4~s4-8 Lever 58장 분석 + s1-19 가성비 데이터 + 약손명가 자사 USP 통합",
-      "body": "<table>\n      <thead><tr><th>카피</th><th>메인 트랙</th><th>보조 트랙</th><th>학습 출처</th><th>매드업 도구</th></tr></thead>\n      <tbody>\n        <tr><td>① 가성비 \"써마지 한번이면 올리리라 평생\"</td><td>D 락인 시각화</td><td>시술 격상 / 가성비</td><td>s1-19 (1.0x vs 7.7x)</td><td>SPRAY AI 인포그래픽</td></tr>\n        <tr><td>② 임상 정량 \"부위별 %\"</td><td>A 임상 정량</td><td>학술 신뢰</td><td>메이크온 / 달바</td><td>SPRAY AI 그래픽 + AI 심의봇</td></tr>\n        <tr><td>③ 결합형 정당성 Q&A</td><td>B 교육형</td><td>락인 시각화</td><td>센텔리안 마데카</td><td>SPRAY AI 카툰</td></tr>\n        <tr><td>④ 시술→가정 전환</td><td>C 전환 서사</td><td>워딩 격상</td><td>미점유 영역 (단독)</td><td>SPRAY AI 셀카·릴스</td></tr>\n        <tr><td>⑤ 4주 챌린지</td><td>D 락인 시각화</td><td>꾸준함 / CRM 락인</td><td>메디큐브 4주차 루틴</td><td>카플친 시리즈 + CRM</td></tr>\n      </tbody>\n    </table>\n    <p><strong>📌 다음 단계 (PT 클로징)</strong>: 5종 카피 시안 × 3종 시각 톤(모델·인포그래픽·카툰) = <strong>15개 소재</strong>를 매드업 SPRAY AI로 자동 생성 → A/B 효율 검증 → BS ROAS 500%·외부몰 ROAS 300%·카플친 +200% 달성 경로</p>"
+      "body": "<table>\n      <thead><tr><th>카피</th><th>메인 트랙</th><th>보조 트랙</th><th>학습 출처</th><th>매드업 도구</th></tr></thead>\n      <tbody>\n        <tr><td>① 가성비 \"써마지 한번이면 올리리라 평생\"</td><td>D 락인 시각화</td><td>시술 격상 / 가성비</td><td>s1-19 (1.0x vs 7.7x)</td><td>SPRAY AI 인포그래픽</td></tr>\n        <tr><td>② 임상 정량 \"부위별 %\"</td><td>A 임상 정량</td><td>학술 신뢰</td><td>메이크온 / 달바</td><td>SPRAY AI 그래픽 + AI 심의봇</td></tr>\n        <tr><td>③ 결합형 정당성 Q&A</td><td>B 교육형</td><td>락인 시각화</td><td>센텔리안 마데카</td><td>SPRAY AI 카툰</td></tr>\n        <tr><td>④ 시술→가정 전환</td><td>C 전환 서사</td><td>워딩 격상</td><td>미점유 영역 (단독)</td><td>SPRAY AI 셀카·릴스</td></tr>\n        <tr><td>⑤ <s>4주 챌린지</s> → <strong>12주 슬로우에이징 루틴</strong></td><td>D 락인 시각화</td><td>꾸준함 / CRM 락인</td><td>메디큐브 4주차 루틴 격상</td><td>카플친 시리즈 + CRM</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑥ NEW \"약손명가가 30대에 권하는 첫 디바이스\"</strong></td><td><strong>진입 카피</strong></td><td>권위 IP / 진입 장벽 낮춤</td><td>메시지 프레임 3축(s1-4·s1-10)</td><td>SPRAY AI 모델·인포</td></tr>\n      </tbody>\n    </table>\n\n    <div style=\"margin:20px 0 12px;padding:14px 18px;background:#fffbeb;border-left:4px solid #f59e0b;border-radius:6px;\">\n      <div style=\"font-size:11px;font-weight:700;color:#92400e;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">⭐ 페르소나 정합성 매트릭스 — Slow-aging Starter (33-42 EMS 진입기)</div>\n      <table style=\"width:100%;font-size:13px;\">\n        <thead><tr style=\"background:#fef3c7;\"><th>카피</th><th style=\"width:90px;\">정합성</th><th>핵심 정합 페인포인트</th><th>액션</th></tr></thead>\n        <tbody>\n          <tr><td>① 가성비 시술 비교</td><td>⭐⭐⭐⭐ 우수</td><td>\"시술 비싸지만 효능 신뢰\" 직접 응답</td><td><strong>유지</strong> · 메인 카피 격상</td></tr>\n          <tr><td>② 임상 정량 %</td><td>⭐⭐⭐ 양호</td><td>30대 후반의 데이터 신뢰 의사결정</td><td><strong>4050 시즌 변형 추가</strong></td></tr>\n          <tr><td>③ Q&A 교육형</td><td>⭐⭐⭐⭐ 우수</td><td>학습형 구매 패턴 + 결합형 의문 해소</td><td><strong>유지</strong></td></tr>\n          <tr><td>④ 시술→가정 전환</td><td>⭐⭐⭐⭐⭐ 최우수</td><td>\"시술 1-3년차\" 페르소나 직격</td><td><strong>핵심 카피 격상</strong></td></tr>\n          <tr><td>⑤ 4주 챌린지</td><td>⭐⭐ 보강 필요</td><td>1020 톤 강함 / 직장인 12주 루틴이 적합</td><td><strong>\"12주 루틴\"으로 톤 격상</strong></td></tr>\n          <tr style=\"background:#fffbeb;\"><td><strong>⑥ 첫 디바이스 (NEW)</strong></td><td>—</td><td>진입 장벽 낮춤 + 약손명가 권위 IP × 30대</td><td><strong>신규 추가</strong></td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <div style=\"margin:16px 0;padding:14px 18px;background:#eff6ff;border-left:4px solid #3b82f6;border-radius:6px;\">\n      <div style=\"font-size:11px;font-weight:700;color:#1e40af;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">🎁 4050 효도선물 시즌 변형 5종 — Gift Buyer Path (광고 30대 자녀 → 사용 4050 부모)</div>\n      <table style=\"width:100%;font-size:13px;\">\n        <thead><tr style=\"background:#dbeafe;\"><th>원본 카피</th><th>시즌 변형 카피</th><th>운영 시즌</th></tr></thead>\n        <tbody>\n          <tr><td>① 가성비</td><td><strong>\"부모님 시술 1번 = 평생 홈케어\"</strong></td><td>전 시즌</td></tr>\n          <tr><td>② 임상 정량</td><td><strong>\"45년 약손명가 임상이 만든 효능 — 부모님께\"</strong></td><td>어버이날·추석</td></tr>\n          <tr><td>③ Q&A</td><td><strong>\"부모님이 묻기 전에 답해주는 사용법\"</strong> (매뉴얼 패키지)</td><td>전 시즌</td></tr>\n          <tr><td>④ 시술→가정</td><td><strong>\"매장 한 번 모시는 대신, 매일 5분\"</strong></td><td>전 시즌 · 핵심</td></tr>\n          <tr><td>⑤ 12주 루틴</td><td><strong>\"부모님 12주 루틴 — 자녀가 같이 챙기는\"</strong></td><td>어버이날</td></tr>\n        </tbody>\n      </table>\n    </div>\n\n    <p><strong>📌 다음 단계 (PT 클로징)</strong>: <span style=\"background:#fef3c7;padding:2px 6px;border-radius:3px;font-weight:700;\">코어 카피 6종 + 시즌 변형 5종 = 총 11종 카피</span> × 3종 시각 톤(모델·인포그래픽·카툰) = <strong>33개 소재</strong>를 매드업 SPRAY AI로 자동 생성 → A/B 효율 검증 → BS ROAS 500%·외부몰 ROAS 300%·카플친 +200% 달성 경로</p>"
+    },
+    {
+      "id": "s4-10",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 제안 · 메시지 프레임 3축 디테일링 (소재 발주 가이드)",
+      "status": "auto",
+      "intro": false,
+      "title": "<span class=\"highlight\">메시지 프레임 3축 × 헤드라인·바디·CTA 디테일링</span> — 매드업 SPRAY AI 자동 생성 시드, 소재 발주서·매체별 변형의 직접 자산",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>메시지 프레임 활용 시나리오</strong>: (1) SPRAY AI 자동 생성 시드 인풋 (2) 매체별 키비주얼·카피 발주서 (3) AI 심의봇 사전 점검 기준 (4) PT 클로징 카피 풀"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>3축 메시지 프레임 (s1-4·s1-10·s1-21 정합)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>축 ① \"30대를 위한 슬로우에이징 일상 루틴\"</strong> — EMS 카테고리어 회피, 슬로우에이징 트렌드 정합"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>축 ② \"에스테틱이 만든 매일 5분\"</strong> — 약손명가 IP × 직장인 시간 부담 해소"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>축 ③ \"약손명가가 30대에 권하는 첫 디바이스\"</strong> — 권위 IP × 진입 장벽 낮춤"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>SPRAY AI 자동 생성 매핑</strong>: 3축 × 3종 톤(모델·인포·카툰) × 5종 매체 규격(메타 피드·릴스·유튜브 쇼츠·BS 카드·CRM 알림톡) = <strong>최대 45개 소재</strong> 자동 생성 가능"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>심의 가드레일</strong>: AI 심의봇이 \"슬로우에이징\"·\"매일\"·\"첫 디바이스\" 키워드 사전 점검 → 식약처 2025 강화 규제 회피 / \"항노화\"·\"치료\"·\"완벽\" 등 금기어 자동 대체 카피 제안"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매체별 운영 권장</strong>: 축 ① 인스타·릴스(인지) / 축 ② 자사몰 LP·BS 카드(고려·전환) / 축 ③ 메타 진입 캠페인 · 카플친 신규 가입 환영(진입)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>다음 단계</strong>: 11종 카피(s4-9) × 메시지 프레임 3축 매핑 → SPRAY AI 인풋 표 자동 생성"
+        }
+      ],
+      "sources": [
+        {
+          "label": "매드업 1.5 페르소나 결정 (s1-21)",
+          "url": "#s1-21"
+        },
+        {
+          "label": "광고 카피 11종 (s4-9)",
+          "url": "#s4-9"
+        }
+      ],
+      "sourceNote": "* 출처: 매드업 페르소나 전략(s1-21) + 카피 시안(s4-9) · 메시지 프레임 3축은 매드업 광고기획팀 정합성 검토 결과",
+      "body": "<div style=\"margin:16px 0;padding:18px 20px;background:linear-gradient(135deg,#fef3c7 0%,#fff 100%);border:1px solid #f59e0b;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;\">축 ①</div>\n  <div style=\"font-size:18px;font-weight:800;color:#111;margin-bottom:14px;\">\"30대를 위한 슬로우에이징 일상 루틴\"</div>\n  <table style=\"width:100%;font-size:13px;border-collapse:collapse;\">\n    <thead><tr style=\"background:#fef3c7;\"><th style=\"padding:8px;text-align:left;\">유형</th><th style=\"padding:8px;text-align:left;\">카피 예시</th><th style=\"padding:8px;text-align:left;width:140px;\">매체</th></tr></thead>\n    <tbody>\n      <tr style=\"border-bottom:1px solid #fde68a;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">헤드라인</td><td style=\"padding:8px;color:#111;\"><strong>\"안티에이징 말고, 슬로우에이징\"</strong></td><td style=\"padding:8px;color:#6b7280;\">인스타 릴스</td></tr>\n      <tr style=\"border-bottom:1px solid #fde68a;background:#fffbeb;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">바디</td><td style=\"padding:8px;color:#111;\">\"노화는 막을 수 없지만, 늦출 수는 있어요. 약손명가가 만든 EMS 밴드로 매일 만나는 루틴, 30대부터 시작하세요.\"</td><td style=\"padding:8px;color:#6b7280;\">자사몰 LP</td></tr>\n      <tr><td style=\"padding:8px;color:#6b7280;font-weight:700;\">CTA</td><td style=\"padding:8px;color:#111;\"><strong>\"내 슬로우에이징 루틴 시작하기 →\"</strong></td><td style=\"padding:8px;color:#6b7280;\">전 매체</td></tr>\n    </tbody>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:18px 20px;background:linear-gradient(135deg,#dbeafe 0%,#fff 100%);border:1px solid #3b82f6;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#1e40af;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;\">축 ②</div>\n  <div style=\"font-size:18px;font-weight:800;color:#111;margin-bottom:14px;\">\"에스테틱이 만든 매일 5분\"</div>\n  <table style=\"width:100%;font-size:13px;border-collapse:collapse;\">\n    <thead><tr style=\"background:#dbeafe;\"><th style=\"padding:8px;text-align:left;\">유형</th><th style=\"padding:8px;text-align:left;\">카피 예시</th><th style=\"padding:8px;text-align:left;width:140px;\">매체</th></tr></thead>\n    <tbody>\n      <tr style=\"border-bottom:1px solid #bfdbfe;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">헤드라인</td><td style=\"padding:8px;color:#111;\"><strong>\"매일 5분, 매장 케어를 집에서\"</strong></td><td style=\"padding:8px;color:#6b7280;\">메타 피드</td></tr>\n      <tr style=\"border-bottom:1px solid #bfdbfe;background:#eff6ff;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">바디</td><td style=\"padding:8px;color:#111;\">\"매장 갈 시간 없는 직장인 30대를 위해. 46년 약손명가 노하우가 만든 EMS 밴드, 매일 출근 전 5분이면 충분합니다.\"</td><td style=\"padding:8px;color:#6b7280;\">유튜브 쇼츠 자막</td></tr>\n      <tr><td style=\"padding:8px;color:#6b7280;font-weight:700;\">CTA</td><td style=\"padding:8px;color:#111;\"><strong>\"5분 루틴 시작 → 첫 구매 10% 할인\"</strong></td><td style=\"padding:8px;color:#6b7280;\">BS·자사몰 카드</td></tr>\n    </tbody>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:18px 20px;background:linear-gradient(135deg,#fce7f3 0%,#fff 100%);border:1px solid #ec4899;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#9f1239;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;\">축 ③</div>\n  <div style=\"font-size:18px;font-weight:800;color:#111;margin-bottom:14px;\">\"약손명가가 30대에 권하는 첫 디바이스\"</div>\n  <table style=\"width:100%;font-size:13px;border-collapse:collapse;\">\n    <thead><tr style=\"background:#fce7f3;\"><th style=\"padding:8px;text-align:left;\">유형</th><th style=\"padding:8px;text-align:left;\">카피 예시</th><th style=\"padding:8px;text-align:left;width:140px;\">매체</th></tr></thead>\n    <tbody>\n      <tr style=\"border-bottom:1px solid #fbcfe8;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">헤드라인</td><td style=\"padding:8px;color:#111;\"><strong>\"디바이스 처음이라면, 약손명가\"</strong></td><td style=\"padding:8px;color:#6b7280;\">메타 진입 캠페인</td></tr>\n      <tr style=\"border-bottom:1px solid #fbcfe8;background:#fdf2f8;\"><td style=\"padding:8px;color:#6b7280;font-weight:700;\">바디</td><td style=\"padding:8px;color:#111;\">\"디바이스가 30개 넘어요. 뭐가 좋은지 몰라요? 46년 약손명가가 30대를 위해 만든 첫 EMS 디바이스. 단순한 시작, 확실한 노하우.\"</td><td style=\"padding:8px;color:#6b7280;\">메타 carousel</td></tr>\n      <tr><td style=\"padding:8px;color:#6b7280;font-weight:700;\">CTA</td><td style=\"padding:8px;color:#111;\"><strong>\"첫 디바이스 가이드 받기 →\"</strong> (카플친 신규 가입 환영 + 가이드 무료 발송)</td><td style=\"padding:8px;color:#6b7280;\">카플친 진입</td></tr>\n    </tbody>\n  </table>\n</div>\n\n<div style=\"margin:20px 0 12px;padding:14px 18px;background:#f9fafb;border-left:4px solid #6b7280;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:700;color:#374151;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">📌 SPRAY AI 자동 생성 매트릭스</div>\n  <table style=\"width:100%;font-size:13px;\">\n    <thead><tr style=\"background:#f3f4f6;\"><th>—</th><th>모델 톤</th><th>인포그래픽 톤</th><th>카툰·일러스트 톤</th></tr></thead>\n    <tbody>\n      <tr><td><strong>축 ①</strong> 슬로우에이징 루틴</td><td>30대 모델 일상 컷</td><td>\"안티 vs 슬로우\" 비교</td><td>\"루틴 캘린더\" 시각화</td></tr>\n      <tr style=\"background:#fafafa;\"><td><strong>축 ②</strong> 매일 5분</td><td>출근 전 거울 셀카</td><td>\"5분 사용법\" 단계 인포</td><td>\"바쁜 30대 일상\" 카툰</td></tr>\n      <tr><td><strong>축 ③</strong> 첫 디바이스</td><td>모델 + 약손명가 본원</td><td>\"디바이스 비교 가이드\"</td><td>\"고민 → 결정\" 스토리</td></tr>\n    </tbody>\n  </table>\n  <p style=\"margin:10px 0 0;font-size:12px;color:#6b7280;\">→ 3축 × 3톤 × 5매체 규격 = <strong>최대 45개 소재 자동 생성</strong> / A/B 효율 검증 후 매주 회전 / AI 심의봇 사전 점검 자동화</p>\n</div>"
     },
     {
       "id": "s5-1",
@@ -5554,6 +5720,76 @@
       "body": "<p><strong>📊 4사 프로모션·리스팅 전략 매트릭스</strong></p>\n    <table>\n      <thead>\n        <tr><th>전략 영역</th><th>약손명가 (OLLI LIRA)</th><th>메디큐브</th><th>LG프라엘</th><th>메이크온</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <th>리스팅 SKU 수</th>\n          <td>3 (디바이스) + 3 (소모품)</td>\n          <td><strong>20+</strong> (셀럽·시즌 콜라보 다수)</td>\n          <td>5~7 (메인 라인)</td>\n          <td>5~6 (스킨라이트 중심)</td>\n        </tr>\n        <tr>\n          <th>가격 다층화</th>\n          <td>26.8만~31.8만 (단일층)</td>\n          <td><strong>10.9만~80만 (4계층)</strong></td>\n          <td>10.8만~30만 (2계층)</td>\n          <td>20만~28만 (단일층)</td>\n        </tr>\n        <tr>\n          <th>모델·셀럽 활용</th>\n          <td>—</td>\n          <td><strong>유재석·장원영·짱구·카일리·헤일리</strong></td>\n          <td>(모델 X, 기술 강조)</td>\n          <td>장원영 (메디큐브와 중복)</td>\n        </tr>\n        <tr>\n          <th>할인 전략</th>\n          <td><strong>풀세트 33% (락인 미끼)</strong></td>\n          <td>이달의 특가·세트 할인 다양</td>\n          <td>대기업 정가 중심·할인 보수적</td>\n          <td>신상품 런칭 할인 중심</td>\n        </tr>\n        <tr>\n          <th>번들·세트 전략</th>\n          <td><strong>밴드 + 패치 5box + 겔 (재구매 락인)</strong></td>\n          <td>2종 세트·X2 세트·콜라보 세트</td>\n          <td>듀얼 모션 클렌저 등 보조 SKU</td>\n          <td>스킨라이트 + 화장품 번들</td>\n        </tr>\n        <tr>\n          <th>시즈널 운영</th>\n          <td>(데이터 부족)</td>\n          <td>얼리썸머·블프·연말</td>\n          <td>분기별 라인업 추가</td>\n          <td>CES·신상품 런칭 모멘텀</td>\n        </tr>\n        <tr>\n          <th>자사몰 메인 강조</th>\n          <td>3 브랜드 통합</td>\n          <td>\"1등\" 라벨 + 셀럽</td>\n          <td>기술 스펙</td>\n          <td>화보 비주얼</td>\n        </tr>\n        <tr>\n          <th>BS 핵심 자산</th>\n          <td>(컨펌 필요)</td>\n          <td>베스트셀러 상단·\"1등\"</td>\n          <td>단정 그리드·신뢰</td>\n          <td>신상품·화보</td>\n        </tr>\n      </tbody>\n    </table>\n\n    <p style=\"margin-top:18px;\"><strong>🎯 약손명가 적용 권장 (매드업 제안)</strong></p>\n    <table>\n      <thead>\n        <tr><th>전략 영역</th><th>현재</th><th>매드업 권장</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>리스팅</td>\n          <td>3 SKU 단일 카테고리</td>\n          <td><strong>\"입문 / 정기 / 풀세트\" 3계층 SKU 재구성</strong> (메디큐브 4계층 벤치)</td>\n        </tr>\n        <tr>\n          <td>가격</td>\n          <td>26.8만 단일 가격</td>\n          <td><strong>패치+겔 정기 구독 (월 19,000원)</strong> + 풀세트 + 단품 3가격대 운영</td>\n        </tr>\n        <tr>\n          <td>모델·셀럽</td>\n          <td>—</td>\n          <td><strong>전문가 IP 활용</strong> (약손명가 강남 시술 전문가 출연) — 메디큐브의 톱스타와 차별</td>\n        </tr>\n        <tr>\n          <td>할인 전략</td>\n          <td>풀세트 33% (상시)</td>\n          <td><strong>시즈널 추가</strong> (5월 가정의달·9월 추석·11월 블프 = 효도 선물 시즌 강화)</td>\n        </tr>\n        <tr>\n          <td>BS 메인 자산</td>\n          <td>—</td>\n          <td><strong>알림받기 혜택 배너</strong> (10만 KPI 견인) + <strong>풀세트 미끼</strong> 상단 강조</td>\n        </tr>\n        <tr>\n          <td>자사몰 메인 강조</td>\n          <td>3 브랜드 분산</td>\n          <td><strong>OLLI LIRA 단독 히어로</strong> + GOLKI 효도 선물 보조 노출</td>\n        </tr>\n      </tbody>\n    </table>"
     },
     {
+      "id": "s5-11",
+      "chapter": "ch5",
+      "meta": "⭐ 매드업 제안 · 4050 시즌 캠페인 캘린더 + 채널 믹스 (Gift Buyer Path 액션 플랜)",
+      "status": "auto",
+      "intro": false,
+      "title": "<span class=\"highlight\">어버이날 50% · 추석 35% · 설날 15%</span> — 4050 시즌 캠페인 D-30 3회 집중, 카카오 선물하기 + GFA + 자사몰 효도 패키지 3-channel 결합",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>전체 예산 분배 (s1-21 1.5 페르소나 결정)</strong>: 연 광고비의 <strong>20%</strong>가 4050 시즌 캠페인 / 코어 3040은 80% 상시 운영"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>시즌별 예산 차등 (시즌 매출 기여도 기반)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>어버이날 D-30 (4월 첫째주~5월 첫째주) — 50%</strong>: 효도선물 카테고리 연간 1위 시즌, 4050 부모님(특히 어머니) 정조준"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>추석 D-30 (8월 중순~9월 중순) — 35%</strong>: 명절 선물 시즌, 카카오 선물하기 \"부모님 선물\" 검색 폭증"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>설날 D-30 (12월 중순~1월 중순) — 15%</strong>: 신년 효도 시즌, 가족 모임 시즌"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>채널 믹스 (시즌 공통 3-channel)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>카카오 선물하기 — 핵심 채널 (시즌 예산 40%)</strong>: 카플친 +200% KPI 동시 견인 / \"부모님 선물\" 카테고리 자연 진입 / 30대 자녀 도달"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>GFA + 메타 인스타·릴스 — 도달 채널 (시즌 예산 35%)</strong>: 30대 자녀 광고 노출 / \"부모님께\" 톤 영상·이미지 / 효도 시즌 카피(s4-9 4050 변형 5종)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>자사몰 + BS 효도 패키지 SKU — 전환 채널 (시즌 예산 25%)</strong>: 디바이스 + 선물 포장 + 매뉴얼 + 매장 1:1 컨설팅 쿠폰 결합"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>CRM 결합 (카플친 +200% KPI 견인)</strong>: 시즌 캠페인 → 알림톡 자동 트리거 = \"선물 픽업 알림 → 부모님 매뉴얼 발송 → 매장 컨설팅 쿠폰 → 한달 후 사용 체크인\" 5단 시나리오"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>차별화 자산</strong>: 메디큐브 대비 약손명가 \"건강·시술 전문성\" 신뢰 = 4050 부모님 신뢰 카테고리 정합 / 시즌 한정 SKU \"효도 패키지\"로 가격 인상 없이 가치 인지 강화"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>다음 단계</strong>: 첫 시즌(어버이날 2026.04) D-45 시점부터 매드업 + 광고주 합동 운영 시작 / 시즌별 효율 데이터 누적 → 분기 단위 시즌 비중 자동 재조정 (LEVER Xpert)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "카카오 선물하기 시즌 트렌드",
+          "url": "https://gift.kakao.com"
+        },
+        {
+          "label": "오픈서베이 2025 효도 선물 카테고리",
+          "url": "https://blog.opensurvey.co.kr"
+        }
+      ],
+      "sourceNote": "* 출처: 카카오 선물하기 시즌 트렌드 · 매드업 1.5 페르소나(s1-21) + Secondary Gift Buyer Path(s1-13) 액션 플랜",
+      "body": "<div style=\"margin:16px 0;padding:18px 20px;background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;\">📅 연간 시즌 캘린더 — 4050 효도선물 (광고주 RFP 일관성 ✓)</div>\n  <table style=\"width:100%;font-size:13px;border-collapse:collapse;\">\n    <thead><tr style=\"background:#fef3c7;\">\n      <th style=\"padding:10px;text-align:left;width:140px;\">시즌</th>\n      <th style=\"padding:10px;text-align:left;width:130px;\">D-30 기간</th>\n      <th style=\"padding:10px;text-align:left;width:90px;\">예산 비중</th>\n      <th style=\"padding:10px;text-align:left;\">핵심 메시지 (s4-9 시즌 변형)</th>\n    </tr></thead>\n    <tbody>\n      <tr style=\"border-bottom:1px solid #fde68a;\"><td style=\"padding:10px;color:#92400e;font-weight:800;\">어버이날</td><td style=\"padding:10px;\">4/1 ~ 5/1</td><td style=\"padding:10px;color:#92400e;font-weight:800;\">50%</td><td style=\"padding:10px;\">\"매장 한 번 모시는 대신, 매일 5분\" · \"45년 임상 효능 — 부모님께\"</td></tr>\n      <tr style=\"border-bottom:1px solid #fde68a;background:#fffbeb;\"><td style=\"padding:10px;color:#92400e;font-weight:800;\">추석</td><td style=\"padding:10px;\">8/15 ~ 9/15</td><td style=\"padding:10px;color:#92400e;font-weight:800;\">35%</td><td style=\"padding:10px;\">\"부모님 시술 1번 = 평생 홈케어\" · \"명절 선물, 골라드린 약손명가\"</td></tr>\n      <tr><td style=\"padding:10px;color:#92400e;font-weight:800;\">설날</td><td style=\"padding:10px;\">12/15 ~ 1/15</td><td style=\"padding:10px;color:#92400e;font-weight:800;\">15%</td><td style=\"padding:10px;\">\"새해 새 루틴, 부모님과 함께\" · \"12주 루틴 — 자녀가 같이 챙기는\"</td></tr>\n    </tbody>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:18px 20px;background:#eff6ff;border:1px solid #3b82f6;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#1e40af;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;\">📡 시즌 채널 믹스 (시즌 공통 3-channel + CRM 결합)</div>\n  <table style=\"width:100%;font-size:13px;border-collapse:collapse;\">\n    <thead><tr style=\"background:#dbeafe;\">\n      <th style=\"padding:10px;text-align:left;width:170px;\">채널</th>\n      <th style=\"padding:10px;text-align:left;width:90px;\">예산</th>\n      <th style=\"padding:10px;text-align:left;\">역할</th>\n      <th style=\"padding:10px;text-align:left;width:170px;\">KPI</th>\n    </tr></thead>\n    <tbody>\n      <tr style=\"border-bottom:1px solid #bfdbfe;\"><td style=\"padding:10px;color:#1e40af;font-weight:800;\">카카오 선물하기 + 카플친</td><td style=\"padding:10px;color:#1e40af;font-weight:800;\">40%</td><td style=\"padding:10px;\">\"부모님 선물\" 카테고리 진입 / 카플친 자동 가입 유도</td><td style=\"padding:10px;\">전환율 · 카플친 +200%</td></tr>\n      <tr style=\"border-bottom:1px solid #bfdbfe;background:#eff6ff;\"><td style=\"padding:10px;color:#1e40af;font-weight:800;\">GFA + 메타 인스타·릴스</td><td style=\"padding:10px;color:#1e40af;font-weight:800;\">35%</td><td style=\"padding:10px;\">30대 자녀 도달 / \"부모님께\" 톤 영상·이미지</td><td style=\"padding:10px;\">CPM · 도달 · 클릭</td></tr>\n      <tr><td style=\"padding:10px;color:#1e40af;font-weight:800;\">자사몰 + BS 효도 패키지</td><td style=\"padding:10px;color:#1e40af;font-weight:800;\">25%</td><td style=\"padding:10px;\">디바이스 + 포장 + 매뉴얼 + 매장 컨설팅 쿠폰 결합 SKU</td><td style=\"padding:10px;\">전환율 · ROAS · 객단가</td></tr>\n    </tbody>\n  </table>\n</div>\n\n<div style=\"margin:16px 0;padding:14px 18px;background:#f9fafb;border-left:4px solid #6b7280;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:700;color:#374151;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;\">🔁 CRM 5단 시나리오 (카플친 +200% KPI 견인)</div>\n  <div style=\"font-size:13px;color:#374151;line-height:1.8;\">\n    <strong>① 시즌 캠페인 노출</strong> → <strong>② 카카오 선물하기 결제</strong> → <strong>③ 카플친 자동 가입</strong> → <strong>④ 알림톡 자동 시리즈</strong> (선물 픽업 알림 → 부모님 매뉴얼 PDF 발송 → 매장 1:1 컨설팅 쿠폰 → 한달 후 사용 체크인) → <strong>⑤ 재구매 SKU 추천</strong> (패치·겔 결합형 락인)\n  </div>\n</div>\n\n<div style=\"margin:16px 0;padding:14px 18px;background:#fef3c7;border-left:4px solid #d97706;border-radius:6px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;\">⚡ 실행 로드맵</div>\n  <table style=\"width:100%;font-size:13px;\">\n    <tr><td style=\"padding:6px 12px;color:#92400e;font-weight:700;width:130px;\">D-45</td><td style=\"padding:6px 12px;color:#111;\">매드업 + 광고주 합동 시즌 킥오프 / SKU·소재·심의 확정</td></tr>\n    <tr style=\"background:#fffbeb;\"><td style=\"padding:6px 12px;color:#92400e;font-weight:700;\">D-30</td><td style=\"padding:6px 12px;color:#111;\">캠페인 본격 시작 / 카카오 선물하기 우선 노출</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#92400e;font-weight:700;\">D-21~7</td><td style=\"padding:6px 12px;color:#111;\">GFA·메타 확장 / A/B 테스트 / SPRAY AI 소재 회전</td></tr>\n    <tr style=\"background:#fffbeb;\"><td style=\"padding:6px 12px;color:#92400e;font-weight:700;\">D-7~0</td><td style=\"padding:6px 12px;color:#111;\">최종 푸시 / 자사몰 효도 패키지 SKU 정점 운영</td></tr>\n    <tr><td style=\"padding:6px 12px;color:#92400e;font-weight:700;\">D+30</td><td style=\"padding:6px 12px;color:#111;\">CRM 시나리오 자동 트리거 / 효율 데이터 누적 → 다음 시즌 비중 LEVER Xpert 자동 재조정</td></tr>\n  </table>\n</div>"
+    },
+    {
       "id": "s5-summary",
       "chapter": "ch5",
       "meta": "🎯 Chapter 5 요약 & 방향성 제언",
@@ -5584,6 +5820,26 @@
         {
           "type": "indent-1",
           "html": "ㄴ <strong>프로모션·리스팅</strong>: 메디큐브 = 셀럽 콜라보 SKU 양산 / LG프라엘 = 묶음 할인 / 메이크온 = 단일 SKU 집중 / 약손명가 = 결합형 패키지 우위 살리기 필요"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⭐ 매드업 1.5 페르소나 채널 운영 매핑 (s1-21·s1-13 정합)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>3040 코어 (연중 80%)</strong>: 메타 인스타·릴스 + 유튜브 + BS ADVoost + 자사몰 카플친 — 상시 운영"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>4050 시즌 (20%)</strong>: 카카오 선물하기 + GFA + 효도 패키지 SKU — 어버이날(50%)·추석(35%)·설날(15%) D-30 3주 집중"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>지그재그·에이블리</strong>: 3040 여성 인앱 광고 보조 채널 — 코어 페르소나 도달 보강"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>시즌별 CRM 결합 (카플친 +200% KPI 견인)</strong>: 시즌 캠페인 → 알림톡 \"선물 픽업 알림·매뉴얼 발송·매장 컨설팅 쿠폰\" 자동 트리거"
         },
         {
           "type": "arrow",
