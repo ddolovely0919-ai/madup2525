@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MADUP Factbook Viewer</title>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
 </head>
 <body data-edit="off">
 
@@ -22,6 +23,7 @@
   </div>
   <div class="actions">
     <button id="btn-edit" class="action-btn">✏️ 편집 모드</button>
+    <button id="btn-export-pptx" class="action-btn" title="현재 팩트북을 PowerPoint(.pptx)로 다운로드">⬇ PPT</button>
     <button id="btn-export" class="action-btn">⬇ JSON</button>
     <button id="btn-import" class="action-btn">⬆ Import</button>
     <input type="file" id="file-import" accept="application/json" hidden>
@@ -86,7 +88,7 @@
   </div>
 </div>
 
-<script src="assets/viewer.js?v=3"></script>
+<script src="assets/viewer.js?v=4"></script>
 <script>
   // 데이터 로딩 (URL 파라미터로 광고주 선택)
   const params = new URLSearchParams(location.search);

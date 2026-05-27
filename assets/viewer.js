@@ -613,6 +613,212 @@ function showSaveStatus(text, cls = '') {
 }
 
 // ==========================================================================
+// PPTX 다운로드 (PptxGenJS CDN)
+// ==========================================================================
+document.getElementById('btn-export-pptx').addEventListener('click', exportPPTX);
+
+async function exportPPTX() {
+  if (typeof PptxGenJS === 'undefined') {
+    alert('PptxGenJS 라이브러리 로드 중... 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  const btn = document.getElementById('btn-export-pptx');
+  const original = btn.textContent;
+  btn.textContent = '⏳ PPT 생성중...';
+  btn.disabled = true;
+
+  try {
+    const data = STATE.data;
+    const pptx = new PptxGenJS();
+    pptx.layout = 'LAYOUT_WIDE';  // 13.333 x 7.5 inches
+    pptx.title = `${data.meta.client} 비딩 ${data.meta.year} 팩트북`;
+    pptx.author = data.meta.owner || 'MADUP';
+    pptx.company = 'MADUP';
+
+    // ====== 표지 슬라이드 ======
+    const cover = pptx.addSlide();
+    cover.background = { color: '0F766E' };
+    cover.addText('MADUP', { x: 0.5, y: 0.5, w: 12, h: 0.5, fontSize: 14, color: 'FFFFFF', bold: true, fontFace: 'Pretendard' });
+    cover.addText(`${data.meta.client} 비딩 ${data.meta.year} 팩트북`, {
+      x: 0.5, y: 2.5, w: 12, h: 1.2, fontSize: 36, color: 'FFFFFF', bold: true, fontFace: 'Pretendard'
+    });
+    cover.addText(data.meta.description || '', {
+      x: 0.5, y: 3.8, w: 12, h: 0.6, fontSize: 16, color: 'E5E7EB', fontFace: 'Pretendard'
+    });
+    cover.addText([
+      { text: `PT ${data.meta.ptDate || ''}`, options: { fontSize: 13, color: 'A7F3D0' } },
+      { text: '   ·   ', options: { fontSize: 13, color: 'A7F3D0' } },
+      { text: `변형 ${data.meta.variant || ''}`, options: { fontSize: 13, color: 'A7F3D0' } },
+      { text: '   ·   ', options: { fontSize: 13, color: 'A7F3D0' } },
+      { text: `업데이트 ${data.meta.updatedAt || ''}`, options: { fontSize: 13, color: 'A7F3D0' } }
+    ], { x: 0.5, y: 5.5, w: 12, h: 0.4, fontFace: 'Pretendard' });
+    cover.addText(`총 ${data.slides.length} 슬라이드 / ${data.chapters.length} 챕터`, {
+      x: 0.5, y: 6.2, w: 12, h: 0.4, fontSize: 12, color: 'A7F3D0', fontFace: 'Pretendard'
+    });
+
+    // ====== 슬라이드 변환 ======
+    const slidesByCh = {};
+    for (const s of data.slides) {
+      if (!slidesByCh[s.chapter]) slidesByCh[s.chapter] = [];
+      slidesByCh[s.chapter].push(s);
+    }
+
+    for (const ch of data.chapters) {
+      const chSlides = slidesByCh[ch.id] || [];
+      if (chSlides.length === 0) continue;
+
+      // 챕터 separator 슬라이드
+      const sep = pptx.addSlide();
+      sep.background = { color: 'F3F4F6' };
+      sep.addText(stripHTML(ch.number || ''), { x: 0.5, y: 2.5, w: 12, h: 0.5, fontSize: 14, color: '6B7280', fontFace: 'Pretendard' });
+      sep.addText(stripHTML(ch.title), { x: 0.5, y: 3.0, w: 12, h: 1.0, fontSize: 32, color: '111827', bold: true, fontFace: 'Pretendard' });
+      sep.addText(`${chSlides.length} 슬라이드`, { x: 0.5, y: 4.2, w: 12, h: 0.4, fontSize: 14, color: '6B7280', fontFace: 'Pretendard' });
+
+      for (const s of chSlides) {
+        const slide = pptx.addSlide();
+        addSlideContent(slide, s, ch);
+      }
+    }
+
+    const fileName = `${data.meta.client}_비딩${data.meta.year}_팩트북_${todayStr()}.pptx`;
+    await pptx.writeFile({ fileName });
+    btn.textContent = '✓ PPT 다운로드 완료';
+    setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+  } catch (err) {
+    console.error('PPT 생성 실패:', err);
+    alert('PPT 생성 실패: ' + err.message);
+    btn.textContent = original;
+    btn.disabled = false;
+  }
+}
+
+function addSlideContent(slide, s, chapter) {
+  const isIntro = !!s.intro;
+  slide.background = { color: isIntro ? 'FEFCE8' : 'FFFFFF' };
+
+  // 챕터·meta 라벨 (상단)
+  slide.addText(`${chapter.title} · ${stripHTML(s.meta || '')}`, {
+    x: 0.5, y: 0.3, w: 12, h: 0.3, fontSize: 10, color: '6B7280', fontFace: 'Pretendard'
+  });
+
+  // 타이틀 (헤드라인 인사이트)
+  slide.addText(stripHTML(s.title || ''), {
+    x: 0.5, y: 0.65, w: 12, h: 1.0,
+    fontSize: 18, color: '111827', bold: true, fontFace: 'Pretendard',
+    valign: 'top', wrap: true
+  });
+
+  let yPos = 1.85;
+
+  // Subnotes
+  if (s.subnotes && s.subnotes.length > 0) {
+    const bullets = s.subnotes.slice(0, 12).map(n => ({
+      text: stripHTML(n.html || ''),
+      options: {
+        bullet: n.type === 'arrow' ? { code: '25B6' } : { indent: n.type === 'indent-2' ? 30 : 15 },
+        color: n.type === 'arrow' ? '0F766E' : '374151',
+        bold: n.type === 'arrow',
+        fontSize: 11,
+        paraSpaceAfter: 2
+      }
+    }));
+    const subHeight = Math.min(4.5, bullets.length * 0.32);
+    slide.addText(bullets, {
+      x: 0.6, y: yPos, w: 9.5, h: subHeight,
+      fontFace: 'Pretendard', wrap: true, valign: 'top'
+    });
+    yPos += subHeight + 0.15;
+  }
+
+  // 표 (body)
+  if (s.body) {
+    const tableData = parseTable(s.body);
+    if (tableData && tableData.length > 0 && yPos < 6.5) {
+      try {
+        slide.addTable(tableData, {
+          x: 0.5, y: yPos, w: 12, h: Math.min(2.5, 7 - yPos),
+          fontSize: 9, fontFace: 'Pretendard',
+          border: { type: 'solid', color: 'E5E7EB', pt: 0.5 },
+          colW: equalCols(tableData[0].length, 12)
+        });
+      } catch (e) { /* ignore table errors */ }
+    }
+  }
+
+  // Gallery 이미지 (오른쪽 사이드, 최대 4장)
+  if (s.gallery && s.gallery.length > 0) {
+    const gImgs = s.gallery.slice(0, 4);
+    const cellW = 1.2, cellH = 1.5;
+    gImgs.forEach((g, i) => {
+      const gx = 10.3 + (i % 2) * (cellW + 0.1);
+      const gy = 1.9 + Math.floor(i / 2) * (cellH + 0.15);
+      try {
+        slide.addImage({ path: g.src, x: gx, y: gy, w: cellW, h: cellH, sizing: { type: 'cover', w: cellW, h: cellH } });
+      } catch (e) { /* skip image errors */ }
+    });
+  }
+
+  // 출처 (하단)
+  if (s.sourceNote || (s.sources && s.sources.length)) {
+    const srcText = stripHTML(s.sourceNote || ('* 출처: ' + (s.sources || []).map(x => x.label).join(', ')));
+    slide.addText(srcText.substring(0, 200), {
+      x: 0.5, y: 7.0, w: 11, h: 0.3, fontSize: 8, color: '9CA3AF', italic: true, fontFace: 'Pretendard'
+    });
+  }
+
+  // status 뱃지 (우하단)
+  const STATUS_LABEL_MAP = { auto: '자동', progress: '작성중', client: '광고주 확인', madup: '매드업 도구' };
+  const STATUS_COLOR_MAP = { auto: '22C55E', progress: 'EAB308', client: 'F97316', madup: '3B82F6' };
+  slide.addText(STATUS_LABEL_MAP[s.status] || s.status || '', {
+    x: 11.5, y: 7.0, w: 1.3, h: 0.3, fontSize: 9, color: 'FFFFFF', bold: true,
+    align: 'center', valign: 'middle', fontFace: 'Pretendard',
+    fill: { color: STATUS_COLOR_MAP[s.status] || '6B7280' }
+  });
+
+  // 슬라이드 ID·페이지 정보 (좌하단)
+  slide.addText(s.id || '', { x: 0.5, y: 7.0, w: 2, h: 0.3, fontSize: 8, color: 'D1D5DB', fontFace: 'Pretendard' });
+}
+
+// HTML 태그 제거 + entity 디코드
+function stripHTML(html) {
+  if (!html) return '';
+  const tmp = document.createElement('div');
+  tmp.innerHTML = String(html);
+  return tmp.textContent || tmp.innerText || '';
+}
+
+// HTML body에서 첫 번째 <table>을 2D 배열로 변환
+function parseTable(html) {
+  if (!html || !html.includes('<table')) return null;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  const table = tmp.querySelector('table');
+  if (!table) return null;
+  const rows = [];
+  const trs = table.querySelectorAll('tr');
+  trs.forEach(tr => {
+    const cells = Array.from(tr.querySelectorAll('th,td')).map(c => ({
+      text: (c.textContent || '').trim().substring(0, 80),
+      options: c.tagName === 'TH'
+        ? { bold: true, fill: { color: 'F3F4F6' }, color: '111827', fontSize: 9 }
+        : { fontSize: 9 }
+    }));
+    if (cells.length) rows.push(cells);
+  });
+  return rows.length > 0 ? rows : null;
+}
+
+function equalCols(n, totalW) {
+  const w = totalW / n;
+  return Array(n).fill(w);
+}
+
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+}
+
+// ==========================================================================
 // 헬퍼
 // ==========================================================================
 function escapeHtml(s) {
