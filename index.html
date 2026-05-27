@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MADUP Factbook Dashboard</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <span class="title">MADUP Factbook Dashboard</span>
+  <span class="pill">매드업 비딩 팩트북 관리</span>
+  <div class="actions" style="margin-left:auto;">
+    <button class="action-btn" id="btn-new-client">+ 새 광고주</button>
+    <a class="action-btn" href="README.md" target="_blank">📖 가이드</a>
+  </div>
+</header>
+
+<div class="landing">
+  <h1>광고주 팩트북</h1>
+  <p class="lead">비딩(PT) 전 사전 조사 자료. 클릭하면 슬라이드 뷰어로 이동, 우상단 ✏️ 편집 모드로 즉시 수정 가능.</p>
+
+  <div class="client-grid" id="client-grid">
+    <!-- JS가 채움 -->
+    <p style="grid-column: 1/-1; color:#9ca3af;">로딩 중…</p>
+  </div>
+</div>
+
+<!-- 새 광고주 모달 -->
+<div class="modal" id="modal-new" hidden>
+  <div class="modal-body">
+    <h3>새 광고주 팩트북 생성</h3>
+    <p style="font-size:13px;color:#6b7280;margin:0 0 16px;">광고주 정보를 입력하면 빈 팩트북이 생성됩니다 (브라우저 localStorage 저장).</p>
+    <label>광고주 ID (영문 slug) <input type="text" id="new-slug" placeholder="예: samsung-card, tving"></label>
+    <label>광고주명 <input type="text" id="new-name" placeholder="예: 삼성카드"></label>
+    <label>비딩 연도 <input type="number" id="new-year" value="2026"></label>
+    <label>변형
+      <select id="new-variant">
+        <option>① 표준형 (e-커머스·플랫폼)</option>
+        <option>② 다중 브랜드형 (포트폴리오)</option>
+        <option>③ 비교 분석형 (다중 사업 모델)</option>
+        <option>④ HTML 출력형 (5다중 데이터)</option>
+      </select>
+    </label>
+    <label>PT 일정 <input type="text" id="new-pt" placeholder="예: 2026-06-16"></label>
+    <div class="modal-actions">
+      <button id="btn-create-confirm">생성</button>
+      <button id="btn-create-cancel">취소</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// 광고주 목록 정의 (확장 시 여기에 추가 또는 manifest.json 분리)
+const CLIENTS = [
+  {
+    slug: 'yakson',
+    name: '약손명가헬스케어',
+    badge: '레퍼런스',
+    description: '뷰티 디바이스 · 3 브랜드(약손명가PB / OLLI LIRA / GOLKI) · 연 30억',
+    year: 2026,
+    variant: '② 다중 브랜드형',
+    pt: '2026-06-16',
+  }
+];
+
+async function loadClientStats() {
+  const grid = document.getElementById('client-grid');
+  grid.innerHTML = '';
+
+  for (const c of CLIENTS) {
+    let stats = null;
+    let totalSlides = 0;
+    // localStorage 우선
+    const local = localStorage.getItem(`factbook:${c.slug}`);
+    if (local) {
+      try {
+        const data = JSON.parse(local);
+        stats = data.stats;
+        totalSlides = (data.slides || []).length;
+      } catch (e) {}
+    }
+    // 파일에서도 시도
+    if (!stats) {
+      try {
+        const res = await fetch(`data/${c.slug}/factbook.json`);
+        if (res.ok) {
+          const data = await res.json();
+          stats = data.stats;
+          totalSlides = (data.slides || []).length;
+        }
+      } catch (e) {}
+    }
+    grid.appendChild(makeCard(c, stats, totalSlides));
+  }
+
+  // 추가 카드 (+ 새 광고주)
+  const addCard = document.createElement('a');
+  addCard.className = 'client-card create-card';
+  addCard.href = '#';
+  addCard.innerHTML = '+ 새 광고주 팩트북 생성';
+  addCard.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('modal-new').hidden = false;
+  });
+  grid.appendChild(addCard);
+}
+
+function makeCard(client, stats, totalSlides) {
+  const a = document.createElement('a');
+  a.className = 'client-card';
+  a.href = `viewer.html?c=${client.slug}`;
+  let statsHtml = '';
+  if (stats) {
+    statsHtml = `
+      <div class="stats-mini">
+        <span style="background:#dcfce7;color:#166534;">자동 ${stats.auto || 0}</span>
+        <span style="background:#fef9c3;color:#854d0e;">작성중 ${stats.progress || 0}</span>
+        <span style="background:#ffedd5;color:#9a3412;">광고주 ${stats.client || 0}</span>
+        <span style="background:#dbeafe;color:#1e40af;">매드업 ${stats.madup || 0}</span>
+        <span style="background:#f3f4f6;color:#374151;">총 ${totalSlides}장</span>
+      </div>`;
+  } else {
+    statsHtml = `<p style="font-size:12px;color:#9ca3af;margin:12px 0 0;">데이터 없음 — 클릭하여 빈 팩트북 시작</p>`;
+  }
+  a.innerHTML = `
+    <h2>${client.name}${client.badge ? ` <span style="font-size:11px;background:#ecfdf5;color:#047857;padding:2px 7px;border-radius:4px;font-weight:600;">${client.badge}</span>` : ''}</h2>
+    <p class="meta">PT ${client.pt} · ${client.variant} · 비딩 ${client.year}</p>
+    <p style="font-size:13px;color:#374151;margin:8px 0 0;line-height:1.5;">${client.description}</p>
+    ${statsHtml}
+  `;
+  return a;
+}
+
+document.getElementById('btn-new-client').addEventListener('click', () => {
+  document.getElementById('modal-new').hidden = false;
+});
+document.getElementById('btn-create-cancel').addEventListener('click', () => {
+  document.getElementById('modal-new').hidden = true;
+});
+document.getElementById('btn-create-confirm').addEventListener('click', () => {
+  const slug = document.getElementById('new-slug').value.trim();
+  const name = document.getElementById('new-name').value.trim();
+  const year = +document.getElementById('new-year').value || 2026;
+  const variant = document.getElementById('new-variant').value;
+  const pt = document.getElementById('new-pt').value.trim() || `${year}-XX-XX`;
+  if (!slug || !name) { alert('광고주 ID와 명을 모두 입력해주세요.'); return; }
+  if (!/^[a-z0-9-]+$/.test(slug)) { alert('광고주 ID는 영문 소문자·숫자·하이픈만 사용.'); return; }
+
+  // 빈 팩트북 골격 생성
+  const stub = {
+    schema_version: "1.0",
+    meta: {
+      client: name, year, variant,
+      ptDate: pt,
+      createdAt: new Date().toISOString().slice(0, 10),
+      updatedAt: new Date().toISOString().slice(0, 10),
+      rfp: "(RFP 핵심 요약을 여기에 작성)",
+      owner: "매드업 비딩 TF",
+      description: ""
+    },
+    stats: { auto: 4, progress: 0, client: 0, madup: 0 },
+    chapters: [
+      { id: 'ch0', number: 'SECTION 0', title: '비딩 개요' },
+      { id: 'ch1', number: 'CHAPTER 1', title: '시장환경 · 타겟 · 소비자 인식' },
+      { id: 'ch2', number: 'CHAPTER 2', title: '자사 · 경쟁사 분석' },
+      { id: 'ch3', number: 'CHAPTER 3', title: '자사 마케팅 현황' },
+      { id: 'ch4', number: 'CHAPTER 4', title: '경쟁사 크리에이티브' },
+      { id: 'ch5', number: 'CHAPTER 5', title: '채널 분석' },
+      { id: 'ch6', number: 'CHAPTER 6', title: 'EXTRA' },
+      { id: 'ch7', number: 'APPENDIX', title: '부록' }
+    ],
+    slides: [
+      {
+        id: 'rfp-task', chapter: 'ch0', meta: 'RFP - 과제', status: 'auto',
+        title: `${name} 비딩 ${year} 핵심 과제 (작성 필요)`,
+        subnotes: [], sources: [], sourceNote: ''
+      },
+      {
+        id: 'rfp-scope', chapter: 'ch0', meta: 'RFP - 과업', status: 'auto',
+        title: 'RFP 7개 과업 영역 정리 (편집해주세요)',
+        subnotes: [], sources: [], sourceNote: ''
+      },
+      {
+        id: 'refs', chapter: 'ch0', meta: '유관 문서', status: 'auto',
+        title: 'RFP / 미팅록 / 광고주 공식 사이트 / 담당자',
+        subnotes: [], sources: [], sourceNote: ''
+      },
+      {
+        id: 'index-table', chapter: 'ch0', meta: 'INDEX', status: 'auto',
+        title: '카테고리별 작성자 + Status 표',
+        subnotes: [
+          { type: 'indent-1', html: 'ㄴ 작성 규칙: <strong>인사이트-first / 출처 의무 / 최대 2년 내</strong>' }
+        ],
+        sources: [], sourceNote: ''
+      }
+    ]
+  };
+  localStorage.setItem(`factbook:${slug}`, JSON.stringify(stub));
+  location.href = `viewer.html?c=${slug}`;
+});
+
+loadClientStats();
+</script>
+
+</body>
+</html>
