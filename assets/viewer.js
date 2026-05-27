@@ -209,12 +209,12 @@ function renderSlide(s) {
   html += '<footer class="slide-footer">';
   if (s.sourceNote || (s.sources && s.sources.length)) {
     html += '<span class="source">';
-    if (s.sourceNote) {
-      // sourceNote 내 링크가 sources에 별도로 있으면 sources 우선
-      html += escapeHtml(s.sourceNote);
-    }
-    if (s.sources && s.sources.length && !s.sourceNote) {
-      html += '* 출처: ' + s.sources.map(src => `<a href="${escapeAttr(src.url)}" target="_blank">${escapeAttr(src.label)}</a>`).join(', ');
+    if (s.sources && s.sources.length) {
+      // sources 배열이 있으면 우선 사용 (깔끔한 <a> 링크 자동 생성)
+      html += '* 출처: ' + s.sources.map(src => `<a href="${escapeAttr(src.url)}" target="_blank" rel="noopener">${escapeAttr(src.label)}</a>`).join(', ');
+    } else if (s.sourceNote) {
+      // sources가 없으면 sourceNote를 HTML 그대로 출력 (JSON 작성 시 <a> 태그 인라인 허용)
+      html += s.sourceNote;
     }
     html += '</span>';
   }
