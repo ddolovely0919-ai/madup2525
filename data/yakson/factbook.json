@@ -15,7 +15,7 @@
     "auto": 80,
     "progress": 1,
     "client": 5,
-    "madup": 7
+    "madup": 8
   },
   "chapters": [
     {
@@ -4056,44 +4056,119 @@
       "meta": "🎯 Chapter 4 요약 & 방향성 제언",
       "status": "auto",
       "intro": true,
-      "title": "Chapter 4 한 줄 요약 — <span class=\"highlight\">경쟁사 크리에이티브는 \"셀럽(메디큐브) vs 스펙(LG) vs AI앱(메이크온)\" 3축 / 약손명가는 \"임상·시술 노하우\" 제4축으로 차별화</span>",
+      "title": "Chapter 4 한 줄 요약 — Lever Xpert 58장 분석 결과 <span class=\"highlight\">경쟁 5축(셀럽·스펙·KAIST·비대칭·전문성) 모두 \"부분\" 점유 / 약손명가는 \"임상+교육+시술전환+결합형 락인\" 4중 결합으로 시장 여백 정조준</span>",
       "subnotes": [
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>메디큐브 = 셀럽 IP 전략</strong>: 유재석(8년) · 장원영 · 짱구 → 친근·대중성 어필 / 아마존 12개월 +902% / 카일리·헤일리 글로벌 셀럽 결합"
+          "html": "ㄴ <strong>축 ① 메디큐브 = 셀럽 + 정교화 콘텐츠</strong>: 유재석·장원영·카일리·헤일리 셀럽 IP / 추가로 <strong>4주차 연예인 풀코스 루틴 + 스킨 단면 기술 시각화 + 자사 신구 비교 + 부위별 효과 + 3종 라인업 가이드</strong> = 광고 1장에 \"왜 사야·어떻게 써야·어떤 효과\" 압축 (s4-7 발견)"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>LG프라엘 = 기술·스펙 전략</strong>: 갈바닉·파동·LED 등 기술 키워드 중심 / DMC BRAND INDEX 1위 57.7% / 디바이스 전용 화장품 \"글래스라이크\" 라인 결합"
+          "html": "ㄴ <strong>축 ② LG프라엘 = 기술·스펙</strong>: 갈바닉·파동·LED 키워드 중심 / DMC BRAND INDEX 1위 57.7% / 디바이스 전용 화장품 글래스라이크 결합"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>메이크온 = 스타 + AI 앱 전략</strong>: 장원영 + AI 피부 진단 앱 / 10만원대 가성비 + 1020 진입템 포지셔닝"
+          "html": "ㄴ <strong>축 ③ 메이크온 = KAIST + 임상 + AI + 팝업 + 카툰 (s4-6 발견)</strong>: 셀럽 IP 부재의 우회 전략 = <strong>\"아모레 × KAIST 공동 연구 + 마이크로 LED 3,770개 + 부위별 임상 % + AI 진단 앱 + 팝업 5장 + 카툰 일러스트 + 시즌 선물\"</strong> 6대 패턴 → 약손명가의 직접 학습 모델"
         },
         {
           "type": "indent-1",
-          "html": "ㄴ <strong>약손명가 매체별 크리에이티브 캡처</strong>: 매드업 도구(SPRAY AI · 크리에이티브 매트릭스) 활용 보강 필요 (status: madup)"
+          "html": "ㄴ <strong>축 ④ 후발주자 5사 = 비대칭 단일 USP (s4-8 발견)</strong>: 듀얼소닉(시간 5분+할인) / 달바(부위별 % 임상+무료체험+글로벌 셀럽) / 쿠쿠(깊이 mm 스펙) / <strong>센텔리안24(교육형 Q&A — 약 IP 사용 정당성 = 결합형 정합 영역)</strong> / 레스노베(프리미엄 미감)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>축 ⑤ 시장 여백 = 약손명가헬스케어 골든존</strong>: 5축 모두 \"부분\" 점유. <span class=\"highlight\">2축 이상 결합 브랜드 부재</span> → 임상(달바·메이크온) + 교육(센텔리안) + 시술전환(미점유) + 결합형 락인(미점유) = <strong>4축 결합이 시장 단독 영역</strong>"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>전략 ① 제4축 차별화</strong>: 셀럽·스펙·AI앱 3축에 \"<span class=\"highlight\">임상·시술 노하우 시각화</span>\" 추가 — 약손명가만의 USP"
+          "html": "▶ <strong>전략 ① 메디큐브 정교화 콘텐츠 직접 차용</strong>: 4주차 챌린지(밴드+패치+겔) / 단면 시각화(일반 EMS vs 약손명가 EMS) / 3종 라인업 가이드(올리리라·PB·골기) / 부위별 효과 비교 = 광고 1장 압축 콘텐츠 표준"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>전략 ② 효과·근거 중심 크리에이티브</strong>: \"써마지 1회 vs 올리리라 1년\" 비교 / \"30년 시술 전문가가 가정 디바이스로 옮긴 노하우\" 서사"
+          "html": "▶ <strong>전략 ② 메이크온 학술 신뢰 모델 응용</strong>: 약손명가 46년 임상 케이스 X건 + 외부 연구기관 협업 검토 + 부위별 % 그래픽 (메이크온 학습 모델) + 카툰 일러스트 친근 톤 결합"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>전략 ③ 인플루언서·KOL 차별</strong>: 메디큐브 톱스타급 IP 자산은 단기 추격 불가 → <strong>피부과 전문의·에스테티션·뷰티 인플루언서 시딩</strong>으로 \"임상 신뢰\" 우위 점유"
+          "html": "▶ <strong>전략 ③ 매드업 4트랙 USP 운영 (s4-5 thesis)</strong>: A 임상 정량(달바 압도) + B 교육형 Q&A(센텔리안 압도) + C 시술→가정 전환(미점유 단독) + D 락인 시각화(메디큐브 \"평생\" 업그레이드) — <strong>매드업 SPRAY AI로 4트랙 소재 A/B 정량 검증 후 운영</strong>"
         },
         {
           "type": "arrow",
-          "html": "▶ <strong>다음 챕터 다리</strong>: 크리에이티브 차별화 → 채널 운영(Chapter 5)에서 매체별 메시지 매핑으로 실행 계획화"
+          "html": "▶ <strong>전략 ④ KOL 시딩 (메디큐브 셀럽 회피)</strong>: 피부과 전문의·에스테티션·뷰티 임상 인플루언서로 \"학술 신뢰\" 우위 점유 — 메디큐브의 톱스타급 IP 비대칭 차별화"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 ⑤ 회피 함정</strong>: 셀럽 1등 5관왕 정면 추격(메디큐브 점유 불가) / 팝업스토어 오프라인(본가 130매장 카니발) / 자사 신구 비교(4년차 첫 모델 단계) → <strong>디지털 콘텐츠 + 임상 인포그래픽 + 결합형 락인 시각화</strong>로 우회"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>다음 챕터 다리</strong>: 4트랙 USP → Ch5에서 매체별 메시지 매핑 (브스 = 라인업 가이드 / 외부몰 = 임상 정량 / CRM 카플친 = 결합형 락인 콘텐츠)"
         }
       ],
-      "sources": [],
-      "sourceNote": "* 출처: Chapter 4 슬라이드 종합 (s4-1 ~ s4-3 통합) · 매드업 도구 보강 필요",
-      "body": "<table>\n      <thead><tr><th>크리에이티브 축</th><th>대표 브랜드</th><th>약손명가 응전</th></tr></thead>\n      <tbody>\n        <tr><td>셀럽 IP</td><td>메디큐브 (유재석·장원영·짱구·카일리·헤일리)</td><td>피부과 전문의 + 에스테티션 KOL 시딩</td></tr>\n        <tr><td>기술·스펙</td><td>LG프라엘 (갈바닉·파동·LED)</td><td>\"46년 임상 검증 EMS\" — 단순 스펙 아닌 임상 시각화</td></tr>\n        <tr><td>스타+AI</td><td>메이크온 (장원영·AI 진단)</td><td>결합형 락인 정량 어필 + 사용자 후기 LTV 시각화</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>임상·노하우 (제4축)</strong></td><td><strong>약손명가헬스케어</strong></td><td><strong>\"시술 → 가정\" 전환 서사 + 결합형 강제 루틴</strong></td></tr>\n      </tbody>\n    </table>"
+      "sources": [
+        { "label": "Lever Xpert \"뷰티디바이스\" + \"메이크온\" 58장 분석", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: Chapter 4 슬라이드 종합 (s4-1 ~ s4-8 통합) · Lever Xpert 58장 광고 소재 분석 (2026-05-27 캡처)",
+      "body": "<table>\n      <thead><tr><th>크리에이티브 축</th><th>대표 브랜드</th><th>핵심 패턴</th><th>약손명가 응전</th></tr></thead>\n      <tbody>\n        <tr><td>① 셀럽 + 정교화</td><td>메디큐브 (29장)</td><td>유재석·장원영·카일리 + 4주차 루틴 + 단면 시각화 + 자사 신구 비교</td><td>셀럽 회피 · 4주 챌린지 + 단면 시각화 직접 차용</td></tr>\n        <tr><td>② 기술·스펙</td><td>LG프라엘</td><td>갈바닉·파동·LED · BRAND INDEX 1위 57.7%</td><td>스펙 대신 \"46년 임상 + 시술 노하우\" 우위</td></tr>\n        <tr><td>③ KAIST + AI + 팝업</td><td>메이크온 (11장)</td><td>아모레 × KAIST 공동연구·논문 + 마이크로 LED 3,770 + AI 진단 앱 + 팝업 5장 + 카툰</td><td>학술 신뢰 모델 응용 + 카툰 친근 톤 결합</td></tr>\n        <tr><td>④ 비대칭 단일 USP</td><td>듀얼소닉·달바·쿠쿠·센텔리안·레스노베 (9장)</td><td>시간 / 임상 % / 깊이 mm / Q&A 교육 / 프리미엄 미감 — 단일 USP</td><td>임상+교육+시술전환+락인 <strong>4중 결합</strong></td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑤ 시장 여백 (단독)</strong></td><td><strong>약손명가헬스케어</strong></td><td><strong>임상 정량 + Q&A 교육 + 시술→가정 전환 + 결합형 락인 = 2축 이상 결합 브랜드 부재</strong></td><td><strong>매드업 4트랙 USP + SPRAY AI A/B 검증 운영</strong></td></tr>\n      </tbody>\n    </table>"
+    },
+    {
+      "id": "s4-9",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 제안 · 4트랙 광고 카피·시안 5종 구체화",
+      "status": "madup",
+      "intro": false,
+      "title": "매드업 4트랙 USP × 광고 카피 5종 시안 — <span class=\"highlight\">Lever Xpert 58장 분석에서 발견한 시장 여백을 단일 메시지로 압축</span> / PT 클로징·소재 운영 가이드의 직접 자산",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>카피 작성 원칙 (Lever 분석 종합)</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>thesis 4대 IP 원칙 정합</strong>: 추상화(\"46년 노하우\") · 라인별 차등 · 워딩 격상(\"메디컬 에스테틱\") · 시술 격상(\"병원 시술 사이\")"
+        },
+        {
+          "type": "indent-1",
+          "html": "② <strong>시장 여백 정조준</strong>: 임상 정량(달바·메이크온 학습) + Q&A 교육(센텔리안 학습) + 시술→가정 전환(미점유) + 결합형 락인(미점유) 중 <strong>2축 이상 결합</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "③ <strong>메디큐브 회피</strong>: 셀럽 0% / 1등 5관왕 0% / 자사 신구 비교 0% — 정면 추격 함정 회피"
+        },
+        {
+          "type": "indent-1",
+          "html": "④ <strong>4트랙 카피 매핑</strong>: 각 카피 = 1개 트랙 메인 + 1-2개 트랙 보조 = 단일 메시지에 다중 USP 압축 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>활용 시나리오</strong>: (1) PT 클로징 슬라이드 5종 카피 시안 (2) 매드업 SPRAY AI A/B 테스트 인풋 (3) 매체별 키비주얼·디스플레이 카피 풀"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>실행 권장 분배</strong>: 5종 카피를 <strong>매체별로 트랙 매핑</strong> — 카피①·② 메타·유튜브 인지 / 카피③ 자사몰 랜딩 / 카피④ 브랜드스토어 리스팅 / 카피⑤ CRM 카플친 알림톡"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 도구 결합</strong>: SPRAY AI로 5종 카피 × 3종 시각 톤(모델·인포그래픽·카툰) = 15개 소재 자동 생성 → A/B 효율 정량 검증 → BS ROAS 500% 달성 경로"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고 심의 컴플라이언스</strong>: 매드업 AI 심의봇(s5-6)으로 5종 카피 사전 심의 → 식약처 2025 강화 규제(행정처분 265건 70% \"선 넘은 광고\") 자동 회피"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "📝 매드업 광고 카피·시안 5종 — 4트랙 USP × Lever 시장 여백 결합",
+        "items": [
+          { "label": "카피 ① 가성비 메인", "value": "\"써마지 한 번이면, 올리리라 평생\"", "sub": "트랙 D(락인) + 시술 격상 / 시술 vs 디바이스 1.0x vs 7.7x 비용 비교 시각화 / 매체: 메타·유튜브 인지", "tone": "highlight" },
+          { "label": "카피 ② 임상 정량", "value": "\"이마 처짐 48.5%·팔자 33%·V라인 38% — 46년 약손명가 임상이 만든 EMS\"", "sub": "트랙 A(임상) + 메이크온·달바 학습 / 부위별 % 인포그래픽 / 매체: 외부몰·브스 디스플레이", "tone": "primary" },
+          { "label": "카피 ③ 결합형 정당성", "value": "\"밴드만 쓰면 부족합니다 — 패치·겔이 왜 필요한지 약손명가가 답합니다\"", "sub": "트랙 B(교육) + 결합형 락인 / Q&A 카툰 + EP+초음파 흡수촉진 시각화(센텔리안 학습) / 매체: 자사몰 랜딩·블로그", "tone": "accent" },
+          { "label": "카피 ④ 시술→가정 전환", "value": "\"30년 시술 전문가가 만든 가정용 리프팅 — 클리닉의 손길을 5분만에\"", "sub": "트랙 C(전환 서사) + 워딩 격상 / 시술 사이사이 케어 영상 + 모델 셀카 / 매체: 인스타·릴스", "tone": "success" },
+          { "label": "카피 ⑤ 4주 챌린지", "value": "\"약손명가 4주 챌린지 — 1주차 모공·2주차 탄력·3주차 윤곽·4주차 풀코스\"", "sub": "트랙 D(락인) + 메디큐브 4주차 루틴 직접 차용 / STEP 가이드 인포그래픽 / 매체: 카플친 알림톡·CRM 시리즈", "tone": "warning" }
+        ],
+        "footnote": "* 5종 카피는 매드업 SPRAY AI A/B 검증 후 효율 상위 2-3종을 메인 운영 + 나머지는 시즌·페르소나별 보조 활용"
+      },
+      "sources": [
+        { "label": "thesis 슬라이드 (4대 IP 원칙)", "url": "" },
+        { "label": "s1-19 시술 vs 디바이스 비용", "url": "https://brunch.co.kr/@valuechampion/235" },
+        { "label": "s4-4 ~ s4-8 Lever 분석", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: thesis 4대 IP 원칙 + s4-4~s4-8 Lever 58장 분석 + s1-19 가성비 데이터 + 약손명가 자사 USP 통합",
+      "body": "<table>\n      <thead><tr><th>카피</th><th>메인 트랙</th><th>보조 트랙</th><th>학습 출처</th><th>매드업 도구</th></tr></thead>\n      <tbody>\n        <tr><td>① 가성비 \"써마지 한번이면 올리리라 평생\"</td><td>D 락인 시각화</td><td>시술 격상 / 가성비</td><td>s1-19 (1.0x vs 7.7x)</td><td>SPRAY AI 인포그래픽</td></tr>\n        <tr><td>② 임상 정량 \"부위별 %\"</td><td>A 임상 정량</td><td>학술 신뢰</td><td>메이크온 / 달바</td><td>SPRAY AI 그래픽 + AI 심의봇</td></tr>\n        <tr><td>③ 결합형 정당성 Q&A</td><td>B 교육형</td><td>락인 시각화</td><td>센텔리안 마데카</td><td>SPRAY AI 카툰</td></tr>\n        <tr><td>④ 시술→가정 전환</td><td>C 전환 서사</td><td>워딩 격상</td><td>미점유 영역 (단독)</td><td>SPRAY AI 셀카·릴스</td></tr>\n        <tr><td>⑤ 4주 챌린지</td><td>D 락인 시각화</td><td>꾸준함 / CRM 락인</td><td>메디큐브 4주차 루틴</td><td>카플친 시리즈 + CRM</td></tr>\n      </tbody>\n    </table>\n    <p><strong>📌 다음 단계 (PT 클로징)</strong>: 5종 카피 시안 × 3종 시각 톤(모델·인포그래픽·카툰) = <strong>15개 소재</strong>를 매드업 SPRAY AI로 자동 생성 → A/B 효율 검증 → BS ROAS 500%·외부몰 ROAS 300%·카플친 +200% 달성 경로</p>"
     },
     {
       "id": "s5-1",
