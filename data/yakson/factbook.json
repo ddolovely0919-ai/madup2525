@@ -12,10 +12,10 @@
     "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강"
   },
   "stats": {
-    "auto": 79,
+    "auto": 80,
     "progress": 1,
     "client": 5,
-    "madup": 3
+    "madup": 4
   },
   "chapters": [
     {
@@ -3695,6 +3695,155 @@
           "tag": "1020 · 화보 톤"
         }
       ]
+    },
+    {
+      "id": "s4-4",
+      "chapter": "ch4",
+      "meta": "⭐ 매드업 도구 · Lever Xpert 크리에이티브 라이브러리 분석",
+      "status": "madup",
+      "intro": false,
+      "title": "Lever Xpert \"뷰티디바이스\" 검색 47개 소재 — <span class=\"highlight\">메디큐브 62% 점유 (29/47)</span> · 광고 메시지 7대 패턴 도출",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>수집 범위</strong>: Lever Xpert 크리에이티브 라이브러리 \"뷰티디바이스\" 검색 결과 47개 (2026-05-27 캡처) → 브랜드별 대표 19장 다운로드 후 메시지 패턴 분류"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>브랜드 점유</strong>: 메디큐브(한 15·일 5·에이지알 8·영 1) = <strong>29장(62%)</strong> / 듀얼소닉 7 / 달바 6 / 쿠쿠 3 / 센텔리안24·레스노베 각 1 — <strong>메디큐브의 압도적 광고 노출량 = 후발 차별화 압력의 정량 근거</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>7대 메시지 패턴 분류</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>사회적 증거</strong>: 셀럽 + 1등 5관왕 (메디큐브 에이지알·달바 글로벌)"
+        },
+        {
+          "type": "indent-1",
+          "html": "② <strong>라인업 선택 가이드</strong>: 3종 라인업 고민별 비교 (메디큐브·듀얼소닉)"
+        },
+        {
+          "type": "indent-1",
+          "html": "③ <strong>신구 모델 진화 비교</strong>: 자사 신구 스펙 차이 (메디큐브 일본)"
+        },
+        {
+          "type": "indent-1",
+          "html": "④ <strong>기능·기술 시각화</strong>: 5 LED·7 모드 멀티 기능 (메디큐브 글로벌)"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑤ <strong>임상 정량 (% 개선)</strong>: 부위별 처짐 % + 무료체험 (달바)"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑥ <strong>시간 단축 약속</strong>: \"매일 5분\" \"2 mins\" (듀얼소닉·달바 글로벌)"
+        },
+        {
+          "type": "indent-1",
+          "html": "⑦ <strong>할부·체험·할인</strong>: 무이자 12개월·-37%·35% 특가 (에이지알·쿠쿠) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>시장 여백 발견</strong>: 패턴 ⑤(임상 정량) + \"교육형 Q&A\"(센텔리안24만 진지하게 사용)는 <span class=\"highlight\">메디큐브가 점유하지 않은 영역</span> = 약손명가헬스케어 차별화 골든존"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>메디큐브 \"이미 입증된 전문성\" 소재 분석</strong>: 김희선(셀럽) + 5관왕(에이지알·글로우픽·카카오톡·네이버·아마존) + 타임스퀘어 노출 = <strong>후발주자 추격 불가 영역</strong> → 정면 승부 X / 우회 USP 필요"
+        }
+      ],
+      "gallery": [
+        { "src": "images/lever/메디큐브-에이지알-1.jpg", "alt": "메디큐브 에이지알 1등 5관왕", "name": "메디큐브 에이지알 — \"이미 입증된 전문성\"", "price": "김희선 + 1등 5관왕 + 타임스퀘어", "tag": "패턴 ① 사회적 증거" },
+        { "src": "images/lever/메디큐브-medicube-2.jpg", "alt": "메디큐브 라인업 가이드", "name": "메디큐브 — \"피부 고민별 맞춤 선택\"", "price": "글로우 / 부프x2 / 콤보 3종", "tag": "패턴 ② 라인업 가이드" },
+        { "src": "images/lever/medicube-japan-2.jpg", "alt": "메디큐브 일본 신구 비교", "name": "메디큐브 일본 — \"6つの進化\"", "price": "구모델 vs 신모델 6항목", "tag": "패턴 ③ 신구 진화" },
+        { "src": "images/lever/medicube-1.jpg", "alt": "메디큐브 글로벌 5 LED", "name": "Medicube — \"SKINCARE DEVICE WITH 5 LED\"", "price": "5색 LED 다중 기능 시각화", "tag": "패턴 ④ 기능 시각화" },
+        { "src": "images/lever/달바-2.jpg", "alt": "달바 임상 부위별 %", "name": "달바 — \"부위별 % 개선 임상\"", "price": "이마 48.5%·팔자 38% + 10일 무료체험", "tag": "🔑 패턴 ⑤ 임상 정량 (시장 여백)" },
+        { "src": "images/lever/듀얼소닉-2.jpg", "alt": "듀얼소닉 매일 5분", "name": "듀얼소닉 — \"매일 5분이면 끝\"", "price": "시간 단축 + 즉시 구매 CTA", "tag": "패턴 ⑥ 시간 단축" },
+        { "src": "images/lever/메디큐브-에이지알-3.jpg", "alt": "에이지알 무이자 할부", "name": "에이지알 — \"무이자 12개월 월 2만원대\"", "price": "한번 사면 평생 + 할부 가성비", "tag": "패턴 ⑦ 할부·체험" },
+        { "src": "images/lever/센텔리안24-마데카-프라임-1.jpg", "alt": "센텔리안24 교육형 Q&A", "name": "센텔리안24 마데카 — \"고분자 앰플 손으로 바르면?\"", "price": "EP+초음파 흡수촉진 메커니즘 교육", "tag": "🔑 시장 여백 (Q&A 교육형)" }
+      ],
+      "sources": [
+        { "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: Lever Xpert 크리에이티브 라이브러리 \"뷰티디바이스\" 검색 47개 소재 분석 (2026-05-27 캡처)"
+    },
+    {
+      "id": "s4-5",
+      "chapter": "ch4",
+      "meta": "⭐ 경쟁사 크리에이티브 · USP 매트릭스 + 시장 여백",
+      "status": "auto",
+      "intro": false,
+      "title": "브랜드별 USP 매트릭스 — <span class=\"highlight\">메디큐브 5패턴 점유 / 임상 정량 + 교육형 Q&A + 결합형 정당성</span>이 약손명가헬스케어 빈자리",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>경쟁 USP 점유 현황</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>메디큐브</strong>: 패턴 ①②③④⑥⑦ 점유 (셀럽·라인업·신구·기능·시간·할부) — <strong>거의 모든 패턴 점유</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>달바</strong>: 패턴 ⑤(임상 정량)·⑥(시간 단축) + 글로벌 셀럽 — \"red carpet\" 톤"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>듀얼소닉</strong>: 패턴 ⑥(시간 5분)·⑦(41% 할인) — 가성비 + HIFU 카테고리"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>센텔리안24 마데카</strong>: <strong>유일하게 패턴 ⑤+교육형 Q&A 사용</strong> — 약 IP 기반 사용 정당성 설명"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>쿠쿠</strong>: 패턴 ④(깊이 mm 차별화) + 할인 — 깊이 1.5/3.0/4.5mm 세분화 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>약손명가헬스케어 빈자리 (시장 여백 4영역)</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>① <strong>임상 정량 (부위별 % 개선)</strong>: 달바만 진지하게 사용 → 약손명가 46년 임상 자산이 압도 가능"
+        },
+        {
+          "type": "indent-1",
+          "html": "② <strong>사용 정당성 교육 (Q&A 콘텐츠)</strong>: 센텔리안24만 → 결합형(밴드+패치+겔)의 \"왜 같이 써야 하나\" 정당성 교육에 정합"
+        },
+        {
+          "type": "indent-1",
+          "html": "③ <strong>시술 → 가정 전환 서사</strong>: 어떤 경쟁사도 미점유 — 약손명가만 가능한 차별 자산"
+        },
+        {
+          "type": "indent-1",
+          "html": "④ <strong>꾸준함 락인 메시지 (강제 루틴)</strong>: 듀얼소닉·달바가 \"매일\" 약하게 언급 → 결합형 정기재구매를 정량(LTV·재구매율)으로 시각화 시 우위 점유 </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 제안 크리에이티브 4트랙</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>트랙 A — <strong>임상 정량형</strong>: 약손명가 46년 시술 임상 → 부위별 % 개선 그래픽 (달바보다 강한 IP)"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 B — <strong>교육형 Q&A</strong>: \"밴드만 쓰면 안되나요?\" \"패치/겔이 왜 필요한가?\" 결합형 정당성"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 C — <strong>시술→가정 전환 서사</strong>: 에스테틱 시술 노하우의 가정 진화형 영상·인포그래픽"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 D — <strong>재구매 락인 시각화</strong>: \"한번 사면 평생\" 메시지를 정량 LTV·재구매율로 업그레이드"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>피하기 (정면 승부 X)</strong>: 셀럽 IP(메디큐브 점유), 1등 5관왕(메디큐브 점유), 단순 할인(가격 경쟁 X) → 매드업 SPRAY AI로 4트랙 소재 효율 정량 검증 후 운영"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🎨 매드업 제안 크리에이티브 4트랙 (시장 여백 정조준)",
+        "items": [
+          { "label": "트랙 A · 임상 정량형", "value": "부위별 % 개선 + 46년 임상 IP", "sub": "벤치 = 달바 / 우위 포인트 = 약손명가 임상 자산 압도", "tone": "highlight" },
+          { "label": "트랙 B · 교육형 Q&A", "value": "결합형 정당성 (밴드+패치+겔)", "sub": "벤치 = 센텔리안24 / 우위 포인트 = 결합형 자체가 USP", "tone": "primary" },
+          { "label": "트랙 C · 시술→가정 전환", "value": "에스테틱 노하우 진화 서사", "sub": "벤치 = 없음 (미점유 영역) / 약손명가 단독 가능", "tone": "accent" },
+          { "label": "트랙 D · 락인 시각화", "value": "재구매·LTV 정량 강조", "sub": "벤치 = 메디큐브 \"한번 사면 평생\" / 우위 포인트 = 정기재구매 강제 모델", "tone": "success" }
+        ],
+        "footnote": "* 4트랙은 매드업 4대 IP 원칙(thesis 슬라이드)과 정합 · 매드업 SPRAY AI로 트랙별 소재 효율 A/B 정량 검증 후 운영"
+      },
+      "sources": [
+        { "label": "Lever Xpert 크리에이티브 라이브러리 (sid=6936)", "url": "https://xpert.lever.me/creative-center/creative-library?sid=6936&q=%EB%B7%B0%ED%8B%B0%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4" }
+      ],
+      "sourceNote": "* 출처: Lever Xpert 47개 소재 분석(s4-4) + 매드업 SPRAY AI · 크리에이티브 매트릭스 도구 결합 제안"
     },
     {
       "id": "s4-summary",
