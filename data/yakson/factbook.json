@@ -133,6 +133,7 @@
     },
     {
       "id": "thesis",
+      "indexLabel": "🎯 비딩 핵심 명제 (IP 이양)",
       "chapter": "sec-intro",
       "meta": "🎯 비딩 핵심 명제 (THESIS) — 2026-05-27 광고주 IP 축소 결정 반영",
       "status": "auto",
@@ -218,6 +219,7 @@
     },
     {
       "id": "lm-1",
+      "indexLabel": "📊 리스닝마인드 ① IP 축소 정량 근거",
       "chapter": "sec-intro",
       "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ① IP 축소 결정의 정량 근거 (2가지)",
       "status": "madup",
@@ -286,6 +288,7 @@
     },
     {
       "id": "lm-2",
+      "indexLabel": "📊 리스닝마인드 ② 제품 vs 브랜드 21배",
       "chapter": "sec-intro",
       "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ② 제품명 vs 브랜드명 검색 격차 (21배)",
       "status": "madup",
@@ -350,6 +353,7 @@
     },
     {
       "id": "lm-3",
+      "indexLabel": "📥 리스닝마인드 종합 + Raw 데이터",
       "chapter": "sec-intro",
       "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ③ Phase 3-5 종합 발견 + Raw 데이터 다운로드",
       "status": "madup",
@@ -2727,6 +2731,7 @@
     },
     {
       "id": "s1-23",
+      "indexLabel": "🔑 4대 IP 축소·이양 가이드",
       "chapter": "ch1",
       "meta": "포지셔닝 · 4대 IP 축소·이양 가이드 (광고주 결정 정합)",
       "status": "auto",
@@ -2789,6 +2794,7 @@
     },
     {
       "id": "s1-summary",
+      "indexLabel": "🎯 Ch1 요약 · 방향성 제언",
       "chapter": "ch1",
       "meta": "🎯 Chapter 1 요약 & 방향성 제언",
       "status": "auto",
@@ -2846,6 +2852,7 @@
     },
     {
       "id": "s2-0",
+      "indexLabel": "🏢 광고주 정의 (빛채그룹 4년차)",
       "chapter": "ch2",
       "meta": "⭐ 자사 · 광고주 정의",
       "status": "auto",
@@ -3088,6 +3095,7 @@
     },
     {
       "id": "s2-pb-new",
+      "indexLabel": "🆕 약손PB 2026 신제품 5종",
       "chapter": "ch2",
       "meta": "⭐ 자사 · 약손PB 2026 신제품 5종 (PDF 2026-05-26 공유)",
       "status": "auto",
@@ -3447,6 +3455,7 @@
     },
     {
       "id": "s2-olli-offline",
+      "indexLabel": "🏬 OLLI LIRA O2O·오프라인 전략",
       "chapter": "ch2",
       "meta": "⭐ 자사 · OLLI LIRA 오프라인 사업 전개 전략 (PDF 2026-05-26 결정)",
       "status": "auto",
@@ -4181,6 +4190,7 @@
     },
     {
       "id": "s2-summary",
+      "indexLabel": "🎯 Ch2 요약 · 자사·경쟁 통합",
       "chapter": "ch2",
       "meta": "🎯 Chapter 2 요약 & 방향성 제언",
       "status": "auto",
@@ -5084,6 +5094,7 @@
     },
     {
       "id": "s4-summary",
+      "indexLabel": "🎯 Ch4 요약 · 5축 매트릭스 + 4트랙",
       "chapter": "ch4",
       "meta": "🎯 Chapter 4 요약 & 방향성 제언",
       "status": "auto",
@@ -5162,6 +5173,7 @@
     },
     {
       "id": "s4-9",
+      "indexLabel": "📝 광고 카피·시안 5+1종 (4트랙)",
       "chapter": "ch4",
       "meta": "⭐ 매드업 제안 · 4트랙 광고 카피 시안 6종 + 4050 시즌 변형 (2026-05-28 페르소나 정합성 보강)",
       "status": "madup",
@@ -5339,6 +5351,7 @@
     },
     {
       "id": "s5-1",
+      "indexLabel": "🚨 6월 BS 중심 전환 (ADVoost)",
       "chapter": "ch5",
       "meta": "⭐ 채널 · 브랜드스토어 (6월 BS 중심 전환 타이밍 정합)",
       "status": "auto",
@@ -6076,6 +6089,7 @@
     },
     {
       "id": "s5-summary",
+      "indexLabel": "🎯 Ch5 요약 · 매드업 솔루션 풀커버",
       "chapter": "ch5",
       "meta": "🎯 Chapter 5 요약 & 방향성 제언",
       "status": "auto",
