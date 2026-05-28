@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "source": "Naver Brand Stores (brand.naver.com)",
+    "stores": {
+      "광고주": "brand.naver.com/yaksonmall",
+      "메이크온": "brand.naver.com/makeon",
+      "메디큐브": "brand.naver.com/medicube",
+      "LG프라엘": "brand.naver.com/lgpral"
+    },
+    "analyst": "비딩 TF",
+    "client": "약손명가헬스케어",
+    "analysis_date": "2026-05-28",
+    "total_reviews": 132,
+    "products_analyzed": 12,
+    "method": "베스트 리뷰 top 12건/상품 × 5축 키워드 분석",
+    "factbook_slides": ["br-1", "br-2"]
+  },
+  "files": [
+    { "file": "yakson-products.json", "scope": "광고주 5종 베스트 리뷰 48건" },
+    { "file": "competitor-makeon.json", "scope": "메이크온 스킨 라이트 테라피 3S 12건" },
+    { "file": "competitor-medicube.json", "scope": "메디큐브 3종 (부스터프로 포함) 36건" },
+    { "file": "competitor-lgpral.json", "scope": "LG프라엘 3종 (써마샷·갈바닉) 36건" },
+    { "file": "analysis-result.json", "scope": "5축 × 4브랜드 매트릭스 + 132 리뷰 감정 분류" },
+    { "file": "analyze.py", "scope": "재현 가능한 분석 스크립트" }
+  ],
+  "key_findings": [
+    "🔥 발견 1: 약손명가 '붓기·혈액순환' 10건 — 경쟁사 0-2건 대비 압도적 (약손 IP의 림프·경락 마사지 DNA 자연 발현)",
+    "🔥 발견 2: 약손IP 신뢰 9건 — 경쟁사 0-1건 (절대 우위 독점 자산)",
+    "🟢 발견 3: 약손명가 선물·구매 8건 + 재구매 5건 = 가족·재구매 자산 강함",
+    "⚠️ 발견 4: 약손명가 기술 표현(갈바닉·EMS·RF) 후기 0-2건 — LG프라엘 7건 대비 약점 (s5-2 RF·갈바닉 결합형 출시 정합)",
+    "⚠️ 발견 5: 약손명가 '주름·탄력' 1건 — 메디큐브 5·LG프라엘 4 대비 약함 (안티에이징 메시지 미흡)",
+    "💡 발견 6: 메이크온은 모든 축에서 평이 — '브랜드 체험' 부재 시그널 (메디큐브의 셀럽 IP 효과 vs 메이크온의 평이함)"
+  ],
+  "reproduce_guide": "python3 analyze.py 실행 시 모든 raw JSON 재집계 → analysis-result.json 재생성"
+}

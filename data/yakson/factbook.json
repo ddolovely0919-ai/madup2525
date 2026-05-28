@@ -15,7 +15,7 @@
     "auto": 85,
     "progress": 1,
     "client": 5,
-    "madup": 16
+    "madup": 18
   },
   "chapters": [
     {
@@ -783,6 +783,165 @@
         { "label": "Naver Search API (https://developers.naver.com)", "url": "https://developers.naver.com" }
       ],
       "sourceNote": "* 출처: Naver Search API · 자체 수집·분류 (2026-05-28) · 18 raw JSON + 3 분석 JSON = 21개 파일 (총 약 600KB)"
+    },
+    {
+      "id": "br-1",
+      "indexLabel": "📝 BS 후기 5축 매트릭스",
+      "chapter": "sec-intro",
+      "meta": "⭐ 분석 도구 · 네이버 브랜드스토어 후기 ① 132 리뷰 5축 키워드 매트릭스",
+      "status": "madup",
+      "intro": false,
+      "title": "광고주 BS 5종 48건 + 경쟁 3사 84건 = <span class=\"highlight\">총 132 리뷰 5축 분석 — 약손명가 \"붓기·혈액순환\" 10건 (경쟁사 평균 1건) = 약손 IP 림프·경락 DNA 자연 발현</span>",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>수집 범위</strong>: 네이버 브랜드스토어 베스트 리뷰 (광고주 yaksonmall 5종·메이크온·메디큐브 3종·LG프라엘 3종 = 12 상품 × top 12건)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>평균 평점</strong>: 약손명가 <strong>4.77</strong> / LG프라엘 4.86 / 메디큐브 4.64 / 메이크온 4.42 — 광고주 평점 경쟁력 OK"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🔥 발견 ① 약손명가 압도적 USP — \"붓기·혈액순환\"</strong>: 약손명가 10건 vs 메이크온 0·메디큐브 2·LG프라엘 1 = <strong>경쟁사 평균 1건 대비 10배</strong>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ \"얼굴선 정돈된 느낌\", \"붓기·V라인·탄력에 도움\", \"한 달 사용 후기\" 등 약손 IP 림프·경락 DNA가 후기에 자연 발현 (광고 카피 강요 X)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🔥 발견 ② 약손IP 신뢰 절대 우위</strong>: 약손명가 9건 (약손·46년·에스테틱·노하우 멘션) vs <strong>경쟁사 0-1건</strong> = 독점 자산"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🟢 발견 ③ 광고주 가족·재구매 자산 강함</strong>: 선물·구매 8건 + 재구매 5건 (\"엄마도 사드렸어요\", \"친구 선물해줬어요\") — 효도선물 페르소나(s1-13) 강력 지지"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⚠️ 발견 ④ 약손명가 기술 표현 약점</strong>: EMS·갈바닉·RF 등 디바이스 기술 멘션 0-2건 vs <strong>LG프라엘 갈바닉·RF 7건</strong> = 신제품 RF·갈바닉 결합형(s5-2)으로 보완 필요"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⚠️ 발견 ⑤ 약손명가 \"주름·탄력·안티에이징\" 메시지 미흡</strong>: 약손 1건 vs 메디큐브 5·LG프라엘 4·메이크온 3 = 슬로우에이징 카피(s4-9) 보강 영역"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>💡 발견 ⑥ 메이크온은 모든 축에서 평이</strong>: 12건 표본 작지만 5축 키워드 분포가 가장 약함 = 셀럽 IP·기술 차별화 부재 시그널 (블로그 시딩 41% 학습 모델인 메이크온 — 광고 강력 vs 후기 평이의 갭)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ①</strong>: 약손명가 \"붓기·림프·경락\" USP는 후기에 자연 발현 = <strong>광고 메시지로 더 강조해도 \"신뢰도 그대로 유지\"</strong> 가능 (체험단·시딩 콘텐츠 인풋)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ②</strong>: 약손 IP 신뢰 9건 = 광고에서 \"46년 약손명가가 만든\" 표현은 후기 자산과 정합 → 메시지 확신 가능"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ③</strong>: 기술 표현 약점은 RF·갈바닉 결합형 신제품 출시(s5-2) + 광고 카피 ②번(임상 정량)으로 동시 해결 영역"
+        }
+      ],
+      "chart": {
+        "type": "hbar",
+        "title": "📊 5축 키워드 매트릭스 (132 리뷰 / 멘션 횟수)",
+        "subtitle": "약손명가 \"붓기·혈액순환\" 10건 = 경쟁사 평균 1건 대비 압도적 차별화",
+        "items": [
+          { "label": "약손명가 — 붓기·혈액순환 (USP)", "value": "10건 (압도적 1위)", "ratio": 1.0, "tone": "highlight" },
+          { "label": "약손명가 — 약손IP신뢰 (독점)", "value": "9건 (경쟁사 0-1)", "ratio": 0.9, "tone": "highlight" },
+          { "label": "약손명가 — 매일·루틴", "value": "12건", "ratio": 1.0, "tone": "accent" },
+          { "label": "약손명가 — 선물·구매 (효도)", "value": "8건", "ratio": 0.8, "tone": "accent" },
+          { "label": "LG프라엘 — 갈바닉·RF (기술)", "value": "7건 (광고주 0)", "ratio": 0.7, "tone": "primary" },
+          { "label": "메디큐브 — 시간언급 (5분·10분)", "value": "9건 (광고주 5)", "ratio": 0.9, "tone": "primary" },
+          { "label": "메디큐브 — 주름·탄력 (안티에이징)", "value": "5건 (광고주 1)", "ratio": 0.5, "tone": "muted" },
+          { "label": "메이크온 — 모든 축 평이", "value": "최대 3건", "ratio": 0.3, "tone": "muted" }
+        ],
+        "footnote": "* 132 리뷰 × 5축(효과·시나리오·기술·가격·소셜) 키워드 매칭. 광고주 강점은 USP·IP·재구매, 약점은 기술·안티에이징"
+      },
+      "sources": [
+        { "label": "📥 [Manifest] manifest.json (메타 + 핵심 발견)", "url": "data/yakson/brand-reviews/manifest.json" },
+        { "label": "📥 [Result] analysis-result.json (5축 매트릭스 + 132 리뷰 감정)", "url": "data/yakson/brand-reviews/analysis-result.json" },
+        { "label": "📥 [Raw] yakson-products.json (광고주 48건)", "url": "data/yakson/brand-reviews/yakson-products.json" },
+        { "label": "📥 [Raw] competitor-makeon.json (12건)", "url": "data/yakson/brand-reviews/competitor-makeon.json" },
+        { "label": "📥 [Raw] competitor-medicube.json (36건)", "url": "data/yakson/brand-reviews/competitor-medicube.json" },
+        { "label": "📥 [Raw] competitor-lgpral.json (36건)", "url": "data/yakson/brand-reviews/competitor-lgpral.json" },
+        { "label": "📥 [Script] analyze.py (재현 가능 분석)", "url": "data/yakson/brand-reviews/analyze.py" }
+      ],
+      "sourceNote": "* 출처: 네이버 브랜드스토어 베스트 리뷰 (brand.naver.com/yaksonmall · /makeon · /medicube · /lgpral · 2026-05-28 수집) · Raw 다운로드 ↓ <a href=\"data/yakson/brand-reviews/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/brand-reviews/analysis-result.json\" target=\"_blank\">📥 분석 결과</a>"
+    },
+    {
+      "id": "br-2",
+      "indexLabel": "🎯 약손 독점 자산 vs 약점",
+      "chapter": "sec-intro",
+      "meta": "⭐ 분석 도구 · 네이버 브랜드스토어 후기 ② 약손명가 독점 자산 + 보강 영역",
+      "status": "madup",
+      "intro": false,
+      "title": "<span class=\"highlight\">약손명가 독점 자산 — 붓기·약손IP·가족재구매</span> / 보강 영역 — 기술표현·안티에이징·시간 메시지 (광고 운영 직접 시사점)",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>독점 자산 ① 림프·경락 후기 자연 발현</strong>: 약손명가 후기 48건 중 \"붓기·V라인·이중턱·작은얼굴\" 14건 (29%) = 약손 47년 시술 DNA가 디바이스 후기에 자연스럽게 옮겨짐"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>대표 발언</strong>: \"얼굴 붓기,브이 라인,탄력에 도움\" · \"하루 한 번 꾸준히 쓰면 효과\" · \"미세진동이 따갑거나 아프지않아요\" — 광고 카피 인풋 직접 활용 가능"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>독점 자산 ② 가족·재구매 자산</strong>: \"엄마도 사드렸어요\" · \"친구 선물해줬어요\" · \"친구집에서 사용 해보고 구입\" — 효도선물 페르소나(s1-13) + 4050 시즌 캠페인(s5-13) 정합"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>독점 자산 ③ 약손 IP 신뢰</strong>: \"약손명가라 기대가 컷나봅니다\" · \"약손명가에서 관리를 잘 받았어요 근데 샵이 너무 멀고\" = <strong>매장 → 홈케어 전환 funnel</strong> 후기 직접 증명"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>보강 영역 ① 기술 표현 후기 부재</strong>: EMS·갈바닉·RF 기술 멘션 약손 0-2건 vs LG프라엘 갈바닉·RF 7건 — <strong>OLLI LIRA 신제품 RF·갈바닉 결합형 출시(s5-2)</strong>로 후기 자산 축적 필요"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>보강 영역 ② 안티에이징 메시지 미흡</strong>: \"주름·탄력·노화 케어\" 약손 1건 vs 메디큐브 5·LG프라엘 4 = <strong>슬로우에이징 카피 (s4-9 축 ①)</strong>로 보강 영역"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>보강 영역 ③ 시간 메시지</strong>: \"5분·10분 사용\" 약손 5건 vs 메디큐브 9건 — \"매일 5분 매장 케어 집에서\" 카피(s4-9 축 ②) 강화 영역"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>💎 발견: 약손 1건 부정 후기 단서</strong>: \"30만원이넘는 물건박스포장상태가 실망\" = 패키지·언박싱 경험 강화 영역 (BS ROAS 500% 달성을 위해 첫인상 개선 필요)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고 운영 시사 ①</strong>: 후기 자연 발현 USP \"붓기·림프·경락\"은 광고 메시지로 강조해도 \"실 사용자 검증\" 신뢰도 유지"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고 운영 시사 ②</strong>: 효도선물 시즌 캠페인(s5-13)에서 \"엄마도 사드렸어요\" 후기 카피 직접 인용 가능 (사실 기반)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고 운영 시사 ③</strong>: 기술 표현 약점은 단기 광고 카피로 해결 불가 → 신제품(RF·갈바닉 결합형) + 임상 정량 콘텐츠 + 시딩 캠페인 결합으로 12개월 축적"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🎯 약손명가 5축 강·약점 매트릭스 (132 리뷰 기반)",
+        "items": [
+          { "label": "🔥 독점 자산 #1", "value": "붓기·혈액순환 10건", "sub": "경쟁사 평균 1건 / 약손 림프·경락 DNA / 광고 메시지 강조 가능", "tone": "highlight" },
+          { "label": "🔥 독점 자산 #2", "value": "약손IP 신뢰 9건", "sub": "경쟁사 0-1건 / \"46년 약손명가\" 후기 자산 / 매장→홈케어 funnel 검증", "tone": "highlight" },
+          { "label": "🟢 강점", "value": "선물·재구매 13건", "sub": "선물 8 + 재구매 5 = 가족·효도 페르소나(s1-13) 강력 지지", "tone": "accent" },
+          { "label": "⚠️ 약점 #1", "value": "기술 멘션 0-2건", "sub": "LG프라엘 갈바닉·RF 7건 대비 / s5-2 결합형 출시로 보강", "tone": "danger" },
+          { "label": "⚠️ 약점 #2", "value": "주름·탄력 1건", "sub": "메디큐브 5·LG프라엘 4 대비 / s4-9 슬로우에이징 카피 강화", "tone": "danger" },
+          { "label": "⚠️ 약점 #3", "value": "시간 메시지 5건", "sub": "메디큐브 9건 대비 / s4-9 \"매일 5분\" 카피로 보강", "tone": "muted" }
+        ],
+        "footnote": "* 약손명가 48 / 경쟁사 84 = 132 리뷰 5축 분석 (효과·시나리오·기술·가격·소셜)"
+      },
+      "sources": [
+        { "label": "📥 [Result] analysis-result.json", "url": "data/yakson/brand-reviews/analysis-result.json" },
+        { "label": "📥 [Manifest] manifest.json", "url": "data/yakson/brand-reviews/manifest.json" },
+        { "label": "📥 [Script] analyze.py (재현)", "url": "data/yakson/brand-reviews/analyze.py" }
+      ],
+      "sourceNote": "* 출처: 네이버 브랜드스토어 132 리뷰 5축 분석 (2026-05-28) · Raw 다운로드 ↓ <a href=\"data/yakson/brand-reviews/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/brand-reviews/analysis-result.json\" target=\"_blank\">📥 분석 결과</a>"
     },
     {
       "id": "s1-1",
