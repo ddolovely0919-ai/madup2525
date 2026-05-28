@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MADUP Factbook Viewer</title>
 <link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/presence.css">
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
 </head>
 <body data-edit="off">
@@ -107,6 +108,8 @@
   const client = params.get('c') || 'yakson';
   loadFactbook(`data/${client}/factbook.json`);
 </script>
+
+<script type="module" src="assets/presence.js"></script>
 
 </body>
 </html>
