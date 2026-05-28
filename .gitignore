@@ -1,33 +1,6 @@
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-scripts/__pycache__/
-
-# 로컬 작업물 (커밋 X)
-*.local.json
-*.draft.json
-*.local.html
-
-# 백업·검증 캡처 (커밋 X)
-*.backup.html
-source/**/*.backup.html
-source/**/screenshots/
-
-# 빌드 산출물
-node_modules/
-dist/
-.cache/
-
-# 환경 변수
-.env
-.env.local
+# Large animated GIFs (8-11MB each)
+data/yakson/product-pages/*/sections/*.gif
+# Very large jpgs (>2MB)
+data/yakson/product-pages/yakson-olliblira/sections/01_y005008_4500x4500.jpg
+data/yakson/product-pages/makeon-skinlight/sections/13_y015411_860x609.jpg
+data/yakson/product-pages/makeon-skinlight/sections/08_y011017_860x720.jpg

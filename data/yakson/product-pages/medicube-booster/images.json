@@ -1,0 +1,512 @@
+{
+  "product": "메디큐브 에이지알 부스터프로 X2",
+  "url": "https://brand.naver.com/medicube/products/13155443679",
+  "page_height": 76734,
+  "captured_at": "2026-05-28",
+  "images": [
+    {
+      "src": "https://shop-phinf.pstatic.net/20260423_14/1776908125287qdTe2_PNG/bn.png?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 363,
+      "top": 3372
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260424_22/1777019165587ulJs7_PNG/%EB%B6%80%EC%8A%A4%ED%84%B0%ED%94%84%EB%A1%9C_%EB%B2%A0%EC%8A%A4%ED%8A%B8_%EB%A6%AC%EB%B7%B0_%EB%B0%B0%EB%84%88_%EC%88%98%EC%A0%95v2.png?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2515,
+      "top": 3643
+    },
+    {
+      "src": "https://medicube0.cafe24.com/web/product/detail/device/bn/bn2_01.jpg",
+      "host": "medicube0.cafe24.com",
+      "w": 1200,
+      "h": 2545,
+      "top": 5527
+    },
+    {
+      "src": "https://medicube0.cafe24.com/web/product/detail/device/bn/AGER_01.gif",
+      "host": "medicube0.cafe24.com",
+      "w": 700,
+      "h": 408,
+      "top": 6873
+    },
+    {
+      "src": "https://medicube0.cafe24.com/web/product/detail/device/bn/bn2_03.jpg?v=1",
+      "host": "medicube0.cafe24.com",
+      "w": 1200,
+      "h": 3044,
+      "top": 7243
+    },
+    {
+      "src": "https://medicube0.cafe24.com/web/upload/NNEditor/20260102/E1848CE185A6E18486E185A9E186A8-E1848BE185A5E186B9E1848BE185B3E186B7-11.jpg",
+      "host": "medicube0.cafe24.com",
+      "w": 1196,
+      "h": 2212,
+      "top": 8854
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_104/1773722184452YG60z_JPEG/260304_X2_01_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2940,
+      "top": 10029
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_255/1773722184451JY9h7_JPEG/260304_X2_01_02.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1724,
+      "top": 12230
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_9/1773722184446G56za_JPEG/260304_X2_01_03.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1873,
+      "top": 13521
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_152/177372218444966VDj_JPEG/260304_X2_01_04.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1177,
+      "top": 14924
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_1/1773722184446EcJue_JPEG/260304_X2_01_05.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1751,
+      "top": 15805
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_288/1773722184537ueKTq_GIF/260304_X2_01_06.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 428,
+      "top": 17116
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_271/1773722184736Osl4i_JPEG/260304_X2_01_07.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 226,
+      "top": 17505
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_1/17737221848242v0t2_JPEG/260304_X2_01_08.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1005,
+      "top": 17674
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_28/17737221848448fP5K_JPEG/260304_X2_01_09.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2230,
+      "top": 18426
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_75/1773722213735qbxYL_JPEG/260304_X2_02_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 496,
+      "top": 20096
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_214/1773722214203vgiEm_GIF/260304_X2_02_02.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 20468
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_160/1773722213693vOh3b_JPEG/260304_X2_02_03.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 270,
+      "top": 20742
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_47/17737222142330H4Cm_GIF/260304_X2_02_04.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 20945
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_229/1773722213700A0y7l_JPEG/260304_X2_02_05.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 269,
+      "top": 21219
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_34/17737222141637kj1J_GIF/260304_X2_02_06.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 21421
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_182/1773722214012LBrIq_JPEG/260304_X2_02_07.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 270,
+      "top": 21696
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_248/1773722214751Qwi0f_GIF/260304_X2_02_08.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 21898
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_248/1773722214329Fm41a_JPEG/260304_X2_02_09.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 516,
+      "top": 22173
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_148/17737222147304PPCj_GIF/260304_X2_02_10.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 22559
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_82/1773722214482tSp0l_JPEG/260304_X2_02_11.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 275,
+      "top": 22834
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_113/1773722215069KfKfb_GIF/260304_X2_02_12.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 303,
+      "top": 23040
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_245/1773722214695JADJH_JPEG/260304_X2_02_13.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 640,
+      "top": 23315
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_226/17737222147752NwDb_JPEG/260304_X2_02_14.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 546,
+      "top": 23794
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_216/1773722215637ejV1O_GIF/260304_X2_02_15.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 24203
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_10/1773722215014BUKAl_JPEG/260304_X2_02_16.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 345,
+      "top": 24573
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_230/17737222151114iyM1_JPEG/260304_X2_02_18.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 242,
+      "top": 24894
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_190/1773722215042qJiXt_JPEG/260304_X2_02_19.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1339,
+      "top": 25075
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_245/1773722215674QGRA6_JPEG/260304_X2_02_20.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 443,
+      "top": 26077
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_7/17737222161379XLcJ_GIF/260304_X2_02_21.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 26409
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_242/1773722215701AKzGR_JPEG/260304_X2_02_22.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1948,
+      "top": 26779
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_82/1773722215437Yt7cQ_JPEG/260304_X2_02_23.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2263,
+      "top": 28238
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_133/1773722215775UbLM3_GIF/260304_X2_02_24.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 29933
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_281/1773722215844CA6WT_JPEG/260304_X2_02_25.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2598,
+      "top": 30303
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_203/17737222766148FOXA_JPEG/260304_X2_03_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 477,
+      "top": 32248
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_79/1773722277277NOGoi_GIF/260304_X2_03_02.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 32605
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_230/177372227738335lNz_JPEG/260304_X2_03_03.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2145,
+      "top": 32975
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_14/17737222775623FKB9_JPEG/260304_X2_03_04.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1921,
+      "top": 34582
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_59/1773722278388NlJhg_GIF/260304_X2_03_05.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 36020
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_23/1773722277847t6r3m_JPEG/260304_X2_03_06.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2868,
+      "top": 36390
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_299/1773722276644bYyIo_JPEG/260304_X2_03_07.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1118,
+      "top": 38538
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_108/17737222770968QGWM_JPEG/260304_X2_03_08.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 532,
+      "top": 39375
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_269/1773722277381e9Twb_GIF/260304_X2_03_09.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 39773
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_176/1773722276636atJJA_JPEG/260304_X2_03_10.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2106,
+      "top": 40143
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_290/1773722276654NIsbs_JPEG/260304_X2_03_11.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 3240,
+      "top": 41720
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_221/1773722331532Oa37p_JPEG/260304_X2_04_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 327,
+      "top": 44147
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_1/1773722332308EXXHu_GIF/260304_X2_04_02.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 44391
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_116/1773722331541lruWC_JPEG/260304_X2_04_03.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1290,
+      "top": 44762
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_212/1773722332244HXst3_GIF/260304_X2_04_04.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 469,
+      "top": 45728
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_243/1773722331547aiCpv_JPEG/260304_X2_04_05.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2191,
+      "top": 46153
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_170/1773722331543b7Rty_JPEG/260304_X2_04_06.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2926,
+      "top": 47794
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_289/1773722331871NnMS0_JPEG/260304_X2_04_07.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1763,
+      "top": 49985
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_88/1773722332448C7AF8_GIF/260304_X2_04_08.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 51305
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_138/1773722332087GlnJM_JPEG/260304_X2_04_09.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 856,
+      "top": 51675
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_230/1773722332000aSNsO_JPEG/260304_X2_04_10.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 3350,
+      "top": 52316
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_110/1773722368557a3IMR_JPEG/260304_X2_05_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2868,
+      "top": 54825
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_225/1773722368600aSRcS_JPEG/260304_X2_05_02.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2845,
+      "top": 56972
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_17/1773722368551TO2sc_JPEG/260304_X2_05_03.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1635,
+      "top": 59103
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_219/1773722368543WNX1s_JPEG/260304_X2_05_04.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2645,
+      "top": 60327
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_191/1773722368572W27Vn_JPEG/260304_X2_05_05.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 3014,
+      "top": 62307
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_278/1773722369180GrwJ1_GIF/260304_X2_05_06.gif?type=wg848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 700,
+      "h": 408,
+      "top": 64564
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_250/1773722369078Kehsu_JPEG/260304_X2_05_06.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 495,
+      "top": 64935
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_130/17737223691183HXvn_JPEG/260304_X2_05_07.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 1610,
+      "top": 65305
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_297/1773722369494v6Niw_JPEG/260304_X2_05_10.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 791,
+      "top": 66744
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_256/1773722369595hpUAh_JPEG/260304_X2_06_01.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2066,
+      "top": 67336
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20260317_8/1773722369597oxGa8_JPEG/260304_X2_06_02.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 2512,
+      "top": 68883
+    },
+    {
+      "src": "https://shop-phinf.pstatic.net/20251016_137/1760582465378C54ls_PNG/SE-957113f7-2fa7-42d9-b082-87923b77dbec.jpg?type=w848",
+      "host": "shop-phinf.pstatic.net",
+      "w": 848,
+      "h": 329,
+      "top": 70764
+    }
+  ]
+}
