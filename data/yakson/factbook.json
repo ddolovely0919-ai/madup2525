@@ -15,7 +15,7 @@
     "auto": 85,
     "progress": 1,
     "client": 5,
-    "madup": 8
+    "madup": 10
   },
   "chapters": [
     {
@@ -215,6 +215,132 @@
       },
       "sourceNote": "* 출처: 광고주 PDF 2026-05-26 공유 자료 + 벤치마크 (닥터자르트/동국제약) + s1-22/s1-23/s4-9 정량 근거",
       "body": "<table>\n      <thead><tr><th>비딩 단계</th><th>약손명가 IP 처리</th><th>매드업 적용</th></tr></thead>\n      <tbody>\n        <tr><td>① 진단 (Ch1·Ch2)</td><td>광고주 IP 축소 결정 확인 / 닥터자르트 vs 동국제약 벤치마크</td><td>IP 어필 5대 잇점 검증 → 2/5만 성공 (s2-1b)</td></tr>\n        <tr><td>② 명제 (현재 슬라이드)</td><td>IP \"폐기\"가 아닌 \"단계적 이양\" 권유</td><td>4대 축소·이양 가이드</td></tr>\n        <tr><td>③ 실행 (Ch3·Ch4·Ch5)</td><td>OLLI/GOLKI 독립 헤드라인 / PB만 IP 유지</td><td>ADVoost · 카플친 · 광고 카피 5종 (s4-9)</td></tr>\n        <tr><td>④ 입증 (Ch6·Appendix)</td><td>리스닝마인드 클러스터·MAU로 이양 효과 측정</td><td>RFP 7과업 풀 커버리지 + 6월 BS 전환 정합</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>⑤ 결론 (PT 클로징)</strong></td><td><strong>광고주 IP 축소 의지 × 매드업 4대 이양 가이드 = 안전한 브랜드 독립 + 임상 자산 보존</strong></td><td><strong>\"이거 매드업이 제일 잘하는 것\" 5포인트 (IP 전환 + 신제품 5종 + OLLI 오프라인 + 6월 BS 전환 + CRM 리텐션)</strong></td></tr>\n      </tbody>\n    </table>"
+    },
+    {
+      "id": "lm-1",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ① IP 축소 결정의 정량 근거 (2가지)",
+      "status": "madup",
+      "intro": false,
+      "title": "리스닝마인드 검색 데이터로 입증된 <span class=\"highlight\">IP 축소 결정의 정량 근거 2가지</span> — ① 약손명가 : 헬스케어 = 138 : 1 ② 2025-07 본가 부정 이슈 폭증 (송도 사건)",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>근거 ① 검색량 격차 138 : 1</strong> — 약손명가 본가 월 109,533 vs 약손명가 헬스케어 월 793 (광고주 브랜드명) = <strong>본가 IP가 138배 압도적</strong> → \"OOO로 인식\" 정확히 입증"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>근거 ② 본가 부정 이슈 노출 위험</strong> — 약손명가 클러스터(498건)에서 발견된 부정 키워드 군집: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>\"송도 총기 사건\" · \"인천 사제총\" · \"약손명가 김현숙\" · \"필킨 조건홍\""
+        },
+        {
+          "type": "indent-1",
+          "html": "\"약손명가 대표 총기\" · \"약손 명가 총격\" · \"사제총 약손명가\""
+        },
+        {
+          "type": "indent-1",
+          "html": "\"약손명가 갑질\" · \"약손명가 성추행\" · \"약손명가 논란\" </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>2025-07 검색량 19배 폭증 진원</strong>: 약손명가 검색량 평소 8만 → <strong>1,554,900회 (19배)</strong> = 송도 사건 매스 노출 시점 (브랜드 매스 인지도↑ but **부정 맥락**)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고주 IP 축소 결정 = 합리적 의사결정</strong> (PDF p.5 \"약손명가 IP 축소 운영 예정\") — 매드업의 \"단계적 이양\" 가이드 정합"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 운영 가이드</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>1. 부정 키워드 자동 제외 운영 (매드업 AI 심의봇 + Lever Xpert 차단 리스트)"
+        },
+        {
+          "type": "arrow",
+          "html": "2. \"약손명가\" 키워드는 PB 광고만 (디바이스 광고 분리)"
+        },
+        {
+          "type": "arrow",
+          "html": "3. 본가 부정 이슈 재발 시 즉시 광고 일시중지 + 메시지 톤 조정 프로토콜 </li></ul>"
+        }
+      ],
+      "chart": {
+        "type": "hbar",
+        "title": "📊 약손명가 vs 광고주 헬스케어 — 검색량 138배 격차",
+        "subtitle": "광고주 PDF \"약손명가 IP 축소 운영\" 결정의 정량 입증",
+        "items": [
+          { "label": "약손명가 (본가, 월평균)", "value": "109,533회 (138x)", "ratio": 1.0, "tone": "highlight" },
+          { "label": "메디큐브 부스터프로", "value": "73,316회 (92x)", "ratio": 0.67, "tone": "primary" },
+          { "label": "약손명가 리프팅밴드 (제품)", "value": "16,896회 (21x)", "ratio": 0.154, "tone": "success" },
+          { "label": "LG 프라엘", "value": "14,156회 (18x)", "ratio": 0.129, "tone": "primary" },
+          { "label": "메이크온", "value": "2,903회 (3.7x)", "ratio": 0.027, "tone": "primary" },
+          { "label": "약손명가 헬스케어 (광고주)", "value": "793회 (1.0x 기준)", "ratio": 0.007, "tone": "accent" }
+        ],
+        "footnote": "* 출처: 리스닝마인드 keyword_info (2026-05-28 / 월 평균 / 한국)"
+      },
+      "sources": [
+        { "label": "리스닝마인드 keyword_info · cluster_finder (2026-05-28)", "url": "" },
+        { "label": "광고주 PDF 공유 자료 2026-05-26 p.5 IP 축소 결정", "url": "" }
+      ],
+      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 (2026-05-28) — 약손명가/메디큐브/LG프라엘/메이크온/약손명가 헬스케어 6개 키워드 비교 + 약손명가 클러스터 498건 부정 키워드 군집"
+    },
+    {
+      "id": "lm-2",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ② 제품명 vs 브랜드명 검색 격차 (21배)",
+      "status": "madup",
+      "intro": false,
+      "title": "<span class=\"highlight\">약손명가 리프팅밴드 (제품) 월 16,896회 vs 약손명가 헬스케어 (브랜드) 월 793회 = 21배</span> — 소비자는 \"제품\"으로 찾고 \"브랜드\"로 못 찾는다",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>핵심 통찰</strong>: 골기 리프팅 밴드는 누적 50만개 판매되며 검색 시장에서 정착 — 단, <strong>약손명가 헬스케어 브랜드명 인지는 1/21 수준</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>제품 검색 페르소나</strong> (광고주 브랜드보다 더 폭넓음): <ul style=\"margin:4px 0;padding-left:18px;\"> <li>30대 26% + 25-29세 21% + 20대 17% = <strong>1020-3050 전 연령 25%+</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "여성 93% / 13-19세 10% (효도 선물 가능성)"
+        },
+        {
+          "type": "indent-1",
+          "html": "월 평균 16,896회 / 2024-11 정점 50,740회 (5만대 매출 추정) </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🚨 트렌드 -39% 감소 중</strong>: 2024-11 정점 5만 → 2026-04 12,900회 (74% 감소) — <strong>메시지·소재·신제품 갱신 시급</strong>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>비교</strong>: 메디큐브 부스터프로도 -36% 감소 중 — 시장 전체 디바이스 검색 둔화 신호 (얼리어답터 → 매스 진입 단계 전환기)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 ① 제품 중심 운영 (브랜드 빌드업 병행)</strong>: \"약손명가 리프팅밴드\" 같은 제품 키워드 메인 운영 + \"OLLI LIRA · 약손명가 헬스케어\" 브랜드 빌드업은 별도 캠페인"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 ② 트렌드 갱신 메시지</strong>: 2026 신제품 5종 출시(가뿐한 복부패치 등) = 검색량 갱신 + 새로운 카테고리 진입 동시 트리거"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 ③ 1020 확장 가능성</strong>: 제품 검색 페르소나에서 13-19세 10% 발견 → \"엄마 선물·효도\" 페르소나 추가 운영 가치"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🎯 광고주 검색 자산 매트릭스 (월 평균)",
+        "items": [
+          { "label": "📦 제품명 (자산↑)", "value": "약손명가 리프팅밴드 16,896회", "sub": "광고주 PB 메인 제품 / 30대 26% + 25-29세 21% + 20대 17% / 누적 50만개 판매 정합", "tone": "highlight" },
+          { "label": "🏪 본가 브랜드 (활용 가능)", "value": "약손명가 109,533회", "sub": "본가 IP / 138배 큰 검색량 / 단 부정 이슈 키워드 동반 (송도 사건)", "tone": "primary" },
+          { "label": "🏢 광고주 브랜드 (육성 필요)", "value": "약손명가 헬스케어 793회", "sub": "광고주 자체 인지도 / 30대 43% 명확 / +273% 빠른 성장 중", "tone": "accent" },
+          { "label": "🔴 미존재 자산 (인지도 0)", "value": "올리리라 / 골기 데이터 없음", "sub": "검색 시장 미존재 → s4-9 광고 카피 5종으로 인지도 폭증 미션", "tone": "danger" }
+        ],
+        "footnote": "* 출처: 리스닝마인드 keyword_info / cluster_finder / path_finder (2026-05-28)"
+      },
+      "sources": [
+        { "label": "리스닝마인드 keyword_info (2026-05-28)", "url": "" }
+      ],
+      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 — 광고주 PB·디바이스·본가 IP 4종 검색량 비교"
     },
     {
       "id": "s1-1",
