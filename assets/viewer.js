@@ -114,6 +114,39 @@ function render() {
   bindActiveObserver();
 }
 
+// 사이드바 INDEX용 라벨 생성 (slide.indexLabel 있으면 사용, 없으면 자동 추출)
+function makeIndexLabel(s) {
+  // 1) 명시적 indexLabel 우선
+  if (s.indexLabel && s.indexLabel.trim()) {
+    return s.indexLabel.trim().substring(0, 50);
+  }
+  // 2) 자동 추출: HTML 태그 제거 → 핵심 부분 추출
+  const cleanTitle = (s.title || '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim();
+  // "—" 이전이 핵심 인사이트인 경우가 많음
+  let core = cleanTitle.split(/\s*—\s*/)[0].trim();
+  // 너무 짧으면 "—" 이후도 포함
+  if (core.length < 15 && cleanTitle.length > core.length) {
+    core = cleanTitle;
+  }
+  // 따옴표·물음표 깔끔하게 정리
+  core = core.replace(/^["'❏\s]+|["'\s]+$/g, '').trim();
+  // 길이 제한
+  if (core.length > 42) core = core.substring(0, 42) + '…';
+  // 3) meta에서 카테고리 prefix 추출 (선택적)
+  const metaClean = (s.meta || '').replace(/<[^>]+>/g, '').replace(/^[⭐🎯📥📊📺📷🐎📂🔑🚨🟢🟡🔴💡]+\s*/, '').trim();
+  // meta가 짧고 의미있으면 prefix로 사용
+  let prefix = '';
+  if (metaClean && metaClean.length <= 18) {
+    // "자사 · 광고주 정의" → 마지막 영역만
+    const parts = metaClean.split(/\s*·\s*/);
+    const tag = parts[parts.length - 1].trim();
+    if (tag.length <= 14 && tag !== core.substring(0, tag.length)) {
+      prefix = `<span class="idx-tag">${tag}</span> `;
+    }
+  }
+  return prefix + escapeHtml(core);
+}
+
 function renderSidebar() {
   const data = STATE.data;
   const nav = document.getElementById('index-nav');
@@ -127,12 +160,14 @@ function renderSidebar() {
   let html = '<ul>';
   for (const ch of data.chapters) {
     const slides = byChapter[ch.id] || [];
-    html += `<li class="index-section"><a href="#${ch.id}">${escapeAttr(ch.title)}</a>`;
+    const chTitle = (ch.title || '').replace(/<[^>]+>/g, '');
+    html += `<li class="index-section"><a href="#${ch.id}">${escapeAttr(chTitle)} <em class="idx-count">${slides.length}</em></a>`;
     if (slides.length) {
       html += '<ul class="index-sub">';
       for (const s of slides) {
-        const label = s.title.substring(0, 30).replace(/<[^>]+>/g, '');
-        html += `<li><a href="#${s.id}">${escapeAttr(label)}</a></li>`;
+        const label = makeIndexLabel(s);
+        const statusCls = `idx-${s.status || 'auto'}`;
+        html += `<li class="${statusCls}"><a href="#${s.id}" title="${escapeAttr((s.title||'').replace(/<[^>]+>/g, ''))}">${label}</a></li>`;
       }
       html += '</ul>';
     }
