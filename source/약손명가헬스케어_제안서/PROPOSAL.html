@@ -1,0 +1,3290 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLLI LIRA × MADUP 2026 디지털 마케팅 제안</title>
+<style>
+  /* ===== Wyatt Color Palette ===== */
+  :root {
+    --bg-page: #050505;
+    --bg-card: #111111;
+    --bg-card-soft: #1a1816;
+    --bg-elev: #232020;
+    --border-soft: #2a2724;
+    --border-strong: #3a3530;
+    --text-main: #f5f1ec;
+    --text-sub: #b8b3a8;
+    --text-caption: #6b6760;
+    --accent-rose: #f5d4d8;
+    --accent-rose-soft: rgba(245, 212, 216, 0.18);
+    --accent-beige: #e6d8c5;
+    --accent-gold: #c9b4a0;
+    --accent-warm: #d4a59a;
+    --accent-blue: #a8bccc;
+    --highlight-bg: rgba(245, 184, 192, 0.22);
+  }
+
+  /* ===== Base ===== */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", "Malgun Gothic", sans-serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 15px;
+    font-feature-settings: "tnum";
+  }
+  a { color: var(--accent-beige); text-decoration: none; }
+  a:hover { text-decoration: underline; color: var(--accent-rose); }
+
+  /* ===== Topbar ===== */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(10, 8, 8, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 14px 32px;
+    display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+    font-size: 12px; color: var(--text-sub);
+  }
+  .topbar .title { font-weight: 700; color: var(--text-main); font-size: 13px; letter-spacing: 0.02em; }
+  .topbar .pill {
+    background: var(--bg-elev); border: 1px solid var(--border-soft);
+    padding: 4px 10px; border-radius: 999px; color: var(--text-sub);
+  }
+  .topbar .actions { margin-left: auto; display: flex; gap: 8px; }
+  .action-btn {
+    padding: 6px 12px; background: var(--bg-elev);
+    border: 1px solid var(--border-soft); border-radius: 8px;
+    font-size: 12px; font-weight: 600;
+    color: var(--text-sub); cursor: pointer; text-decoration: none;
+  }
+  .action-btn:hover { background: var(--bg-card-soft); color: var(--text-main); border-color: var(--accent-beige); text-decoration: none; }
+
+  /* ===== Layout ===== */
+  .container { display: grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 56px); }
+  .sidebar {
+    background: var(--bg-card); border-right: 1px solid var(--border-soft);
+    padding: 24px 16px; position: sticky; top: 56px;
+    height: calc(100vh - 56px); overflow-y: auto;
+  }
+  .sidebar h2 {
+    font-size: 11px; text-transform: uppercase; color: var(--text-caption);
+    letter-spacing: 0.1em; margin: 16px 0 8px 8px;
+  }
+  .sidebar h2:first-child { margin-top: 0; }
+  .index-nav ul { list-style: none; padding: 0; margin: 0; }
+  .index-nav .index-section { margin-bottom: 4px; }
+  .index-nav .index-section > a {
+    display: block; padding: 8px 10px; border-radius: 6px;
+    color: var(--text-main); font-weight: 600; font-size: 13px;
+  }
+  .index-nav .index-section > a:hover { background: var(--bg-elev); text-decoration: none; }
+  .index-nav .index-sub { padding-left: 20px; }
+  .index-nav .index-sub a {
+    display: block; padding: 5px 10px; border-radius: 6px;
+    color: var(--text-sub); font-size: 12px;
+  }
+  .index-nav .index-sub a:hover { background: var(--bg-elev); color: var(--text-main); text-decoration: none; }
+  .index-nav a.active { background: var(--accent-rose-soft); color: var(--accent-rose); font-weight: 600; }
+  .index-nav .ch-badge {
+    display: inline-block; padding: 1px 6px;
+    background: var(--accent-rose-soft); color: var(--accent-rose);
+    border-radius: 4px; font-size: 10px; margin-right: 4px;
+  }
+
+  .main { padding: 32px 48px; max-width: 1100px; }
+
+  /* ===== Marks ===== */
+  .madup-mark {
+    position: absolute; bottom: 20px; left: 32px;
+    font-size: 10px; letter-spacing: 0.25em;
+    color: var(--text-sub); font-weight: 500; pointer-events: none;
+  }
+  .madup-mark strong { font-weight: 800; color: var(--text-main); }
+  .page-no {
+    position: absolute; bottom: 20px; right: 32px;
+    font-size: 11px; color: var(--text-sub); font-weight: 600; pointer-events: none;
+  }
+  .page-label {
+    position: absolute; top: 20px; left: 32px;
+    font-size: 10px; color: var(--text-caption);
+    letter-spacing: 0.05em; pointer-events: none;
+  }
+
+  /* ===== Cover ===== */
+  .cover {
+    min-height: 95vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 60px 110px;
+    background:
+      radial-gradient(ellipse 700px 500px at 78% 25%, rgba(245, 212, 216, 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse 500px 400px at 18% 75%, rgba(230, 216, 197, 0.12) 0%, transparent 55%),
+      linear-gradient(180deg, #0a0807 0%, #0c0a08 50%, #050402 100%);
+    color: var(--text-main); border-radius: 16px;
+    margin: 0 0 32px; position: relative; overflow: hidden;
+  }
+  .cover::before {
+    content: ""; position: absolute; top: 28px; left: 28px;
+    width: 80px; height: 3px; background: var(--accent-rose); border-radius: 2px;
+  }
+  .cover .year {
+    font-size: 12px; letter-spacing: 0.3em;
+    color: var(--accent-rose); font-weight: 700; margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-size: 52px; font-weight: 800; margin: 0 0 16px;
+    line-height: 1.1; color: var(--text-main); letter-spacing: -0.02em;
+  }
+  .cover h1 .brand-en {
+    display: block; font-size: 68px;
+    color: var(--accent-rose); letter-spacing: 0.03em; margin-bottom: 8px;
+  }
+  .cover .subtitle {
+    font-size: 19px; font-weight: 400; color: var(--text-sub);
+    margin: 12px 0 24px; letter-spacing: 0.02em;
+  }
+  .cover .subtitle .em { color: var(--accent-beige); font-weight: 600; }
+  .cover .thesis-line {
+    font-size: 15.5px; color: var(--accent-beige);
+    line-height: 1.75; max-width: 760px;
+    margin: 8px 0 32px; font-weight: 400;
+    border-left: 2px solid var(--accent-rose); padding-left: 18px;
+  }
+  .cover .thesis-line strong { color: var(--text-main); font-weight: 700; }
+  .cover footer {
+    margin-top: auto; margin-bottom: 32px; font-size: 11px;
+    color: var(--text-caption);
+    border-top: 1px solid var(--border-soft); padding-top: 20px;
+  }
+  .cover footer span { display: block; line-height: 1.7; }
+
+  /* ===== Strategic Thesis ===== */
+  .thesis-section {
+    background:
+      radial-gradient(ellipse 600px 400px at 75% 30%, rgba(245, 212, 216, 0.10) 0%, transparent 55%),
+      var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 16px;
+    padding: 64px 56px 96px;
+    margin: 0 0 32px;
+    position: relative; overflow: hidden;
+  }
+  .thesis-section .meta-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 800;
+    color: var(--accent-rose);
+    letter-spacing: 0.25em; text-transform: uppercase;
+    border: 1px solid var(--accent-rose);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 26px;
+  }
+  .thesis-section h2 {
+    font-size: 30px; font-weight: 800;
+    line-height: 1.45; margin: 0 0 14px;
+    color: var(--text-main); letter-spacing: -0.02em;
+    max-width: 880px;
+  }
+  .thesis-section .thesis-sub {
+    font-size: 15px; color: var(--text-sub);
+    line-height: 1.8; max-width: 820px; margin: 0 0 36px;
+  }
+  .thesis-section .thesis-sub strong { color: var(--accent-beige); font-weight: 700; }
+  .thesis-divider {
+    display: block; width: 60px; height: 2px;
+    background: var(--accent-rose); margin: 28px 0; border: none;
+  }
+
+  /* ===== TOC ===== */
+  .toc {
+    background: var(--bg-card); border: 1px solid var(--border-soft);
+    border-radius: 16px; padding: 56px 56px 96px;
+    margin: 0 0 32px; position: relative;
+  }
+  .toc h2 {
+    font-size: 11px; color: var(--accent-rose);
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  .toc h1 { font-size: 36px; margin: 0 0 32px; color: var(--text-main); }
+  .toc ol { list-style: none; padding: 0; counter-reset: section; }
+  .toc ol li {
+    counter-increment: section; padding: 16px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 17px; font-weight: 600;
+    display: flex; align-items: center; gap: 20px;
+    color: var(--text-main);
+  }
+  .toc ol li::before {
+    content: counter(section, decimal-leading-zero);
+    font-size: 14px; background: transparent;
+    color: var(--accent-rose); border: 1px solid var(--accent-rose);
+    padding: 6px 12px; border-radius: 6px;
+    min-width: 56px; text-align: center;
+    font-weight: 700; letter-spacing: 0.04em;
+  }
+  .toc ol li .ch-name { flex: 1; }
+  .toc ol li .ch-desc {
+    font-size: 13px; color: var(--text-sub); font-weight: 400;
+    margin-left: auto;
+  }
+
+  /* ===== Chapter Heading (간지 · Declarative Divider) ===== */
+  .chapter {
+    margin: 56px 0 24px;
+    padding: 72px 56px 96px;
+    min-height: 560px;
+    display: flex; flex-direction: column;
+    background: linear-gradient(180deg, #0c0a08 0%, #050402 100%);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    position: relative; text-align: left; overflow: hidden;
+  }
+  /* 챕터 eyebrow (번호 + 제목 결합 라벨) */
+  .chapter .ch-eyebrow {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .chapter .ch-eyebrow .ch-eyebrow-title { color: var(--text-sub); margin-left: 8px; }
+
+  /* ===== Flow Spine (흐름 일관성 인디케이터) ===== */
+  .flow-spine {
+    display: flex; align-items: flex-start;
+    margin: 0 0 44px; max-width: 720px;
+  }
+  .flow-spine .fs-stage {
+    display: flex; flex-direction: column; align-items: center;
+    flex: 1; position: relative;
+  }
+  .flow-spine .fs-line {
+    position: absolute; top: 6px; left: 50%; width: 100%;
+    height: 2px; background: var(--border-strong); z-index: 0;
+  }
+  .flow-spine .fs-stage:last-child .fs-line { display: none; }
+  .flow-spine .fs-stage.done .fs-line { background: var(--accent-beige); opacity: 0.5; }
+  .flow-spine .fs-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--bg-page); border: 2px solid var(--border-strong);
+    z-index: 1;
+  }
+  .flow-spine .fs-stage.done .fs-dot { background: var(--accent-beige); border-color: var(--accent-beige); }
+  .flow-spine .fs-stage.current .fs-dot {
+    width: 16px; height: 16px; margin-top: -2px;
+    background: var(--accent-rose); border-color: var(--accent-rose);
+    box-shadow: 0 0 0 5px rgba(245,212,216,0.18);
+  }
+  .flow-spine .fs-label {
+    margin-top: 12px; font-size: 11px;
+    color: var(--text-caption); letter-spacing: 0.04em; font-weight: 600;
+  }
+  .flow-spine .fs-stage.done .fs-label { color: var(--text-sub); }
+  .flow-spine .fs-stage.current .fs-label { color: var(--accent-rose); font-weight: 800; }
+
+  /* ===== Declaration (선언 문장 — 간지 hero) ===== */
+  .chapter .declaration {
+    font-size: 38px; font-weight: 800;
+    line-height: 1.42; letter-spacing: -0.025em;
+    color: var(--text-main); margin: 0 0 18px;
+    max-width: 880px;
+  }
+  .chapter .declaration .em {
+    color: var(--accent-rose);
+    background: linear-gradient(transparent 70%, rgba(245,184,192,0.18) 70%);
+  }
+  .chapter .declaration-sub {
+    font-size: 15px; color: var(--accent-beige);
+    line-height: 1.7; letter-spacing: 0.01em;
+    margin: 0; max-width: 760px; font-weight: 500;
+  }
+  .chapter .ch-divider-rule {
+    width: 100%; height: 1px; background: var(--border-soft);
+    margin: 28px 0 0; border: none;
+  }
+  /* 챕터 제목 (간지 하단 소제목 역할) */
+  .chapter .ch-title {
+    font-size: 22px; font-weight: 700; color: var(--text-main);
+    margin: 28px 0 0; letter-spacing: -0.01em;
+  }
+  .chapter .ch-title .underline {
+    display: inline-block;
+    border-bottom: 2px solid var(--accent-rose); padding-bottom: 3px;
+  }
+  .chapter::after {
+    content: ""; position: absolute;
+    top: 24px; right: 32px;
+    width: 80px; height: 80px;
+    border: 1px solid var(--accent-rose);
+    opacity: 0.25; border-radius: 50%; pointer-events: none;
+  }
+  .chapter::before {
+    content: ""; position: absolute;
+    top: 12px; right: 56px;
+    width: 80px; height: 80px;
+    border: 1px solid var(--accent-beige);
+    opacity: 0.15; border-radius: 50%; pointer-events: none;
+  }
+  .chapter .ch-num {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase;
+  }
+  .chapter h1 {
+    margin: 14px 0 0; font-size: 42px; font-weight: 800;
+    color: var(--text-main); letter-spacing: -0.02em;
+  }
+  .chapter h1 .underline {
+    display: inline-block;
+    border-bottom: 3px solid var(--accent-rose); padding-bottom: 4px;
+  }
+  .chapter .ch-summary {
+    margin: 22px 0 0; font-size: 14.5px;
+    color: var(--text-sub); line-height: 1.85; max-width: 840px;
+  }
+  .chapter .ch-conclusion {
+    margin-top: 32px; padding: 14px 18px;
+    background: var(--accent-rose-soft);
+    border-left: 3px solid var(--accent-rose);
+    border-radius: 0 8px 8px 0;
+    font-size: 13.5px; color: var(--accent-rose);
+    font-weight: 600; max-width: 820px;
+  }
+  .chapter .ch-conclusion strong { color: var(--text-main); font-weight: 700; }
+
+  /* ===== Slide ===== */
+  .slide {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 56px 56px 80px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    scroll-margin-top: 80px;
+    position: relative;
+  }
+  .slide-meta {
+    display: inline-block;
+    background: transparent; color: var(--accent-rose);
+    padding: 4px 12px; border: 1px solid var(--accent-rose);
+    border-radius: 999px; font-size: 10px; font-weight: 800;
+    letter-spacing: 0.12em; margin-bottom: 18px; text-transform: uppercase;
+  }
+  .slide-title {
+    margin: 0 0 14px; font-size: 25px;
+    font-weight: 700; color: var(--text-main);
+    line-height: 1.45; letter-spacing: -0.01em;
+  }
+  .slide-title-sub {
+    margin: -8px 0 22px; font-size: 14px;
+    color: var(--text-sub); font-weight: 400; line-height: 1.7;
+  }
+  .highlight {
+    background: linear-gradient(transparent 62%, var(--highlight-bg) 62%);
+    padding: 0 4px; font-weight: 700; color: var(--accent-rose);
+  }
+  .slide-bullets { list-style: none; padding: 0; margin: 0 0 18px; }
+  .slide-bullets li {
+    color: var(--text-sub); font-size: 14.5px;
+    margin: 8px 0; padding-left: 20px;
+    position: relative; line-height: 1.8;
+  }
+  .slide-bullets li::before {
+    content: "·"; position: absolute; left: 4px;
+    color: var(--accent-rose); font-weight: 800;
+  }
+  .slide-bullets li.sub {
+    color: var(--text-caption); font-size: 13.5px; padding-left: 32px;
+  }
+  .slide-bullets li.sub::before { content: "ㄴ"; color: var(--text-caption); left: 16px; }
+  .slide-bullets li strong { color: var(--text-main); }
+
+  /* Tables (dark) */
+  .slide table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    font-size: 13.5px; background: var(--bg-card-soft);
+    border-radius: 8px; overflow: hidden;
+  }
+  .slide th, .slide td {
+    border: 1px solid var(--border-soft);
+    padding: 12px 14px; text-align: left; vertical-align: top;
+    color: var(--text-sub);
+  }
+  .slide th {
+    background: var(--bg-elev); color: var(--accent-rose);
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .slide td strong { color: var(--text-main); }
+  .slide tbody tr:hover { background: rgba(245, 212, 216, 0.04); }
+
+  /* ===== Bridge to Next Slide ===== */
+  .bridge {
+    margin: 30px 0 6px;
+    padding: 18px 22px;
+    background: linear-gradient(90deg, rgba(245, 212, 216, 0.10) 0%, transparent 100%);
+    border-left: 3px solid var(--accent-rose);
+    border-radius: 0 10px 10px 0;
+    font-size: 14.5px; line-height: 1.7;
+    color: var(--text-main); font-weight: 600;
+    position: relative;
+  }
+  .bridge::before {
+    content: "→ NEXT"; display: block;
+    font-size: 9px; font-weight: 800;
+    letter-spacing: 0.25em; color: var(--accent-rose);
+    margin-bottom: 8px; text-transform: uppercase;
+  }
+  .bridge strong { color: var(--accent-rose); }
+  .bridge em { font-style: normal; color: var(--accent-beige); font-weight: 600; }
+
+  /* ===== Hero Metric ===== */
+  .hero-metric-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    margin: 24px 0;
+    background: var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .hero-metric {
+    background: var(--bg-card-soft);
+    padding: 26px 22px 28px;
+    text-align: left; position: relative;
+  }
+  .hero-metric .hm-label {
+    font-size: 10px; color: var(--text-caption);
+    font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .hero-metric .hm-value {
+    font-size: 38px; font-weight: 800;
+    color: var(--accent-rose); margin: 0 0 6px;
+    line-height: 1; letter-spacing: -0.02em;
+  }
+  .hero-metric .hm-value .hm-unit {
+    font-size: 17px; color: var(--accent-beige);
+    margin-left: 3px;
+  }
+  .hero-metric .hm-trend {
+    display: inline-block; padding: 2px 8px;
+    border-radius: 4px; font-size: 11px; font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .hero-metric .hm-trend.up { background: rgba(245, 212, 216, 0.15); color: var(--accent-rose); }
+  .hero-metric .hm-trend.down { background: rgba(168, 188, 204, 0.15); color: var(--accent-blue); }
+  .hero-metric .hm-desc {
+    font-size: 12px; color: var(--text-sub);
+    line-height: 1.6; margin: 8px 0 0;
+  }
+
+  /* ===== Horizontal Bar Chart ===== */
+  .bar-chart {
+    margin: 22px 0;
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px 26px;
+  }
+  .bar-chart .bc-title {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 80px;
+    gap: 14px; align-items: center;
+    margin: 10px 0;
+  }
+  .bar-label { font-size: 13px; color: var(--text-main); font-weight: 600; }
+  .bar-track {
+    height: 22px; background: rgba(245, 212, 216, 0.06);
+    border-radius: 4px; position: relative; overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%; border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent-rose) 0%, var(--accent-warm) 100%);
+    display: flex; align-items: center; padding-left: 10px;
+    font-size: 11px; color: #1a1a1a; font-weight: 800;
+  }
+  .bar-fill.neg { background: linear-gradient(90deg, var(--accent-blue) 0%, #7a8a9a 100%); color: #1a1a1a; }
+  .bar-fill.muted { background: linear-gradient(90deg, var(--bg-elev) 0%, var(--border-strong) 100%); color: var(--text-sub); }
+  .bar-value { font-size: 13px; color: var(--accent-rose); font-weight: 800; text-align: right; }
+  .bar-value.neg { color: var(--accent-blue); }
+  .bar-value.muted { color: var(--text-caption); }
+
+  /* ===== SVG Line Chart ===== */
+  .line-chart {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 22px 0;
+  }
+  .line-chart .lc-title {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .line-chart svg { width: 100%; height: 180px; }
+  .line-chart .lc-x-labels {
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: var(--text-caption); margin-top: 8px;
+    padding: 0 8px;
+  }
+
+  /* ===== Donut Chart ===== */
+  .donut-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px; align-items: center;
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 22px 0;
+  }
+  .donut {
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--accent-rose) 0% 32%,
+      var(--accent-warm) 32% 50%,
+      var(--accent-beige) 50% 63%,
+      var(--accent-blue) 63% 75%,
+      var(--bg-elev) 75% 100%
+    );
+    position: relative;
+    margin: 0 auto;
+  }
+  .donut::after {
+    content: ""; position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; height: 120px;
+    background: var(--bg-card);
+    border-radius: 50%;
+  }
+  .donut .donut-center {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; z-index: 1;
+  }
+  .donut .donut-center .dc-value {
+    font-size: 26px; font-weight: 800;
+    color: var(--accent-rose); line-height: 1;
+  }
+  .donut .donut-center .dc-label {
+    font-size: 10px; color: var(--text-sub);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;
+  }
+  .donut-legend ul { list-style: none; padding: 0; margin: 0; }
+  .donut-legend li {
+    display: grid;
+    grid-template-columns: 14px 1fr 50px;
+    gap: 12px; align-items: center;
+    padding: 6px 0; font-size: 13px;
+    border-bottom: 1px dashed var(--border-soft);
+  }
+  .donut-legend li:last-child { border-bottom: none; }
+  .donut-legend .lg-dot {
+    width: 12px; height: 12px; border-radius: 3px;
+  }
+  .donut-legend .lg-name { color: var(--text-main); }
+  .donut-legend .lg-value { color: var(--accent-rose); font-weight: 800; text-align: right; }
+
+  /* ===== Positioning Map (2-axis) ===== */
+  .position-map {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px;
+    margin: 22px 0;
+  }
+  .pm-title {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .pm-area {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-left: 1px solid var(--border-strong);
+    border-bottom: 1px solid var(--border-strong);
+    margin: 0 12px 12px 60px;
+  }
+  .pm-area::before {
+    content: ""; position: absolute;
+    top: 50%; left: 0; right: 0; height: 1px;
+    background: var(--border-soft); opacity: 0.4;
+  }
+  .pm-area::after {
+    content: ""; position: absolute;
+    top: 0; bottom: 0; left: 50%; width: 1px;
+    background: var(--border-soft); opacity: 0.4;
+  }
+  .pm-axis-y, .pm-axis-x {
+    position: absolute; font-size: 10px;
+    color: var(--text-caption); letter-spacing: 0.05em;
+  }
+  .pm-axis-y { left: -56px; top: 50%; transform: translateY(-50%) rotate(-90deg); white-space: nowrap; }
+  .pm-axis-y.top { top: 8px; transform: none; left: -56px; color: var(--accent-beige); }
+  .pm-axis-y.bottom { bottom: 8px; top: auto; transform: none; left: -56px; color: var(--accent-beige); }
+  .pm-axis-x.center { bottom: -22px; left: 50%; transform: translateX(-50%); }
+  .pm-axis-x.left { bottom: -22px; left: 0; color: var(--accent-beige); }
+  .pm-axis-x.right { bottom: -22px; right: 0; color: var(--accent-beige); }
+  .pm-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 88px; padding: 6px 10px;
+    background: var(--bg-card);
+    border: 1.5px solid var(--accent-rose);
+    border-radius: 6px;
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; text-align: center;
+    box-shadow: 0 0 0 4px rgba(245, 212, 216, 0.08);
+  }
+  .pm-point.us {
+    background: var(--accent-rose); color: #1a1a1a;
+    box-shadow: 0 0 0 6px rgba(245, 212, 216, 0.20);
+    z-index: 2;
+  }
+  .pm-point.competitor {
+    border-color: var(--accent-blue); color: var(--accent-blue);
+    background: var(--bg-card);
+  }
+  .pm-point.competitor::before {
+    content: ""; position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+  }
+  .pm-zone {
+    position: absolute;
+    border: 1px dashed var(--accent-beige);
+    background: rgba(230, 216, 197, 0.05);
+    border-radius: 6px;
+    font-size: 10px; color: var(--accent-beige);
+    padding: 4px 8px; letter-spacing: 0.04em; font-weight: 700;
+  }
+
+  /* ===== Funnel Diagram ===== */
+  .funnel-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin: 22px 0;
+  }
+  .funnel-step {
+    background: var(--bg-card-soft);
+    padding: 18px 16px 22px;
+    text-align: center;
+    position: relative;
+    border-top: 3px solid;
+  }
+  .funnel-step:nth-child(1) { border-top-color: var(--accent-rose); }
+  .funnel-step:nth-child(2) { border-top-color: var(--accent-warm); }
+  .funnel-step:nth-child(3) { border-top-color: var(--accent-gold); }
+  .funnel-step:nth-child(4) { border-top-color: var(--accent-beige); }
+  .funnel-step .fs-num {
+    font-size: 10px; color: var(--accent-rose);
+    font-weight: 800; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .funnel-step h6 {
+    margin: 0 0 8px; font-size: 14px;
+    color: var(--text-main); font-weight: 700;
+  }
+  .funnel-step p {
+    margin: 0; font-size: 11.5px;
+    color: var(--text-sub); line-height: 1.6;
+  }
+  .funnel-step::after {
+    content: "▶"; position: absolute;
+    top: 50%; right: -10px; transform: translateY(-50%);
+    color: var(--accent-rose); font-size: 12px;
+    background: var(--bg-page); padding: 0 4px;
+  }
+  .funnel-step:last-child::after { display: none; }
+
+  /* ===== Season Calendar ===== */
+  .season-cal {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 22px 0;
+  }
+  .sc-title {
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .sc-track {
+    position: relative;
+    height: 80px;
+    background: rgba(245, 212, 216, 0.05);
+    border-radius: 6px;
+  }
+  .sc-month-marks {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: absolute;
+    inset: 0;
+  }
+  .sc-month-marks > div {
+    border-right: 1px dashed var(--border-soft);
+    font-size: 10px; color: var(--text-caption);
+    padding: 4px 6px;
+  }
+  .sc-month-marks > div:last-child { border-right: none; }
+  .sc-block {
+    position: absolute;
+    height: 32px; top: 24px;
+    border-radius: 4px;
+    display: flex; align-items: center;
+    padding: 0 10px;
+    font-size: 11px; font-weight: 800;
+    color: #1a1a1a;
+    z-index: 2;
+  }
+  .sc-block.major {
+    background: linear-gradient(90deg, var(--accent-rose) 0%, var(--accent-warm) 100%);
+    box-shadow: 0 0 0 3px rgba(245, 212, 216, 0.2);
+  }
+  .sc-block.minor {
+    background: linear-gradient(90deg, var(--accent-beige) 0%, var(--accent-gold) 100%);
+  }
+
+  /* ===== Persona Card ===== */
+  .persona-card {
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 14px 0;
+    position: relative;
+  }
+  .persona-card.primary {
+    background: linear-gradient(135deg, rgba(245, 212, 216, 0.12) 0%, transparent 100%);
+    border: 1px solid var(--accent-rose);
+  }
+  .persona-card.secondary {
+    background: linear-gradient(135deg, rgba(168, 188, 204, 0.10) 0%, transparent 100%);
+    border: 1px solid var(--accent-blue);
+  }
+  .persona-card.excluded {
+    background: var(--bg-card-soft);
+    border: 1px dashed var(--border-strong);
+    opacity: 0.7;
+  }
+  .pc-tag {
+    display: inline-block;
+    font-size: 10px; font-weight: 800;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .persona-card.primary .pc-tag { background: var(--accent-rose); color: #1a1a1a; }
+  .persona-card.secondary .pc-tag { background: var(--accent-blue); color: #1a1a1a; }
+  .persona-card.excluded .pc-tag { background: var(--bg-elev); color: var(--text-caption); }
+  .pc-name {
+    font-size: 19px; font-weight: 800;
+    color: var(--text-main); margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .pc-desc { font-size: 13.5px; color: var(--text-sub); line-height: 1.7; margin: 0 0 14px; }
+  .pc-detail {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 8px 14px; font-size: 12px;
+    border-top: 1px solid var(--border-soft); padding-top: 12px;
+  }
+  .pc-detail dt { color: var(--accent-beige); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .pc-detail dd { margin: 0; color: var(--text-sub); line-height: 1.65; }
+  .pc-detail dd strong { color: var(--text-main); }
+
+  /* ===== Message Axis (3축 카드) ===== */
+  .msg-axis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px; margin: 22px 0;
+  }
+  .msg-axis-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px;
+    position: relative;
+    border-top: 3px solid var(--accent-rose);
+  }
+  .msg-axis-card:nth-child(2) { border-top-color: var(--accent-beige); }
+  .msg-axis-card:nth-child(3) { border-top-color: var(--accent-warm); }
+  .msg-axis-card .ma-num {
+    font-size: 10px; color: var(--accent-rose);
+    font-weight: 800; letter-spacing: 0.2em;
+    margin-bottom: 8px;
+  }
+  .msg-axis-card h5 {
+    margin: 0 0 12px; font-size: 16px;
+    color: var(--text-main); font-weight: 800;
+    letter-spacing: -0.01em; line-height: 1.4;
+  }
+  .msg-axis-card .ma-desc {
+    font-size: 12.5px; color: var(--text-sub);
+    line-height: 1.7; margin: 0 0 12px;
+  }
+  .msg-axis-card .ma-detail {
+    font-size: 11.5px; color: var(--text-caption);
+    line-height: 1.6; padding-top: 10px;
+    border-top: 1px solid var(--border-soft);
+  }
+  .msg-axis-card .ma-detail strong { color: var(--accent-beige); }
+
+  /* ===== Flow Arrow Connector ===== */
+  .flow-conn {
+    display: flex; align-items: center; justify-content: center;
+    margin: 12px 0; gap: 14px;
+    font-size: 11px; color: var(--accent-rose);
+    font-weight: 700; letter-spacing: 0.1em;
+  }
+  .flow-conn::before, .flow-conn::after {
+    content: ""; flex: 1; max-width: 80px;
+    height: 1px; background: var(--accent-rose); opacity: 0.5;
+  }
+
+  /* ===== Print PDF ===== */
+  @media print {
+    .topbar, .sidebar { display: none !important; }
+    .container { display: block !important; }
+    .main { padding: 0 !important; max-width: 100% !important; }
+    .slide, .cover, .toc, .chapter, .thesis-section {
+      page-break-after: always; page-break-inside: avoid;
+      margin: 0 !important; border-radius: 0 !important; min-height: 100vh;
+    }
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1023px) {
+    .container { grid-template-columns: 1fr; }
+    .sidebar { position: relative; top: 0; height: auto; border-right: none; border-bottom: 1px solid var(--border-soft); }
+    .main { padding: 24px; }
+    .msg-axis, .funnel-row { grid-template-columns: 1fr; }
+    .donut-row { grid-template-columns: 1fr; }
+  }
+
+  /* Position fix for absolute children */
+  .cover > *:not(.madup-mark):not(.page-no):not(.page-label),
+  .thesis-section > *:not(.madup-mark):not(.page-no):not(.page-label),
+  .chapter > *:not(.madup-mark):not(.page-no):not(.page-label),
+  .toc > *:not(.madup-mark):not(.page-no):not(.page-label) {
+    position: relative; z-index: 1;
+  }
+
+  /* ============================================================ */
+  /* ===== LIGHT THEME — 콘텐츠 슬라이드 + TOC (와이어트 일반 페이지) ===== */
+  /* CSS 변수 스코핑: .slide / .toc 하위 모든 컴포넌트가 자동 전환 */
+  /* (간지 .chapter / .cover / .thesis-section / #closing 은 다크 유지) */
+  /* ============================================================ */
+  .slide, .toc {
+    --bg-page: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-soft: #faf7f3;
+    --bg-elev: #f2ede5;
+    --border-soft: #e9e3d9;
+    --border-strong: #d6ccbe;
+    --text-main: #2b2620;
+    --text-sub: #6e655a;
+    --text-caption: #a09684;
+    --accent-rose: #b5616f;        /* 화이트 배경 가독성용 딥 로즈 */
+    --accent-rose-soft: rgba(181, 97, 111, 0.10);
+    --accent-beige: #9c7c54;       /* 딥 웜 골드 */
+    --accent-gold: #b89a6f;
+    --accent-warm: #bd7e73;
+    --accent-blue: #5f7488;
+    --highlight-bg: rgba(245, 184, 192, 0.50);
+  }
+  /* 화이트 카드: 다크 캔버스 위에서 떠 보이도록 그림자 강화 */
+  .slide {
+    box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+    border-color: var(--border-soft);
+  }
+  .toc {
+    box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+  }
+  /* 본문 강조어: 화이트 배경에서 핑크 하이라이트 + 딥 로즈 텍스트 */
+  .slide .highlight, .toc .highlight {
+    color: var(--accent-rose);
+  }
+  /* 표 헤더 가독성 */
+  .slide th { color: var(--accent-rose); }
+  /* funnel 화살표 마스크가 화이트 슬라이드와 자연스럽게 */
+  .slide .funnel-step::after { background: #ffffff; }
+  /* bar-fill 텍스트(딥 로즈 막대 위) 흰색으로 */
+  .slide .bar-fill { color: #ffffff; }
+  .slide .bar-fill.muted { color: var(--text-sub); }
+  /* persona / msg-axis 카드 — 화이트에서 톤 보정 */
+  .slide .persona-card.primary { background: linear-gradient(135deg, rgba(181,97,111,0.07) 0%, #ffffff 100%); }
+  .slide .persona-card.secondary { background: linear-gradient(135deg, rgba(95,116,136,0.07) 0%, #ffffff 100%); }
+  .slide .persona-card.excluded { background: var(--bg-card-soft); }
+  .slide .persona-card.primary .pc-tag,
+  .slide .persona-card.secondary .pc-tag { color: #ffffff; }
+  /* 도넛 hole = 화이트 */
+  .slide .donut::after { background: #ffffff; }
+  /* position-map us 포인트 텍스트 화이트 */
+  .slide .pm-point.us { color: #ffffff; }
+</style>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="https://ddolovely0919-ai.github.io/madup2525/index.html" class="action-btn">← 팩트북</a>
+  <span class="title">OLLI LIRA × MADUP 2026</span>
+  <span class="pill">v2.0 · 1.5 페르소나 정합</span>
+  <span class="pill">Pro 신제품 전략</span>
+  <div class="actions">
+    <button id="btn-export-pptx" class="action-btn" title="제안서를 편집 가능한 PowerPoint(.pptx)로 다운로드 — 텍스트·표·차트 수정 가능">⬇ PPT (편집가능)</button>
+    <button onclick="window.print()" class="action-btn">🖨 인쇄</button>
+  </div>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+  <h2>Contents</h2>
+  <nav class="index-nav">
+    <ul>
+      <li class="index-section"><a href="#cover">표지</a></li>
+      <li class="index-section"><a href="#thesis"><span class="ch-badge">★</span>핵심 명제</a></li>
+      <li class="index-section"><a href="#toc">목차</a></li>
+      <li class="index-section"><a href="#ch1"><span class="ch-badge">01</span>시장 진단</a>
+        <ul class="index-sub">
+          <li><a href="#s1-1">시장 폭증</a></li>
+          <li><a href="#s1-2">1강 + 추격군 구도</a></li>
+          <li><a href="#s1-3">검색 패러다임 전환</a></li>
+          <li><a href="#s1-4">슬로우에이징 트렌드</a></li>
+          <li><a href="#s1-sum">Ch1 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch2"><span class="ch-badge">02</span>자사 진단</a>
+        <ul class="index-sub">
+          <li><a href="#s2-1">OLLI LIRA 라인업</a></li>
+          <li><a href="#s2-2">광고주 PDF 결정</a></li>
+          <li><a href="#s2-3">EMS 단일 미스매치</a></li>
+          <li><a href="#s2-4">경쟁 포지셔닝 맵</a></li>
+          <li><a href="#s2-sum">Ch2 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch3"><span class="ch-badge">03</span>전략 결정</a>
+        <ul class="index-sub">
+          <li><a href="#s3-1">1.5 페르소나 결정</a></li>
+          <li><a href="#s3-2">Pro 결합형 모드 확장</a></li>
+          <li><a href="#s3-3">메시지 프레임 3축</a></li>
+          <li><a href="#s3-4">시즌 캠페인 캘린더</a></li>
+          <li><a href="#s3-sum">Ch3 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch4"><span class="ch-badge">04</span>매체 운영</a>
+        <ul class="index-sub">
+          <li><a href="#s4-1">매체 믹스 전체</a></li>
+          <li><a href="#s4-2">검색 운영</a></li>
+          <li><a href="#s4-3">메타·구글</a></li>
+          <li><a href="#s4-4">네이버 BS·협력광고</a></li>
+          <li><a href="#s4-5">카카오 선물하기 (시즌)</a></li>
+          <li><a href="#s4-sum">Ch4 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch5"><span class="ch-badge">05</span>크리에이티브</a>
+        <ul class="index-sub">
+          <li><a href="#s5-1">카피 11종 매트릭스</a></li>
+          <li><a href="#s5-2">메시지 프레임 디테일</a></li>
+          <li><a href="#s5-3">SPRAY AI · 심의봇</a></li>
+          <li><a href="#s5-4">톤앤매너 가이드</a></li>
+          <li><a href="#s5-sum">Ch5 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch6"><span class="ch-badge">06</span>CRM · 재구매</a>
+        <ul class="index-sub">
+          <li><a href="#s6-1">CRM 5단 시나리오</a></li>
+          <li><a href="#s6-2">MILOT 통합 데이터</a></li>
+          <li><a href="#s6-3">Pro 락인 재구매</a></li>
+          <li><a href="#s6-sum">Ch6 결론</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#ch7"><span class="ch-badge">07</span>매드업 솔루션</a>
+        <ul class="index-sub">
+          <li><a href="#s7-1">시그니처 솔루션 4종</a></li>
+          <li><a href="#s7-2">전담 조직 R&R</a></li>
+          <li><a href="#s7-3">Special Offer 3종</a></li>
+          <li><a href="#s7-4">일정 로드맵</a></li>
+        </ul>
+      </li>
+      <li class="index-section"><a href="#closing">Thank You</a></li>
+    </ul>
+  </nav>
+  <p style="font-size:10px;color:var(--text-caption);padding:10px;margin-top:20px;letter-spacing:0.05em;">
+    📊 <a href="https://ddolovely0919-ai.github.io/madup2525/viewer.html?c=yakson" target="_blank">팩트북 99 슬라이드</a><br>
+    🌐 <a href="https://ddolovely0919-ai.github.io/madup2525/index.html" target="_blank">대시보드</a>
+  </p>
+</aside>
+
+<main class="main">
+
+<!-- ============================================ -->
+<!-- COVER -->
+<!-- ============================================ -->
+<section class="cover" id="cover">
+  <div class="year">2026 PROPOSAL · v2.0</div>
+  <h1>
+    <span class="brand-en">OLLI LIRA</span>
+    × MADUP
+  </h1>
+  <p class="subtitle">약손명가헬스케어 <span class="em">디지털 마케팅 전략</span></p>
+  <p class="thesis-line">
+    <strong>46년 약손명가 헤리티지의 단계적 이양</strong>과 <strong>EMS 단일에서 결합형 멀티테크로의 진화</strong>를 통해,<br>
+    Slow-aging Starter 페르소나를 정조준하고 4050 시즌 시장도 비대칭으로 흡수합니다.
+  </p>
+  <footer>
+    <span>Copyright © 2026 MADUP, All rights reserved</span>
+    <span>Tel. 02-1522-1060 | 서울특별시 서초구 서초대로 74길 4 삼성생명서초타워 20층</span>
+  </footer>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- ============================================ -->
+<!-- STRATEGIC THESIS -->
+<!-- ============================================ -->
+<section class="thesis-section" id="thesis">
+  <div class="page-label">핵심 명제 ㅣ Strategic Thesis</div>
+  <span class="meta-tag">Strategic Thesis</span>
+  <h2>
+    매드업은 OLLI LIRA에 <span class="highlight">단일 페르소나 집중·신제품 진화·시즌 비대칭 흡수</span>의<br>
+    세 가지 결정을 동시에 권합니다
+  </h2>
+  <p class="thesis-sub">
+    뷰티 디바이스 시장은 1조7천억 → 3조4천억으로 폭증하지만, 메디큐브 1강 + 추격군 4사 + 후발 5사가 점유한 가장 어려운 진입 국면입니다.
+    <strong>광고주의 약손명가 IP 축소 결정(2026-05-26)과 EMS 단일의 페르소나 미스매치</strong>는 동일한 답을 가리킵니다 — 다층 운영 폐기·결합형 진화·시즌 비대칭이라는 세 결정으로 단일 프레임을 만듭니다.
+  </p>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">시장 규모 2030</div>
+      <div class="hm-value">3.4<span class="hm-unit">조</span></div>
+      <div class="hm-desc">2024 대비 +100% 성장 전망 · KPMG 슬로우에이징 견인</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">갈바닉 디바이스 검색</div>
+      <div class="hm-trend up">↑ 폭증</div>
+      <div class="hm-value">+1,762<span class="hm-unit">%</span></div>
+      <div class="hm-desc">2022.05 → 2026.04 / 리스닝마인드 701개 키워드 실데이터</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">코어 페르소나</div>
+      <div class="hm-value">80<span class="hm-unit">%</span></div>
+      <div class="hm-desc">Slow-aging Starter (33-42세 EMS 진입기) 예산 집중</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">매드업 어워즈</div>
+      <div class="hm-value">5<span class="hm-unit">년</span></div>
+      <div class="hm-desc">Meta·Criteo Agency of the Year 5년 연속(2021~2025)</div>
+    </div>
+  </div>
+
+  <hr class="thesis-divider">
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.15em;text-transform:uppercase;font-weight:800;margin:0 0 16px;">세 가지 결정</p>
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">결정 ①</div>
+      <h5>1.5 페르소나 단일 집중</h5>
+      <p class="ma-desc">Slow-aging Starter 80% + Gift Buyer Path 20%. 1020은 자연 유입만.</p>
+      <p class="ma-detail">→ <strong>다층 운영 폐기</strong>로 메시지·예산·소재가 단일 톤으로 정렬됩니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">결정 ②</div>
+      <h5>Pro 결합형 모드 확장</h5>
+      <p class="ma-desc">EMS 밴드 + RF·갈바닉 어태치먼트 = 카테고리 빈자리 진입.</p>
+      <p class="ma-detail">→ <strong>2026 Q3 출시</strong>로 +1,762% 폭증 시장의 빈자리를 점유합니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">결정 ③</div>
+      <h5>시즌 비대칭 흡수</h5>
+      <p class="ma-desc">어버이날 50% / 추석 35% / 설날 15% — 3회 D-30 집중 운영.</p>
+      <p class="ma-detail">→ <strong>광고는 30대 자녀, 사용은 4050 부모</strong>로 RFP를 그대로 유지합니다.</p>
+    </div>
+  </div>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">01</div>
+</section>
+
+<!-- ============================================ -->
+<!-- TOC -->
+<!-- ============================================ -->
+<section class="toc" id="toc">
+  <h2>Contents</h2>
+  <h1>목차</h1>
+  <ol>
+    <li><span class="ch-name">시장 진단</span><span class="ch-desc">시장 폭증 · 1강 구도 · 검색 패러다임 · 슬로우에이징</span></li>
+    <li><span class="ch-name">자사 진단</span><span class="ch-desc">OLLI LIRA 라인업 · IP 결정 · EMS 미스매치 · 경쟁 맵</span></li>
+    <li><span class="ch-name">전략 결정</span><span class="ch-desc">1.5 페르소나 · Pro 신제품 · 3축 메시지 · 시즌 캘린더</span></li>
+    <li><span class="ch-name">매체 운영</span><span class="ch-desc">8 채널 · 검색 · 메타·구글 · BS · 카카오 시즌</span></li>
+    <li><span class="ch-name">크리에이티브</span><span class="ch-desc">카피 11종 · 메시지 3축 · SPRAY AI · 톤앤매너</span></li>
+    <li><span class="ch-name">CRM · 재구매</span><span class="ch-desc">5단 시나리오 · MILOT · Pro 락인</span></li>
+    <li><span class="ch-name">매드업 솔루션 · 일정</span><span class="ch-desc">시그니처 4종 · 조직 R&R · Special Offer · 12주 + Q3</span></li>
+  </ol>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">02</div>
+</section>
+
+<!-- ============================================ -->
+<!-- CHAPTER 01 — 시장 진단 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch1">
+  <div class="ch-eyebrow">Chapter 01<span class="ch-eyebrow-title">· 시장 진단</span></div>
+  <div class="flow-spine"><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">1등은 이미 메디큐브입니다.<br><span class="em">그런데 가장 빠르게 크는 자리는 비어 있습니다.</span></h1>
+  <p class="declaration-sub">갈바닉 +1,762% · 고주파 +1,120%로 폭증하는 카테고리. 1강과 정면 승부 대신, 비어 있는 바로 그 자리가 진입점입니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">시장 진단</span></p>
+  <p class="ch-summary">국내 뷰티 디바이스 시장은 9년 만에 20배 폭증하며 2030년 3조4천억으로 향하지만, 메디큐브 1강 + 추격군 4사 + 후발 5사로 점유 구도가 굳어졌습니다. 검색은 일반어에서 카테고리어로 대전환했고, 슬로우에이징·헬스케어 융합이 약손명가 자산에 정합됩니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch1 결론</strong>: 시장 폭증 · 패러다임 전환 · 트렌드 정합 — 진입의 마지막 골든타임입니다.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- ============================================ -->
+<!-- s1-1 시장 폭증 -->
+<!-- ============================================ -->
+<article class="slide" id="s1-1">
+  <div class="page-label">시장 진단 ㅣ 시장 폭증</div>
+  <span class="slide-meta">시장 규모</span>
+  <h2 class="slide-title">국내 뷰티 디바이스 시장은 <span class="highlight">9년 만에 20배 폭증</span> — 2030년 3.4조 규모로 향하는 검증된 성장 시장에 안착했습니다</h2>
+  <p class="slide-title-sub">2013년 800억원 → 2024년 1조7천억원 → 2030년 3조4천억원 전망 (CAGR 13.8%, 글로벌은 26.1%)</p>
+
+  <div class="line-chart">
+    <div class="lc-title">📈 국내 뷰티 디바이스 시장 규모 (단위: 조원)</div>
+    <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+      <!-- Grid lines -->
+      <line x1="40" y1="20" x2="580" y2="20" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="60" x2="580" y2="60" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="100" x2="580" y2="100" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="140" x2="580" y2="140" stroke="#e9e3d9" stroke-width="0.5"/>
+      <line x1="40" y1="180" x2="580" y2="180" stroke="#e9e3d9" stroke-width="0.5"/>
+      <!-- Y axis labels -->
+      <text x="32" y="24" text-anchor="end" fill="#a09684" font-size="10">3.4</text>
+      <text x="32" y="64" text-anchor="end" fill="#a09684" font-size="10">2.5</text>
+      <text x="32" y="104" text-anchor="end" fill="#a09684" font-size="10">1.7</text>
+      <text x="32" y="144" text-anchor="end" fill="#a09684" font-size="10">0.9</text>
+      <text x="32" y="184" text-anchor="end" fill="#a09684" font-size="10">0.1</text>
+      <!-- Line (2013=0.08, 2018=0.5, 2022=1.6, 2024=1.7, 2027=2.5, 2030=3.4) -->
+      <polyline points="80,185 200,160 320,108 380,104 480,60 560,20"
+                fill="none" stroke="#b5616f" stroke-width="2.5"/>
+      <!-- Area fill -->
+      <polygon points="80,185 200,160 320,108 380,104 480,60 560,20 560,185 80,185"
+               fill="#b5616f" opacity="0.08"/>
+      <!-- Data points -->
+      <circle cx="80" cy="185" r="3.5" fill="#b5616f"/>
+      <circle cx="200" cy="160" r="3.5" fill="#b5616f"/>
+      <circle cx="320" cy="108" r="4" fill="#b5616f"/>
+      <circle cx="380" cy="104" r="4" fill="#b5616f"/>
+      <circle cx="480" cy="60" r="4.5" fill="#b5616f" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="560" cy="20" r="6" fill="#b5616f" stroke="#ffffff" stroke-width="2"/>
+      <!-- Annotations -->
+      <text x="320" y="98" fill="#9c7c54" font-size="10" font-weight="700">1.6조 (2022)</text>
+      <text x="480" y="50" fill="#9c7c54" font-size="10" font-weight="700">2.5조 (2027F)</text>
+      <text x="540" y="14" fill="#b5616f" font-size="11" font-weight="800">3.4조 (2030F)</text>
+    </svg>
+    <div class="lc-x-labels">
+      <span>2013</span><span>2018</span><span>2022</span><span>2024</span><span>2027</span><span>2030</span>
+    </div>
+  </div>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">9년 성장 배수</div>
+      <div class="hm-value">20<span class="hm-unit">배</span></div>
+      <div class="hm-desc">2013년 800억원 → 2022년 1조6천억원</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">국내 CAGR</div>
+      <div class="hm-value">13.8<span class="hm-unit">%</span></div>
+      <div class="hm-desc">2024-2034 연평균 성장률 전망</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">글로벌 CAGR</div>
+      <div class="hm-value">26.1<span class="hm-unit">%</span></div>
+      <div class="hm-desc">2022 140억$ → 2030 898억$</div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>시장 폭증은 이미 검증되었으며 2030년까지 안정적 성장 곡선이 정착했다 — K-뷰티 다음 게임체인저로 부상</li>
+    <li>그러나 시장이 커지면 후발주자 진입 비용도 가파르게 상승한다는 명제도 함께 작동합니다</li>
+    <li class="sub">출처: 삼정KPMG INSIGHT Vol.93 · Expert Market Research · 비즈워치(2025.11.21)</li>
+  </ul>
+
+  <p class="bridge">
+    시장 자체는 검증되었지만, 이미 <strong>메디큐브 1강 체제와 추격군이 점유</strong>한 가장 어려운 진입 국면이라는 사실을 함께 봐야 합니다. <em>다음 슬라이드에서 1강 구도를 진단합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">03</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s1-2 1강 + 추격군 구도 -->
+<!-- ============================================ -->
+<article class="slide" id="s1-2">
+  <div class="page-label">시장 진단 ㅣ 점유 구도</div>
+  <span class="slide-meta">경쟁 구도</span>
+  <h2 class="slide-title">메디큐브 <span class="highlight">절대 1강 32%</span> · LG·아모레 추격군 · 후발 다수 — 카테고리 리더가 굳어진 가장 어려운 진입 국면이 본격화되고 있습니다</h2>
+  <p class="slide-title-sub">메디큐브 부스터프로 단일 200만대+ · 글로벌 누적 600만대 / DMC BRAND INDEX 인지도 1위는 LG프라엘 57.7% — 인지도와 판매가 분리된 시장 구조</p>
+
+  <div class="donut-row">
+    <div class="donut">
+      <div class="donut-center">
+        <div class="dc-value">32%</div>
+        <div class="dc-label">메디큐브</div>
+      </div>
+    </div>
+    <div class="donut-legend">
+      <ul>
+        <li>
+          <span class="lg-dot" style="background:#f5d4d8;"></span>
+          <span class="lg-name"><strong>메디큐브 (에이피알)</strong> — 부스터프로 200만대+</span>
+          <span class="lg-value">32%</span>
+        </li>
+        <li>
+          <span class="lg-dot" style="background:#d4a59a;"></span>
+          <span class="lg-name"><strong>LG프라엘</strong> — 인지도 1위 (DMC 57.7%)</span>
+          <span class="lg-value">18%</span>
+        </li>
+        <li>
+          <span class="lg-dot" style="background:#e6d8c5;"></span>
+          <span class="lg-name"><strong>메이크온 (아모레)</strong> — 1020 진입</span>
+          <span class="lg-value">13%</span>
+        </li>
+        <li>
+          <span class="lg-dot" style="background:#a8bccc;"></span>
+          <span class="lg-name"><strong>셀리턴·듀얼소닉·달바</strong> — 후발 5사</span>
+          <span class="lg-value">12%</span>
+        </li>
+        <li>
+          <span class="lg-dot" style="background:#232020;"></span>
+          <span class="lg-name">기타 (OLLI LIRA 포함)</span>
+          <span class="lg-value">25%</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">브랜드 IP 자산 비교</p>
+  <table>
+    <thead>
+      <tr><th style="width:20%;">브랜드</th><th>IP 자산</th><th style="width:18%;">약점·여백</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>메디큐브</strong></td><td>유재석 8년 모델 + 카리나·장원영 · APEC 정상 선물</td><td>"1위 부담" · EMS 리프팅 약함</td></tr>
+      <tr><td><strong>LG프라엘</strong></td><td>LG생활건강 자본 + 갈바닉 미국 진출</td><td>인지도 > 판매 · 라인업 단조</td></tr>
+      <tr><td><strong>메이크온</strong></td><td>장원영 + KAIST 공동 연구 + AI 진단 앱</td><td>1020 타깃 · 3040 진입 약함</td></tr>
+      <tr><td style="background:rgba(245,212,216,0.08);"><strong style="color:var(--accent-rose);">OLLI LIRA 진입 여백</strong></td><td colspan="2" style="color:var(--accent-rose);"><strong>"EMS 리프팅 + 결합형 락인 + 에스테틱 IP"</strong> — 빈 카테고리</td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    1강 구도는 굳어졌지만, <strong>인지도(LG) ≠ 판매(메디큐브)로 분리된 시장 구조</strong>는 후발주자에게 진입 여지를 남깁니다. <em>이를 활용할 결정적 신호는 검색 행태 전환에서 발견됩니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">04</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s1-3 검색 패러다임 전환 -->
+<!-- ============================================ -->
+<article class="slide" id="s1-3">
+  <div class="page-label">시장 진단 ㅣ 검색 패러다임</div>
+  <span class="slide-meta">검색 행태 전환</span>
+  <h2 class="slide-title">검색 행태가 <span class="highlight">일반어 -37% → 카테고리어 +1,762%</span>로 대전환 — 시장이 전문화되고 후발주자 진입 신호가 명확해졌습니다</h2>
+  <p class="slide-title-sub">리스닝마인드 701개 카테고리 키워드 / 2022.05 ~ 2026.04 월별 추이 실데이터 / "갈바닉 디바이스" "고주파 디바이스" 등 기술 카테고리어 폭증</p>
+
+  <div class="bar-chart">
+    <div class="bc-title">🔍 카테고리 키워드 검색량 변화 (2022 → 2026, 리스닝마인드 실데이터)</div>
+    <div class="bar-row">
+      <div class="bar-label">갈바닉 디바이스</div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%;">+1,762%</div></div>
+      <div class="bar-value">+1,762%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">고주파 디바이스</div>
+      <div class="bar-track"><div class="bar-fill" style="width:63.5%;">+1,120%</div></div>
+      <div class="bar-value">+1,120%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">리프팅 디바이스</div>
+      <div class="bar-track"><div class="bar-fill" style="width:32%;">+560%</div></div>
+      <div class="bar-value">+560%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">EMS 디바이스</div>
+      <div class="bar-track"><div class="bar-fill" style="width:23%;">+402%</div></div>
+      <div class="bar-value">+402%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">일반어 ("뷰티 디바이스")</div>
+      <div class="bar-track"><div class="bar-fill neg" style="width:21%;">-37%</div></div>
+      <div class="bar-value neg">-37%</div>
+    </div>
+  </div>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ①</div>
+      <h5>일반어 -37% 하락</h5>
+      <p class="ma-desc">검색자가 더 이상 "뷰티 디바이스"라는 막연한 키워드를 쓰지 않습니다.</p>
+      <p class="ma-detail">→ 카테고리 학습이 완료된 시장 = 후발주자가 일반어로는 진입 불가능합니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ②</div>
+      <h5>기술어 +1,762% 폭증</h5>
+      <p class="ma-desc">"갈바닉 디바이스" 키워드 검색이 17배 늘었습니다.</p>
+      <p class="ma-detail">→ 사용자는 이제 <strong>기술별로 선택</strong>합니다. RF·갈바닉 보유가 곧 진입 신호입니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ③</div>
+      <h5>OLLI LIRA 미보유 영역</h5>
+      <p class="ma-desc">갈바닉·고주파 폭증 카테고리에 OLLI LIRA는 단 1개 SKU도 없다.</p>
+      <p class="ma-detail">→ <strong>가장 큰 기회 영역이 비어 있는 상태</strong>로 진입 시점을 기다립니다.</p>
+    </div>
+  </div>
+
+  <p class="bridge">
+    검색은 기술별로 분기되었고 진입 신호는 명확해졌습니다. <strong>이 변화의 배경에는 슬로우에이징·헬스케어 융합이라는 더 큰 트렌드</strong>가 자리합니다. <em>다음 슬라이드에서 트렌드의 약손명가 정합성을 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">05</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s1-4 슬로우에이징 트렌드 -->
+<!-- ============================================ -->
+<article class="slide" id="s1-4">
+  <div class="page-label">시장 진단 ㅣ 슬로우에이징 · 헬스케어 융합</div>
+  <span class="slide-meta">트렌드</span>
+  <h2 class="slide-title">슬로우에이징 + 헬스케어 융합이 <span class="highlight">K-뷰티 다음 게임체인저</span>로 부상 — 약손명가 에스테틱 IP에 자연 정합되는 트렌드가 정착했습니다</h2>
+  <p class="slide-title-sub">올영 슬로우에이징 카테고리 매출 +10% 연속 성장 · 동국제약(센텔리안24)·달바 등 헬스케어 사업자 진출 가속 · 오픈서베이 "건강·맞춤 솔루션"이 "예쁨" 추월</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">단계 1</div>
+      <h6>안티에이징 일반화</h6>
+      <p>2018~2020<br>일반 화장품 시장</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">단계 2</div>
+      <h6>홈케어 디바이스 진입</h6>
+      <p>2021~2023<br>200만원대 → 20만원대</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">단계 3</div>
+      <h6>슬로우에이징 전환</h6>
+      <p>2024~2025<br>"예방 + 일상 루틴"</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">단계 4 ⭐</div>
+      <h6>헬스케어 융합</h6>
+      <p>2026~<br>"건강·전문성·신뢰"</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">약손명가 정합성 매트릭스</p>
+  <table>
+    <thead>
+      <tr><th style="width:30%;">트렌드 키워드</th><th>2026 시장 신호</th><th style="width:24%;">약손명가 자산</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>슬로우에이징 (저속노화)</strong></td><td>"노화 예방" 메시지로 2030 진입 / 올영 카테고리 +10%</td><td><strong>46년 에스테틱 노하우</strong></td></tr>
+      <tr><td><strong>헬스케어 융합</strong></td><td>동국제약(센텔리안)·달바 등 진출 / "건강·전문성" 우선</td><td>약손명가 = <strong>헬스케어 본업</strong></td></tr>
+      <tr><td><strong>시술 + 디바이스 병행</strong></td><td>보톡스·리프팅 시술 경험률 급증 / 디바이스 = 효과 유지 도구</td><td><strong>130개 매장 시술 IP</strong></td></tr>
+      <tr><td><strong>전문가 IP 카테고리</strong></td><td>메디큐브 톱스타 / LG 기술 / 약손명가 빈자리</td><td><strong>7년 연속 브랜드파워 대상</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    트렌드는 4개 축 모두에서 약손명가 자산과 정합됩니다. <strong>시장 폭증 · 패러다임 전환 · 트렌드 정합 — 세 가지 신호가 한 방향을 가리키는 순간</strong>은 흔하지 않다. <em>다음 슬라이드에서 Ch1 결론을 정리합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">06</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s1-sum Ch1 결론 -->
+<!-- ============================================ -->
+<article class="slide" id="s1-sum">
+  <div class="page-label">시장 진단 ㅣ Chapter 1 결론</div>
+  <span class="slide-meta">🎯 Ch1 결론</span>
+  <h2 class="slide-title"><span class="highlight">시장 폭증 · 패러다임 전환 · 트렌드 정합</span>의 세 신호가 한 방향으로 정렬됐다 — 지금이 후발주자가 진입할 마지막 골든타임입니다</h2>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">신호 ① 시장</div>
+      <div class="hm-value">3.4<span class="hm-unit">조</span></div>
+      <div class="hm-desc">2030년까지 +100% 성장 검증된 곡선</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">신호 ② 검색</div>
+      <div class="hm-trend up">↑ 전환</div>
+      <div class="hm-value">+1,762<span class="hm-unit">%</span></div>
+      <div class="hm-desc">갈바닉 디바이스 폭증 / 기술별 분기 정착</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">신호 ③ 트렌드</div>
+      <div class="hm-value">4<span class="hm-unit">축</span></div>
+      <div class="hm-desc">슬로우에이징·헬스케어·시술병행·전문가IP 모두 정합</div>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:28px 0 14px;">진입 시점 매트릭스</p>
+  <div class="position-map">
+    <div class="pm-title">🎯 시장 진입 적합도 — 후발주자 관점</div>
+    <div class="pm-area" style="aspect-ratio: 16/8;">
+      <span class="pm-axis-y top">진입 비용 高</span>
+      <span class="pm-axis-y bottom">진입 비용 低</span>
+      <span class="pm-axis-x left">초기 시장</span>
+      <span class="pm-axis-x right">성숙 시장</span>
+      <div class="pm-point" style="top:75%;left:18%;">2018<br>초기</div>
+      <div class="pm-point" style="top:62%;left:36%;">2021<br>진입 시작</div>
+      <div class="pm-point" style="top:40%;left:55%;">2024<br>경쟁 격화</div>
+      <div class="pm-point us" style="top:32%;left:68%;">⭐ 2026<br><strong>GOLDEN</strong></div>
+      <div class="pm-point" style="top:18%;left:88%;">2028<br>진입 늦음</div>
+      <div class="pm-zone" style="top:25%;left:60%;width:18%;height:18%;">진입 골든존</div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>2026은 진입의 골든존</strong> — 시장이 성숙해 가는 반면 카테고리 리더가 새 카테고리(EMS+갈바닉+RF)는 아직 점유하지 못한 시점입니다</li>
+    <li>2028 이후는 진입 비용이 가파르게 상승 — 카테고리 학습이 완전히 종료되고 1등 브랜드의 락인이 굳어집니다</li>
+    <li class="sub">→ 그러나 시장 진입의 결정은 자사 자산과 의사결정 환경을 함께 봐야 한다 (Ch2 자사 진단)</li>
+  </ul>
+
+  <p class="bridge">
+    시장 신호는 명확합니다. 이제 <strong>자사 OLLI LIRA가 이 시장에 진입할 준비가 되었는지</strong>를 진단해야 한다 — 라인업·광고주 결정·EMS 단일 미스매치·경쟁 포지셔닝의 네 측면입니다. <em>Ch2 자사 진단으로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">07</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 02 — 자사 진단 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch2">
+  <div class="ch-eyebrow">Chapter 02<span class="ch-eyebrow-title">· 자사 진단</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">OLLI LIRA는 좋은 디바이스입니다.<br><span class="em">그런데 그게 4050을 위한 것이라면요?</span></h1>
+  <p class="declaration-sub">EMS는 4050 친화 기술입니다. 광고주 타깃 3040은 본능적으로 RF·갈바닉을 찾습니다 — 무기를 진화시켜야 할 시간입니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">자사 진단</span></p>
+  <p class="ch-summary">OLLI LIRA는 "밴드+패치+겔" 결합형 락인이라는 약손명가만의 자산을 보유했지만, 광고주 PDF는 IP 축소를 결정했고 EMS 단일은 3040 코어 페르소나와 미스매치 상태입니다. 경쟁 포지셔닝 맵에는 미들마켓 multi-tech 빈자리가 남아 있습니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch2 결론</strong>: IP 단계적 이양 + 결합형 진화 + 페르소나 재정렬 — 세 가지가 같은 답을 가리킵니다.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- ============================================ -->
+<!-- s2-1 OLLI LIRA 라인업 -->
+<!-- ============================================ -->
+<article class="slide" id="s2-1">
+  <div class="page-label">자사 진단 ㅣ OLLI LIRA 라인업</div>
+  <span class="slide-meta">라인업</span>
+  <h2 class="slide-title">OLLI LIRA는 \"<span class="highlight">밴드 + 패치 + 겔\"의 결합형 락인</span> — 단일 디바이스가 아닌 정기 재구매 유도형 비즈니스 모델이 정착했습니다</h2>
+  <p class="slide-title-sub">디바이스 268,000원/318,000원 (단품/풀세트) · 뷰티 라인업(패치·겔·파우치)은 \"올리밴드 시너지\" 메시지로 디바이스와 강하게 연결</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">Step 1</div>
+      <h6>디바이스 (Anchor)</h6>
+      <p>EMS 밴드 단품 268,000원<br>풀세트 318,000원<br><strong>진입 SKU</strong></p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">Step 2</div>
+      <h6>패치 (Refill)</h6>
+      <p>정기 소모형<br>EMS 강도 +30% 보조<br><strong>월간 재구매</strong></p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">Step 3</div>
+      <h6>겔 (Co-purchase)</h6>
+      <p>전용 컨덕팅 겔<br>이온 전도성 강화<br><strong>2-3개월 재구매</strong></p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">Step 4</div>
+      <h6>락인 완성</h6>
+      <p>3 SKU 결합 사용 시<br>LTV 평균 7.7배<br><strong>장기 충성 전환</strong></p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">결합형 락인 자산의 차별성</p>
+  <table>
+    <thead>
+      <tr><th style="width:24%;">자산</th><th>OLLI LIRA</th><th>경쟁사 (메디큐브·LG·메이크온)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>비즈니스 모델</strong></td><td>디바이스 + 소모재 결합형</td><td>디바이스 단품 중심</td></tr>
+      <tr><td><strong>재구매 주기</strong></td><td>월간(패치) + 분기(겔)</td><td>2-3년 디바이스 재구매 X</td></tr>
+      <tr><td><strong>LTV 배수</strong></td><td><strong style="color:var(--accent-rose);">7.7배 (시술 1년치 대비)</strong></td><td>1.0배 (디바이스 단품 한정)</td></tr>
+      <tr><td><strong>CRM 가능성</strong></td><td>월간 트리거 가능</td><td>구매 후 데드존</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>OLLI LIRA의 결합형 락인은 <strong>경쟁사가 모방 불가능한 비즈니스 모델 자산</strong>이다 — 메디큐브 부스터프로도 패치·겔 같은 소모재 라인은 없다</li>
+    <li>이 자산을 광고 전략에 어떻게 녹일지가 56억 광고주의 ROAS·LTV·CRM KPI를 동시에 견인하는 출발점이 됩니다</li>
+  </ul>
+
+  <p class="bridge">
+    결합형 락인이라는 강한 자산을 보유했지만, <strong>광고주는 동시에 IP 축소라는 어려운 결정</strong>을 내렸습니다. <em>다음 슬라이드에서 광고주 PDF 결정의 함의를 진단합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">08</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s2-2 광고주 PDF 결정 -->
+<!-- ============================================ -->
+<article class="slide" id="s2-2">
+  <div class="page-label">자사 진단 ㅣ 광고주 PDF 결정</div>
+  <span class="slide-meta">광고주 결정 (2026-05-26)</span>
+  <h2 class="slide-title">광고주 PDF가 명시한 <span class="highlight">\"약손명가 IP 축소 + OLLI LIRA·GOLKI 독립 브랜딩\"</span> — IP를 빼는 것이 아니라 단계적으로 이양해야 합니다</h2>
+  <p class="slide-title-sub">광고주 PDF(2026-05-26) p.5: \"약손명가 IP 중심의 매출 확대 전략 운영해왔으나, 약손명가 IP 축소 운영 예정으로 약손PB 제품 외 OLLI LIRA·GOLKI의 브랜딩 필요\"</p>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">함의 ①</div>
+      <h5>축소는 옳다</h5>
+      <p class="ma-desc">닥터자르트 케이스 — 정점 6,326억 → 1/3 추락(2,329억) + 영업적자.</p>
+      <p class="ma-detail">→ <strong>오너 IP 과의존</strong>으로 카테고리 확장이 실패한 동일 위험 시그널이 광고주에도 발현 중입니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">함의 ②</div>
+      <h5>그러나 폐기는 위험</h5>
+      <p class="ma-desc">동국제약 마데카 — 모기업 IP를 \"추상화 유지\"로 헬스케어 3,164억 견인.</p>
+      <p class="ma-detail">→ IP를 <strong>완전히 빼지 않고 단계적으로 이양</strong>한 케이스가 성공 경로입니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">함의 ③</div>
+      <h5>이양의 4 가드레일</h5>
+      <p class="ma-desc">유지 영역 · 축소 영역 · 추상화 영역 · 강화 영역의 명확한 분류가 필요합니다.</p>
+      <p class="ma-detail">→ <strong>매드업이 제안하는 4 가드레일</strong>이 광고주 결정의 실행 가능성을 만듭니다.</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:28px 0 14px;">매드업 권장 — IP 이양 4 가드레일</p>
+  <table>
+    <thead>
+      <tr><th style="width:18%;">영역</th><th>유지·축소·이양</th><th>구체 표현</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong style="color:var(--accent-rose);">유지 영역</strong></td><td>핵심 신뢰 자산은 보존</td><td>46년 임상 노하우 · 골기테라피 1979 헤리티지 · 전문가 권위</td></tr>
+      <tr><td><strong style="color:var(--accent-beige);">축소 영역</strong></td><td>브랜드명 직접 노출 축소</td><td>\"약손명가의 OOO\" 표현 단계적 축소</td></tr>
+      <tr><td><strong style="color:var(--accent-warm);">추상화 영역</strong></td><td>워딩 격상</td><td>\"본가 매장\" → \"메디컬 에스테틱 노하우\" 추상화</td></tr>
+      <tr><td><strong style="color:var(--accent-blue);">강화 영역</strong></td><td>OLLI LIRA 독립 브랜딩</td><td>EMS 결합형 · Slow-aging Starter · Pro 신제품의 자체 USP 강화</td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    IP 이양의 가드레일은 정리되었습니다. 그러나 더 시급한 문제는 <strong>OLLI LIRA의 EMS 단일 기술이 3040 코어 페르소나의 본능적 선호와 미스매치</strong>라는 점입니다. <em>다음 슬라이드에서 진단합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">09</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s2-3 EMS 단일 미스매치 -->
+<!-- ============================================ -->
+<article class="slide" id="s2-3">
+  <div class="page-label">자사 진단 ㅣ EMS 단일 기술 페르소나 미스매치</div>
+  <span class="slide-meta">기술-페르소나 진단</span>
+  <h2 class="slide-title">EMS 단일은 <span class="highlight">4050 친화 기술이며 3040 코어 페르소나는 본능적으로 RF·갈바닉을 선호</span> — 메시지 보완으로는 부족합니다</h2>
+  <p class="slide-title-sub">광고주 RFP 메인 타겟은 3040 / OLLI LIRA EMS는 4050 강세 기술 / 카테고리어 폭증은 RF·갈바닉 (+1,762%·+1,120%)</p>
+
+  <div class="bar-chart">
+    <div class="bc-title">📊 카테고리별 효능 선호도 (연령대 강세)</div>
+    <div class="bar-row">
+      <div class="bar-label">EMS 디바이스</div>
+      <div class="bar-track"><div class="bar-fill muted" style="width:30%;">4050 강세</div></div>
+      <div class="bar-value muted">4050</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">RF (고주파)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:78%;">2030 강세 · 콜라겐</div></div>
+      <div class="bar-value">2030</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">갈바닉</div>
+      <div class="bar-track"><div class="bar-fill" style="width:85%;">전 연령 · 흡수율</div></div>
+      <div class="bar-value">전 연령</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">LED 마스크</div>
+      <div class="bar-track"><div class="bar-fill" style="width:60%;">전 연령 · 탄력</div></div>
+      <div class="bar-value">전 연령</div>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">미스매치 진단</p>
+  <table>
+    <thead>
+      <tr><th style="width:24%;">축</th><th>광고주 RFP 메인 타겟 (3040)</th><th>OLLI LIRA EMS 단일</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>본능적 기술 선호</strong></td><td>RF·갈바닉·HIFU 멀티테크</td><td style="color:var(--accent-blue);">EMS 단일</td></tr>
+      <tr><td><strong>페인포인트</strong></td><td>모공 · 초기 탄력 · 잔주름</td><td style="color:var(--accent-blue);">근육 운동 · V라인 (4050 톤)</td></tr>
+      <tr><td><strong>가격 적정대</strong></td><td>26.8만원 (미들마켓)</td><td style="color:var(--accent-rose);">정합 ✓</td></tr>
+      <tr><td><strong>구매 의사결정</strong></td><td>\"내 가치·취향 반영\"</td><td style="color:var(--accent-blue);">기능 소구 톤 잔존</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>EMS는 객관적으로 4050 친화 기술이며, 3040은 본능적으로 RF·갈바닉 검색을 시작한다 — 시장 데이터로 입증된 미스매치입니다</li>
+    <li>이 격차는 광고 카피·소재의 톤 조정만으로는 근본 해결이 불가능하다 — <strong>제품 본성의 진화가 함께 가야 합니다</strong></li>
+    <li class="sub">→ 매드업 답: 메시지 프레임 3축(Ch3·5)으로 톤 보완 + Pro 신제품 결합형 모드(Ch3)로 제품 진화 동시 추진</li>
+  </ul>
+
+  <p class="bridge">
+    미스매치는 명확하고 답은 두 갈래다 — <strong>메시지·제품 진화의 동시 추진</strong>이 결정 사항이 됩니다. <em>다음 슬라이드에서 경쟁 포지셔닝 맵을 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">10</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s2-4 경쟁 포지셔닝 맵 -->
+<!-- ============================================ -->
+<article class="slide" id="s2-4">
+  <div class="page-label">자사 진단 ㅣ 경쟁 포지셔닝 맵</div>
+  <span class="slide-meta">경쟁 매트릭스</span>
+  <h2 class="slide-title">2축 포지셔닝 맵 — <span class="highlight">40-45만원 미들마켓 multi-tech</span>가 비어 있다, OLLI LIRA Pro가 정확히 점유할 자리입니다</h2>
+  <p class="slide-title-sub">가격(저가 ↔ 고가) × 기술 통합도(단일 ↔ 멀티) 2축 분석 / 메디큐브 정면 충돌 회피 + LG·후발 우회 + 미들마켓 빈자리 정조준</p>
+
+  <div class="position-map">
+    <div class="pm-title">🗺️ 경쟁 포지셔닝 맵 — 빈자리는 한 곳입니다</div>
+    <div class="pm-area">
+      <span class="pm-axis-y top">멀티 기술</span>
+      <span class="pm-axis-y bottom">단일 기술</span>
+      <span class="pm-axis-x left">저가 (10-25만)</span>
+      <span class="pm-axis-x right">고가 (60만+)</span>
+      <div class="pm-point competitor" style="top:78%;left:25%;">메이크온<br>1020·10만</div>
+      <div class="pm-point competitor" style="top:50%;left:42%;">LG프라엘<br>갈바닉 35만</div>
+      <div class="pm-point competitor" style="top:30%;left:78%;">메디큐브<br>멀티 67만</div>
+      <div class="pm-point competitor" style="top:40%;left:90%;">듀얼소닉<br>100만+</div>
+      <div class="pm-point competitor" style="top:78%;left:42%;">OLLI LIRA 현재<br>EMS 27만</div>
+      <div class="pm-point us" style="top:38%;left:58%;">⭐ OLLI LIRA Pro<br>멀티 40-45만</div>
+      <div class="pm-zone" style="top:30%;left:48%;width:24%;height:22%;">미들마켓 multi-tech 빈자리</div>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">경쟁사별 약점·진입 여백</p>
+  <table>
+    <thead>
+      <tr><th style="width:22%;">브랜드</th><th>기술</th><th>가격</th><th>약점·OLLI LIRA Pro 진입 근거</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>LG프라엘 수퍼폼</strong></td><td>갈바닉 단일</td><td>35만원대</td><td>EMS·RF 없음 → multi-tech 우위로 가치 차별화</td></tr>
+      <tr><td><strong>메디큐브 부스터프로</strong></td><td>EMS+갈바닉+LED</td><td>67만원대</td><td>진입장벽·\"1위 부담\" → 미들마켓에서 진입 가능</td></tr>
+      <tr><td><strong>듀얼소닉</strong></td><td>HIFU+RF</td><td>100만원+</td><td>갈바닉 없음·고가 → 가격 + 기술 모두 차별화</td></tr>
+      <tr style="background:rgba(245,212,216,0.08);"><td><strong style="color:var(--accent-rose);">OLLI LIRA Pro (신제품)</strong></td><td><strong style="color:var(--accent-rose);">EMS+RF+갈바닉</strong></td><td><strong style="color:var(--accent-rose);">40-45만원</strong></td><td><strong style="color:var(--accent-rose);">미들마켓 multi-tech 빈자리에 단독 진입</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    포지셔닝 맵은 단 하나의 빈자리를 가리킵니다. <strong>광고주 IP 결정 · EMS 미스매치 · 경쟁사 빈자리</strong> — 세 신호가 같은 답을 가리키는 순간입니다. <em>다음 슬라이드에서 Ch2 결론을 정리합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">11</div>
+</article>
+
+<!-- ============================================ -->
+<!-- s2-sum Ch2 결론 -->
+<!-- ============================================ -->
+<article class="slide" id="s2-sum">
+  <div class="page-label">자사 진단 ㅣ Chapter 2 결론</div>
+  <span class="slide-meta">🎯 Ch2 결론</span>
+  <h2 class="slide-title"><span class="highlight">광고주 결정 · 페르소나 미스매치 · 경쟁사 빈자리</span>가 같은 답을 가리킨다 — 결합형 자산을 진화시킬 결정의 순간입니다</h2>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ①</div>
+      <h5>광고주 PDF 결정</h5>
+      <p class="ma-desc">약손명가 IP 축소 + OLLI LIRA 독립 브랜딩.</p>
+      <p class="ma-detail">→ <strong>4 가드레일</strong>로 단계적 이양 (유지·축소·추상화·강화).</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ②</div>
+      <h5>EMS 단일 미스매치</h5>
+      <p class="ma-desc">4050 친화 기술 vs 3040 코어 페르소나의 RF·갈바닉 선호.</p>
+      <p class="ma-detail">→ <strong>제품 본성의 진화</strong>가 필요하다 (메시지 보완으로는 부족).</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">신호 ③</div>
+      <h5>경쟁 포지셔닝 빈자리</h5>
+      <p class="ma-desc">40-45만원 미들마켓 multi-tech 자리에 단 한 곳도 진입자 없음.</p>
+      <p class="ma-detail">→ <strong>2026 Q3 출시</strong>가 빈자리 단독 점유 가능 시점입니다.</p>
+    </div>
+  </div>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">결합형 LTV 배수</div>
+      <div class="hm-value">7.7<span class="hm-unit">배</span></div>
+      <div class="hm-desc">시술 1년치 대비 OLLI LIRA 디바이스+소모재 결합 사용 시</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">IP 이양 가드레일</div>
+      <div class="hm-value">4<span class="hm-unit">축</span></div>
+      <div class="hm-desc">유지·축소·추상화·강화 4 분류로 광고주 결정 실행화</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">Pro 신제품 가격</div>
+      <div class="hm-value">40-45<span class="hm-unit">만</span></div>
+      <div class="hm-desc">미들마켓 multi-tech 빈자리 단독 점유</div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>세 신호의 정렬은 우연이 아닙니다</strong> — 광고주가 IP 축소를 결정한 시점이 곧 시장에 빈자리가 비어 있는 시점이며, 페르소나 미스매치가 가장 큰 시점입니다</li>
+    <li>이 정렬을 활용한 답이 Ch3의 세 가지 결정 — 1.5 페르소나 · Pro 신제품 · 시즌 비대칭 흡수입니다</li>
+  </ul>
+
+  <p class="bridge">
+    시장 진입 환경(Ch1)과 자사 진단(Ch2)이 정렬되었습니다. 이제 <strong>매드업의 세 가지 전략 결정</strong>으로 답을 만든다 — 1.5 페르소나 단일 집중·Pro 결합형 진화·시즌 비대칭 흡수. <em>Ch3 전략 결정으로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">12</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 03 — 전략 결정 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch3">
+  <div class="ch-eyebrow">Chapter 03<span class="ch-eyebrow-title">· 전략 결정</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">더 많은 타깃이 더 많은 매출일까요?<br><span class="em">56억 예산에선 정반대입니다.</span></h1>
+  <p class="declaration-sub">다층 운영은 메시지를 분산시킵니다. 하나의 페르소나에 집중하고, 4050은 시즌에만 비대칭으로 흡수합니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">전략 결정</span></p>
+  <p class="ch-summary">매드업은 네 가지 결정을 권합니다 — 1.5 페르소나 단일 집중(Slow-aging Starter 80% + Gift Buyer 20%) · Pro 결합형 모드 확장(2026 Q3) · 메시지 프레임 3축 · 시즌 비대칭 흡수. 네 결정은 서로의 약점을 정확히 보완합니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch3 결론</strong>: 1.5 페르소나 + Pro 신제품 + 3축 메시지 + 시즌 캘린더 = 단일 프레임.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- s3-1 1.5 페르소나 결정 -->
+<article class="slide" id="s3-1">
+  <div class="page-label">전략 결정 ㅣ 1.5 페르소나</div>
+  <span class="slide-meta">결정 ① 1.5 페르소나</span>
+  <h2 class="slide-title">매드업의 첫 결정 — <span class="highlight">다층 운영 폐기, Slow-aging Starter 80% + Gift Buyer Path 20%의 1.5 페르소나</span> 단일 집중입니다</h2>
+  <p class="slide-title-sub">3페르소나(3040+4050+1020) 다층 운영은 56억 사이즈에 예산 분산 = 메시지 약화 / 단일 집중으로 메시지·소재·매체 일관성 확보</p>
+
+  <div class="bar-chart">
+    <div class="bc-title">💰 예산 분배 결정</div>
+    <div class="bar-row">
+      <div class="bar-label"><strong>Slow-aging Starter</strong></div>
+      <div class="bar-track"><div class="bar-fill" style="width:80%;">3040 코어 · 상시 운영</div></div>
+      <div class="bar-value">80%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><strong>Gift Buyer Path</strong></div>
+      <div class="bar-track"><div class="bar-fill" style="width:20%; background:linear-gradient(90deg, var(--accent-beige) 0%, var(--accent-gold) 100%);">4050 효도시즌 · D-30 집중</div></div>
+      <div class="bar-value" style="color:var(--accent-beige);">20%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">1020 진입</div>
+      <div class="bar-track"><div class="bar-fill muted" style="width:2%;"></div></div>
+      <div class="bar-value muted">0%</div>
+    </div>
+  </div>
+
+  <div class="persona-card primary">
+    <span class="pc-tag">⭐ PRIMARY · 80%</span>
+    <h4 class="pc-name">Slow-aging Starter — 약손명가가 30대에 권하는 첫 디바이스</h4>
+    <p class="pc-desc">광고주 RFP 3040 메인 타겟의 코어 세그먼트. 30대 ≠ 동질 집단이며, 페인포인트별 3 세그먼트 중 "33-42세 EMS 진입기"가 약손명가 IP·EMS 모두에 자연 정합합니다.</p>
+    <dl class="pc-detail">
+      <dt>연령</dt><dd>33-42세 여성 (30대 후반 ~ 40대 초반 코어)</dd>
+      <dt>라이프</dt><dd>직장 7-15년차 · 시술 1-3년차 · 잔주름·탄력 초기 신호 자각</dd>
+      <dt>메인 채널</dt><dd>인스타·유튜브·올영 · 네이버 BS</dd>
+      <dt>핵심 메시지</dt><dd><strong>"30대를 위한 슬로우에이징 일상 루틴 · 에스테틱이 만든 매일 5분"</strong></dd>
+    </dl>
+  </div>
+
+  <div class="persona-card secondary">
+    <span class="pc-tag">🎁 SECONDARY · 20% (시즌)</span>
+    <h4 class="pc-name">Gift Buyer Path — 30대 자녀 광고 → 4050 부모 사용 듀얼 타겟</h4>
+    <p class="pc-desc">광고 타겟은 여전히 30대(RFP 일치)이지만 사용 타겟은 4050 부모님인 듀얼 구조. 어버이날·추석·설날 D-30 집중 운영으로 4050 시장도 비대칭 흡수합니다.</p>
+    <dl class="pc-detail">
+      <dt>광고 타겟</dt><dd><strong>30대 자녀</strong> (광고주 RFP 3040 완벽 일치)</dd>
+      <dt>사용 타겟</dt><dd>4050 부모님 (특히 어머니)</dd>
+      <dt>시즌</dt><dd>어버이날 D-30(4월) · 추석 D-30(9월) · 설날 D-30(1월)</dd>
+      <dt>핵심 메시지</dt><dd><strong>"매장 한 번 모시는 대신, 매일 5분"</strong></dd>
+    </dl>
+  </div>
+
+  <p class="bridge">
+    페르소나는 단일로 정렬되었습니다. 그러나 <strong>EMS 단일 기술의 본성 미스매치는 페르소나 결정만으로는 해결되지 않습니다</strong> — 제품 본성의 진화가 필요합니다. <em>다음 슬라이드에서 Pro 신제품 결합형 모드를 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">13</div>
+</article>
+
+<!-- s3-2 Pro 결합형 모드 확장 -->
+<article class="slide" id="s3-2">
+  <div class="page-label">전략 결정 ㅣ Pro 결합형 모드 확장</div>
+  <span class="slide-meta">결정 ② Pro 신제품</span>
+  <h2 class="slide-title">매드업의 두 번째 결정 — <span class="highlight">기존 밴드 + RF·갈바닉 어태치먼트로 결합형 모드를 확장</span>한다, 2026 Q3 출시로 +1,762% 폭증 카테고리의 빈자리를 점유합니다</h2>
+  <p class="slide-title-sub">옵션 A(단일 multi-tech)와 B(별도 SKU 라인)는 메디큐브 정면 충돌·자기잠식 비효율 / 옵션 C가 약손명가 결합형 락인 자산과 자연 정합</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:24%;">옵션</th><th>방식</th><th style="width:14%;">판정</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>A. 단일 multi-tech 통합</strong></td>
+        <td>메디큐브 부스터프로 패턴 — 신규 단일 SKU에 EMS+RF+갈바닉+LED 통합</td>
+        <td style="color:var(--accent-blue);">❌ 비효율<br><span style="font-size:10px;">정면 충돌</span></td>
+      </tr>
+      <tr>
+        <td><strong>B. 별도 신규 SKU 라인</strong></td>
+        <td>LG프라엘 패턴 — 갈바닉 단독 · RF 단독 별도 디바이스 출시</td>
+        <td style="color:var(--accent-blue);">❌ 비효율<br><span style="font-size:10px;">자기잠식·예산 분산</span></td>
+      </tr>
+      <tr style="background:rgba(245,212,216,0.08);">
+        <td><strong style="color:var(--accent-rose);">⭐ C. 결합형 모드 확장</strong></td>
+        <td><strong style="color:var(--accent-rose);">OLLI LIRA Pro = 기존 밴드 + RF 헤드 + 갈바닉 어태치먼트 + 패치/겔</strong></td>
+        <td style="color:var(--accent-rose);">✅ 권장<br><span style="font-size:10px;">락인 + 카테고리 확장</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">옵션 C의 세 가지 효과</p>
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">효과 ①</div>
+      <h5>락인 강화</h5>
+      <p class="ma-desc">기존 사용자는 어태치먼트만 추가 구매로 진화 — 락인이 깊어집니다.</p>
+      <p class="ma-detail">→ MILOT 기존 사용자 분석 · 카플친 "얼리액세스 우선구매" 자동 트리거.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">효과 ②</div>
+      <h5>카테고리 확장</h5>
+      <p class="ma-desc">+1,762% 폭증 갈바닉 / +1,120% 폭증 RF 시장에 단독 진입.</p>
+      <p class="ma-detail">→ 40-45만원 미들마켓 multi-tech 빈자리 점유.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">효과 ③</div>
+      <h5>페르소나 정합</h5>
+      <p class="ma-desc">30대 초중반 = 처음부터 Pro 풀세트 / 33-42 EMS 진입기 = "진화" 메시지.</p>
+      <p class="ma-detail">→ Slow-aging Starter 정조준 + 4050 효도선물 풀스택 신뢰성.</p>
+    </div>
+  </div>
+
+  <p class="bridge">
+    Pro 신제품으로 제품 본성은 진화합니다. 그러나 <strong>출시까지 단기 메시지로 EMS 약점을 보완</strong>해야 한다 — 메시지 프레임 3축이 그 답입니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">14</div>
+</article>
+
+<!-- s3-3 메시지 프레임 3축 -->
+<article class="slide" id="s3-3">
+  <div class="page-label">전략 결정 ㅣ 메시지 프레임 3축</div>
+  <span class="slide-meta">메시지 프레임</span>
+  <h2 class="slide-title">매드업의 세 번째 결정 — <span class="highlight">메시지 프레임 3축</span>으로 EMS 카테고리어를 후방 배치하고 Slow-aging Starter 톤으로 단일화합니다</h2>
+  <p class="slide-title-sub">"EMS로 리프팅" (4050 톤) 회피 / 3040 본능적 선호(RF·갈바닉)와 충돌하지 않는 메시지 프레임 / SPRAY AI 자동 생성 시드로 직접 활용</p>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ①</div>
+      <h5>"30대를 위한<br>슬로우에이징 일상 루틴"</h5>
+      <p class="ma-desc">EMS 카테고리어 회피, 슬로우에이징 트렌드 정합. 안티에이징(노화 거부) 톤에서 슬로우에이징(예방·일상) 톤으로 전환.</p>
+      <p class="ma-detail"><strong>매체</strong>: 인스타 릴스 · 자사몰 LP · 유튜브 쇼츠</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ②</div>
+      <h5>"에스테틱이 만든<br>매일 5분"</h5>
+      <p class="ma-desc">약손명가 IP × 직장인 시간 부담 해소. 46년 노하우라는 권위와 "매일 5분"이라는 진입 장벽 낮춤이 결합됩니다.</p>
+      <p class="ma-detail"><strong>매체</strong>: 메타 피드 · BS 카드 · CRM 알림톡</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ③</div>
+      <h5>"약손명가가 30대에<br>권하는 첫 디바이스"</h5>
+      <p class="ma-desc">권위 IP × 진입 장벽 낮춤. 디바이스가 30개가 넘는 카테고리에서 "첫 디바이스"라는 가이드 포지셔닝이 신뢰를 만듭니다.</p>
+      <p class="ma-detail"><strong>매체</strong>: 메타 진입 캠페인 · 카플친 신규 가입 환영</p>
+    </div>
+  </div>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">SPRAY AI 자동 생성</div>
+      <div class="hm-value">45<span class="hm-unit">개</span></div>
+      <div class="hm-desc">3축 × 3톤(모델·인포·카툰) × 5매체 규격</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">AI 심의봇 가드레일</div>
+      <div class="hm-value">100<span class="hm-unit">%</span></div>
+      <div class="hm-desc">3축 키워드 사전 점검 자동화로 식약처 규제 회피</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">발주 사이클 단축</div>
+      <div class="hm-value">-30<span class="hm-unit">%</span></div>
+      <div class="hm-desc">3축 표준화로 발주·심의·발행 시간 단축</div>
+    </div>
+  </div>
+
+  <p class="bridge">
+    메시지 3축은 정해졌고 Slow-aging Starter는 정조준되었습니다. 이제 <strong>4050 시장도 비대칭 흡수할 시즌 캠페인 캘린더</strong>가 필요합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">15</div>
+</article>
+
+<!-- s3-4 시즌 캠페인 캘린더 -->
+<article class="slide" id="s3-4">
+  <div class="page-label">전략 결정 ㅣ 시즌 캠페인 캘린더</div>
+  <span class="slide-meta">시즌 비대칭 흡수</span>
+  <h2 class="slide-title">매드업의 네 번째 결정 — <span class="highlight">어버이날 50% · 추석 35% · 설날 15%의 시즌 D-30 3회 집중</span>으로 4050 시장도 비대칭 흡수합니다</h2>
+  <p class="slide-title-sub">광고는 30대 자녀 / 사용은 4050 부모 듀얼 타겟 / 카카오 선물하기 + GFA + 자사몰 효도 패키지 SKU 3-channel 결합</p>
+
+  <div class="season-cal">
+    <div class="sc-title">📅 2026 시즌 캠페인 캘린더</div>
+    <div class="sc-track">
+      <div class="sc-month-marks">
+        <div>1월</div><div>2월</div><div>3월</div><div>4월</div><div>5월</div><div>6월</div>
+        <div>7월</div><div>8월</div><div>9월</div><div>10월</div><div>11월</div><div>12월</div>
+      </div>
+      <div class="sc-block minor" style="left:0%;width:6%;">설날 15%</div>
+      <div class="sc-block major" style="left:25%;width:8.3%;">어버이날 50%</div>
+      <div class="sc-block major" style="left:62%;width:8.3%; background:linear-gradient(90deg, var(--accent-warm) 0%, var(--accent-gold) 100%);">추석 35%</div>
+      <div class="sc-block minor" style="left:93%;width:7%;">설날 15%</div>
+    </div>
+    <p style="font-size:11px;color:var(--text-caption);margin:14px 0 0;">→ 어버이날이 효도선물 연간 1위 시즌 (예산 50%) / 추석 2위 (35%) / 설날 3위 (15%)</p>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">시즌별 3-channel 운영</p>
+  <table>
+    <thead>
+      <tr><th style="width:20%;">채널</th><th>예산</th><th>역할</th><th style="width:24%;">시즌별 적용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>카카오 선물하기 + 카플친</strong></td>
+        <td><strong style="color:var(--accent-rose);">40%</strong></td>
+        <td>"부모님 선물" 카테고리 진입 / 카플친 +200% KPI 견인</td>
+        <td>전 시즌 핵심 채널</td>
+      </tr>
+      <tr>
+        <td><strong>GFA + 메타 인스타·릴스</strong></td>
+        <td><strong style="color:var(--accent-rose);">35%</strong></td>
+        <td>30대 자녀 도달 / "부모님께" 톤 영상·이미지</td>
+        <td>어버이날 집중</td>
+      </tr>
+      <tr>
+        <td><strong>자사몰 + BS 효도 패키지</strong></td>
+        <td><strong style="color:var(--accent-rose);">25%</strong></td>
+        <td>디바이스 + 포장 + 매뉴얼 + 매장 컨설팅 쿠폰 SKU</td>
+        <td>전 시즌 전환 채널</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>시즌 캠페인은 광고 타겟(30대 자녀)이 RFP와 일치하므로 <strong>광고주 의사를 어기지 않고 4050 시장을 흡수</strong>한다 — 비대칭 전략의 핵심입니다</li>
+    <li>시즌 캠페인은 카플친 +200% KPI를 자연 견인하는 구조 — 시즌 결제 → 카플친 가입 → 알림톡 시리즈 5단 자동 트리거(Ch6 CRM)</li>
+  </ul>
+
+  <p class="bridge">
+    네 가지 결정(1.5 페르소나·Pro 신제품·3축 메시지·시즌 캘린더)이 정렬되었습니다. <strong>이 결정들이 어떻게 단일 프레임으로 작동하는지</strong>를 Ch3 결론에서 정리합니다. <em>다음 슬라이드로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">16</div>
+</article>
+
+<!-- s3-sum Ch3 결론 -->
+<article class="slide" id="s3-sum">
+  <div class="page-label">전략 결정 ㅣ Chapter 3 결론</div>
+  <span class="slide-meta">🎯 Ch3 결론</span>
+  <h2 class="slide-title">네 가지 결정이 <span class="highlight">단일 프레임으로 작동</span>한다 — 1.5 페르소나 + Pro 신제품 + 3축 메시지 + 시즌 캘린더가 서로의 약점을 보완합니다</h2>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">결정 1</div>
+      <h6>1.5 페르소나</h6>
+      <p>Slow-aging Starter 80%<br>Gift Buyer 20%</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">결정 2</div>
+      <h6>Pro 신제품</h6>
+      <p>EMS+RF+갈바닉<br>2026 Q3 출시</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">결정 3</div>
+      <h6>3축 메시지</h6>
+      <p>슬로우에이징 루틴<br>매일 5분 · 첫 디바이스</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">결정 4</div>
+      <h6>시즌 캘린더</h6>
+      <p>어버이날 50%<br>추석 35% · 설날 15%</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:28px 0 14px;">상호 보완 매트릭스</p>
+  <table>
+    <thead>
+      <tr><th style="width:22%;">결정</th><th>약점 보완 대상</th><th>보완 방식</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1.5 페르소나</strong></td><td>다층 운영 메시지 약화</td><td>단일 페르소나 집중 → 메시지·소재·매체 일관성</td></tr>
+      <tr><td><strong>Pro 신제품</strong></td><td>EMS 단일 페르소나 미스매치</td><td>RF·갈바닉 결합으로 3040 본능 정합</td></tr>
+      <tr><td><strong>3축 메시지</strong></td><td>Pro 출시 전 기간 (Q1~Q2)</td><td>EMS 카테고리어 후방 배치 + 슬로우에이징 톤</td></tr>
+      <tr><td><strong>시즌 캘린더</strong></td><td>4050 시장 미응대</td><td>광고 30대 / 사용 4050 듀얼로 RFP 유지 + 흡수</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>네 결정은 <strong>각각 독립적이지만 서로의 약점을 정확히 보완</strong>한다 — 하나라도 빠지면 다른 결정의 효과가 약해집니다</li>
+    <li>이 단일 프레임이 매드업의 비딩 핵심 명제 — 메디큐브의 "1위 IP"·LG의 "기술"·메이크온의 "1020"과 모두 다른 자리에 OLLI LIRA가 선다</li>
+  </ul>
+
+  <p class="bridge">
+    전략은 결정되었습니다. 이제 <strong>이 단일 프레임을 8개 매체에 어떻게 실행할 것인지</strong>가 다음 질문입니다. <em>Ch4 매체 운영으로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">17</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 04 — 매체 운영 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch4">
+  <div class="ch-eyebrow">Chapter 04<span class="ch-eyebrow-title">· 매체 운영</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">메디큐브를 따라가면 어떻게 될까요?<br><span class="em">영원히 2등에 머뭅니다.</span></h1>
+  <p class="declaration-sub">셀럽·1위 경쟁을 회피하고, Lever 58장 분석이 찾아낸 빈 메시지(임상·교육·결합)를 8개 매체로 정조준합니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">매체 운영</span></p>
+  <p class="ch-summary">3040 코어 80%는 검색·메타·구글·BS로 상시 운영하고, 4050 시즌 20%는 카카오 선물하기로 D-30 집중합니다. 메디큐브 정면 충돌을 회피하고 Lever Xpert 58장 분석의 시장 여백(임상 정량 + 교육형 Q&A + 결합형 정당성)을 정조준합니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch4 결론</strong>: 메디큐브 회피 + 시장 여백 정조준 + 시즌 비대칭 흡수 — 8 채널 단일 운영.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- s4-1 매체 믹스 전체 -->
+<article class="slide" id="s4-1">
+  <div class="page-label">매체 운영 ㅣ 매체 믹스 전체</div>
+  <span class="slide-meta">매체 믹스</span>
+  <h2 class="slide-title">8 채널은 <span class="highlight">3040 코어 상시 운영 + 4050 시즌 집중</span>으로 역할이 분명하게 나뉜다 — 각 채널이 단일 프레임의 한 부분을 담당합니다</h2>
+  <p class="slide-title-sub">코어 80% (검색·메타·구글·BS·자사몰) 상시 + 시즌 20% (카카오·GFA) 집중 / GEO는 Pro 신제품 카테고리어 선점 보조</p>
+
+  <div class="bar-chart">
+    <div class="bc-title">📡 채널별 예산 비중 (연간)</div>
+    <div class="bar-row">
+      <div class="bar-label">검색 (LSA·NDA)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:22%;">카테고리어 응대</div></div>
+      <div class="bar-value">22%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">메타 (인스타·릴스)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:24%;">코어 도달·전환</div></div>
+      <div class="bar-value">24%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">구글 (UAC·YT)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:12%;">임상 신뢰 콘텐츠</div></div>
+      <div class="bar-value">12%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">네이버 BS·협력광고</div>
+      <div class="bar-track"><div class="bar-fill" style="width:18%;">전환 거점</div></div>
+      <div class="bar-value">18%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">카카오 (시즌)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:16%; background:linear-gradient(90deg, var(--accent-beige) 0%, var(--accent-gold) 100%);">4050 시즌 흡수</div></div>
+      <div class="bar-value" style="color:var(--accent-beige);">16%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">GEO·기타</div>
+      <div class="bar-track"><div class="bar-fill muted" style="width:8%;">신제품 선점 보조</div></div>
+      <div class="bar-value muted">8%</div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>채널 비중은 LEVER Xpert가 매주 ROAS·전환·이탈 데이터로 자동 재조정 — 고정값이 아닌 효율 기반 동적 운영입니다</li>
+    <li>RFP "신규 매체 발굴" 요구에 GEO(AI 검색) + 메타 협력광고(쿠팡 종료 대체)로 직접 응답합니다</li>
+    <li class="sub">→ 매체 구체 예산은 광고주 NDA 자료 수령 후 Ch7 Special Offer 단계에서 확정 제시</li>
+  </ul>
+
+  <p class="bridge">
+    채널 역할은 정리되었습니다. 가장 먼저 <strong>검색이 카테고리어 전환(+1,762%)에 어떻게 응대하는지</strong>를 봅니다. <em>다음 슬라이드로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">18</div>
+</article>
+
+<!-- s4-2 검색 운영 -->
+<article class="slide" id="s4-2">
+  <div class="page-label">매체 운영 ㅣ 검색</div>
+  <span class="slide-meta">검색 · LSA · NDA</span>
+  <h2 class="slide-title">검색은 <span class="highlight">카테고리어 전환의 정면 응대 채널</span> — LEVER Xpert로 폭증 키워드를 자동 선점하고 다중 USP를 단일 카피에 압축합니다</h2>
+  <p class="slide-title-sub">"갈바닉 디바이스" +1,762% / "고주파 디바이스" +1,120% 폭증 키워드 진입 비용이 낮은 시기 / 브랜드 보호 + 카테고리어 + 경쟁사 대응 3중 운영</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:24%;">키워드 군</th><th>예시</th><th style="width:16%;">매체</th><th style="width:16%;">페르소나</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong style="color:var(--accent-rose);">폭증 카테고리어 ⭐</strong></td><td>"갈바닉 디바이스" · "고주파 디바이스" · "리프팅 디바이스"</td><td>LSA·NDA</td><td>Pro 진입 (3040)</td></tr>
+      <tr><td><strong>슬로우에이징</strong></td><td>"슬로우에이징 디바이스" · "홈케어 에스테틱"</td><td>LSA·NDA·GEO</td><td>Slow-aging Starter</td></tr>
+      <tr><td><strong>시즌·선물</strong></td><td>"어버이날 선물" · "효도 선물" · "부모님 선물"</td><td>LSA·GFA</td><td>Gift Buyer (시즌)</td></tr>
+      <tr><td><strong>브랜드 보호</strong></td><td>"올리리라" · "OLLI LIRA"</td><td>LSA</td><td>3-Track 공통</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">LEVER Xpert 입찰</div>
+      <div class="hm-value">자동</div>
+      <div class="hm-desc">키워드 입찰가 자동 최적화 + 신규 진입 키워드 발굴</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">자기잠식 리스크</div>
+      <div class="hm-value">최소</div>
+      <div class="hm-desc">트랙별 키워드 충돌 거의 없음 — 독립 운영 가능</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">AI 심의봇</div>
+      <div class="hm-value">사전</div>
+      <div class="hm-desc">키워드·카피 식약처 규제 사전 점검 자동화</div>
+    </div>
+  </div>
+
+  <p class="bridge">
+    검색이 수요를 잡으면, <strong>메타·구글이 효능과 임상 신뢰로 전환을 만듭니다</strong>. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">19</div>
+</article>
+
+<!-- s4-3 메타·구글 -->
+<article class="slide" id="s4-3">
+  <div class="page-label">매체 운영 ㅣ 메타 · 구글</div>
+  <span class="slide-meta">메타 · 구글 퍼포먼스</span>
+  <h2 class="slide-title">메타·구글은 <span class="highlight">Slow-aging Starter 정조준의 메인 트래픽 채널</span> — 효능 데이터·임상 시각화로 메디큐브 셀럽 전략을 우회합니다</h2>
+  <p class="slide-title-sub">Meta Badged Premium · Google Premier 파트너 권한 / Lever Xpert 분석 — 메디큐브 62% 점유(셀럽) / 약손명가는 "임상 정량 + 교육형" 빈자리 정조준</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">인지</div>
+      <h6>슬로우에이징 루틴</h6>
+      <p>인스타 릴스<br>15초 Hook 영상</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">고려</div>
+      <h6>효능 인포그래픽</h6>
+      <p>메타 Carousel<br>임상 정량 데이터</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">신뢰</div>
+      <h6>전문가·임상 콘텐츠</h6>
+      <p>유튜브 KOL<br>4050 헬스 전문가</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">전환</div>
+      <h6>미끼 프로모션</h6>
+      <p>풀세트 318,000원<br>리타게팅 자동화</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>Meta·Criteo Agency of the Year 5년 연속(2021~2025)</strong> — 매체사 우선 지원·CSM 지정·신규 베타 기능 우선 적용</li>
+    <li>메디큐브의 셀럽 전략 대신 <strong>"임상 정량 + 교육형 Q&A"</strong>로 우회 — Lever 분석에서 약손명가가 차지할 시장 여백으로 확인됨</li>
+    <li>SPRAY AI로 소재 자동 생성·테스트 → 일간 단위 소재 회전 + 피로도 관리 자동화</li>
+  </ul>
+
+  <p class="bridge">
+    메타·구글이 트래픽을 만들면, <strong>네이버 BS가 전환을 마무리하고 협력광고로 카테고리 일링을 잡습니다</strong>. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">20</div>
+</article>
+
+<!-- s4-4 네이버 BS·협력광고 -->
+<article class="slide" id="s4-4">
+  <div class="page-label">매체 운영 ㅣ 네이버 BS · 협력광고</div>
+  <span class="slide-meta">네이버 BS · 협력광고</span>
+  <h2 class="slide-title">네이버 BS는 <span class="highlight">전환 거점이자 ADVoost 자동화 무대</span> — 협력광고로 카테고리 일링과 미끼 프로모션을 동시 노출합니다</h2>
+  <p class="slide-title-sub">RFP BS ROAS 500% 도전적 KPI / 매드업 ADVoost(통합 애셋 자동 소재) + 쇼핑 프로모션 베타 / 쿠팡 협력광고 종료(25.12) → 메타 협력광고 신규 도입으로 대체</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:20%;">운영 축</th><th>현재 (EMS 단일)</th><th>Pro 출시 후 (Q3~)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>BS 카테고리 일링</strong></td><td>"EMS 리프팅" 카테고리</td><td>"갈바닉·고주파 디바이스" 폭증 카테고리 추가</td></tr>
+      <tr><td><strong>협력광고</strong></td><td>풀세트 318,000원 미끼</td><td>Pro 풀세트 + 어태치먼트 단독 SKU</td></tr>
+      <tr><td><strong>ADVoost 자동화</strong></td><td>통합 애셋 자동 소재 생성</td><td>신제품 소재 자동 확장</td></tr>
+      <tr><td><strong>매드업 권한</strong></td><td colspan="2" style="text-align:center;color:var(--accent-rose);font-weight:600;">Naver Premier Partner — 베타 기능 우선 적용 + CSM 직접 협의</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>BS는 3 브랜드 통합 funnel 유지하되 카테고리·시즌별 소재 분리 운영으로 페르소나 명확화</li>
+    <li>협력광고 + 검색 결합 시 ROAS 평균 +30% 개선 사례 다수 — BS ROAS 500% KPI의 실현 경로</li>
+    <li class="sub">매장·BS·자사몰 1st-party 데이터는 MILOT으로 통합 (Ch6 CRM 연결)</li>
+  </ul>
+
+  <p class="bridge">
+    코어 채널(검색·메타·BS)이 상시 운영을 담당하면, <strong>카카오 선물하기가 4050 시즌을 비대칭으로 흡수합니다</strong>. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">21</div>
+</article>
+
+<!-- s4-5 카카오 선물하기 (시즌) -->
+<article class="slide" id="s4-5">
+  <div class="page-label">매체 운영 ㅣ 카카오 선물하기 (시즌)</div>
+  <span class="slide-meta">카카오 · 시즌 흡수</span>
+  <h2 class="slide-title">카카오 선물하기는 <span class="highlight">4050 시즌 비대칭 흡수의 핵심 채널</span> — 시즌 결제가 카플친 +200% KPI를 자연 견인합니다</h2>
+  <p class="slide-title-sub">어버이날 D-30(4월) · 추석 D-30(9월) · 설날 D-30(1월) 3회 집중 / 광고는 30대 자녀 / 사용은 4050 부모 듀얼 타겟</p>
+
+  <div class="season-cal">
+    <div class="sc-title">📅 시즌 D-30 집중 운영 (시즌 채널 예산 40%)</div>
+    <div class="sc-track">
+      <div class="sc-month-marks">
+        <div>1월</div><div>2월</div><div>3월</div><div>4월</div><div>5월</div><div>6월</div>
+        <div>7월</div><div>8월</div><div>9월</div><div>10월</div><div>11월</div><div>12월</div>
+      </div>
+      <div class="sc-block minor" style="left:0%;width:6%;">설날</div>
+      <div class="sc-block major" style="left:25%;width:8.3%;">어버이날 50%</div>
+      <div class="sc-block major" style="left:62%;width:8.3%; background:linear-gradient(90deg, var(--accent-warm) 0%, var(--accent-gold) 100%);">추석 35%</div>
+      <div class="sc-block minor" style="left:93%;width:7%;">설날</div>
+    </div>
+  </div>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">1</div>
+      <h6>시즌 노출</h6>
+      <p>카카오 선물하기<br>"부모님 선물" 진입</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">2</div>
+      <h6>결제</h6>
+      <p>효도 패키지 SKU<br>포장+매뉴얼+쿠폰</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">3</div>
+      <h6>카플친 가입</h6>
+      <p>자동 가입 유도<br>+200% KPI 견인</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">4</div>
+      <h6>알림톡 5단</h6>
+      <p>픽업→매뉴얼→<br>컨설팅→재구매</p>
+    </div>
+  </div>
+
+  <p class="bridge">
+    8 채널의 역할과 시즌 운영이 정리되었습니다. <strong>이를 단일 운영 원칙으로 묶는 Ch4 결론</strong>으로 이동합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">22</div>
+</article>
+
+<!-- s4-sum Ch4 결론 -->
+<article class="slide" id="s4-sum">
+  <div class="page-label">매체 운영 ㅣ Chapter 4 결론</div>
+  <span class="slide-meta">🎯 Ch4 결론</span>
+  <h2 class="slide-title">8 채널은 <span class="highlight">메디큐브 회피 · 빈자리 정조준 · 시즌 흡수</span>라는 단일 원칙으로 작동한다 — Lever Xpert 58장 분석이 운영 근거입니다</h2>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">원칙 ①</div>
+      <h5>메디큐브 회피</h5>
+      <p class="ma-desc">셀럽 0% · "1등 5관왕" 0% · 자사 신구 비교 0%.</p>
+      <p class="ma-detail">→ 정면 추격 함정을 회피하고 자원 효율을 지킵니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">원칙 ②</div>
+      <h5>시장 여백 정조준</h5>
+      <p class="ma-desc">임상 정량 + 교육형 Q&A + 결합형 정당성 2축 이상 결합.</p>
+      <p class="ma-detail">→ Lever 분석에서 발견한 미점유 영역을 단독 점유합니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">원칙 ③</div>
+      <h5>시즌 비대칭 흡수</h5>
+      <p class="ma-desc">카카오 선물하기로 4050 시장을 RFP 위반 없이 흡수.</p>
+      <p class="ma-detail">→ 카플친 +200% KPI를 자연 견인합니다.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>8 채널은 각자 다른 역할을 맡지만 <strong>단일 원칙 아래 통합 운영</strong>된다 — LEVER Xpert 콘솔 1개로 전체 가시화</li>
+    <li>RFP 7개 과업 중 미디어 믹스·퍼포먼스·신규 매체 발굴 3개가 이 챕터에서 직접 응답됩니다</li>
+  </ul>
+
+  <p class="bridge">
+    매체가 트래픽을 만들면, <strong>크리에이티브가 전환을 만듭니다</strong>. 11종 카피 × 메시지 3축 × SPRAY AI 자동화로 이동합니다. <em>Ch5 크리에이티브로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">23</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 05 — 크리에이티브 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch5">
+  <div class="ch-eyebrow">Chapter 05<span class="ch-eyebrow-title">· 크리에이티브</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">잘 만든 소재 하나면 충분할까요?<br><span class="em">매주 165개가 돌아야 이깁니다.</span></h1>
+  <p class="declaration-sub">메시지 3축을 SPRAY AI가 카피 11종 × 3톤 × 5매체로 자동 변환합니다. AI 심의봇이 식약처 규제를 사전에 막습니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">크리에이티브</span></p>
+  <p class="ch-summary">메시지 3축을 코어 카피 6종 + 4050 시즌 변형 5종 = 총 11종으로 구현하고, SPRAY AI로 3톤 × 5매체에 자동 변환하면 최대 165개 변형이 생성됩니다. AI 심의봇이 식약처 강화 규제를 사전 회피하고, 1.5 페르소나 단일 톤으로 정렬합니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch5 결론</strong>: 11종 카피 × 3톤 × 5매체 = 최대 165개 변형 / 주간 회전 + 식약처 자동 회피.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- s5-1 카피 11종 매트릭스 -->
+<article class="slide" id="s5-1">
+  <div class="page-label">크리에이티브 ㅣ 카피 11종 매트릭스</div>
+  <span class="slide-meta">카피 매트릭스</span>
+  <h2 class="slide-title"><span class="highlight">코어 6종 + 4050 시즌 변형 5종 = 총 11종</span> — Lever 58장 분석의 시장 여백을 단일 메시지에 압축합니다</h2>
+  <p class="slide-title-sub">각 카피 = 1개 메인 트랙 + 1-2개 보조 트랙 / Slow-aging Starter 정합성 우수 4종 유지 · 1종 톤 격상 · 1종 신규 추가</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:34%;">코어 카피 6종</th><th style="width:16%;">정합성</th><th>4050 시즌 변형</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>① 가성비 "써마지 한번이면 평생"</td><td>⭐⭐⭐⭐</td><td>"부모님 시술 1번 = 평생 홈케어"</td></tr>
+      <tr><td>② 임상 정량 "부위별 %"</td><td>⭐⭐⭐</td><td>"45년 임상이 만든 효능 — 부모님께"</td></tr>
+      <tr><td>③ 결합형 정당성 Q&A</td><td>⭐⭐⭐⭐</td><td>"부모님이 묻기 전에 답해주는 사용법"</td></tr>
+      <tr><td>④ 시술→가정 전환</td><td>⭐⭐⭐⭐⭐</td><td>"매장 한 번 모시는 대신, 매일 5분"</td></tr>
+      <tr><td>⑤ <s>4주 챌린지</s> → 12주 슬로우에이징 루틴</td><td>톤 격상</td><td>"부모님 12주 루틴 — 자녀가 같이"</td></tr>
+      <tr style="background:rgba(245,212,216,0.08);"><td><strong style="color:var(--accent-rose);">⑥ NEW "약손명가가 30대에 권하는 첫 디바이스"</strong></td><td>신규</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">코어 카피</div>
+      <div class="hm-value">6<span class="hm-unit">종</span></div>
+      <div class="hm-desc">정합성 우수 4종 + 톤 격상 1종 + 신규 1종</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">시즌 변형</div>
+      <div class="hm-value">5<span class="hm-unit">종</span></div>
+      <div class="hm-desc">Gift Buyer Path 4050 듀얼 타겟용</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">총 변형</div>
+      <div class="hm-value">165<span class="hm-unit">개</span></div>
+      <div class="hm-desc">11종 × 3톤 × 5매체 SPRAY AI 자동 생성</div>
+    </div>
+  </div>
+
+  <p class="bridge">
+    카피 11종은 메시지 3축에서 파생됩니다. <strong>3축이 헤드라인·바디·CTA로 어떻게 디테일링되는지</strong>를 봅니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">24</div>
+</article>
+
+<!-- s5-2 메시지 프레임 디테일 -->
+<article class="slide" id="s5-2">
+  <div class="page-label">크리에이티브 ㅣ 메시지 프레임 디테일</div>
+  <span class="slide-meta">3축 디테일링</span>
+  <h2 class="slide-title">메시지 3축은 <span class="highlight">헤드라인·바디·CTA로 디테일링</span>되어 SPRAY AI 자동 생성 시드로 직접 활용됩니다</h2>
+  <p class="slide-title-sub">소재 발주서·매체별 변형의 직접 자산 / 3축 × 3톤(모델·인포·카툰) × 5매체 규격</p>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ① 슬로우에이징 루틴</div>
+      <h5>"안티에이징 말고,<br>슬로우에이징"</h5>
+      <p class="ma-desc"><strong>바디</strong>: "노화는 막을 수 없지만, 늦출 수는 있어요. 약손명가가 만든 EMS 밴드로 매일 만나는 루틴, 30대부터."</p>
+      <p class="ma-detail"><strong>CTA</strong>: "내 슬로우에이징 루틴 시작하기 →"</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ② 매일 5분</div>
+      <h5>"매일 5분,<br>매장 케어를 집에서"</h5>
+      <p class="ma-desc"><strong>바디</strong>: "매장 갈 시간 없는 직장인 30대를 위해. 46년 약손명가 노하우가 만든 EMS 밴드, 출근 전 5분이면 충분."</p>
+      <p class="ma-detail"><strong>CTA</strong>: "5분 루틴 시작 → 첫 구매 10% 할인"</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">축 ③ 첫 디바이스</div>
+      <h5>"디바이스 처음이라면,<br>약손명가"</h5>
+      <p class="ma-desc"><strong>바디</strong>: "디바이스가 30개 넘어요. 뭐가 좋은지 몰라요? 46년 약손명가가 30대를 위해 만든 첫 EMS 디바이스."</p>
+      <p class="ma-detail"><strong>CTA</strong>: "첫 디바이스 가이드 받기 →" (카플친 가입)</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);letter-spacing:0.12em;text-transform:uppercase;font-weight:800;margin:24px 0 14px;">SPRAY AI 자동 생성 매트릭스</p>
+  <table>
+    <thead>
+      <tr><th style="width:24%;">—</th><th>모델 톤</th><th>인포그래픽 톤</th><th>카툰·일러스트</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>축 ① 루틴</strong></td><td>30대 모델 일상 컷</td><td>"안티 vs 슬로우" 비교</td><td>"루틴 캘린더"</td></tr>
+      <tr><td><strong>축 ② 5분</strong></td><td>출근 전 거울 셀카</td><td>"5분 사용법" 단계</td><td>"바쁜 30대 일상"</td></tr>
+      <tr><td><strong>축 ③ 첫</strong></td><td>모델 + 약손명가 본원</td><td>"디바이스 비교 가이드"</td><td>"고민 → 결정"</td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    3축 디테일은 SPRAY AI 시드가 됩니다. <strong>SPRAY AI와 AI 심의봇이 어떻게 자동 생성·심의 사이클을 만드는지</strong>를 봅니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">25</div>
+</article>
+
+<!-- s5-3 SPRAY AI · 심의봇 -->
+<article class="slide" id="s5-3">
+  <div class="page-label">크리에이티브 ㅣ SPRAY AI · AI 심의봇</div>
+  <span class="slide-meta">자동화 파이프라인</span>
+  <h2 class="slide-title">SPRAY AI + AI 심의봇은 <span class="highlight">생성 → 심의 → 발행 사이클을 자동화</span> — 주간 회전과 식약처 규제 회피를 동시에 가능하게 합니다</h2>
+  <p class="slide-title-sub">2025년 화장품 광고 행정처분 265건 중 70%가 "선 넘은 광고" 적발 / 식약처 AI 모니터링 가동 → 사전 점검이 운영 효율의 핵심</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">1</div>
+      <h6>SPRAY AI 생성</h6>
+      <p>11종 카피 시드<br>3톤 × 5매체 자동</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">2</div>
+      <h6>AI 심의봇 점검</h6>
+      <p>식약처 지침 기반<br>위반 표현 자동 검출</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">3</div>
+      <h6>인력 검수</h6>
+      <p>크리에이티브 70+<br>이중 체계</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">4</div>
+      <h6>발행·환원</h6>
+      <p>효율 데이터<br>LEVER Xpert 환원</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>AI 심의봇</strong> — 화장품 표시·광고 관리 지침(2025.1.21 개정) 기반 자동 점검 + "100%"·"치료"·"완벽" 등 금기어 자동 대체 카피 제안</li>
+    <li><strong>BEYOND·임상 카피</strong>는 심의 리스크가 가장 높음 → AI 심의봇 사전 점검이 운영 효율의 핵심</li>
+    <li>SPRAY AI 자동 생성 + 인력 70+ 검수의 <strong>이중 체계</strong>로 발주 사이클 평균 30% 단축</li>
+  </ul>
+
+  <p class="bridge">
+    자동화 파이프라인이 효율을 만들면, <strong>톤앤매너가 1.5 페르소나에 정합된 단일 비주얼 언어</strong>를 보장합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">26</div>
+</article>
+
+<!-- s5-4 톤앤매너 가이드 -->
+<article class="slide" id="s5-4">
+  <div class="page-label">크리에이티브 ㅣ 톤앤매너 가이드</div>
+  <span class="slide-meta">Visual Direction</span>
+  <h2 class="slide-title">톤앤매너는 <span class="highlight">Slow-aging Starter 단일 페르소나에 정합</span>된다 — 3-Track 분산 대신 코어 페르소나 중심 단일 비주얼 언어로 통일합니다</h2>
+  <p class="slide-title-sub">1.5 페르소나 결정에 따라 톤도 단일화 / Modern·Editorial·Warm 3톤은 funnel 단계별 역할로 재배치</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:18%;">funnel 단계</th><th>비주얼 톤</th><th>컬러</th><th>활용 매체</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>인지 (Hook)</strong></td><td>Modern · 모던 미니멀</td><td>무채색 + 로즈골드 액센트</td><td>인스타 릴스 · 유튜브 쇼츠</td></tr>
+      <tr><td><strong>고려 (Detail)</strong></td><td>Editorial · 임상 신뢰</td><td>화이트 + 네이비 액센트</td><td>메타 Carousel · BS 상세 · GEO</td></tr>
+      <tr><td><strong>신뢰 (Trust)</strong></td><td>Editorial · 전문가</td><td>화이트 + 골드</td><td>유튜브 KOL · BS 신뢰 콘텐츠</td></tr>
+      <tr><td><strong>전환·시즌 (Action)</strong></td><td>Warm · 따뜻·정성</td><td>우드톤 + 크림 + 골드</td><td>카카오 선물하기 · 효도 패키지</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>3톤은 페르소나가 아닌 <strong>funnel 단계별 역할</strong>로 재배치 — Slow-aging Starter라는 단일 페르소나 안에서 일관성 유지</li>
+    <li>Warm 톤은 4050 시즌(Gift Buyer Path)에 집중 활용 — 효도·정성 정서 강조</li>
+    <li class="sub">매드업 디자인 시스템 라이브러리 등록 → SPRAY AI 자동 생성 시드로 활용</li>
+  </ul>
+
+  <p class="bridge">
+    크리에이티브 체계가 완성되었습니다. <strong>이를 단일 운영으로 묶는 Ch5 결론</strong>으로 이동합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">27</div>
+</article>
+
+<!-- s5-sum Ch5 결론 -->
+<article class="slide" id="s5-sum">
+  <div class="page-label">크리에이티브 ㅣ Chapter 5 결론</div>
+  <span class="slide-meta">🎯 Ch5 결론</span>
+  <h2 class="slide-title"><span class="highlight">11종 카피 × 3톤 × 5매체 = 최대 165개 변형</span> — 주간 회전과 식약처 자동 회피가 동시에 가능한 크리에이티브 엔진이 완성됐습니다</h2>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">카피 자산</div>
+      <div class="hm-value">11<span class="hm-unit">종</span></div>
+      <div class="hm-desc">코어 6 + 시즌 변형 5 (Lever 58장 분석 기반)</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">자동 변형</div>
+      <div class="hm-value">165<span class="hm-unit">개</span></div>
+      <div class="hm-desc">SPRAY AI 3톤 × 5매체 자동 생성</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">심의 회피</div>
+      <div class="hm-value">자동</div>
+      <div class="hm-desc">AI 심의봇 + 인력 70+ 이중 체계</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">발주 단축</div>
+      <div class="hm-value">-30<span class="hm-unit">%</span></div>
+      <div class="hm-desc">생성→심의→발행 사이클 표준화</div>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>크리에이티브 엔진은 <strong>광고 카피·소재·심의·매체 발주</strong> RFP 과업에 직접 응답 — 월별 제작 수량·단가 명시 가능</li>
+    <li>SPRAY AI A/B 효율 검증 → BS ROAS 500% · 외부몰 ROAS 300% 달성 경로의 핵심 도구</li>
+  </ul>
+
+  <p class="bridge">
+    소재가 전환을 만들면, <strong>CRM이 재구매와 LTV를 만듭니다</strong>. 광고만으로는 도달 불가능한 KPI를 통합 운영으로 푼다. <em>Ch6 CRM·재구매로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">28</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 06 — CRM · 재구매 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch6">
+  <div class="ch-eyebrow">Chapter 06<span class="ch-eyebrow-title">· CRM · 재구매</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage "><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">구매 버튼을 누르면 끝일까요?<br><span class="em">디바이스는 그때부터가 시작입니다.</span></h1>
+  <p class="declaration-sub">결합형 락인(밴드+패치+겔)이 CRM과 만나면 LTV 7.7배. 카플친 +200%는 광고가 아니라 5단 시나리오가 만듭니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">CRM · 재구매</span></p>
+  <p class="ch-summary">OLLI LIRA의 결합형 락인(밴드+패치+겔)은 CRM과 만날 때 LTV 7.7배로 극대화됩니다. 카플친 +200% KPI는 광고가 아닌 시즌 결제 → 카플친 가입 → 알림톡 5단 시나리오로 견인되며, MILOT이 5개 데이터 소스를 통합하고 Pro 신제품이 기존 사용자 락인을 강화합니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch6 결론</strong>: 광고만으로 KPI 도달 불가 → 광고+알림톡+콘텐츠 통합 운영으로 LTV 견인.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- s6-1 CRM 5단 시나리오 -->
+<article class="slide" id="s6-1">
+  <div class="page-label">CRM · 재구매 ㅣ CRM 5단 시나리오</div>
+  <span class="slide-meta">CRM 5단 시나리오</span>
+  <h2 class="slide-title">시즌 결제가 <span class="highlight">카플친 가입 → 알림톡 5단 시나리오</span>를 자동 트리거 — 카플친 +200% KPI는 광고가 아닌 CRM 결합으로 견인됩니다</h2>
+  <p class="slide-title-sub">RFP 카플친 +200% KPI는 광고만으로 달성 불가 / 시즌 캠페인(Ch4) → 결제 → 카플친 → 알림톡 자동 시리즈 5단</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">1단</div>
+      <h6>선물 픽업 알림</h6>
+      <p>결제 직후<br>배송·픽업 안내</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">2단</div>
+      <h6>부모님 매뉴얼</h6>
+      <p>D+3<br>사용법 PDF 발송</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">3단</div>
+      <h6>매장 컨설팅 쿠폰</h6>
+      <p>D+14<br>1:1 OMO 유도</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">4·5단</div>
+      <h6>체크인 → 재구매</h6>
+      <p>D+30 사용 체크<br>패치·겔 락인</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:20%;">CRM 시나리오</th><th>트리거</th><th>채널</th><th style="width:22%;">목표</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>디바이스 첫 구매</strong></td><td>구매 후 14일</td><td>카플친·이메일</td><td>사용 가이드 + 후기 유도</td></tr>
+      <tr><td><strong>앰플·패치 정기</strong></td><td>구매 후 30일</td><td>카플친·SMS</td><td>전용 소모재 정기 구독</td></tr>
+      <tr><td><strong>매장 OMO</strong></td><td>구매 후 60일</td><td>카플친·매장 QR</td><td>약손명가 시술 멤버십</td></tr>
+      <tr><td><strong>시즌·선물</strong></td><td>시즌 D-30</td><td>카카오 선물하기</td><td>가족 구성원 선물 구매</td></tr>
+      <tr><td><strong>Pro 업셀</strong></td><td>Pro 출시 시</td><td>카플친 얼리액세스</td><td>기존 사용자 어태치먼트 추가</td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    5단 시나리오가 작동하려면 <strong>흩어진 데이터가 하나로 통합</strong>되어야 한다 — MILOT이 그 역할을 합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">29</div>
+</article>
+
+<!-- s6-2 MILOT 통합 데이터 -->
+<article class="slide" id="s6-2">
+  <div class="page-label">CRM · 재구매 ㅣ MILOT 통합 데이터</div>
+  <span class="slide-meta">MILOT · 1st-party</span>
+  <h2 class="slide-title">MILOT은 <span class="highlight">자사몰·BS·매장·이메일·카카오를 통합</span>하는 1st-party 데이터 엔진 — 5단 시나리오를 자동 트리거합니다</h2>
+  <p class="slide-title-sub">디바이스는 구매 주기가 길어 1st-party 데이터·CRM 자동화가 LTV의 핵심 / 매드업 자체 솔루션 — 사용 추가 비용 0</p>
+
+  <div class="funnel-row">
+    <div class="funnel-step">
+      <div class="fs-num">수집</div>
+      <h6>5개 소스 통합</h6>
+      <p>자사몰·BS·매장<br>이메일·카카오</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">분석</div>
+      <h6>사용자 세그먼트</h6>
+      <p>구매주기·LTV·<br>이탈 위험 스코어</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">트리거</div>
+      <h6>시나리오 자동</h6>
+      <p>5단 CRM<br>자동 발송</p>
+    </div>
+    <div class="funnel-step">
+      <div class="fs-num">최적화</div>
+      <h6>효율 환원</h6>
+      <p>LEVER Xpert<br>매체 타깃 시드</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li><strong>MILOT</strong>은 매드업 자체 1st-party 데이터 솔루션 — 5개 소스 통합 관리 + CRM 시나리오 자동 트리거 + 매체 리타게팅 시드 생성</li>
+    <li>매장·BS·자사몰 데이터가 분리 운영되면 5단 시나리오가 작동 불가 — MILOT 통합이 전제 조건</li>
+    <li class="sub">광고주 자체 시스템(ERP·POS) 연동은 NDA 체결 후 Ch7 Special Offer 단계에서 협의</li>
+  </ul>
+
+  <p class="bridge">
+    데이터가 통합되면, <strong>Pro 신제품이 기존 사용자 락인을 한 단계 더 강화</strong>합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">30</div>
+</article>
+
+<!-- s6-3 Pro 락인 재구매 -->
+<article class="slide" id="s6-3">
+  <div class="page-label">CRM · 재구매 ㅣ Pro 락인 재구매</div>
+  <span class="slide-meta">Pro 업셀 · 락인</span>
+  <h2 class="slide-title">Pro 신제품은 <span class="highlight">기존 사용자에게 어태치먼트 업셀로 락인을 강화</span> — 신규 획득 없이 LTV를 끌어올립니다</h2>
+  <p class="slide-title-sub">기존 OLLI LIRA 사용자 = MILOT으로 식별 → 카플친 "얼리액세스 우선구매" 자동 트리거 → 어태치먼트 추가 구매 (신규 디바이스 구매 부담 없음)</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:24%;">사용자 단계</th><th>Pro 진입 경로</th><th>LTV 효과</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>기존 밴드 사용자</strong></td><td>RF·갈바닉 어태치먼트만 추가 구매</td><td>재구매 1회 + 소모재 락인 연장</td></tr>
+      <tr><td><strong>패치·겔 정기 사용자</strong></td><td>Pro 전용 소모재로 업셀</td><td>객단가 상승 + 정기 구독 유지</td></tr>
+      <tr><td><strong>신규 사용자</strong></td><td>처음부터 Pro 풀세트</td><td>진입 객단가 40-45만원</td></tr>
+      <tr><td><strong>4050 효도선물</strong></td><td>Pro 풀세트 = 풀스택 신뢰성</td><td>시즌 객단가 최대화</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hero-metric-row">
+    <div class="hero-metric">
+      <div class="hm-label">기존 사용자 재구매</div>
+      <div class="hm-value">어태치먼트</div>
+      <div class="hm-desc">신규 디바이스 부담 없이 락인 강화</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">결합형 LTV</div>
+      <div class="hm-value">7.7<span class="hm-unit">배</span></div>
+      <div class="hm-desc">디바이스+소모재+Pro 어태치먼트 결합</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hm-label">획득 비용</div>
+      <div class="hm-value">0</div>
+      <div class="hm-desc">기존 사용자 업셀은 신규 CAC 없음</div>
+    </div>
+  </div>
+
+  <p class="bridge">
+    CRM·재구매 체계가 완성되었습니다. <strong>이를 LTV 관점으로 묶는 Ch6 결론</strong>으로 이동합니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">31</div>
+</article>
+
+<!-- s6-sum Ch6 결론 -->
+<article class="slide" id="s6-sum">
+  <div class="page-label">CRM · 재구매 ㅣ Chapter 6 결론</div>
+  <span class="slide-meta">🎯 Ch6 결론</span>
+  <h2 class="slide-title">광고만으로는 KPI 도달 불가 — <span class="highlight">광고 + 알림톡 + 콘텐츠를 1개 운영팀이 통합 관리</span>해야 LTV 100%+를 달성합니다</h2>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">결합 ①</div>
+      <h5>결합형 락인 × CRM</h5>
+      <p class="ma-desc">밴드+패치+겔 결합형이 5단 시나리오와 만나 LTV 7.7배.</p>
+      <p class="ma-detail">→ 경쟁사가 모방 불가능한 비즈니스 모델 자산입니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">결합 ②</div>
+      <h5>시즌 × 카플친 KPI</h5>
+      <p class="ma-desc">시즌 결제가 카플친 가입을 자동 견인.</p>
+      <p class="ma-detail">→ 카플친 +200% KPI를 광고가 아닌 구조로 달성합니다.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">결합 ③</div>
+      <h5>Pro × 기존 사용자</h5>
+      <p class="ma-desc">어태치먼트 업셀로 신규 CAC 없이 LTV 상승.</p>
+      <p class="ma-detail">→ MILOT 식별 + 카플친 얼리액세스 자동 트리거.</p>
+    </div>
+  </div>
+
+  <ul class="slide-bullets">
+    <li>매드업의 강점은 <strong>광고·알림톡·콘텐츠를 분리하지 않고 1개 운영팀이 통합 관리</strong>한다는 점 — RFP CRM 과업의 직접 응답</li>
+    <li>광고 + CRM 결합 운영이 BS ROAS 500% · 카플친 +200% · LTV 100%+ KPI를 동시에 견인합니다</li>
+  </ul>
+
+  <p class="bridge">
+    전략·매체·소재·CRM이 모두 정렬되었습니다. 이제 <strong>이 모든 것을 실행할 매드업의 솔루션·조직·일정</strong>을 봅니다. <em>Ch7 매드업 솔루션으로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">32</div>
+</article>
+
+<!-- ============================================ -->
+<!-- CHAPTER 07 — 매드업 솔루션 -->
+<!-- ============================================ -->
+<section class="chapter" id="ch7">
+  <div class="ch-eyebrow">Chapter 07<span class="ch-eyebrow-title">· 매드업 솔루션 및 일정</span></div>
+  <div class="flow-spine"><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">시장</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">자사</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">전략</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">매체</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">소재</div></div><div class="fs-stage done"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">관계</div></div><div class="fs-stage current"><div class="fs-line"></div><div class="fs-dot"></div><div class="fs-label">실행</div></div></div>
+  <h1 class="declaration">전략이 훌륭하면 충분할까요?<br><span class="em">실행할 도구와 사람이 없으면 종이일 뿐입니다.</span></h1>
+  <p class="declaration-sub">시그니처 솔루션 4종 + 전담 11인 + Special Offer 3종이 RFP 7개 과업을 그대로 실행합니다.</p>
+  <hr class="ch-divider-rule">
+  <p class="ch-title"><span class="underline">매드업 솔루션 및 일정</span></p>
+  <p class="ch-summary">전 과정을 가능하게 하는 시그니처 솔루션 4종(LEVER Xpert·MILOT·AI Navigator·SPRAY AI)과 전담 조직, Special Offer 3종, 일정 로드맵을 종합합니다. RFP 7개 과업이 솔루션과 1:1 매핑되며, 12주 온보딩 후 분기 운영과 Pro 신제품 Q3 출시가 동시 진행됩니다.</p>
+  <div class="ch-conclusion">▶ <strong>Ch7 결론</strong>: RFP 7개 과업 풀 커버리지 + 전담 조직 + Special Offer 3종 + 12주·Q3 로드맵.</div>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+<!-- s7-1 시그니처 솔루션 4종 -->
+<article class="slide" id="s7-1">
+  <div class="page-label">매드업 솔루션 ㅣ 시그니처 솔루션 4종</div>
+  <span class="slide-meta">시그니처 솔루션</span>
+  <h2 class="slide-title">매드업 4 솔루션이 <span class="highlight">RFP 7개 과업을 1:1 매핑</span> — 검색·CRM·GEO·소재 자동화 전 사이클을 커버합니다</h2>
+  <p class="slide-title-sub">매드업 솔루션 사업부문(테크 50+ · 크리에이티브 70+)이 자체 개발·운영 / 사용 추가 비용 0 (운영 수수료 포함)</p>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">검색 · 매체</div>
+      <h5>LEVER Xpert</h5>
+      <p class="ma-desc">키워드 입찰 자동 최적화 · 폭증 카테고리어 발굴 · 매체별 ROAS 통합 모니터링 + 분기 자동 조정.</p>
+      <p class="ma-detail"><strong>RFP 매핑</strong>: 퍼포먼스 · 미디어 믹스 · 성과 분석</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">CRM · 데이터</div>
+      <h5>MILOT</h5>
+      <p class="ma-desc">자사몰·BS·매장·이메일·카카오 통합 · 5단 CRM 시나리오 자동 트리거 · 재구매 funnel.</p>
+      <p class="ma-detail"><strong>RFP 매핑</strong>: 고객 리텐션 CRM · 카플친 +200%</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">소재 · 심의</div>
+      <h5>SPRAY AI + AI 심의봇</h5>
+      <p class="ma-desc">11종 카피 자동 생성 · 식약처 규제 사전 점검 · 일간 회전 · 효율 자동 환원.</p>
+      <p class="ma-detail"><strong>RFP 매핑</strong>: 광고 콘텐츠 크리에이티브</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:30%;">RFP 7개 과업</th><th>매드업 솔루션 매핑</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>① 브랜딩 전략</td><td>1.5 페르소나 + 메시지 3축 + 톤앤매너 (Ch3·5)</td></tr>
+      <tr><td>② 퍼포먼스 광고</td><td><strong>LEVER Xpert</strong> 매체 자동 최적화</td></tr>
+      <tr><td>③ 고객 리텐션 CRM</td><td><strong>MILOT</strong> 5단 시나리오</td></tr>
+      <tr><td>④ 광고 콘텐츠</td><td><strong>SPRAY AI + AI 심의봇</strong> 165개 변형</td></tr>
+      <tr><td>⑤ 미디어 믹스</td><td>8 채널 단일 운영 (Ch4)</td></tr>
+      <tr><td>⑥ 성과 분석·리포팅</td><td>LEVER Xpert 통합 대시보드</td></tr>
+      <tr><td>⑦ 추가 제안 (IMC)</td><td><strong>Pro 신제품 + GEO + AI Navigator</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p class="bridge">
+    솔루션이 과업을 커버하면, <strong>전담 조직이 실행을 책임집니다</strong>. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">33</div>
+</article>
+
+<!-- s7-2 전담 조직 R&R -->
+<article class="slide" id="s7-2">
+  <div class="page-label">매드업 솔루션 ㅣ 전담 조직 R&R</div>
+  <span class="slide-meta">조직 · 인력 R&R</span>
+  <h2 class="slide-title">전담 조직은 <span class="highlight">광고·CRM·콘텐츠를 1개 팀이 통합 관리</span> — 분리 운영의 KPI 실패를 구조적으로 차단합니다</h2>
+  <p class="slide-title-sub">매드업 마케팅 사업부문(300+) 중 약손명가헬스케어 전담 인력 R&R / 본사 조직(테크·크리에이티브·법무·인사이트) 추가 비용 없이 지원</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:24%;">역할</th><th>인원</th><th>R&R</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Account Director</strong></td><td>총괄 1인</td><td>전략·KPI·광고주 커뮤니케이션 총괄</td></tr>
+      <tr><td><strong>매체 운영</strong></td><td>검색·메타·구글 4인</td><td>LEVER Xpert 활용 8 채널 효율 운영</td></tr>
+      <tr><td><strong>크리에이티브</strong></td><td>디자이너·카피 3인</td><td>SPRAY AI + 인력 이중 소재 운영</td></tr>
+      <tr><td><strong>CRM · 데이터</strong></td><td>분석가 2인</td><td>MILOT 5단 시나리오 설계·운영</td></tr>
+      <tr><td><strong>콘텐츠 · GEO</strong></td><td>1인</td><td>AI Navigator GEO 시드 운영</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li><strong>전담 11인 구조</strong> — 광고·CRM·콘텐츠가 1개 팀에 묶여 통합 운영 (분리 운영 시 카플친 +200% KPI 실패)</li>
+    <li>주간 정기 미팅 + 월간 리뷰 + 분기 전략 / 슬랙·노션 통합 협업</li>
+  </ul>
+
+  <p class="bridge">
+    조직이 준비되면, <strong>약손명가 전용 Special Offer</strong>로 진입 장벽을 낮춥니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">34</div>
+</article>
+
+<!-- s7-3 Special Offer 3종 -->
+<article class="slide" id="s7-3">
+  <div class="page-label">매드업 솔루션 ㅣ Special Offer 3종</div>
+  <span class="slide-meta">Special Offer</span>
+  <h2 class="slide-title">약손명가헬스케어 전용 <span class="highlight">Special Offer 3종</span> — 온보딩 솔루션 무상 + Pro 신제품 런칭 캠페인 + GEO 시드 30종</h2>
+
+  <div class="msg-axis">
+    <div class="msg-axis-card">
+      <div class="ma-num">Offer ①</div>
+      <h5>온보딩 솔루션 무상</h5>
+      <p class="ma-desc">LEVER Xpert·MILOT·AI Navigator·SPRAY AI 첫 3개월 무상 도입.</p>
+      <p class="ma-detail">→ 데이터 연동·운영 비용 0 + 3-Track 운영 초기 안정화 보장.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">Offer ②</div>
+      <h5>Pro 신제품 런칭 캠페인</h5>
+      <p class="ma-desc">2026 Q3 Pro 출시 D-90 합동 킥오프 + 기존 사용자 얼리액세스 자동 트리거.</p>
+      <p class="ma-detail">→ 신제품 카테고리 진입을 매드업이 직접 설계·운영.</p>
+    </div>
+    <div class="msg-axis-card">
+      <div class="ma-num">Offer ③</div>
+      <h5>GEO 시드 콘텐츠 30종</h5>
+      <p class="ma-desc">슬로우에이징·임상·디바이스 카테고리 AI 응답 시드 30종 자체 제작.</p>
+      <p class="ma-detail">→ AI Navigator로 응답 점유율 모니터링 + 분기 보강.</p>
+    </div>
+  </div>
+
+  <p style="font-size:11px;color:var(--text-caption);margin:18px 0 0;letter-spacing:0.02em;">* Special Offer 3종은 약손명가헬스케어 전용 조건이며, 본 제안 채택 이후 6개월 내 운영 개시 기준입니다.</p>
+
+  <p class="bridge">
+    조건이 정리되면, <strong>12주 온보딩과 Pro Q3 출시의 일정 로드맵</strong>이 마지막 질문입니다. <em>다음 슬라이드에서 봅니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">35</div>
+</article>
+
+<!-- s7-4 일정 로드맵 -->
+<article class="slide" id="s7-4">
+  <div class="page-label">매드업 솔루션 ㅣ 일정 로드맵</div>
+  <span class="slide-meta">일정 로드맵</span>
+  <h2 class="slide-title"><span class="highlight">12주 온보딩 + 분기 운영 + Pro Q3 출시</span> — 안착을 우선하되 신제품은 추석 시즌과 맞물려 동시 운영합니다</h2>
+  <p class="slide-title-sub">계약 직후 4주 온보딩 → 8주 안정화 → 분기 운영 / Pro 신제품은 Q3 출시로 추석 시즌(s4-5)과 자연 연결</p>
+
+  <div class="season-cal">
+    <div class="sc-title">📅 2026 통합 운영 로드맵</div>
+    <div class="sc-track" style="height:100px;">
+      <div class="sc-month-marks">
+        <div>1월</div><div>2월</div><div>3월</div><div>4월</div><div>5월</div><div>6월</div>
+        <div>7월</div><div>8월</div><div>9월</div><div>10월</div><div>11월</div><div>12월</div>
+      </div>
+      <div class="sc-block major" style="left:0%;width:16%;top:14px;">온보딩 12주</div>
+      <div class="sc-block minor" style="left:25%;width:8.3%;top:14px;">어버이날</div>
+      <div class="sc-block" style="left:50%;width:16%;top:52px;background:linear-gradient(90deg,var(--accent-rose) 0%,var(--accent-warm) 100%);">Pro 런칭 D-90</div>
+      <div class="sc-block major" style="left:62%;width:8.3%;top:14px;background:linear-gradient(90deg,var(--accent-warm) 0%,var(--accent-gold) 100%);">추석+Pro</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:18%;">시점</th><th>온보딩·운영</th><th>Pro 신제품</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Week 1-4</strong></td><td>데이터 연동 · 솔루션 셋업 · 1.5 페르소나 가이드 확정</td><td>—</td></tr>
+      <tr><td><strong>Week 5-12</strong></td><td>8 채널 운영 본격화 · SPRAY AI 가동 · 주간 리포트</td><td>—</td></tr>
+      <tr><td><strong>Q2 (어버이날)</strong></td><td>첫 시즌 캠페인 · 1차 효율 리뷰</td><td>Pro 킥오프 D-90</td></tr>
+      <tr><td><strong>Q3 (추석)</strong></td><td>분기 비중 자동 조정</td><td><strong style="color:var(--accent-rose);">Pro 출시 + 추석 시즌 동시</strong></td></tr>
+      <tr><td><strong>Q4 (설날)</strong></td><td>연간 성과 리뷰 · 차년도 전략</td><td>Pro 락인 본격화</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="slide-bullets">
+    <li>매드업은 약손명가헬스케어의 2026년 핵심 모멘텀을 <strong>1.5 페르소나 · Pro 신제품 · 시즌 비대칭</strong>의 단일 프레임으로 함께 만들어갑니다</li>
+    <li class="sub">매체 비중·예산·구체 KPI는 광고주 NDA 자료 수령 후 별도 디테일 안으로 즉시 회신 가능</li>
+  </ul>
+
+  <p class="bridge">
+    시장 진단부터 일정까지 단일 프레임으로 정렬되었습니다. <strong>OLLI LIRA와 MADUP의 2026 동행</strong>을 제안합니다. <em>마지막 슬라이드로 이동합니다.</em>
+  </p>
+
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+  <div class="page-no">36</div>
+</article>
+
+<!-- ============================================ -->
+<!-- Closing -->
+<!-- ============================================ -->
+<section class="cover" id="closing" style="min-height:60vh;">
+  <div class="year">Thank You</div>
+  <h1>
+    <span class="brand-en" style="font-size:50px;">OLLI LIRA × MADUP</span>
+    <span style="font-size:30px;font-weight:600;">2026 디지털 마케팅 동행</span>
+  </h1>
+  <p class="thesis-line">
+    <strong>1.5 페르소나 · Pro 신제품 진화 · 시즌 비대칭 흡수</strong>의 단일 프레임으로,<br>
+    OLLI LIRA를 EMS 리프팅 카테고리의 새로운 기준으로 만들어갑니다.
+  </p>
+  <footer>
+    <span>Copyright © 2026 MADUP, All rights reserved</span>
+    <span>Tel. 02-1522-1060 | 서울특별시 서초구 서초대로 74길 4 삼성생명서초타워 20층</span>
+  </footer>
+  <div class="madup-mark">DIGITAL MARKETING GROUP <strong>MADUP</strong></div>
+</section>
+
+</main>
+</div>
+
+<script>
+  const sections = document.querySelectorAll('article[id], section[id]');
+  const links = document.querySelectorAll('.index-nav a[href^="#"]');
+  const linkMap = {};
+  links.forEach(a => linkMap[a.getAttribute('href').slice(1)] = a);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        if (linkMap[id]) {
+          links.forEach(a => a.classList.remove('active'));
+          linkMap[id].classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-30% 0px -65% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // ============================================================
+  // PPT 다운로드 — PptxGenJS 네이티브 (편집 가능)
+  // 텍스트=텍스트박스 / 표=PPT표 / 차트=PPT 차트(막대·선·파이) / 다이어그램=표
+  // 다크 간지 ↔ 화이트 콘텐츠 톤 유지
+  // ============================================================
+  const exportBtn = document.getElementById('btn-export-pptx');
+  exportBtn.addEventListener('click', exportProposalPPTX);
+
+  const SW = 13.333, SH = 7.5, MX = 0.55, CW = 13.333 - 0.55 * 2;
+  const FONT = 'Pretendard';
+  const clean = (s) => (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const numOf = (s) => { const m = (s || '').replace(/,/g, '').match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+  const isDark = (el) => el.classList.contains('cover') || el.classList.contains('thesis-section')
+    || el.classList.contains('chapter') || el.id === 'closing';
+
+  function palette(dark) {
+    return dark
+      ? { bg: '0A0807', txt: 'F5F1EC', sub: 'B8B3A8', cap: '6B6760', rose: 'F5D4D8', beige: 'E6D8C5', soft: '1A1816', line: '2A2724' }
+      : { bg: 'FFFFFF', txt: '2B2620', sub: '6E655A', cap: 'A09684', rose: 'B5616F', beige: '9C7C54', soft: 'FAF7F3', line: 'E9E3D9' };
+  }
+
+  function addFooter(slide, C, pageEl) {
+    slide.addText([{ text: 'DIGITAL MARKETING GROUP ', options: { color: C.cap } }, { text: 'MADUP', options: { color: C.txt, bold: true } }],
+      { x: MX, y: 7.08, w: 7, h: 0.3, fontSize: 8, charSpacing: 2, fontFace: FONT });
+    if (pageEl) slide.addText(clean(pageEl.textContent), { x: SW - 1.5, y: 7.08, w: 1, h: 0.3, fontSize: 9, color: C.cap, align: 'right', fontFace: FONT });
+  }
+
+  // HTML <table> → PptxGenJS rows
+  function tableRows(tbl, C) {
+    const rows = [];
+    tbl.querySelectorAll('tr').forEach(tr => {
+      const cells = [];
+      tr.querySelectorAll('th,td').forEach(cell => {
+        const isH = cell.tagName === 'TH';
+        cells.push({
+          text: clean(cell.textContent),
+          options: { fontSize: 8.5, fontFace: FONT, color: isH ? C.rose : C.sub, bold: isH, fill: { color: isH ? C.soft : C.bg }, valign: 'middle', align: 'left' }
+        });
+      });
+      if (cells.length) rows.push(cells);
+    });
+    return rows;
+  }
+
+  function buildSlide(pptx, el) {
+    const dark = isDark(el);
+    const C = palette(dark);
+    const slide = pptx.addSlide();
+    slide.background = { color: C.bg };
+    addFooter(slide, C, el.querySelector('.page-no'));
+
+    if (el.classList.contains('cover') || el.id === 'closing') return buildCover(slide, el, C);
+    if (el.classList.contains('thesis-section')) return buildThesis(slide, el, C);
+    if (el.classList.contains('chapter')) return buildChapter(slide, el, C);
+    if (el.classList.contains('toc')) return buildTOC(slide, el, C);
+    return buildContent(slide, el, C);
+  }
+
+  function buildCover(slide, el, C) {
+    const year = el.querySelector('.year'), h1 = el.querySelector('h1'),
+      sub = el.querySelector('.subtitle'), thesis = el.querySelector('.thesis-line');
+    if (year) slide.addText(clean(year.textContent), { x: MX, y: 1.3, w: CW, h: 0.4, fontSize: 13, color: C.rose, bold: true, charSpacing: 3, fontFace: FONT });
+    slide.addText(clean(h1 ? h1.textContent : ''), { x: MX, y: 2.0, w: CW, h: 1.4, fontSize: 42, color: C.rose, bold: true, fontFace: FONT });
+    if (sub) slide.addText(clean(sub.textContent), { x: MX, y: 3.5, w: CW, h: 0.6, fontSize: 18, color: C.sub, fontFace: FONT });
+    if (thesis) slide.addText(clean(thesis.textContent), { x: MX, y: 4.3, w: CW - 1, h: 1.2, fontSize: 15, color: C.beige, fontFace: FONT, valign: 'top' });
+  }
+
+  function buildChapter(slide, el, C) {
+    const eye = el.querySelector('.ch-eyebrow'), decl = el.querySelector('.declaration'),
+      dsub = el.querySelector('.declaration-sub'), title = el.querySelector('.ch-title'),
+      summ = el.querySelector('.ch-summary'), concl = el.querySelector('.ch-conclusion');
+    if (eye) slide.addText(clean(eye.textContent), { x: MX, y: 0.7, w: CW, h: 0.35, fontSize: 12, color: C.rose, bold: true, charSpacing: 2, fontFace: FONT });
+    if (decl) slide.addText(clean(decl.textContent), { x: MX, y: 1.5, w: CW - 0.5, h: 1.8, fontSize: 30, color: C.txt, bold: true, fontFace: FONT, valign: 'top', lineSpacingMultiple: 1.1 });
+    if (dsub) slide.addText(clean(dsub.textContent), { x: MX, y: 3.5, w: CW - 1, h: 0.7, fontSize: 14, color: C.beige, fontFace: FONT, valign: 'top' });
+    if (title) slide.addText(clean(title.textContent), { x: MX, y: 4.5, w: CW, h: 0.5, fontSize: 20, color: C.txt, bold: true, fontFace: FONT });
+    if (summ) slide.addText(clean(summ.textContent), { x: MX, y: 5.1, w: CW - 0.5, h: 1.0, fontSize: 11, color: C.sub, fontFace: FONT, valign: 'top' });
+    if (concl) slide.addText(clean(concl.textContent), { x: MX, y: 6.2, w: CW - 0.5, h: 0.6, fontSize: 11, color: C.rose, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+  }
+
+  function buildThesis(slide, el, C) {
+    const tag = el.querySelector('.meta-tag'), h2 = el.querySelector('h2'),
+      tsub = el.querySelector('.thesis-sub');
+    if (tag) slide.addText(clean(tag.textContent), { x: MX, y: 0.55, w: CW, h: 0.35, fontSize: 11, color: C.rose, bold: true, charSpacing: 2, fontFace: FONT });
+    if (h2) slide.addText(clean(h2.textContent), { x: MX, y: 1.05, w: CW - 0.5, h: 1.3, fontSize: 26, color: C.txt, bold: true, fontFace: FONT, valign: 'top' });
+    if (tsub) slide.addText(clean(tsub.textContent), { x: MX, y: 2.5, w: CW - 0.5, h: 0.9, fontSize: 12, color: C.sub, fontFace: FONT, valign: 'top' });
+    // 3 결정 (msg-axis) → 3-칸 표
+    const cards = el.querySelectorAll('.msg-axis-card');
+    if (cards.length) {
+      const head = [], body = [];
+      cards.forEach(c => {
+        head.push({ text: clean(c.querySelector('h5')?.textContent), options: { fontSize: 11, bold: true, color: C.rose, fill: { color: C.soft }, fontFace: FONT, align: 'center' } });
+        body.push({ text: clean(c.querySelector('.ma-desc')?.textContent) + '\n\n' + clean(c.querySelector('.ma-detail')?.textContent), options: { fontSize: 9, color: C.sub, fontFace: FONT, valign: 'top' } });
+      });
+      slide.addTable([head, body], { x: MX, y: 3.6, w: CW, colW: Array(cards.length).fill(CW / cards.length), rowH: [0.5, 1.6], border: { type: 'solid', color: C.line, pt: 0.5 } });
+    }
+  }
+
+  function buildTOC(slide, el, C) {
+    slide.addText('목차 · CONTENTS', { x: MX, y: 0.6, w: CW, h: 0.6, fontSize: 28, color: C.txt, bold: true, fontFace: FONT });
+    const rows = [];
+    el.querySelectorAll('ol li').forEach((li, i) => {
+      rows.push([
+        { text: String(i + 1).padStart(2, '0'), options: { fontSize: 12, bold: true, color: C.rose, align: 'center', valign: 'middle', fontFace: FONT } },
+        { text: clean(li.querySelector('.ch-name')?.textContent), options: { fontSize: 13, bold: true, color: C.txt, valign: 'middle', fontFace: FONT } },
+        { text: clean(li.querySelector('.ch-desc')?.textContent), options: { fontSize: 10, color: C.sub, valign: 'middle', fontFace: FONT } }
+      ]);
+    });
+    slide.addTable(rows, { x: MX, y: 1.6, w: CW, colW: [1.2, 4.5, CW - 5.7], rowH: 0.62, border: { type: 'solid', color: C.line, pt: 0.5 } });
+  }
+
+  function buildContent(slide, el, C) {
+    let y = 0.4;
+    const meta = el.querySelector('.slide-meta'), title = el.querySelector('.slide-title'), tsub = el.querySelector('.slide-title-sub');
+    if (meta) { slide.addText(clean(meta.textContent), { x: MX, y, w: CW, h: 0.3, fontSize: 10, color: C.rose, bold: true, charSpacing: 1, fontFace: FONT }); y += 0.36; }
+    if (title) { const t = clean(title.textContent); const th = Math.min(1.3, 0.42 + t.length / 70 * 0.34); slide.addText(t, { x: MX, y, w: CW, h: th, fontSize: 17, color: C.txt, bold: true, fontFace: FONT, valign: 'top' }); y += th + 0.08; }
+    if (tsub) { slide.addText(clean(tsub.textContent), { x: MX, y, w: CW, h: 0.5, fontSize: 11, color: C.sub, fontFace: FONT, valign: 'top' }); y += 0.5; }
+
+    // 본문 블록 순회
+    const blocks = el.querySelectorAll(':scope > ul.slide-bullets, :scope > table, :scope > .bar-chart, :scope > .line-chart, :scope > .donut-row, :scope > .hero-metric-row, :scope > .msg-axis, :scope > .funnel-row, :scope > .persona-card, :scope > .position-map, :scope > .season-cal, :scope > .bridge');
+    blocks.forEach(b => { if (y > 6.7) return; y = addBlock(slide, b, C, y); });
+  }
+
+  function addBlock(slide, b, C, y) {
+    try {
+      // 불릿
+      if (b.matches('ul.slide-bullets')) {
+        const items = [...b.querySelectorAll('li')].map(li => ({
+          text: clean(li.textContent),
+          options: { bullet: { indent: li.classList.contains('sub') ? 26 : 14 }, color: li.classList.contains('sub') ? C.cap : C.sub, fontSize: 10.5, paraSpaceAfter: 4, fontFace: FONT }
+        }));
+        const h = Math.min(2.6, items.length * 0.33);
+        slide.addText(items, { x: MX, y, w: CW, h, valign: 'top', fontFace: FONT });
+        return y + h + 0.15;
+      }
+      // 표
+      if (b.matches('table')) {
+        const rows = tableRows(b, C);
+        if (!rows.length) return y;
+        const h = Math.min(3.0, rows.length * 0.34);
+        slide.addTable(rows, { x: MX, y, w: CW, autoPage: false, border: { type: 'solid', color: C.line, pt: 0.5 }, valign: 'middle' });
+        return y + h + 0.18;
+      }
+      // 막대 차트 → PPT 막대 차트(숫자) or 표
+      if (b.matches('.bar-chart')) {
+        const rows = [...b.querySelectorAll('.bar-row')].map(r => ({ label: clean(r.querySelector('.bar-label')?.textContent), val: clean(r.querySelector('.bar-value')?.textContent) }));
+        const nums = rows.map(r => numOf(r.val));
+        if (rows.length && nums.every(n => n !== null)) {
+          const h = Math.min(3.0, 0.6 + rows.length * 0.4);
+          slide.addChart('bar', [{ name: '값', labels: rows.map(r => r.label), values: nums }],
+            { x: MX, y, w: CW, h, barDir: 'bar', showValue: true, dataLabelColor: C.txt, dataLabelFontFace: FONT, dataLabelFontSize: 9, chartColors: [C.rose.replace('#', '')], catAxisLabelColor: C.sub, valAxisHidden: true, showLegend: false, catAxisLabelFontFace: FONT, catAxisLabelFontSize: 9 });
+          return y + h + 0.18;
+        } else {
+          const tr = [[{ text: '지표', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }, { text: '값', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }]];
+          rows.forEach(r => tr.push([{ text: r.label, options: { fontSize: 9, color: C.sub, fontFace: FONT } }, { text: r.val, options: { fontSize: 9, color: C.txt, bold: true, fontFace: FONT } }]));
+          const h = Math.min(2.6, tr.length * 0.34);
+          slide.addTable(tr, { x: MX, y, w: 7, colW: [4.5, 2.5], border: { type: 'solid', color: C.line, pt: 0.5 } });
+          return y + h + 0.18;
+        }
+      }
+      // 라인 차트 → PPT 선 차트 (시장 규모)
+      if (b.matches('.line-chart')) {
+        const h = 2.7;
+        slide.addChart('line', [{ name: '시장규모(조원)', labels: ['2013', '2018', '2022', '2024', '2027', '2030'], values: [0.08, 0.5, 1.6, 1.7, 2.5, 3.4] }],
+          { x: MX, y, w: CW, h, chartColors: [C.rose.replace('#', '')], showValue: true, dataLabelColor: C.txt, dataLabelFontSize: 9, dataLabelFontFace: FONT, lineSize: 3, showLegend: false, catAxisLabelColor: C.sub, valAxisLabelColor: C.sub, catAxisLabelFontFace: FONT, lineDataSymbol: 'circle' });
+        return y + h + 0.18;
+      }
+      // 도넛 → PPT 파이 차트 (점유율)
+      if (b.matches('.donut-row')) {
+        const labels = [], values = [];
+        b.querySelectorAll('.donut-legend li').forEach(li => {
+          const nm = clean(li.querySelector('.lg-name')?.textContent);
+          const vl = numOf(li.querySelector('.lg-value')?.textContent);
+          if (nm && vl !== null) { labels.push(nm.slice(0, 18)); values.push(vl); }
+        });
+        if (values.length) {
+          const h = 3.0;
+          slide.addChart('doughnut', [{ name: '점유율', labels, values }],
+            { x: MX, y, w: CW, h, showLegend: true, legendPos: 'r', legendColor: C.sub, legendFontFace: FONT, showValue: true, dataLabelColor: 'FFFFFF', dataLabelFontSize: 9, holeSize: 55, chartColors: ['B5616F', 'C08A7D', '9C7C54', '5F7488', 'C9C0B2'] });
+          return y + h + 0.18;
+        }
+        return y;
+      }
+      // Hero metric → 표 (지표/값/설명)
+      if (b.matches('.hero-metric-row')) {
+        const head = [], val = [], desc = [];
+        b.querySelectorAll('.hero-metric').forEach(m => {
+          head.push({ text: clean(m.querySelector('.hm-label')?.textContent), options: { fontSize: 9, color: C.cap, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          val.push({ text: clean(m.querySelector('.hm-value')?.textContent), options: { fontSize: 18, bold: true, color: C.rose, align: 'center', fontFace: FONT } });
+          desc.push({ text: clean(m.querySelector('.hm-desc')?.textContent), options: { fontSize: 8, color: C.sub, align: 'center', valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        slide.addTable([head, val, desc], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.35, 0.6, 0.7], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + 1.85;
+      }
+      // msg-axis (3축 카드) → 표
+      if (b.matches('.msg-axis')) {
+        const head = [], body = [];
+        b.querySelectorAll('.msg-axis-card').forEach(c => {
+          head.push({ text: clean(c.querySelector('h5')?.textContent), options: { fontSize: 10, bold: true, color: C.rose, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          body.push({ text: clean(c.querySelector('.ma-desc')?.textContent) + '\n' + clean(c.querySelector('.ma-detail')?.textContent), options: { fontSize: 8.5, color: C.sub, valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        const h = 2.0;
+        slide.addTable([head, body], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.5, 1.4], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + h + 0.15;
+      }
+      // funnel → 표
+      if (b.matches('.funnel-row')) {
+        const head = [], body = [];
+        b.querySelectorAll('.funnel-step').forEach(st => {
+          head.push({ text: clean(st.querySelector('h6')?.textContent), options: { fontSize: 10, bold: true, color: C.rose, fill: { color: C.soft }, align: 'center', fontFace: FONT } });
+          body.push({ text: clean(st.querySelector('p')?.textContent), options: { fontSize: 8.5, color: C.sub, align: 'center', valign: 'top', fontFace: FONT } });
+        });
+        const n = head.length; if (!n) return y;
+        slide.addTable([head, body], { x: MX, y, w: CW, colW: Array(n).fill(CW / n), rowH: [0.45, 0.9], border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + 1.5;
+      }
+      // persona-card → 텍스트 블록
+      if (b.matches('.persona-card')) {
+        const tag = clean(b.querySelector('.pc-tag')?.textContent);
+        const nm = clean(b.querySelector('.pc-name')?.textContent);
+        const dsc = clean(b.querySelector('.pc-desc')?.textContent);
+        slide.addText([
+          { text: tag + '  ', options: { fontSize: 9, bold: true, color: C.rose } },
+          { text: nm + '\n', options: { fontSize: 13, bold: true, color: C.txt } },
+          { text: dsc, options: { fontSize: 9.5, color: C.sub } }
+        ], { x: MX, y, w: CW, h: 1.1, fontFace: FONT, valign: 'top', fill: { color: C.soft }, line: { color: C.line, pt: 0.5 } });
+        return y + 1.2;
+      }
+      // position-map → 포인트 표
+      if (b.matches('.position-map')) {
+        const tr = [[{ text: '브랜드 · 포지션', options: { bold: true, color: C.rose, fill: { color: C.soft }, fontSize: 9, fontFace: FONT } }]];
+        b.querySelectorAll('.pm-point').forEach(p => tr.push([{ text: clean(p.textContent), options: { fontSize: 9, color: C.sub, fontFace: FONT } }]));
+        const h = Math.min(2.6, tr.length * 0.32);
+        slide.addTable(tr, { x: MX, y, w: 6, border: { type: 'solid', color: C.line, pt: 0.5 } });
+        return y + h + 0.18;
+      }
+      // season-cal → 블록 텍스트
+      if (b.matches('.season-cal')) {
+        const blocks = [...b.querySelectorAll('.sc-block')].map(s => clean(s.textContent)).join('   ·   ');
+        slide.addText('시즌: ' + blocks, { x: MX, y, w: CW, h: 0.6, fontSize: 11, color: C.txt, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+        return y + 0.75;
+      }
+      // bridge → 로즈 박스
+      if (b.matches('.bridge')) {
+        slide.addText('→ NEXT  ' + clean(b.textContent).replace(/^→ NEXT/, ''), { x: MX, y: Math.max(y, 6.3), w: CW, h: 0.7, fontSize: 10.5, color: C.rose, bold: true, fontFace: FONT, fill: { color: C.soft }, valign: 'middle' });
+        return y + 0.8;
+      }
+    } catch (e) { console.warn('block skip', e); }
+    return y;
+  }
+
+  async function exportProposalPPTX() {
+    if (typeof PptxGenJS === 'undefined') { alert('PptxGenJS 로드 중입니다. 잠시 후 다시 시도해주세요.'); return; }
+    const btn = exportBtn, original = btn.textContent;
+    btn.disabled = true;
+    try {
+      const pptx = new PptxGenJS();
+      pptx.layout = 'LAYOUT_WIDE';
+      pptx.title = 'OLLI LIRA × MADUP 2026 디지털 마케팅 제안';
+      pptx.author = 'MADUP'; pptx.company = 'MADUP';
+      const targets = Array.from(document.querySelectorAll('.main > section, .main > article'));
+      for (let i = 0; i < targets.length; i++) {
+        btn.textContent = `⏳ ${i + 1}/${targets.length}`;
+        buildSlide(pptx, targets[i]);
+        if (i % 6 === 0) await new Promise(r => setTimeout(r, 10));
+      }
+      const today = new Date().toISOString().slice(0, 10);
+      btn.textContent = '⏳ 저장 중...';
+      await pptx.writeFile({ fileName: `OLLI_LIRA_MADUP_제안서_편집가능_${today}.pptx` });
+      btn.textContent = '✓ 다운로드 완료';
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2500);
+    } catch (err) {
+      console.error('PPT 생성 실패:', err);
+      alert('PPT 생성 실패: ' + err.message);
+      btn.textContent = original; btn.disabled = false;
+    }
+  }
+</script>
+
+</body>
+</html>

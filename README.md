@@ -7,20 +7,60 @@
 ## 📁 디렉토리 구조
 
 ```
-factbook-app/
+factbook-app/                ← repo root (= 배포 루트)
 ├── index.html              ← 광고주 선택 (랜딩)
-├── viewer.html             ← 슬라이드 뷰어 + 편집 UI
+├── viewer.html             ← 팩트북 슬라이드 뷰어 + 편집 UI
 ├── README.md               ← 이 문서
 ├── assets/
 │   ├── style.css           ← 공통 스타일
-│   └── viewer.js           ← 렌더링·편집 로직
+│   └── viewer.js           ← 렌더링·편집 로직 + PPT 변환
 ├── scripts/
-│   └── html_to_json.py     ← HTML→JSON 추출 (기존 팩트북 마이그레이션용)
-└── data/
-    └── yakson/             ← 광고주별 폴더
-        ├── factbook.json   ← 슬라이드 데이터
-        ├── schema.md       ← JSON 스키마 명세
-        └── images/         ← 제품·캡처 이미지 (33장)
+│   └── html_to_json.py     ← HTML→JSON 추출 (마이그레이션용)
+├── data/                   ← 팩트북 데이터 (JSON + 이미지)
+│   └── yakson/
+│       ├── factbook.json   ← 99 슬라이드 데이터
+│       └── images/         ← 제품·캡처·경쟁사 이미지
+├── proposals/              ← 제안서 배포본
+│   └── yakson-healthcare/
+│       ├── index.html      ← v2.0 (7챕터 36슬라이드 · 다크간지+화이트콘텐츠)
+│       ├── PROPOSAL.pdf    ← PDF 출력본
+│       └── images/         ← 제안서 이미지
+├── source/                 ← 작업 원본 (편집용)
+│   ├── 약손명가헬스케어_제안서/
+│   │   ├── PROPOSAL.html   ← 제안서 source (편집용)
+│   │   ├── PROPOSAL.pdf
+│   │   ├── PROPOSAL-OUTLINE.md
+│   │   └── images/
+│   └── 약손명가헬스케어_팩트북/
+│       ├── FACTBOOK.html   ← 팩트북 풀버전 (74슬라이드 정적 HTML)
+│       ├── FACTBOOK.md
+│       └── images/
+└── skills/                 ← 매드업 표준 작성 룰 (Claude Code skill)
+    ├── fact-book/SKILL.md      ← 팩트북 작성 스킬 (1,022 lines)
+    └── market-proposal/SKILL.md ← 제안서 작성 스킬 (518 lines)
+```
+
+## 💻 다른 컴퓨터에서 작업 시작하기
+
+이 repo를 clone 하면 **팩트북 + 제안서 + 매드업 작성 스킬**을 한 번에 받을 수 있습니다.
+
+```bash
+# 1) clone
+git clone git@github.com:ddolovely0919-ai/madup2525.git
+cd madup2525
+
+# 2) Claude Code skill 활성화 (선택 — 매드업 표준 작성 룰 자동 적용)
+mkdir -p .claude
+ln -s ../skills .claude/skills   # 또는 cp -R skills .claude/skills
+
+# 3) 로컬 서버 (편집·미리보기)
+python3 -m http.server 8000
+# 팩트북: http://localhost:8000/viewer.html?c=yakson
+# 제안서: http://localhost:8000/proposals/yakson-healthcare/
+# 작업 원본: source/ 아래 직접 편집
+
+# 4) Claude Code 호출 시 skill 자동 활성화
+# "팩트북 작성" → fact-book skill / "제안서 작성" → market-proposal skill
 ```
 
 ## 🚀 로컬 실행

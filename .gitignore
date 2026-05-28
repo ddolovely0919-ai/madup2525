@@ -18,6 +18,11 @@ scripts/__pycache__/
 *.draft.json
 *.local.html
 
+# 백업·검증 캡처 (커밋 X)
+*.backup.html
+source/**/*.backup.html
+source/**/screenshots/
+
 # 빌드 산출물
 node_modules/
 dist/
