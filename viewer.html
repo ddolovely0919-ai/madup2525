@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MADUP Factbook Viewer</title>
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
 </head>
 <body data-edit="off">
@@ -36,13 +36,25 @@
     <h2>검색</h2>
     <input type="search" id="search-box" placeholder="키워드 검색…">
 
-    <h2>필터</h2>
+    <h2>필터 — 상태</h2>
     <div class="status-filters">
       <span class="filter-chip all" data-filter="all" data-active="true">전체</span>
       <span class="filter-chip auto" data-filter="auto">자동</span>
       <span class="filter-chip progress" data-filter="progress">작성중</span>
       <span class="filter-chip client" data-filter="client">광고주</span>
       <span class="filter-chip madup" data-filter="madup">매드업</span>
+    </div>
+
+    <h2>필터 — 출처</h2>
+    <div class="source-filters">
+      <span class="src-chip src-lm" data-source="lm">📊 리스닝마인드</span>
+      <span class="src-chip src-naver" data-source="naver">🌐 네이버 API</span>
+      <span class="src-chip src-lever" data-source="lever">🎨 Lever Xpert</span>
+      <span class="src-chip src-madup-tool" data-source="madup-tool">⚙️ 매드업 도구</span>
+      <span class="src-chip src-news" data-source="news">📰 뉴스기사</span>
+      <span class="src-chip src-consulting" data-source="consulting">💼 컨설팅</span>
+      <span class="src-chip src-academic" data-source="academic">🎓 학술</span>
+      <span class="src-chip src-client" data-source="client-doc">📄 광고주 자료</span>
     </div>
 
     <h2>목차 (INDEX)</h2>
@@ -88,7 +100,7 @@
   </div>
 </div>
 
-<script src="assets/viewer.js?v=5"></script>
+<script src="assets/viewer.js?v=6"></script>
 <script>
   // 데이터 로딩 (URL 파라미터로 광고주 선택)
   const params = new URLSearchParams(location.search);

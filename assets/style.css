@@ -130,6 +130,48 @@ body[data-edit="on"] #btn-edit {
 .filter-chip.client:not([data-active]) { background: #ffedd5; color: #9a3412; }
 .filter-chip.madup:not([data-active]) { background: #dbeafe; color: #1e40af; }
 
+/* 출처 필터 (다중 선택, 토글) */
+.source-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.src-chip {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.12s;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.src-chip:hover { border-color: #9ca3af; color: #111827; }
+.src-chip[data-active="true"] {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+  font-weight: 600;
+}
+.src-chip.src-lm[data-active="true"] { background: #6366f1; border-color: #6366f1; }
+.src-chip.src-naver[data-active="true"] { background: #03c75a; border-color: #03c75a; }
+.src-chip.src-lever[data-active="true"] { background: #d97706; border-color: #d97706; }
+.src-chip.src-madup-tool[data-active="true"] { background: #3b82f6; border-color: #3b82f6; }
+.src-chip.src-news[data-active="true"] { background: #6b7280; border-color: #6b7280; }
+.src-chip.src-consulting[data-active="true"] { background: #7c3aed; border-color: #7c3aed; }
+.src-chip.src-academic[data-active="true"] { background: #0891b2; border-color: #0891b2; }
+.src-chip.src-client[data-active="true"] { background: #ea580c; border-color: #ea580c; }
+
+/* INDEX 슬라이드 숨김 (필터 적용 시) */
+.index-nav .index-sub li.is-hidden { display: none; }
+.slide-card.is-hidden { display: none; }
+.slide-card.search-hidden { display: none; }
+
 .index-nav ul { list-style: none; padding: 0; margin: 0; }
 .index-nav .index-section { margin-bottom: 6px; }
 .index-nav .index-section > a {

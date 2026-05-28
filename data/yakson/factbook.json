@@ -15,7 +15,7 @@
     "auto": 85,
     "progress": 1,
     "client": 5,
-    "madup": 11
+    "madup": 16
   },
   "chapters": [
     {
@@ -406,6 +406,411 @@
       ],
       "sourceNote": "* 출처: 리스닝마인드 MCP 11회 호출 종합 (2026-05-28) · 매드업 비딩 TF 분석",
       "body": "<table>\n      <thead><tr><th>Phase</th><th>키워드</th><th>핵심 발견</th><th>Raw 데이터</th></tr></thead>\n      <tbody>\n        <tr><td>1</td><td>약손명가 vs 헬스케어</td><td>138:1 격차 + 송도 사건 부정 키워드 → IP 축소 정량 입증</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download>📥 brands</a> · <a href=\"data/yakson/listening-mind/lm-cluster-yakson.json\" download>📥 yakson cluster</a></td></tr>\n        <tr><td>2</td><td>리프팅 디바이스 (path)</td><td>300개 경로 / 5개 커뮤니티 / 시술 대체 + 약손명가 더쿠 경로 발견</td><td><a href=\"data/yakson/listening-mind/lm-cluster-lifting.json\" download>📥 lifting cluster</a> · <a href=\"data/yakson/listening-mind/lm-path-lifting.json\" download>📥 path</a></td></tr>\n        <tr><td>3</td><td>20-50대 뷰티 디바이스</td><td>연령 키워드 시장 부재 → 메인 키워드 페르소나 매체 분배</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-ages.json\" download>📥 ages</a></td></tr>\n        <tr><td>4</td><td>신제품 5종 카테고리</td><td>⭐ 셀룰라이트 패치 +95% 폭증 (가뿐한 복부패치 골든타임)</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-products.json\" download>📥 products</a></td></tr>\n        <tr><td>5</td><td>약손명가 가격 / 매장 / 강남</td><td>약손명가 가격 5,510회 = OLLI 매장 모객 funnel 핵심</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-offline.json\" download>📥 offline</a></td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>📂 통합</strong></td><td colspan=\"3\"><a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\"><strong>📥 manifest.json — 전체 데이터 인덱스 + 핵심 발견 요약</strong></a></td></tr>\n      </tbody>\n    </table>\n    <p><strong>💡 Raw 데이터 활용 안내</strong>: 모든 JSON 파일은 <code>data/yakson/listening-mind/</code> 경로에 저장됨. GitHub Pages 배포 URL에서도 직접 접근 가능 (예: <a href=\"https://ddolovely0919-ai.github.io/madup2525/data/yakson/listening-mind/manifest.json\" target=\"_blank\">manifest.json</a>). 동일 키워드로 리스닝마인드 MCP 재호출 시 raw 응답 재생성 가능.</p>"
+    },
+    {
+      "id": "nb-1",
+      "indexLabel": "📊 네이버 블로그 시장 + 시딩 매트릭스",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 네이버 블로그 분석 ① 18 키워드 시장 사이즈 + 시딩% 매트릭스",
+      "status": "madup",
+      "intro": false,
+      "title": "네이버 블로그 18 키워드 1,800건 분석 — <span class=\"highlight\">메이크온 시딩 41% (시장 절대 강자) / 올리리라 시딩 26-29% (광고주 캠페인 활발)</span>",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>분석 범위</strong>: 네이버 검색 API로 18 키워드 × 각 100건 = 1,800건 수집 / 자동 분류 (자연/시딩/광고/불분명)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>시장 사이즈 TOP 5</strong> (네이버 블로그 등록 총 게시물): <ul style=\"margin:4px 0;padding-left:18px;\"> <li>홈케어 디바이스 121,098건 (최대)"
+        },
+        {
+          "type": "indent-1",
+          "html": "메이크온 81,520건 (브랜드 1위) / 리프팅 디바이스 72,203건"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>광고주 골기 31,952건 (메디큐브 부스터프로 15,377 대비 2배!)</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "EMS 리프팅 26,706건 / LG프라엘 23,356건 / 약손명가 마사저 20,854건 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🔥 시딩 % 매트릭스</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>메이크온 시딩 41%</strong> = 시장 절대 강자 (메이크온 8.1만 × 41% = 약 3.3만 시딩 포스트)"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>올리리라 밴드 29% + 올리리라 패치 26%</strong> = 광고주 자체 시딩 활발 ⭐"
+        },
+        {
+          "type": "indent-1",
+          "html": "LG프라엘 5% / 셀리턴 5% / 메디큐브 부스터프로 3% (낮음)"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>메디큐브 자연 후기 34%</strong> = 셀럽 IP의 자연 입소문 효과 (인디 추격 불가) </li></ul>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>광고주 PB 시장 자산 확인</strong>: 골기 31,952 > 메디큐브 부스터프로 15,377 = 약손명가 IP의 블로그 검색 자산 강함 (s1-23 IP 이양 정합)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ①</strong>: 메이크온 시딩 41% = 메이크온 시딩 운영 패턴 직접 학습 (s4-6 카이스트 카툰 정합)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ②</strong>: 올리리라 시딩 26-29% = <strong>광고주가 이미 시딩 캠페인 진행 중</strong> → 매드업이 이어받아 운영할 시딩 자산 명확"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ③</strong>: 메디큐브 자연 34% = 인디 광고주 정면 추격 불가 → <strong>시딩 + 임상 + 4주 챌린지</strong>로 우회"
+        }
+      ],
+      "chart": {
+        "type": "hbar",
+        "title": "📊 시딩 점유율 비교 (블로그 시딩+체험단+광고표기 비율)",
+        "subtitle": "메이크온 41% 시딩 강자 / 올리리라 26-29% 광고주 시딩 자산",
+        "items": [
+          { "label": "메이크온 (직접 경쟁)", "value": "41.0% 시딩", "ratio": 1.0, "tone": "highlight" },
+          { "label": "올리리라 밴드 (광고주)", "value": "29.0% 시딩", "ratio": 0.71, "tone": "accent" },
+          { "label": "올리리라 패치 (광고주)", "value": "26.0% 시딩", "ratio": 0.63, "tone": "accent" },
+          { "label": "가뿐한 멀티패치 (광고주 신제품)", "value": "9.1% 시딩", "ratio": 0.22, "tone": "primary" },
+          { "label": "LG프라엘 (직접 경쟁)", "value": "5.0% 시딩", "ratio": 0.12, "tone": "muted" },
+          { "label": "셀리턴 (후발 경쟁)", "value": "5.0% 시딩", "ratio": 0.12, "tone": "muted" },
+          { "label": "약손명가 리프팅밴드 (광고주 PB)", "value": "4.0% 시딩", "ratio": 0.10, "tone": "muted" },
+          { "label": "메디큐브 부스터프로 (자연 34%)", "value": "3.0% 시딩", "ratio": 0.07, "tone": "success" }
+        ],
+        "footnote": "* 메디큐브는 시딩 대신 자연 후기 34% (셀럽 IP 효과) → 인디 정면 추격 불가, 다른 차별화 필요"
+      },
+      "sources": [
+        { "label": "📥 [Index] manifest.json (18 키워드 인덱스)", "url": "data/yakson/naver-blog/manifest.json" },
+        { "label": "📥 [Summary] all-summary.json (통합 매트릭스)", "url": "data/yakson/naver-blog/all-summary.json" },
+        { "label": "Naver Search API (https://developers.naver.com)", "url": "https://developers.naver.com" }
+      ],
+      "sourceNote": "* 출처: Naver Search API · 매드업 자체 수집·분류 (2026-05-28) · Raw 다운로드 ↓ <a href=\"data/yakson/naver-blog/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/naver-blog/all-summary.json\" target=\"_blank\">📥 통합 요약</a>"
+    },
+    {
+      "id": "nb-2",
+      "indexLabel": "🎯 시딩 콘텐츠 메시지 매트릭스",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 네이버 블로그 분석 ② 시딩 콘텐츠 메시지 비교 (효과·시나리오·기술·가격·소셜)",
+      "status": "madup",
+      "intro": false,
+      "title": "경쟁사 시딩 콘텐츠 핵심 메시지 비교 — <span class=\"highlight\">올리리라 \"무료체험·체험단\" / 셀리턴 \"4주 챌린지\" / 메디큐브 \"5종 기술·내돈내산\"</span>",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>분석 방법</strong>: 각 키워드 시딩 포스트 description 텍스트 모아 5차원 키워드 빈도 추출 (효과 USP / 사용 시나리오 / 기술 / 가격·이벤트 / 소셜 신뢰)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🔥 메이크온 시딩 (41건) 메시지</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>효과 = <strong>탄력·보습·광채</strong> (스킨케어 중심)"
+        },
+        {
+          "type": "indent-1",
+          "html": "시나리오 = <strong>매일·꾸준히·아침·루틴·2주</strong> (꾸준한 사용 강조)"
+        },
+        {
+          "type": "indent-1",
+          "html": "기술 = LED·초음파 (단일 기술) / 가격 = - / 소셜 = 솔직·후기·추천 (기본) </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⭐ 올리리라 시딩 (29-26건) 메시지</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>효과 = <strong>리프팅·탄력·온열·붓기·근육</strong> (얼굴 윤곽 + EMS 근육)"
+        },
+        {
+          "type": "indent-1",
+          "html": "시나리오 = 10분·마사지·루틴 (단순)"
+        },
+        {
+          "type": "indent-1",
+          "html": "기술 = <strong>EMS·웨이브·겔·패치·밴드</strong> (결합형 락인 직접 강조)"
+        },
+        {
+          "type": "indent-1",
+          "html": "가격 = <strong>\"무료·무료체험·체험단·오픈\"</strong> 🔥 (시딩 직접 시그널)"
+        },
+        {
+          "type": "indent-1",
+          "html": "소셜 = <strong>\"1위\"</strong> 자칭 (시딩 메시지 표준) </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🎯 셀리턴 시딩 (5건) 메시지</strong>: 효과 = 여드름 (트러블 케어 카테고리) / 시나리오 = <strong>\"꾸준히·4주 챌린지\"</strong> ⭐ 명확한 가이드"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🟢 메디큐브 자연 (34건) 메시지</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>효과 = 광범위 (리프팅·탄력·광채·톤·미백)"
+        },
+        {
+          "type": "indent-1",
+          "html": "기술 = <strong>5종 멀티 (EMS·RF·초음파·고주파·미세전류)</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "소셜 = <strong>\"내돈내산\"</strong> 자연 후기 어필 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>약손명가 리프팅밴드 (전체 100건)</strong>: 효과 = 리프팅·탄력·V라인·톤·붓기 / 시나리오 = 매일·꾸준히·5분·10분·아침 / 기술 = EMS·마이크로·겔·패치·밴드 (결합형) / 소셜 = 내돈내산·솔직·후기·리뷰·추천"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 4트랙 시딩 메시지 처방</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>트랙 A — <strong>\"V라인·붓기\" 임상 정량</strong> (달바·메이크온 학습 + 약손명가 임상 자산 추가)"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 B — <strong>\"4주 챌린지\" 사용 가이드</strong> (셀리턴 시딩 표준 + 결합형 락인 — s4-9 카피 ⑤ 정합)"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 C — <strong>\"무료체험·체험단 오픈\"</strong> 시딩 캠페인 확대 (올리리라 이미 진행 중 활용)"
+        },
+        {
+          "type": "arrow",
+          "html": "트랙 D — <strong>\"내돈내산 솔직 후기\"</strong> 자연 시딩 유도 (메디큐브 자연 34% 패턴 학습) </li></ul>"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🎯 경쟁사 시딩 콘텐츠 메시지 차별화 매트릭스",
+        "items": [
+          { "label": "🔥 메이크온 시딩 41%", "value": "탄력·보습·광채 + 매일 루틴", "sub": "스킨케어 중심 / KAIST 학습 모델 / LED·초음파 단일 기술", "tone": "highlight" },
+          { "label": "⭐ 올리리라 시딩 26-29%", "value": "리프팅·온열·붓기 + 무료체험·체험단", "sub": "광고주 자체 시딩 캠페인 진행 중 / EMS·웨이브·결합형 강조 / \"1위\" 자칭", "tone": "accent" },
+          { "label": "🎯 셀리턴 시딩 5%", "value": "여드름 케어 + 4주 챌린지", "sub": "트러블 카테고리 / \"꾸준히·4주\" 사용 가이드 명확 (s4-9 카피 ⑤ 정합)", "tone": "warning" },
+          { "label": "🟢 메디큐브 자연 34%", "value": "5종 기술 멀티 + 내돈내산", "sub": "셀럽 IP의 자연 입소문 / EMS·RF·초음파·고주파·미세전류 모두 언급 / 인디 추격 불가", "tone": "success" }
+        ],
+        "footnote": "* 매드업 4트랙 처방 = 임상(달바·메이크온) + 4주 챌린지(셀리턴) + 시딩 캠페인(올리리라 확장) + 자연 후기(메디큐브 학습)"
+      },
+      "sources": [
+        { "label": "📥 [Analysis] content-analysis.json (시딩 메시지 매트릭스)", "url": "data/yakson/naver-blog/content-analysis.json" },
+        { "label": "📥 [Raw] 18 키워드 별 description 데이터", "url": "data/yakson/naver-blog/raw/" }
+      ],
+      "sourceNote": "* 출처: Naver Search API 시딩 포스트 description 텍스트 5차원 키워드 빈도 분석 (2026-05-28) · 데이터 다운로드 ↓ <a href=\"data/yakson/naver-blog/content-analysis.json\" download target=\"_blank\">📥 메시지 매트릭스 JSON</a>"
+    },
+    {
+      "id": "nb-3",
+      "indexLabel": "🚀 2026-04 시딩 캠페인 폭증",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 네이버 블로그 분석 ③ 시계열 2026-04 시딩 캠페인 폭증 (광고주 27배)",
+      "status": "madup",
+      "intro": false,
+      "title": "약손명가 리프팅밴드 <span class=\"highlight\">2026-04 블로그 발행 27배 폭증</span> — 광고주의 4월 시딩 캠페인 정량 입증 + 매드업 6월 BS 전환 시점 ROI 측정 기반",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>월별 발행 폭증 시그널</strong> (vs 2026-03 대비): <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>약손명가 리프팅밴드: 1건 → 27건 (27.0x)</strong> 🔥 광고주 메인 PB 폭증"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>듀얼소닉: 3건 → 19건 (6.3x)</strong> 후발 경쟁사 약진"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>골기: 6건 → 24건 (4.0x)</strong> 광고주 라인 동반 폭증"
+        },
+        {
+          "type": "indent-1",
+          "html": "LG프라엘 / 메이크온 / 셀리턴: 모두 3.0x 증가 (시장 전체 시딩 활성기)"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>메디큐브 부스터프로: 22 → 15건 (-0.3x 감소)</strong> ⚠️ 메디큐브 시딩 둔화 시그널 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>해석</strong>: 2026-04 = 봄/여름 시즌 진입 + 광고주 자체 캠페인 진행 시점 (가뿐한 복부패치·멀티패치 출시 준비기) → 시딩 27배 폭증으로 신제품 사전 인지도 빌드업"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>매드업 활용 포인트</strong>: 4월 시딩 27건의 캠페인 ROI를 6월 BS 전환 시점에 측정·복기 (예: 4월 시딩 → 5월 자사몰 트래픽 · 6월 BS 전환 효과)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ①</strong>: 광고주가 시딩 캠페인 운영 경험 보유 + 매드업이 이어받아 데이터 기반 최적화 가능 시그널"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ②</strong>: 메디큐브 시딩 둔화 (-30%) = 후발 진입 골든타임 시그널 (시장 점유 확장 기회)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>전략 시사 ③ 매드업 6월 BS 전환 시점 ROI 측정</strong>: 4월 시딩(27건) → 5월 자사몰·BS 유입 측정 → 6월 캠페인 효율 검증 → 7월 최적화"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고주 미팅 활용</strong>: \"4월에 어떤 시딩 캠페인 진행하셨나요?\" (status: client) — 광고주 시딩 운영 경험·예산·매니지먼트 도구 확인 필요"
+        }
+      ],
+      "chart": {
+        "type": "hbar",
+        "title": "📈 2026-04 블로그 발행 폭증 배수 (vs 2026-03)",
+        "subtitle": "광고주 약손명가 리프팅밴드 27배 폭증 (시딩 캠페인 정량 입증)",
+        "items": [
+          { "label": "약손명가 리프팅밴드 (광고주)", "value": "1→27건 (27.0x)", "ratio": 1.0, "tone": "highlight" },
+          { "label": "듀얼소닉 (후발)", "value": "3→19건 (6.3x)", "ratio": 0.23, "tone": "primary" },
+          { "label": "골기 (광고주)", "value": "6→24건 (4.0x)", "ratio": 0.15, "tone": "accent" },
+          { "label": "LG프라엘 (직접 경쟁)", "value": "2→6건 (3.0x)", "ratio": 0.11, "tone": "primary" },
+          { "label": "메이크온 (직접 경쟁)", "value": "7→21건 (3.0x)", "ratio": 0.11, "tone": "primary" },
+          { "label": "셀리턴 (후발)", "value": "2→6건 (3.0x)", "ratio": 0.11, "tone": "muted" },
+          { "label": "약손명가 마사저 (광고주)", "value": "12→21건 (1.8x)", "ratio": 0.067, "tone": "accent" },
+          { "label": "메디큐브 부스터프로 (직접 경쟁)", "value": "22→15건 (-0.3x)", "ratio": 0.04, "tone": "danger" }
+        ],
+        "footnote": "* 메디큐브 -30% 감소 = 시딩 둔화 시그널 / 광고주 27배·6.3배 폭증 = 후발 적극 진입 시점"
+      },
+      "sources": [
+        { "label": "📥 [Summary] all-summary.json (월별 시계열)", "url": "data/yakson/naver-blog/all-summary.json" }
+      ],
+      "sourceNote": "* 출처: Naver Search API 18 키워드 × 100건 × postdate 월별 집계 (2026-05-28)"
+    },
+    {
+      "id": "nb-4",
+      "indexLabel": "🎯 메가 블로거 + 매드업 운영 가이드",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 네이버 블로그 분석 ④ 메가 블로거 식별 + 매드업 3단 운영 가이드",
+      "status": "madup",
+      "intro": false,
+      "title": "<span class=\"highlight\">매드업이 접근 가능한 메가·중상위 블로거 풀 식별</span> — 천사의 알·블루원·난 좋은 사람이 좋다 / 3단 운영 모델 (메가·중상위·나노)",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🔑 멀티 디바이스 메가 블로거 발견</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>천사의 알</strong> — 약손명가 리프팅밴드 3건 + 메디큐브 부스터프로 5건 + 홈케어 디바이스 2건 = <strong>뷰티 디바이스 카테고리 강자</strong>"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>LG전자 온라인 인증점 블루원</strong> — LG프라엘 5건 (공식 시딩 채널)"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>난 좋은 사람이 좋다</strong> — 셀리턴 5건 (시딩 활발)"
+        },
+        {
+          "type": "indent-1",
+          "html": "새벽 네시의 손톱달 — 듀얼소닉 4건 / 0530rok — 메이크온 3건 / 립덕후의 뷰티 세상 — 약손명가 마사저 3건 / ✨ 뷰티 조지 — 올리리라 밴드 3건 </li></ul>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>매드업 시딩 운영 시 1차 타깃</strong>: 천사의 알·립덕후 등 멀티 디바이스 블로거 — 약손명가 IP·임상 콘텐츠 적합"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>🏗 매드업 시딩 3단 운영 모델</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>1차 메가</strong> (월 방문 10만+·디바이스 카테고리 강자) = 키비주얼·브랜드 인지 빌드업"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>2차 중상위</strong> (월 1-10만·뷰티 일반) = 키워드 점유 (리스닝마인드 클러스터 6축 매핑)"
+        },
+        {
+          "type": "indent-1",
+          "html": "<strong>3차 나노·체험단</strong> (월 1만 이하·일반인) = 자연 SEO·롱테일 (올리리라 시딩 26-29% 패턴 확장) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 솔루션 결합</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li><strong>LEVER Xpert</strong>로 시딩 콘텐츠 키비주얼 자동 생성"
+        },
+        {
+          "type": "arrow",
+          "html": "<strong>SPRAY AI</strong>로 블로거별 맞춤 콘텐츠 (페르소나·연령·관심사)"
+        },
+        {
+          "type": "arrow",
+          "html": "<strong>AI 심의봇</strong>으로 광고 표기 컴플라이언스 자동 검수 (식약처 강화 - s5-6 정합)"
+        },
+        {
+          "type": "arrow",
+          "html": "<strong>리스닝마인드 + Naver API</strong> 통합 키워드 모니터링 (월별 시딩 ROI 측정) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고주 미팅 필요 항목 (status: client)</strong>: ① 현재 시딩 운영 예산·매니지먼트사 ② 4월 캠페인 ROI 데이터 ③ KOL DB 보유 여부 ④ 광고법 준수 가이드 보유 여부"
+        }
+      ],
+      "chart": {
+        "type": "compare",
+        "title": "🏗 매드업 시딩·인플루언서 3단 운영 모델",
+        "items": [
+          { "label": "1차 메가 (월 10만+)", "value": "키비주얼·브랜드 인지", "sub": "천사의 알 (디바이스 카테고리 강자) · 립덕후 (약손명가 PB 친화) — LEVER Xpert 키비주얼 생성", "tone": "highlight" },
+          { "label": "2차 중상위 (월 1-10만)", "value": "키워드 점유·SEO", "sub": "리스닝마인드 6축 클러스터 매핑 · SPRAY AI 페르소나 맞춤 콘텐츠 · 리프팅/탄력/V라인 키워드 점유", "tone": "primary" },
+          { "label": "3차 나노·체험단 (월 1만 이하)", "value": "자연 SEO·롱테일", "sub": "올리리라 시딩 26-29% 패턴 확장 · 일반인 일반인 체험단 운영 · 광고 표기 AI 심의봇 자동 검수", "tone": "accent" },
+          { "label": "📊 ROI 측정", "value": "월별 정량 리포트", "sub": "Naver API + 리스닝마인드 통합 모니터링 · 4월 27배 폭증 같은 정량 검증 · BS 전환 funnel 매핑", "tone": "success" }
+        ],
+        "footnote": "* 매드업 솔루션 4종 결합 운영 (LEVER Xpert + SPRAY AI + AI 심의봇 + 리스닝마인드)"
+      },
+      "sources": [
+        { "label": "📥 [Summary] all-summary.json (블로거 식별)", "url": "data/yakson/naver-blog/all-summary.json" }
+      ],
+      "sourceNote": "* 출처: Naver Search API 18 키워드 중복 포스트 블로거 분석 (2026-05-28) · 매드업 솔루션 매핑"
+    },
+    {
+      "id": "nb-5",
+      "indexLabel": "📥 네이버 블로그 Raw 데이터",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 네이버 블로그 분석 ⑤ Raw 데이터 다운로드 (18 키워드 1,453건)",
+      "status": "madup",
+      "intro": false,
+      "title": "네이버 블로그 분석 <span class=\"highlight\">Raw 데이터 18+1 JSON 다운로드 제공</span> — 광고주가 자체 검증 + 매월 재호출 가능",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>총 수집</strong>: 18 키워드 × 평균 80건 = <strong>1,453건 raw 메타데이터</strong> (제목·요약·블로거명·블로그URL·발행일·자동분류 결과)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>활용 시나리오</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>매월 재호출 → 시딩 캠페인 ROI 모니터링"
+        },
+        {
+          "type": "indent-1",
+          "html": "특정 블로거 ID 추출 → 매드업 인플루언서 DB 구축"
+        },
+        {
+          "type": "indent-1",
+          "html": "메시지 패턴 분석 → SPRAY AI 인풋"
+        },
+        {
+          "type": "indent-1",
+          "html": "광고주 자체 분석 검증 (정량 근거 제공) </li></ul>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>📥 전체 인덱스</strong>: <a href=\"data/yakson/naver-blog/manifest.json\" target=\"_blank\"><strong>manifest.json</strong></a> — 18 키워드 + 핵심 발견 6가지 요약"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>📊 통합 매트릭스</strong>: <a href=\"data/yakson/naver-blog/all-summary.json\" target=\"_blank\"><strong>all-summary.json</strong></a> — 시장사이즈·시딩%·블로거·월별 시계열 통합"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>🎯 메시지 분석</strong>: <a href=\"data/yakson/naver-blog/content-analysis.json\" target=\"_blank\"><strong>content-analysis.json</strong></a> — 시딩 콘텐츠 5차원 키워드 매트릭스"
+        }
+      ],
+      "sources": [
+        { "label": "📥 [Index] manifest.json", "url": "data/yakson/naver-blog/manifest.json" },
+        { "label": "📥 [Summary] all-summary.json (통합 매트릭스)", "url": "data/yakson/naver-blog/all-summary.json" },
+        { "label": "📥 [Analysis] content-analysis.json (시딩 메시지)", "url": "data/yakson/naver-blog/content-analysis.json" },
+        { "label": "📥 [Raw 1] 약손명가-리프팅밴드.json", "url": "data/yakson/naver-blog/raw/약손명가-리프팅밴드.json" },
+        { "label": "📥 [Raw 2] 가뿐한-포.json", "url": "data/yakson/naver-blog/raw/가뿐한-포.json" },
+        { "label": "📥 [Raw 3] 약손명가-마사저.json", "url": "data/yakson/naver-blog/raw/약손명가-마사저.json" },
+        { "label": "📥 [Raw 4] 가뿐한-복부패치.json", "url": "data/yakson/naver-blog/raw/가뿐한-복부패치.json" },
+        { "label": "📥 [Raw 5] 가뿐한-멀티패치.json", "url": "data/yakson/naver-blog/raw/가뿐한-멀티패치.json" },
+        { "label": "📥 [Raw 6] 약손-브이핏-패치.json", "url": "data/yakson/naver-blog/raw/약손-브이핏-패치.json" },
+        { "label": "📥 [Raw 7] 올리리라-밴드.json (시딩 29%)", "url": "data/yakson/naver-blog/raw/올리리라-밴드.json" },
+        { "label": "📥 [Raw 8] 올리리라-패치.json (시딩 26%)", "url": "data/yakson/naver-blog/raw/올리리라-패치.json" },
+        { "label": "📥 [Raw 9] 골기.json (31,952건 최대)", "url": "data/yakson/naver-blog/raw/골기.json" },
+        { "label": "📥 [Raw 10] 메디큐브-부스터프로.json (자연 34%)", "url": "data/yakson/naver-blog/raw/메디큐브-부스터프로.json" },
+        { "label": "📥 [Raw 11] LG프라엘.json", "url": "data/yakson/naver-blog/raw/LG프라엘.json" },
+        { "label": "📥 [Raw 12] 메이크온.json (시딩 41% 강자)", "url": "data/yakson/naver-blog/raw/메이크온.json" },
+        { "label": "📥 [Raw 13] 셀리턴.json (4주 챌린지)", "url": "data/yakson/naver-blog/raw/셀리턴.json" },
+        { "label": "📥 [Raw 14] 듀얼소닉.json", "url": "data/yakson/naver-blog/raw/듀얼소닉.json" },
+        { "label": "📥 [Raw 15] 달바-디바이스.json", "url": "data/yakson/naver-blog/raw/달바-디바이스.json" },
+        { "label": "📥 [Raw 16] 리프팅-디바이스.json (72,203건)", "url": "data/yakson/naver-blog/raw/리프팅-디바이스.json" },
+        { "label": "📥 [Raw 17] EMS-리프팅.json", "url": "data/yakson/naver-blog/raw/EMS-리프팅.json" },
+        { "label": "📥 [Raw 18] 홈케어-디바이스.json (121,098 최대)", "url": "data/yakson/naver-blog/raw/홈케어-디바이스.json" },
+        { "label": "Naver Search API (https://developers.naver.com)", "url": "https://developers.naver.com" }
+      ],
+      "sourceNote": "* 출처: Naver Search API · 매드업 자체 수집·분류 (2026-05-28) · 18 raw JSON + 3 분석 JSON = 21개 파일 (총 약 600KB)"
     },
     {
       "id": "s1-1",

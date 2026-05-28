@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "source": "Naver Search API (https://developers.naver.com)",
+    "endpoint": "https://openapi.naver.com/v1/search/blog.json",
+    "analyst": "MADUP / 매드업 비딩 TF",
+    "client": "약손명가헬스케어",
+    "analysis_date": "2026-05-28",
+    "keywords_count": 18,
+    "total_records": 1453,
+    "tool_credits": "Naver Open API (Free, 25,000/day)",
+    "factbook_slides": ["nb-1", "nb-2", "nb-3", "nb-4"]
+  },
+  "files": [
+    { "file": "all-summary.json", "scope": "18 키워드 통합 매트릭스 (시장사이즈·시딩분류·블로거·시계열)" },
+    { "file": "raw/약손명가-리프팅밴드.json", "category": "광고주 PB", "total": 3898, "natural_pct": 8.0, "seeded_pct": 4.0 },
+    { "file": "raw/가뿐한-포.json", "category": "광고주 PB", "total": 5362, "natural_pct": 5.0, "seeded_pct": 1.0 },
+    { "file": "raw/약손명가-마사저.json", "category": "광고주 PB", "total": 20854, "natural_pct": 11.0, "seeded_pct": 3.0 },
+    { "file": "raw/가뿐한-복부패치.json", "category": "광고주 신제품", "total": 37, "natural_pct": 8.1, "seeded_pct": 2.7 },
+    { "file": "raw/가뿐한-멀티패치.json", "category": "광고주 신제품", "total": 22, "natural_pct": 4.5, "seeded_pct": 9.1 },
+    { "file": "raw/약손-브이핏-패치.json", "category": "광고주 신제품", "total": 3, "natural_pct": 0, "seeded_pct": 0 },
+    { "file": "raw/올리리라-밴드.json", "category": "광고주 디바이스", "total": 326, "natural_pct": 8.0, "seeded_pct": 29.0, "alert": "🔥 시딩 29% (광고주 캠페인 활발)" },
+    { "file": "raw/올리리라-패치.json", "category": "광고주 디바이스", "total": 282, "natural_pct": 5.0, "seeded_pct": 26.0, "alert": "🔥 시딩 26% (광고주 캠페인 활발)" },
+    { "file": "raw/골기.json", "category": "광고주 디바이스", "total": 31952, "natural_pct": 2.0, "seeded_pct": 3.0 },
+    { "file": "raw/메디큐브-부스터프로.json", "category": "직접 경쟁", "total": 15377, "natural_pct": 34.0, "seeded_pct": 3.0, "alert": "⭐ 자연 34% (셀럽 IP 효과)" },
+    { "file": "raw/LG프라엘.json", "category": "직접 경쟁", "total": 23356, "natural_pct": 15.0, "seeded_pct": 5.0 },
+    { "file": "raw/메이크온.json", "category": "직접 경쟁", "total": 81520, "natural_pct": 4.0, "seeded_pct": 41.0, "alert": "🔥 시딩 41% (시장 절대 강자 = 학습 모델)" },
+    { "file": "raw/셀리턴.json", "category": "후발 경쟁", "total": 10513, "natural_pct": 1.0, "seeded_pct": 5.0 },
+    { "file": "raw/듀얼소닉.json", "category": "후발 경쟁", "total": 21845, "natural_pct": 16.0, "seeded_pct": 3.0 },
+    { "file": "raw/달바-디바이스.json", "category": "후발 경쟁", "total": 4828, "natural_pct": 14.0, "seeded_pct": 1.0 },
+    { "file": "raw/리프팅-디바이스.json", "category": "카테고리", "total": 72203, "natural_pct": 14.0, "seeded_pct": 4.0 },
+    { "file": "raw/EMS-리프팅.json", "category": "카테고리", "total": 26706, "natural_pct": 6.0, "seeded_pct": 1.0 },
+    { "file": "raw/홈케어-디바이스.json", "category": "카테고리", "total": 121098, "natural_pct": 9.0, "seeded_pct": 0 }
+  ],
+  "key_findings": [
+    "🔥 발견 1: 메이크온 시딩 41% = 시장 절대 강자 (광고주 학습 모델 / s4-6 카이스트 카툰 정합)",
+    "🟢 발견 2: 올리리라 시딩 26-29% = 광고주 시딩 자산 보유 (검색 인지도 0 vs 시딩 활발)",
+    "⭐ 발견 3: 메디큐브 자연 34% = 셀럽 IP의 자연 입소문 효과 (인디는 정면 추격 불가)",
+    "🚀 발견 4: 약손명가 리프팅밴드 2026-04 시딩 27배 폭증 (광고주 캠페인 ROI 검증 가능)",
+    "🎯 발견 5: 메가 블로거 발견 (천사의 알 = 멀티 디바이스 / 블루원 = LG 공식 / 난 좋은 사람이 좋다 = 셀리턴 5건)",
+    "💡 발견 6: 광고주 PB 시장 사이즈 양호 (골기 31,952건 > 메디큐브 15,377건)"
+  ],
+  "classification_logic": {
+    "seeding_keywords": ["체험단", "원고료", "협찬", "지원받", "제공받", "유료광고", "PPL", "받았어요", "선물받", "체험"],
+    "ad_disclosure": ["#광고", "(광고)", "[광고]", "광고 포스팅", "후원받"],
+    "natural_keywords": ["내돈내산", "직접 구매", "솔직 후기", "직구매"],
+    "note": "현재 분류는 제목 + 요약(200자)만 분석. 본문 크롤링 추가 시 정확도 60-70%까지 향상 가능"
+  },
+  "reproduce_guide": "Naver Open API + Client ID/Secret으로 동일 키워드 재호출 가능. 단가: 무료, 일 25,000회 제한."
+}

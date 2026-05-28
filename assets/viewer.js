@@ -114,6 +114,30 @@ function render() {
   bindActiveObserver();
 }
 
+// 슬라이드의 데이터 출처 자동 추출 (sourceNote / sources / meta / id 패턴 기반)
+const SOURCE_PATTERNS = [
+  { key: 'lm', label: '📊 리스닝마인드', match: (s) => /리스닝마인드|listening.?mind/i.test(s._combined) || /^lm-/.test(s.id || '') },
+  { key: 'naver', label: '🌐 네이버 API', match: (s) => /Naver Search API|네이버 API|네이버 검색 API|openapi\.naver/i.test(s._combined) || /^nb-/.test(s.id || '') },
+  { key: 'lever', label: '🎨 Lever Xpert', match: (s) => /Lever Xpert|LEVER Xpert|크리에이티브 라이브러리/i.test(s._combined) },
+  { key: 'madup-tool', label: '⚙️ 매드업 도구', match: (s) => /SPRAY AI|ADVoost|ADBoost|AI 심의봇|모바일인덱스|매드업.*솔루션|매드업.*도구/i.test(s._combined) },
+  { key: 'news', label: '📰 뉴스기사', match: (s) => /비즈워치|머니투데이|매일경제|한경|EBN|코스인|코스모닝|메디파나|메디포뉴스|뷰티누리|머니S|한국경제|뉴스1|히트뉴스|아시아경제|이데일리|메디컬타임즈|매거진|Daum|Newswire|Allure|Elle Korea|얼루어|Harper|마리끌레르|W Korea|네이트|블로터/i.test(s._combined) },
+  { key: 'consulting', label: '💼 컨설팅', match: (s) => /KPMG|맥킨지|McKinsey|삼일|삼일회계|베인|Bain|PwC|딜로이트|Deloitte|모르도르|Mordor|Expert Market|imarc|GlobalGrowthInsights|DataBridge|Business Research/i.test(s._combined) },
+  { key: 'academic', label: '🎓 학술', match: (s) => /KAIST|카이스트|논문|학술|학회|KCI|특허|임상.*검증|이병철 회장|1979/i.test(s._combined) },
+  { key: 'client-doc', label: '📄 광고주 자료', match: (s) => /RFP|미팅록|광고주 PDF|광고주 자료|광고주 공유|광고주 결정|광고주 미팅|광고주 확인 필요/i.test(s._combined) },
+];
+
+function detectSources(s) {
+  // dataSource 필드 명시적 지정 우선
+  if (Array.isArray(s.dataSource) && s.dataSource.length) return s.dataSource;
+  // 자동 추출: meta + title + sourceNote + sources labels 모두 합쳐서 매칭
+  const combined = [
+    s.meta || '', s.title || '', s.sourceNote || '',
+    ...(s.sources || []).map(src => `${src.label || ''} ${src.url || ''}`)
+  ].join(' ');
+  const _s = { ...s, _combined: combined };
+  return SOURCE_PATTERNS.filter(p => p.match(_s)).map(p => p.key);
+}
+
 // 사이드바 INDEX용 라벨 생성 (slide.indexLabel 있으면 사용, 없으면 자동 추출)
 function makeIndexLabel(s) {
   // 1) 명시적 indexLabel 우선
@@ -206,7 +230,9 @@ function renderSlides() {
 
 function renderSlide(s) {
   const cls = `slide-card${s.intro ? ' intro' : ''}`;
-  let html = `<article class="${cls}" id="${s.id}" data-status="${s.status}" data-slide-id="${s.id}">`;
+  const sources = detectSources(s);
+  const srcAttr = sources.length ? ` data-sources="${sources.join(',')}"` : '';
+  let html = `<article class="${cls}" id="${s.id}" data-status="${s.status}" data-slide-id="${s.id}"${srcAttr}>`;
 
   // 슬라이드 액션 버튼 (편집 모드)
   html += `<div class="slide-actions">
@@ -420,20 +446,58 @@ function bindActiveObserver() {
 }
 
 // ==========================================================================
-// 필터 + 검색
+// 필터 + 검색 (상태 1개 + 출처 다중 선택 결합)
 // ==========================================================================
+const FILTER_STATE = { status: 'all', sources: new Set() };
+
+function applyFilters() {
+  document.querySelectorAll('.slide-card[data-status]').forEach(card => {
+    const status = card.dataset.status;
+    const srcAttr = card.dataset.sources || '';
+    const cardSources = srcAttr ? srcAttr.split(',') : [];
+
+    const statusOk = FILTER_STATE.status === 'all' || status === FILTER_STATE.status;
+    const sourceOk = FILTER_STATE.sources.size === 0 ||
+                     [...FILTER_STATE.sources].some(s => cardSources.includes(s));
+
+    if (statusOk && sourceOk) card.classList.remove('is-hidden');
+    else card.classList.add('is-hidden');
+  });
+  // INDEX도 동기화 — 숨겨진 슬라이드 ID와 매칭되는 li 숨김
+  const hiddenIds = new Set(
+    [...document.querySelectorAll('.slide-card.is-hidden')].map(c => c.id)
+  );
+  document.querySelectorAll('.index-sub li').forEach(li => {
+    const a = li.querySelector('a');
+    if (!a) return;
+    const sid = (a.getAttribute('href') || '').slice(1);
+    if (hiddenIds.has(sid)) li.classList.add('is-hidden');
+    else li.classList.remove('is-hidden');
+  });
+}
+
+// 상태 필터 (단일 선택)
 document.querySelectorAll('.filter-chip').forEach(chip => {
   chip.addEventListener('click', () => {
-    const filter = chip.dataset.filter;
     document.querySelectorAll('.filter-chip').forEach(c => c.removeAttribute('data-active'));
     chip.setAttribute('data-active', 'true');
-    document.querySelectorAll('.slide-card[data-status]').forEach(card => {
-      if (filter === 'all' || card.dataset.status === filter) {
-        card.classList.remove('is-hidden');
-      } else {
-        card.classList.add('is-hidden');
-      }
-    });
+    FILTER_STATE.status = chip.dataset.filter;
+    applyFilters();
+  });
+});
+
+// 출처 필터 (다중 선택, 토글)
+document.querySelectorAll('.src-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const src = chip.dataset.source;
+    if (FILTER_STATE.sources.has(src)) {
+      FILTER_STATE.sources.delete(src);
+      chip.removeAttribute('data-active');
+    } else {
+      FILTER_STATE.sources.add(src);
+      chip.setAttribute('data-active', 'true');
+    }
+    applyFilters();
   });
 });
 
