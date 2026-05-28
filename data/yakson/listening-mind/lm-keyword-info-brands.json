@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "tool": "mcp__ListeningMind__keyword_info",
+    "request_date": "2026-05-28",
+    "gl": "kr",
+    "data_type": "all",
+    "source": "리스닝마인드 MCP (https://listeningmind-service-mcp.ascentlab.io)",
+    "purpose": "광고주 브랜드 자산 vs 경쟁사 6종 검색량 비교 / IP 축소 결정 정량 입증"
+  },
+  "summary_table": [
+    {"keyword": "약손명가", "volume_avg": 109533, "volume_total": 2638870, "volume_trend": 0.89, "cpc_usd": 1.08, "competition_index": 26, "gender_f_ratio": 72.44, "age_30s": 34.32, "age_40s": 19.74, "age_50s": 19.74, "category": "본가_브랜드"},
+    {"keyword": "메디큐브 부스터프로", "volume_avg": 73316, "volume_total": 1155340, "volume_trend": -0.36, "cpc_usd": 0.85, "competition_index": 56, "gender_f_ratio": 86.57, "age_25_29": 23.9, "age_30s": 35.82, "age_40s": 19.77, "category": "경쟁사_제품"},
+    {"keyword": "약손명가 리프팅밴드", "volume_avg": 16896, "volume_total": 236980, "volume_trend": -0.39, "cpc_usd": 0.89, "competition_index": 95, "gender_f_ratio": 93.09, "age_20_24": 17.34, "age_25_29": 20.91, "age_30s": 25.64, "age_40s": 14.63, "category": "광고주_PB_제품"},
+    {"keyword": "lg 프라엘", "volume_avg": 14156, "volume_total": 163560, "volume_trend": 0.11, "cpc_usd": 0.32, "competition_index": 79, "gender_f_ratio": 76.23, "age_30s": 37.81, "age_40s": 32.0, "category": "경쟁사_브랜드"},
+    {"keyword": "리프팅 디바이스", "volume_avg": 3793, "volume_total": 39430, "volume_trend": -0.11, "cpc_usd": 1.64, "competition_index": 100, "gender_f_ratio": 91.87, "age_30s": 40.84, "age_40s": 27.53, "category": "카테고리_키워드"},
+    {"keyword": "메이크온", "volume_avg": 2903, "volume_total": 38370, "volume_trend": -0.13, "cpc_usd": 0.47, "competition_index": 36, "gender_f_ratio": 83.99, "age_30s": 37.94, "age_40s": 35.86, "category": "경쟁사_브랜드"},
+    {"keyword": "셀리턴", "volume_avg": 1450, "volume_total": 20650, "volume_trend": 0.12, "cpc_usd": 1.12, "competition_index": 17, "gender_f_ratio": 56.91, "age_30s": 34.84, "age_40s": 31.67, "age_50s": 22.8, "category": "경쟁사_브랜드"},
+    {"keyword": "약손명가 헬스케어", "volume_avg": 793, "volume_total": 13590, "volume_trend": -0.33, "cpc_usd": 0.62, "competition_index": 28, "gender_f_ratio": 68.02, "age_30s": 43.36, "age_40s": 23.57, "age_50s": 13.82, "category": "광고주_브랜드"},
+    {"keyword": "ems 리프팅", "volume_avg": 266, "volume_total": 3340, "volume_trend": -0.29, "cpc_usd": 3.1, "competition_index": 64, "gender_f_ratio": 81.45, "age_30s": 48.34, "age_40s": 29.13, "category": "광고주_USP_카테고리"},
+    {"keyword": "홈 리프팅", "volume_avg": 96, "volume_total": 1680, "volume_trend": -0.25, "cpc_usd": 0.03, "competition_index": 83, "gender_f_ratio": 96.07, "age_30s": 60.78, "age_40s": 19.6, "category": "카테고리_키워드"},
+    {"keyword": "올리리라", "volume_avg": null, "category": "광고주_브랜드", "note": "검색 데이터 없음 (인지도 0)"},
+    {"keyword": "올리리라 밴드", "volume_avg": null, "category": "광고주_브랜드", "note": "검색 데이터 없음"},
+    {"keyword": "골기", "volume_avg": null, "category": "광고주_브랜드", "note": "검색 데이터 없음 (인지도 0)"}
+  ],
+  "key_ratios": {
+    "약손명가_vs_광고주_헬스케어": "138 : 1",
+    "약손명가_vs_메디큐브": "1.5 : 1",
+    "광고주_리프팅밴드_vs_광고주_브랜드": "21 : 1",
+    "메디큐브_vs_광고주": "92 : 1"
+  },
+  "critical_findings": [
+    "발견1: 광고주 IP 축소 결정 = 138배 검색 격차로 정량 입증",
+    "발견2: 제품명(리프팅밴드)이 브랜드명(헬스케어)보다 21배 더 검색됨",
+    "발견3: 올리리라/골기 자체 브랜드 인지도 0 (s4-9 카피 5종 시급성)",
+    "발견4: 메디큐브 부스터프로 트렌드 -36% 감소 → 후발 진입 골든타임",
+    "발견5: EMS 리프팅 카테고리 30대 48% (광고주 페르소나 정확 정합)"
+  ],
+  "monthly_volume_alerts": {
+    "약손명가_2025_07_spike": {
+      "month": "2025-07",
+      "volume": 1554900,
+      "vs_avg": "19x",
+      "cause": "송도 총기 사건 매스 노출 (부정 맥락)"
+    }
+  }
+}

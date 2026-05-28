@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "tool": "mcp__ListeningMind__keyword_info",
+    "request_date": "2026-05-28",
+    "gl": "kr",
+    "data_type": "all",
+    "source": "리스닝마인드 MCP",
+    "purpose": "광고주 2026 신제품 5종 (PDF 2026-05-26) 카테고리 검색량 검증"
+  },
+  "summary_table": [
+    {"keyword": "약손명가 리프팅밴드", "volume_avg": 16896, "volume_total": 236980, "volume_trend": -0.39, "gender_f_ratio": 93.09, "age_13_19": 9.77, "age_20_24": 17.34, "age_25_29": 20.91, "age_30s": 25.64, "age_40s": 14.63, "category": "광고주_PB_메인", "peak": "2024-11 (50,740)"},
+    {"keyword": "클렌징오일 추천", "volume_avg": 10486, "volume_total": 134720, "volume_trend": 0.12, "gender_f_ratio": 85.59, "age_30s": 23.74, "age_40s": 31.08, "age_50s": 27.07, "category": "신제품_듀얼멜팅_검증", "note": "큰 시장이지만 경쟁 96 격화"},
+    {"keyword": "팩 클렌저", "volume_avg": 2993, "volume_total": 39890, "volume_trend": -0.26, "gender_f_ratio": 81.89, "age_30s": 34.29, "age_40s": 27.11, "age_50s": 13.23, "category": "신제품_포어블러링_검증", "note": "경쟁 99 (매우 격화)"},
+    {"keyword": "승모근 패치", "volume_avg": 1786, "volume_total": 20000, "volume_trend": 0.2, "gender_f_ratio": 93.14, "age_30s": 35.35, "age_40s": 35.21, "age_50s": 17.14, "category": "신제품_가뿐한멀티패치_검증", "note": "정확한 광고주 페르소나 정합"},
+    {"keyword": "리프팅 패치", "volume_avg": 810, "volume_total": 11090, "volume_trend": 0.02, "gender_f_ratio": 88.27, "age_25_29": 14.93, "age_30s": 28.92, "age_40s": 24.19, "age_50s": 25.33, "category": "신제품_브이핏_검증", "note": "다층 페르소나"},
+    {"keyword": "셀룰라이트 패치", "volume_avg": 660, "volume_total": 6230, "volume_trend": 0.95, "gender_f_ratio": 83.01, "age_20s": 18.23, "age_30s": 32.7, "age_40s": 21.38, "category": "신제품_가뿐한복부패치_검증", "alert": "⭐ 트렌드 +95% 폭증 (골든타임)"},
+    {"keyword": "지압 패치", "volume_avg": 616, "volume_total": 9090, "volume_trend": -0.33, "gender_f_ratio": 81.42, "age_30s": 25.4, "age_40s": 32.51, "category": "신제품_가뿐한멀티패치_검증"},
+    {"keyword": "복부 패치", "volume_avg": 366, "volume_total": 3850, "volume_trend": 0.06, "gender_f_ratio": 83.16, "age_30s": 35.14, "age_40s": 38.11, "category": "신제품_가뿐한복부패치_검증"},
+    {"keyword": "여리한 패치", "volume_avg": 212, "volume_total": 1509, "volume_trend": -0.13, "gender_f_ratio": 90.74, "age_25_29": 18.51, "age_30s": 40.74, "age_40s": 20.37, "category": "광고주_기존_제품", "note": "리뉴얼 전 검색량"}
+  ],
+  "critical_findings": [
+    "🔴 셀룰라이트 패치 트렌드 +95% 폭증 = 가뿐한 복부패치 출시 골든타임",
+    "🟢 승모근 패치 = 광고주 30-40대 정합 + 트렌드 +20%",
+    "⚠️ 팩 클렌저·클렌징오일 = 큰 시장이지만 경쟁 96-99 (매드업 SPRAY AI 차별화 필요)",
+    "⚠️ 약손명가 리프팅밴드 트렌드 -39% = 신제품 5종 출시로 갱신 필수",
+    "💡 셀룰라이트 패치 20대 18% = 1020 확장 가능성 (효도선물)"
+  ],
+  "product_channel_strategy": {
+    "가뿐한_복부패치": "셀룰라이트 패치 +95% / 30대 33% → 올영 + 메타·인스타",
+    "가뿐한_멀티패치": "승모근 패치 30-40대 70% / 트렌드 +20% → 올영 + 카플친",
+    "약손_브이핏_리프팅_패치": "리프팅 패치 다층 페르소나 → 공식몰·외부몰",
+    "듀얼_멜팅_클렌징_오일": "클렌징오일 추천 큰 시장 / 40-50대 강세 → 공식몰 메인",
+    "포어_블러링_팩_클렌저": "팩 클렌저 경쟁 99 → 차별화 카피 필수"
+  }
+}

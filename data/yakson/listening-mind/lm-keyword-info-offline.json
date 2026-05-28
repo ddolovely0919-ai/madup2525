@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "tool": "mcp__ListeningMind__keyword_info",
+    "request_date": "2026-05-28",
+    "gl": "kr",
+    "purpose": "OLLI LIRA 오프라인 전개 + 약손명가 매장 모객 의도 검증 (PDF 2026-05-26 결정)"
+  },
+  "summary_table": [
+    {"keyword": "약손명가 가격", "volume_avg": 5510, "volume_total": 74080, "volume_trend": -0.05, "cpc_usd": 1.54, "competition_index": 39, "gender_f_ratio": 79.48, "age_25_29": 20.25, "age_30s": 28.05, "age_50s": 27.01, "category": "본가_매장_의도", "alert": "💪 가장 강력한 오프라인 모객 키워드"},
+    {"keyword": "약손명가 후기", "volume_avg": 1746, "volume_total": 22250, "volume_trend": -0.14, "cpc_usd": 3.76, "competition_index": 15, "gender_f_ratio": 91.37, "age_25_29": 26.53, "age_30s": 40.13, "category": "본가_검증_의도", "note": "25-30대 강세 / CPC $3.76 (의도 강함)"},
+    {"keyword": "강남 에스테틱", "volume_avg": 1310, "volume_total": 16920, "volume_trend": 0.03, "cpc_usd": 0.22, "competition_index": 32, "gender_f_ratio": 84.15, "age_25_29": 23.82, "age_30s": 37.55, "category": "지역_타게팅", "note": "OLLI LIRA 매장 진입 강남 1순위"},
+    {"keyword": "메디큐브 매장", "volume_avg": 573, "volume_total": 9110, "volume_trend": -0.2, "cpc_usd": 2.75, "competition_index": 38, "gender_f_ratio": 77.03, "age_25_29": 26.45, "age_30s": 35.96, "category": "경쟁사_오프라인", "note": "메디큐브도 매장 검색 진행 중"},
+    {"keyword": "에스테틱 추천", "volume_avg": 173, "volume_total": 2670, "volume_trend": -0.27, "cpc_usd": 0.51, "gender_f_ratio": 88.37, "age_20_24": 18.6, "age_25_29": 23.25, "age_30s": 25.58, "category": "에스테틱_탐색"},
+    {"keyword": "골기 테라피", "volume_avg": 71, "volume_total": 1923, "volume_trend": 0.17, "gender_f_ratio": 92.59, "age_30s": 37.03, "age_40s": 44.44, "category": "광고주_GOLKI_USP", "note": "4050 강세 / 광고주 브랜드 헤리티지 검색"},
+    {"keyword": "약손명가 매장", "volume_avg": 27, "volume_total": 515, "volume_trend": 2.7, "category": "본가_매장_급증", "alert": "🚨 +270% 폭증 (2025-07 사건 트리거)"}
+  ],
+  "critical_findings": [
+    "🔴 약손명가 가격 5,510회 = OLLI O2O 핵심 키워드 (광고주 자사몰 유입 강력)",
+    "🟢 강남 에스테틱 1,310회 = OLLI LIRA 강남 매장 오픈 시 직접 타게팅",
+    "🟢 골기 테라피 30-40대 81% = GOLKI 브랜드 4050 페르소나 정합",
+    "⚠️ 약손명가 매장 +270% 폭증 = 송도 사건 매스 노출",
+    "💡 약손명가 후기 25-30대 67% = OLLI LIRA 진입 페르소나와 일치"
+  ],
+  "olli_offline_strategy": {
+    "타게팅_키워드": ["약손명가 가격", "강남 에스테틱", "에스테틱 추천"],
+    "회피_키워드": ["약손명가 매장 (총기 사건 연관)", "약손 명가 김현숙"],
+    "OLLI_매장_광고": "강남 → 약손명가 가격 검색자 유입 → OLLI LIRA 매장 모객",
+    "GOLKI_채널": "골기 테라피 검색 → 카카오 선물하기 (PDF p.5 매핑)"
+  }
+}

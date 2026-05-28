@@ -15,7 +15,7 @@
     "auto": 85,
     "progress": 1,
     "client": 5,
-    "madup": 10
+    "madup": 11
   },
   "chapters": [
     {
@@ -276,10 +276,13 @@
         "footnote": "* 출처: 리스닝마인드 keyword_info (2026-05-28 / 월 평균 / 한국)"
       },
       "sources": [
-        { "label": "리스닝마인드 keyword_info · cluster_finder (2026-05-28)", "url": "" },
+        { "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종 검색량 raw)", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
+        { "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 클러스터 498건 + 부정 키워드)", "url": "data/yakson/listening-mind/lm-cluster-yakson.json" },
+        { "label": "📥 [Index] manifest.json (전체 리스닝마인드 데이터 인덱스)", "url": "data/yakson/listening-mind/manifest.json" },
+        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" },
         { "label": "광고주 PDF 공유 자료 2026-05-26 p.5 IP 축소 결정", "url": "" }
       ],
-      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 (2026-05-28) — 약손명가/메디큐브/LG프라엘/메이크온/약손명가 헬스케어 6개 키워드 비교 + 약손명가 클러스터 498건 부정 키워드 군집"
+      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 (2026-05-28) · Raw 데이터 다운로드 ↓ <a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download target=\"_blank\">📥 브랜드 비교 JSON</a> · <a href=\"data/yakson/listening-mind/lm-cluster-yakson.json\" download target=\"_blank\">📥 클러스터 JSON</a> · <a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\">📥 전체 인덱스</a>"
     },
     {
       "id": "lm-2",
@@ -338,9 +341,67 @@
         "footnote": "* 출처: 리스닝마인드 keyword_info / cluster_finder / path_finder (2026-05-28)"
       },
       "sources": [
-        { "label": "리스닝마인드 keyword_info (2026-05-28)", "url": "" }
+        { "label": "📥 [Raw] lm-keyword-info-brands.json", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
+        { "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)", "url": "data/yakson/listening-mind/lm-keyword-info-products.json" },
+        { "label": "📥 [Index] manifest.json", "url": "data/yakson/listening-mind/manifest.json" },
+        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" }
       ],
-      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 — 광고주 PB·디바이스·본가 IP 4종 검색량 비교"
+      "sourceNote": "* 출처: 리스닝마인드 MCP 분석 · Raw 데이터 다운로드 ↓ <a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download target=\"_blank\">📥 브랜드 JSON</a> · <a href=\"data/yakson/listening-mind/lm-keyword-info-products.json\" download target=\"_blank\">📥 신제품 JSON</a> · <a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\">📥 전체 인덱스</a>"
+    },
+    {
+      "id": "lm-3",
+      "chapter": "sec-intro",
+      "meta": "⭐ 매드업 도구 · 리스닝마인드 분석 ③ Phase 3-5 종합 발견 + Raw 데이터 다운로드",
+      "status": "madup",
+      "intro": false,
+      "title": "리스닝마인드 11회 호출 종합 — <span class=\"highlight\">셀룰라이트 패치 +95% 폭증 · 약손명가 가격 5,510회 · 약손명가 리프팅밴드 더쿠 경로 발견</span> + Raw 데이터 7종 다운로드 제공",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Phase 3 연령별 키워드 시장 진단</strong>: \"30대/40대 뷰티 디바이스\" = 데이터 부재 (월 130 이하) → <strong>메인 키워드를 페르소나별 매체 분배 운영</strong>이 더 효율적 (리프팅 디바이스 30대 41% / 약손명가 리프팅밴드 1020-3050 폭넓음)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Phase 4 신제품 5종 검증</strong>: <ul style=\"margin:4px 0;padding-left:18px;\"> <li>⭐ <strong>셀룰라이트 패치 트렌드 +95% 폭증</strong> = 가뿐한 복부패치 출시 골든타임"
+        },
+        {
+          "type": "indent-1",
+          "html": "승모근 패치 30-40대 70% + 트렌드 +20% = 가뿐한 멀티패치 정확 정합"
+        },
+        {
+          "type": "indent-1",
+          "html": "팩 클렌저·클렌징오일 = 큰 시장 + 경쟁 96-99 → 매드업 SPRAY AI 차별화 필수 </li></ul>"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Phase 5 오프라인 모객 의도</strong>: 약손명가 가격 월 5,510회 (30대 28% + 50대 27%) = OLLI LIRA 매장 모객 핵심 키워드 / 강남 에스테틱 1,310회 + 골기 테라피 4050 강세"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Path Finder 결정적 발견</strong>: <em>리프팅 디바이스 → 리프팅 기기 디시 → 리프팅 밴드 효과 디시 → 약손명가 리프팅밴드 더쿠</em> 경로 존재 = 광고주 제품이 디시·더쿠에서 자연 검증 중"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 운영 가이드</strong>: ① 셀룰라이트 패치 키워드 선점 광고 ② 약손명가 가격→OLLI 매장 모객 funnel ③ 더쿠·디시 인플루언서 시딩 ④ 부정 키워드(송도 사건) 자동 차단"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>📥 Raw 데이터 다운로드 (7종 JSON)</strong>: 본 슬라이드 하단 sources 섹션 + <a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\">manifest.json</a>에서 전체 인덱스 확인 가능"
+        }
+      ],
+      "sources": [
+        { "label": "📥 [Index] manifest.json (전체 데이터 인덱스 + 핵심 발견)", "url": "data/yakson/listening-mind/manifest.json" },
+        { "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종)", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
+        { "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)", "url": "data/yakson/listening-mind/lm-keyword-info-products.json" },
+        { "label": "📥 [Raw] lm-keyword-info-offline.json (오프라인 모객 10종)", "url": "data/yakson/listening-mind/lm-keyword-info-offline.json" },
+        { "label": "📥 [Raw] lm-keyword-info-ages.json (연령 페르소나 8종)", "url": "data/yakson/listening-mind/lm-keyword-info-ages.json" },
+        { "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 498건 + 부정 키워드)", "url": "data/yakson/listening-mind/lm-cluster-yakson.json" },
+        { "label": "📥 [Raw] lm-cluster-lifting.json (리프팅 디바이스 5개 커뮤니티)", "url": "data/yakson/listening-mind/lm-cluster-lifting.json" },
+        { "label": "📥 [Raw] lm-path-lifting.json (리프팅 경로 300개)", "url": "data/yakson/listening-mind/lm-path-lifting.json" },
+        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" }
+      ],
+      "sourceNote": "* 출처: 리스닝마인드 MCP 11회 호출 종합 (2026-05-28) · 매드업 비딩 TF 분석",
+      "body": "<table>\n      <thead><tr><th>Phase</th><th>키워드</th><th>핵심 발견</th><th>Raw 데이터</th></tr></thead>\n      <tbody>\n        <tr><td>1</td><td>약손명가 vs 헬스케어</td><td>138:1 격차 + 송도 사건 부정 키워드 → IP 축소 정량 입증</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download>📥 brands</a> · <a href=\"data/yakson/listening-mind/lm-cluster-yakson.json\" download>📥 yakson cluster</a></td></tr>\n        <tr><td>2</td><td>리프팅 디바이스 (path)</td><td>300개 경로 / 5개 커뮤니티 / 시술 대체 + 약손명가 더쿠 경로 발견</td><td><a href=\"data/yakson/listening-mind/lm-cluster-lifting.json\" download>📥 lifting cluster</a> · <a href=\"data/yakson/listening-mind/lm-path-lifting.json\" download>📥 path</a></td></tr>\n        <tr><td>3</td><td>20-50대 뷰티 디바이스</td><td>연령 키워드 시장 부재 → 메인 키워드 페르소나 매체 분배</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-ages.json\" download>📥 ages</a></td></tr>\n        <tr><td>4</td><td>신제품 5종 카테고리</td><td>⭐ 셀룰라이트 패치 +95% 폭증 (가뿐한 복부패치 골든타임)</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-products.json\" download>📥 products</a></td></tr>\n        <tr><td>5</td><td>약손명가 가격 / 매장 / 강남</td><td>약손명가 가격 5,510회 = OLLI 매장 모객 funnel 핵심</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-offline.json\" download>📥 offline</a></td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>📂 통합</strong></td><td colspan=\"3\"><a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\"><strong>📥 manifest.json — 전체 데이터 인덱스 + 핵심 발견 요약</strong></a></td></tr>\n      </tbody>\n    </table>\n    <p><strong>💡 Raw 데이터 활용 안내</strong>: 모든 JSON 파일은 <code>data/yakson/listening-mind/</code> 경로에 저장됨. GitHub Pages 배포 URL에서도 직접 접근 가능 (예: <a href=\"https://ddolovely0919-ai.github.io/madup2525/data/yakson/listening-mind/manifest.json\" target=\"_blank\">manifest.json</a>). 동일 키워드로 리스닝마인드 MCP 재호출 시 raw 응답 재생성 가능.</p>"
     },
     {
       "id": "s1-1",

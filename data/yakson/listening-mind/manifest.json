@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "source": "ListeningMind MCP (https://listeningmind-service-mcp.ascentlab.io)",
+    "analyst": "MADUP / 매드업 비딩 TF",
+    "client": "약손명가헬스케어",
+    "analysis_date": "2026-05-28",
+    "geolocation": "kr",
+    "total_credits_used": 11,
+    "factbook_slides": ["lm-1", "lm-2", "lm-3"]
+  },
+  "files": [
+    {
+      "file": "lm-keyword-info-brands.json",
+      "tool": "keyword_info",
+      "scope": "브랜드 검색량 비교 (광고주 자체 4종 + 경쟁사 6종)",
+      "keywords_count": 13,
+      "key_findings": [
+        "약손명가 vs 약손명가 헬스케어 = 138:1",
+        "약손명가 리프팅밴드 vs 약손명가 헬스케어 = 21:1",
+        "올리리라/골기 = 검색 시장 미존재",
+        "메디큐브 부스터프로 트렌드 -36% (감소 중)"
+      ]
+    },
+    {
+      "file": "lm-keyword-info-products.json",
+      "tool": "keyword_info",
+      "scope": "신제품 5종 카테고리 검색량 (PDF 2026-05-26 신제품 검증)",
+      "keywords_count": 12,
+      "key_findings": [
+        "셀룰라이트 패치 트렌드 +95% (골든타임)",
+        "승모근 패치 월 1,786회 / 30-40대 70%",
+        "팩 클렌저 시장 크지만 경쟁 99 (격화)",
+        "약손명가 리프팅밴드 월 16,896회 / 트렌드 -39%"
+      ]
+    },
+    {
+      "file": "lm-keyword-info-offline.json",
+      "tool": "keyword_info",
+      "scope": "오프라인 모객 의도 (OLLI O2O 전략용)",
+      "keywords_count": 10,
+      "key_findings": [
+        "약손명가 가격 월 5,510회 (30대 28% + 50대 27%)",
+        "약손명가 후기 월 1,746회 (25대 26.5% 진입)",
+        "강남 에스테틱 월 1,310회 / 25-30대 강세",
+        "약손명가 매장 +270% 폭증 (2025-07 사건)"
+      ]
+    },
+    {
+      "file": "lm-keyword-info-ages.json",
+      "tool": "keyword_info",
+      "scope": "연령별 페르소나 키워드 검증",
+      "keywords_count": 8,
+      "key_findings": [
+        "20대/30대/40대 뷰티 디바이스 키워드 시장 매우 작음 (월 50-130회)",
+        "50대 뷰티 디바이스 CPC $4.87 (최고가)",
+        "→ 메인 키워드를 페르소나별 매체 분배 운영이 더 효율적"
+      ]
+    },
+    {
+      "file": "lm-cluster-yakson.json",
+      "tool": "cluster_finder",
+      "scope": "약손명가 브랜드 클러스터 (rels + communities)",
+      "data_points": 498,
+      "key_findings": [
+        "🚨 부정 키워드 군집 발견: 송도 총기 사건·인천 사제총·약손명가 김현숙·필킨 조건홍",
+        "약손명가 대표 총기·갑질·성추행·논란 등",
+        "2025-07 검색량 19배 폭증 = 이 부정 이슈의 매스 노출",
+        "Community 0: 일반 약손명가 관리/매장",
+        "Community 1: 약손명가 남자 후기·경락·다이어트 (118건)",
+        "Community 2: 부정 이슈·총기 사건 키워드 (140건)",
+        "Community 3: 마사지 가격·테라피·체험 (78건)"
+      ]
+    },
+    {
+      "file": "lm-cluster-lifting.json",
+      "tool": "cluster_finder",
+      "scope": "리프팅 디바이스 클러스터 (rels + 5개 커뮤니티)",
+      "data_points": 350,
+      "key_findings": [
+        "Community 0: 홈케어 일반 (홈 디바이스 추천)",
+        "Community 1: 더쿠 리뷰 (뷰티 디바이스 순위 더쿠)",
+        "Community 2: 시장·산업 정보 (PDF·종류·브랜드)",
+        "Community 3: 뷰티 테크 일반 (갈바닉·EMS·초음파)",
+        "Community 4: 디시 리뷰 + 시술 (브이쎄라·울쎄라·실리프팅)"
+      ]
+    },
+    {
+      "file": "lm-path-lifting.json",
+      "tool": "path_finder",
+      "scope": "리프팅 디바이스 사용자 검색 경로 (300개)",
+      "data_points": 300,
+      "key_findings": [
+        "핵심 경로: 리프팅 디바이스 → 뷰티 디바이스 → 메디큐브 부스터프로 → 에이지알",
+        "시술 대체 경로: 리프팅 디바이스 → 울쎄라 홈 디바이스 → 홈쎄라 → 마미케어 브이쎄라",
+        "약손명가 발견 경로: 리프팅 디바이스 → 리프팅 기기 디시 → 리프팅 밴드 효과 디시 → 약손명가 리프팅밴드 더쿠",
+        "부정 경로: 메디큐브 뷰티 디바이스 → 메디큐브 논란·효과없음 (메디큐브 약점 발견)"
+      ]
+    }
+  ],
+  "tools_used": [
+    {
+      "name": "keyword_info",
+      "endpoint": "mcp__ListeningMind__keyword_info",
+      "description": "검색량·트렌드·인구통계·CPC·경쟁도 조회"
+    },
+    {
+      "name": "cluster_finder",
+      "endpoint": "mcp__ListeningMind__cluster_finder",
+      "description": "관계 키워드 + 커뮤니티(인식·구매 맥락) 클러스터"
+    },
+    {
+      "name": "path_finder",
+      "endpoint": "mcp__ListeningMind__path_finder",
+      "description": "검색 여정(인지→고민→비교→구매→재구매) 경로"
+    }
+  ],
+  "reproduce_guide": "동일 키워드로 리스닝마인드 MCP 재호출 시 raw 응답 재생성 가능. tool 명세는 factbook-app/data/yakson/listening-mind/manifest.json의 tools_used 참조."
+}

@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "tool": "mcp__ListeningMind__keyword_info",
+    "request_date": "2026-05-28",
+    "gl": "kr",
+    "purpose": "연령별 페르소나 키워드 시장 검증 (RFP 3040 메인 타겟)"
+  },
+  "summary_table": [
+    {"keyword": "50대 뷰티 디바이스", "volume_avg": 123, "volume_total": 1512, "volume_trend": -0.32, "cpc_usd": 4.87, "competition_index": 70, "category": "연령_타게팅", "note": "CPC 최고 / 인구통계 30대 33% + 50대 28%"},
+    {"keyword": "20대 뷰티 디바이스", "volume_avg": 54, "volume_total": 991, "volume_trend": -0.5, "cpc_usd": 0.28, "competition_index": 0, "category": "연령_타게팅"},
+    {"keyword": "30대 뷰티 디바이스", "data": null, "category": "연령_타게팅", "note": "데이터 없음 (검색량 임계값 이하)"},
+    {"keyword": "40대 뷰티 디바이스", "data": null, "category": "연령_타게팅", "note": "데이터 없음"},
+    {"keyword": "엄마 뷰티 디바이스", "data": null, "category": "효도선물_의도", "note": "데이터 없음"},
+    {"keyword": "효도 선물 디바이스", "data": null, "category": "효도선물_의도", "note": "데이터 없음"},
+    {"keyword": "어머니날 선물 디바이스", "data": null, "category": "시즌_의도", "note": "데이터 없음"},
+    {"keyword": "1020 뷰티 디바이스", "data": null, "category": "연령_타게팅", "note": "데이터 없음"}
+  ],
+  "critical_findings": [
+    "🔴 연령별 키워드 자체 시장 매우 작음 (월 50-130회 / 6개는 데이터 없음)",
+    "💡 광고 운영 시사: 연령 키워드 직접 타게팅보다 메인 키워드를 페르소나별 매체 분배가 효율적",
+    "💡 메인 키워드 (리프팅 디바이스 3,793 / 약손명가 리프팅밴드 16,896)의 인구통계로 페르소나 매핑 가능",
+    "💰 50대 뷰티 디바이스 CPC $4.87 = 작지만 의도 강함"
+  ],
+  "operational_strategy": {
+    "main_keyword_persona_mapping": {
+      "리프팅_디바이스": "30대 41% + 40대 28% (광고주 정합)",
+      "약손명가_리프팅밴드": "30대 26% + 25-29세 21% + 20대 17% (폭넓음)",
+      "ems_리프팅": "30대 48% (광고주 EMS USP 정합)",
+      "홈_리프팅": "30대 61% (광고주 페르소나 압도)"
+    },
+    "추천": "연령 키워드 광고 운영 비용 비효율 → 메인 키워드 × 매체별 페르소나 분배 운영"
+  }
+}
