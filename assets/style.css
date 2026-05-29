@@ -1023,7 +1023,9 @@ body[data-edit="on"] .slide-actions { display: flex; }
 .fb-timeline-step.future .fb-timeline-dot { background: var(--fb-light); }
 .fb-timeline-year { font-size: 11px; color: var(--fb-light); font-weight: 700; }
 .fb-timeline-val { font-size: 18px; font-weight: 800; color: var(--fb-primary); margin-top: 2px; }
+.fb-timeline-val.warn { color: var(--fb-warn); }
 .fb-timeline-step.future .fb-timeline-val { color: var(--fb-light); }
+.fb-timeline-sub { font-size: 11px; color: var(--fb-gray); margin-top: 4px; line-height: 1.4; }
 
 /* Stat pill (KPI 가로 정렬) */
 .fb-stats { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; }
