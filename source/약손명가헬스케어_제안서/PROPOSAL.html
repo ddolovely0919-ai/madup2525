@@ -934,6 +934,159 @@
   .slide .donut::after { background: #ffffff; }
   /* position-map us 포인트 텍스트 화이트 */
   .slide .pm-point.us { color: #ffffff; }
+
+  /* ============================================================ */
+  /* ===== fb-* 차트 컴포넌트 (팩트북 동기화 / Wyatt 톤) ===== */
+  /* .slide(화이트) / .chapter(다크) 모두에서 CSS 변수로 자동 적응 */
+  /* ============================================================ */
+  .fb-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .fb-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .fb-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .fb-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 900px) {
+    .fb-grid-3, .fb-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .fb-grid-2 { grid-template-columns: 1fr; }
+  }
+
+  /* fb-card */
+  .fb-card {
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .fb-card .fb-label {
+    font-size: 10px; font-weight: 800;
+    color: var(--text-caption);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .fb-card .fb-title {
+    font-size: 17px; font-weight: 700;
+    color: var(--accent-rose);
+    margin-bottom: 8px; line-height: 1.35;
+  }
+  .fb-card .fb-keyword {
+    background: var(--accent-rose-soft);
+    border-radius: 6px; padding: 8px 12px;
+    font-size: 13px; font-weight: 600;
+    color: var(--text-main); margin: 8px 0;
+  }
+  .fb-card.warn { border-color: var(--accent-warm); }
+  .fb-card.warn .fb-title { color: var(--accent-warm); }
+  .fb-card.gold { border-color: var(--accent-gold); }
+  .fb-card.gold .fb-title { color: var(--accent-gold); }
+  .fb-card.blue { border-color: var(--accent-blue); }
+  .fb-card.blue .fb-title { color: var(--accent-blue); }
+
+  /* fb-callout */
+  .fb-callout {
+    padding: 16px 20px; border-radius: 10px;
+    background: var(--accent-rose-soft);
+    border-left: 4px solid var(--accent-rose);
+    margin: 14px 0;
+  }
+  .fb-callout .fb-callout-title {
+    font-size: 12px; font-weight: 800;
+    color: var(--accent-rose);
+    letter-spacing: 0.05em; margin-bottom: 6px;
+  }
+  .fb-callout-gold { background: rgba(201,180,160,0.14); border-left-color: var(--accent-gold); }
+  .fb-callout-gold .fb-callout-title { color: var(--accent-gold); }
+  .fb-callout-warn { background: rgba(212,165,154,0.14); border-left-color: var(--accent-warm); }
+  .fb-callout-warn .fb-callout-title { color: var(--accent-warm); }
+
+  /* fb-bar-chart */
+  .fb-bar-chart { margin: 14px 0; }
+  .fb-bar-row { display: grid; grid-template-columns: 160px 1fr; gap: 12px; align-items: center; padding: 5px 0; }
+  .fb-bar-label { color: var(--text-main); font-weight: 600; font-size: 13px; }
+  .fb-bar-track {
+    height: 22px; background: var(--bg-elev);
+    border-radius: 4px; position: relative; overflow: hidden;
+  }
+  .fb-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-rose), var(--accent-warm));
+    display: flex; align-items: center; padding-left: 10px;
+    color: #ffffff; font-size: 11px; font-weight: 700;
+    border-radius: 4px;
+  }
+  .fb-bar-fill.warn { background: linear-gradient(90deg, var(--accent-warm), var(--accent-rose)); }
+  .fb-bar-fill.gold { background: linear-gradient(90deg, var(--accent-gold), var(--accent-beige)); color: #2b2620; }
+  .fb-bar-fill.muted { background: var(--bg-elev); color: var(--text-sub); }
+
+  /* fb-timeline */
+  .fb-timeline {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin: 22px 0 14px; position: relative; padding: 0 10px;
+  }
+  .fb-timeline::before {
+    content: ""; position: absolute;
+    top: 18px; left: 30px; right: 30px;
+    height: 2px; background: var(--border-soft); z-index: 0;
+  }
+  .fb-timeline-step { position: relative; z-index: 1; text-align: center; flex: 1; }
+  .fb-timeline-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--border-strong); margin: 4px auto 8px;
+    border: 3px solid var(--bg-card);
+  }
+  .fb-timeline-step.active .fb-timeline-dot {
+    background: var(--accent-rose); width: 18px; height: 18px;
+    margin-top: 2px; box-shadow: 0 0 0 4px var(--accent-rose-soft);
+  }
+  .fb-timeline-step.future .fb-timeline-dot { background: var(--text-caption); }
+  .fb-timeline-year { font-size: 11px; color: var(--text-caption); font-weight: 700; }
+  .fb-timeline-val { font-size: 18px; font-weight: 800; color: var(--accent-rose); margin-top: 2px; }
+  .fb-timeline-val.warn { color: var(--accent-warm); }
+  .fb-timeline-step.future .fb-timeline-val { color: var(--text-caption); }
+  .fb-timeline-sub { font-size: 11px; color: var(--text-sub); margin-top: 4px; line-height: 1.4; }
+
+  /* fb-stats (KPI pill row) */
+  .fb-stats { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; }
+  .fb-stat-pill {
+    flex: 1; min-width: 140px;
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px; padding: 14px 18px;
+  }
+  .fb-stat-pill .fb-stat-label {
+    font-size: 11px; color: var(--text-caption); font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .fb-stat-pill .fb-stat-value {
+    font-size: 28px; font-weight: 800; color: var(--accent-rose);
+    line-height: 1.1; margin: 4px 0;
+  }
+  .fb-stat-pill .fb-stat-desc { font-size: 11px; color: var(--text-sub); line-height: 1.5; }
+  .fb-stat-pill.warn .fb-stat-value { color: var(--accent-warm); }
+  .fb-stat-pill.gold .fb-stat-value { color: var(--accent-gold); }
+  .fb-stat-pill.blue .fb-stat-value { color: var(--accent-blue); }
+
+  /* fb-insight-row */
+  .fb-insight-row {
+    display: grid; grid-template-columns: 60px 1fr; gap: 14px;
+    align-items: start; margin: 10px 0; padding: 12px 16px;
+    background: var(--bg-card-soft);
+    border: 1px solid var(--border-soft); border-radius: 8px;
+  }
+  .fb-insight-num {
+    font-size: 24px; font-weight: 800; color: var(--accent-rose);
+    text-align: center; line-height: 1;
+  }
+  .fb-insight-title { font-size: 14px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+  .fb-insight-desc { font-size: 12px; color: var(--text-sub); line-height: 1.65; }
+
+  /* fb-* 다크 간지 보정: .chapter 내부에서 더 강한 대비 */
+  .chapter .fb-card,
+  .chapter .fb-stat-pill,
+  .chapter .fb-insight-row {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(245,212,216,0.18);
+  }
+  .chapter .fb-callout {
+    background: rgba(245,212,216,0.10);
+  }
 </style>
 <link rel="stylesheet" href="../../assets/presence.css">
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/PptxGenJS@3.12.0/dist/pptxgen.bundle.js"></script>
@@ -1893,11 +2046,27 @@
     </tbody>
   </table>
 
-  <div style="margin:18px 0;padding:18px 22px;background:#fef3c7;border-left:5px solid #b5616f;border-radius:6px;">
-    <p style="margin:0;font-size:14px;color:#92400e;font-weight:700;line-height:1.7;">
-      🔑 <strong style="color:#b5616f;">OLLI LIRA만 가진 조합</strong>: 매장 IP × 결합형 락인 × 30대 일상 루틴 메시지<br>
-      <span style="font-size:12px;font-weight:500;color:#6b7280;">→ 4사 어느 누구와도 정면 비교 불가 — 단독 카테고리 영역 점유 가능</span>
-    </p>
+  <div class="fb-stats">
+    <div class="fb-stat-pill">
+      <div class="fb-stat-label">매장 자산</div>
+      <div class="fb-stat-value">130개</div>
+      <div class="fb-stat-desc">4사 중 단독 보유 (4사 = 0개)</div>
+    </div>
+    <div class="fb-stat-pill gold">
+      <div class="fb-stat-label">시술 IP</div>
+      <div class="fb-stat-value">46년</div>
+      <div class="fb-stat-desc">에스테틱 노하우 자산</div>
+    </div>
+    <div class="fb-stat-pill warn">
+      <div class="fb-stat-label">결합형 LTV</div>
+      <div class="fb-stat-value">7.7배</div>
+      <div class="fb-stat-desc">밴드+패치+겔 락인 멀티플</div>
+    </div>
+  </div>
+
+  <div class="fb-callout fb-callout-gold">
+    <div class="fb-callout-title">🔑 OLLI LIRA만 가진 조합</div>
+    <div>매장 IP × 결합형 락인 × 30대 일상 루틴 메시지 — <strong>4사 어느 누구와도 정면 비교 불가</strong>. 단독 카테고리 영역 점유 가능합니다.</div>
   </div>
 
   <ul class="slide-bullets">
