@@ -999,3 +999,64 @@ body[data-edit="on"] .slide-actions { display: flex; }
 .fb-kpi .fb-kpi-value { font-size: 22px; font-weight: 800; color: var(--fb-primary); line-height: 1; }
 .fb-kpi .fb-kpi-unit { font-size: 13px; font-weight: 600; color: var(--fb-gray); }
 .fb-kpi-rose .fb-kpi-value { color: #B5616F; }
+
+/* ===== 차트·그래프 컴포넌트 (가로 막대·타임라인·인사이트) ===== */
+.fb-bar-chart { margin: 16px 0; }
+.fb-bar-row { display: grid; grid-template-columns: 140px 1fr 80px; gap: 12px; align-items: center; margin: 8px 0; font-size: 13px; }
+.fb-bar-label { color: var(--fb-dark); font-weight: 600; }
+.fb-bar-track { height: 22px; background: var(--fb-bg); border-radius: 4px; position: relative; overflow: hidden; }
+.fb-bar-fill { height: 100%; background: linear-gradient(90deg, var(--fb-primary), var(--fb-primary-soft)); display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 11px; font-weight: 700; border-radius: 4px; }
+.fb-bar-fill.warn { background: linear-gradient(90deg, var(--fb-warn), #FF8A7F); }
+.fb-bar-fill.accent { background: linear-gradient(90deg, var(--fb-accent), #2DD4BF); }
+.fb-bar-fill.gold { background: linear-gradient(90deg, var(--fb-gold), #D4A60D); }
+.fb-bar-fill.rose { background: linear-gradient(90deg, #B5616F, #D77E8C); }
+.fb-bar-value { text-align: right; font-weight: 700; color: var(--fb-primary); font-size: 13px; }
+.fb-bar-value.warn { color: var(--fb-warn); }
+.fb-bar-value.rose { color: #B5616F; }
+
+/* 타임라인 (시계열) */
+.fb-timeline { display: flex; align-items: center; justify-content: space-between; margin: 22px 0 14px; position: relative; padding: 0 10px; }
+.fb-timeline::before { content: ""; position: absolute; top: 18px; left: 30px; right: 30px; height: 2px; background: var(--fb-border); z-index: 0; }
+.fb-timeline-step { position: relative; z-index: 1; text-align: center; flex: 1; }
+.fb-timeline-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--fb-border); margin: 4px auto 8px; border: 3px solid #fff; }
+.fb-timeline-step.active .fb-timeline-dot { background: var(--fb-primary); width: 18px; height: 18px; margin-top: 2px; box-shadow: 0 0 0 4px var(--fb-primary-bg); }
+.fb-timeline-step.future .fb-timeline-dot { background: var(--fb-light); }
+.fb-timeline-year { font-size: 11px; color: var(--fb-light); font-weight: 700; }
+.fb-timeline-val { font-size: 18px; font-weight: 800; color: var(--fb-primary); margin-top: 2px; }
+.fb-timeline-step.future .fb-timeline-val { color: var(--fb-light); }
+
+/* Stat pill (KPI 가로 정렬) */
+.fb-stats { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; }
+.fb-stat-pill { flex: 1; min-width: 140px; background: linear-gradient(135deg, var(--fb-primary-bg), #fff); border: 1px solid var(--fb-border); border-radius: 8px; padding: 14px 18px; }
+.fb-stat-pill .fb-stat-label { font-size: 11px; color: var(--fb-gray); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.fb-stat-pill .fb-stat-value { font-size: 28px; font-weight: 800; color: var(--fb-primary); line-height: 1.1; margin: 4px 0; }
+.fb-stat-pill .fb-stat-desc { font-size: 11px; color: var(--fb-gray); line-height: 1.5; }
+.fb-stat-pill.rose { background: linear-gradient(135deg, #FEF3F4, #fff); }
+.fb-stat-pill.rose .fb-stat-value { color: #B5616F; }
+.fb-stat-pill.warn { background: linear-gradient(135deg, var(--fb-warn-bg), #fff); }
+.fb-stat-pill.warn .fb-stat-value { color: var(--fb-warn); }
+
+/* 도넛 차트 (CSS conic-gradient) */
+.fb-donut-row { display: grid; grid-template-columns: 160px 1fr; gap: 20px; align-items: center; margin: 18px 0; padding: 18px 22px; background: var(--fb-bg); border-radius: 10px; }
+.fb-donut { width: 140px; height: 140px; border-radius: 50%; position: relative; margin: 0 auto; }
+.fb-donut::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: var(--fb-bg); border-radius: 50%; }
+.fb-donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1; }
+.fb-donut-center .v { font-size: 22px; font-weight: 800; color: var(--fb-primary); }
+.fb-donut-center .l { font-size: 11px; color: var(--fb-gray); }
+.fb-donut-legend { font-size: 13px; }
+.fb-donut-legend ul { list-style: none; padding: 0; margin: 0; }
+.fb-donut-legend li { display: grid; grid-template-columns: 14px 1fr 50px; gap: 10px; align-items: center; padding: 5px 0; border-bottom: 1px dashed var(--fb-border); }
+.fb-donut-legend li:last-child { border-bottom: none; }
+.fb-donut-legend .dot { width: 12px; height: 12px; border-radius: 3px; }
+.fb-donut-legend .v { text-align: right; font-weight: 700; color: var(--fb-primary); }
+
+/* 인사이트 박스 (3-row 격자) */
+.fb-insight-row { display: grid; grid-template-columns: 60px 1fr; gap: 14px; align-items: start; margin: 10px 0; padding: 12px 16px; background: #fff; border: 1px solid var(--fb-border); border-radius: 8px; }
+.fb-insight-num { font-size: 24px; font-weight: 800; color: var(--fb-primary); text-align: center; line-height: 1; }
+.fb-insight-title { font-size: 14px; font-weight: 700; color: var(--fb-dark); margin-bottom: 4px; }
+.fb-insight-desc { font-size: 12px; color: var(--fb-gray); line-height: 1.65; }
+
+/* Image gallery (제품·캡처 이미지 그리드) */
+.fb-img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 14px 0; }
+.fb-img-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; border: 1px solid var(--fb-border); }
+.fb-img-grid .fb-img-caption { font-size: 11px; color: var(--fb-gray); margin-top: 4px; text-align: center; }
