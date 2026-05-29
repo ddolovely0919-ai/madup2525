@@ -9,10 +9,10 @@
     "updatedAt": "2026-05-28",
     "rfp": "연간 30억 예산, 3 브랜드(약손명가PB/OLLI LIRA/GOLKI) 통합 운영. KPI: 공식몰 ROAS 250%/브스 500%/외부몰 300%, 재구매율 10%, 카플친 +200%.",
     "owner": "매드업 비딩 TF",
-    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌) · A단계 연쇄 업데이트(s1-4·s1-10·s1-13·s4-9·s5-summary)"
+    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌) · A단계 연쇄 업데이트(s1-4·s1-10·s1-13·s4-9·s5-summary) · 실무진 시각 반영(뷰앤디·에르고바디·95P·리파 4사 진짜 경쟁사)"
   },
   "stats": {
-    "auto": 85,
+    "auto": 88,
     "progress": 1,
     "client": 5,
     "madup": 20
@@ -256,21 +256,66 @@
         "title": "📊 약손명가 vs 광고주 헬스케어 — 검색량 138배 격차",
         "subtitle": "광고주 PDF \"약손명가 IP 축소 운영\" 결정의 정량 입증",
         "items": [
-          { "label": "약손명가 (본가, 월평균)", "value": "109,533회 (138x)", "ratio": 1.0, "tone": "highlight" },
-          { "label": "메디큐브 부스터프로", "value": "73,316회 (92x)", "ratio": 0.67, "tone": "primary" },
-          { "label": "약손명가 리프팅밴드 (제품)", "value": "16,896회 (21x)", "ratio": 0.154, "tone": "success" },
-          { "label": "LG 프라엘", "value": "14,156회 (18x)", "ratio": 0.129, "tone": "primary" },
-          { "label": "메이크온", "value": "2,903회 (3.7x)", "ratio": 0.027, "tone": "primary" },
-          { "label": "약손명가 헬스케어 (광고주)", "value": "793회 (1.0x 기준)", "ratio": 0.007, "tone": "accent" }
+          {
+            "label": "약손명가 (본가, 월평균)",
+            "value": "109,533회 (138x)",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "메디큐브 부스터프로",
+            "value": "73,316회 (92x)",
+            "ratio": 0.67,
+            "tone": "primary"
+          },
+          {
+            "label": "약손명가 리프팅밴드 (제품)",
+            "value": "16,896회 (21x)",
+            "ratio": 0.154,
+            "tone": "success"
+          },
+          {
+            "label": "LG 프라엘",
+            "value": "14,156회 (18x)",
+            "ratio": 0.129,
+            "tone": "primary"
+          },
+          {
+            "label": "메이크온",
+            "value": "2,903회 (3.7x)",
+            "ratio": 0.027,
+            "tone": "primary"
+          },
+          {
+            "label": "약손명가 헬스케어 (광고주)",
+            "value": "793회 (1.0x 기준)",
+            "ratio": 0.007,
+            "tone": "accent"
+          }
         ],
         "footnote": "* 출처: 리스닝마인드 keyword_info (2026-05-28 / 월 평균 / 한국)"
       },
       "sources": [
-        { "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종 검색량 raw)", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
-        { "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 클러스터 498건 + 부정 키워드)", "url": "data/yakson/listening-mind/lm-cluster-yakson.json" },
-        { "label": "📥 [Index] manifest.json (전체 리스닝마인드 데이터 인덱스)", "url": "data/yakson/listening-mind/manifest.json" },
-        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" },
-        { "label": "광고주 PDF 공유 자료 2026-05-26 p.5 IP 축소 결정", "url": "" }
+        {
+          "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종 검색량 raw)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-brands.json"
+        },
+        {
+          "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 클러스터 498건 + 부정 키워드)",
+          "url": "data/yakson/listening-mind/lm-cluster-yakson.json"
+        },
+        {
+          "label": "📥 [Index] manifest.json (전체 리스닝마인드 데이터 인덱스)",
+          "url": "data/yakson/listening-mind/manifest.json"
+        },
+        {
+          "label": "리스닝마인드 MCP 서버",
+          "url": "https://listeningmind-service-mcp.ascentlab.io"
+        },
+        {
+          "label": "광고주 PDF 공유 자료 2026-05-26 p.5 IP 축소 결정",
+          "url": ""
+        }
       ],
       "sourceNote": "* 출처: 리스닝마인드 MCP 분석 (2026-05-28) · Raw 데이터 다운로드 ↓ <a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download target=\"_blank\">📥 브랜드 비교 JSON</a> · <a href=\"data/yakson/listening-mind/lm-cluster-yakson.json\" download target=\"_blank\">📥 클러스터 JSON</a> · <a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\">📥 전체 인덱스</a>"
     },
@@ -324,18 +369,50 @@
         "type": "compare",
         "title": "🎯 광고주 검색 자산 매트릭스 (월 평균)",
         "items": [
-          { "label": "📦 제품명 (자산↑)", "value": "약손명가 리프팅밴드 16,896회", "sub": "광고주 PB 메인 제품 / 30대 26% + 25-29세 21% + 20대 17% / 누적 50만개 판매 정합", "tone": "highlight" },
-          { "label": "🏪 본가 브랜드 (활용 가능)", "value": "약손명가 109,533회", "sub": "본가 IP / 138배 큰 검색량 / 단 부정 이슈 키워드 동반 (송도 사건)", "tone": "primary" },
-          { "label": "🏢 광고주 브랜드 (육성 필요)", "value": "약손명가 헬스케어 793회", "sub": "광고주 자체 인지도 / 30대 43% 명확 / +273% 빠른 성장 중", "tone": "accent" },
-          { "label": "🔴 미존재 자산 (인지도 0)", "value": "올리리라 / 골기 데이터 없음", "sub": "검색 시장 미존재 → s4-9 광고 카피 5종으로 인지도 폭증 미션", "tone": "danger" }
+          {
+            "label": "📦 제품명 (자산↑)",
+            "value": "약손명가 리프팅밴드 16,896회",
+            "sub": "광고주 PB 메인 제품 / 30대 26% + 25-29세 21% + 20대 17% / 누적 50만개 판매 정합",
+            "tone": "highlight"
+          },
+          {
+            "label": "🏪 본가 브랜드 (활용 가능)",
+            "value": "약손명가 109,533회",
+            "sub": "본가 IP / 138배 큰 검색량 / 단 부정 이슈 키워드 동반 (송도 사건)",
+            "tone": "primary"
+          },
+          {
+            "label": "🏢 광고주 브랜드 (육성 필요)",
+            "value": "약손명가 헬스케어 793회",
+            "sub": "광고주 자체 인지도 / 30대 43% 명확 / +273% 빠른 성장 중",
+            "tone": "accent"
+          },
+          {
+            "label": "🔴 미존재 자산 (인지도 0)",
+            "value": "올리리라 / 골기 데이터 없음",
+            "sub": "검색 시장 미존재 → s4-9 광고 카피 5종으로 인지도 폭증 미션",
+            "tone": "danger"
+          }
         ],
         "footnote": "* 출처: 리스닝마인드 keyword_info / cluster_finder / path_finder (2026-05-28)"
       },
       "sources": [
-        { "label": "📥 [Raw] lm-keyword-info-brands.json", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
-        { "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)", "url": "data/yakson/listening-mind/lm-keyword-info-products.json" },
-        { "label": "📥 [Index] manifest.json", "url": "data/yakson/listening-mind/manifest.json" },
-        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" }
+        {
+          "label": "📥 [Raw] lm-keyword-info-brands.json",
+          "url": "data/yakson/listening-mind/lm-keyword-info-brands.json"
+        },
+        {
+          "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-products.json"
+        },
+        {
+          "label": "📥 [Index] manifest.json",
+          "url": "data/yakson/listening-mind/manifest.json"
+        },
+        {
+          "label": "리스닝마인드 MCP 서버",
+          "url": "https://listeningmind-service-mcp.ascentlab.io"
+        }
       ],
       "sourceNote": "* 출처: 리스닝마인드 MCP 분석 · Raw 데이터 다운로드 ↓ <a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download target=\"_blank\">📥 브랜드 JSON</a> · <a href=\"data/yakson/listening-mind/lm-keyword-info-products.json\" download target=\"_blank\">📥 신제품 JSON</a> · <a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\">📥 전체 인덱스</a>"
     },
@@ -382,15 +459,42 @@
         }
       ],
       "sources": [
-        { "label": "📥 [Index] manifest.json (전체 데이터 인덱스 + 핵심 발견)", "url": "data/yakson/listening-mind/manifest.json" },
-        { "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종)", "url": "data/yakson/listening-mind/lm-keyword-info-brands.json" },
-        { "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)", "url": "data/yakson/listening-mind/lm-keyword-info-products.json" },
-        { "label": "📥 [Raw] lm-keyword-info-offline.json (오프라인 모객 10종)", "url": "data/yakson/listening-mind/lm-keyword-info-offline.json" },
-        { "label": "📥 [Raw] lm-keyword-info-ages.json (연령 페르소나 8종)", "url": "data/yakson/listening-mind/lm-keyword-info-ages.json" },
-        { "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 498건 + 부정 키워드)", "url": "data/yakson/listening-mind/lm-cluster-yakson.json" },
-        { "label": "📥 [Raw] lm-cluster-lifting.json (리프팅 디바이스 5개 커뮤니티)", "url": "data/yakson/listening-mind/lm-cluster-lifting.json" },
-        { "label": "📥 [Raw] lm-path-lifting.json (리프팅 경로 300개)", "url": "data/yakson/listening-mind/lm-path-lifting.json" },
-        { "label": "리스닝마인드 MCP 서버", "url": "https://listeningmind-service-mcp.ascentlab.io" }
+        {
+          "label": "📥 [Index] manifest.json (전체 데이터 인덱스 + 핵심 발견)",
+          "url": "data/yakson/listening-mind/manifest.json"
+        },
+        {
+          "label": "📥 [Raw] lm-keyword-info-brands.json (브랜드 13종)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-brands.json"
+        },
+        {
+          "label": "📥 [Raw] lm-keyword-info-products.json (신제품 12종)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-products.json"
+        },
+        {
+          "label": "📥 [Raw] lm-keyword-info-offline.json (오프라인 모객 10종)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-offline.json"
+        },
+        {
+          "label": "📥 [Raw] lm-keyword-info-ages.json (연령 페르소나 8종)",
+          "url": "data/yakson/listening-mind/lm-keyword-info-ages.json"
+        },
+        {
+          "label": "📥 [Raw] lm-cluster-yakson.json (약손명가 498건 + 부정 키워드)",
+          "url": "data/yakson/listening-mind/lm-cluster-yakson.json"
+        },
+        {
+          "label": "📥 [Raw] lm-cluster-lifting.json (리프팅 디바이스 5개 커뮤니티)",
+          "url": "data/yakson/listening-mind/lm-cluster-lifting.json"
+        },
+        {
+          "label": "📥 [Raw] lm-path-lifting.json (리프팅 경로 300개)",
+          "url": "data/yakson/listening-mind/lm-path-lifting.json"
+        },
+        {
+          "label": "리스닝마인드 MCP 서버",
+          "url": "https://listeningmind-service-mcp.ascentlab.io"
+        }
       ],
       "sourceNote": "* 출처: 리스닝마인드 MCP 11회 호출 종합 (2026-05-28) · 비딩 TF 분석",
       "body": "<table>\n      <thead><tr><th>Phase</th><th>키워드</th><th>핵심 발견</th><th>Raw 데이터</th></tr></thead>\n      <tbody>\n        <tr><td>1</td><td>약손명가 vs 헬스케어</td><td>138:1 격차 + 송도 사건 부정 키워드 → IP 축소 정량 입증</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-brands.json\" download>📥 brands</a> · <a href=\"data/yakson/listening-mind/lm-cluster-yakson.json\" download>📥 yakson cluster</a></td></tr>\n        <tr><td>2</td><td>리프팅 디바이스 (path)</td><td>300개 경로 / 5개 커뮤니티 / 시술 대체 + 약손명가 더쿠 경로 발견</td><td><a href=\"data/yakson/listening-mind/lm-cluster-lifting.json\" download>📥 lifting cluster</a> · <a href=\"data/yakson/listening-mind/lm-path-lifting.json\" download>📥 path</a></td></tr>\n        <tr><td>3</td><td>20-50대 뷰티 디바이스</td><td>연령 키워드 시장 부재 → 메인 키워드 페르소나 매체 분배</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-ages.json\" download>📥 ages</a></td></tr>\n        <tr><td>4</td><td>신제품 5종 카테고리</td><td>⭐ 셀룰라이트 패치 +95% 폭증 (가뿐한 복부패치 골든타임)</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-products.json\" download>📥 products</a></td></tr>\n        <tr><td>5</td><td>약손명가 가격 / 매장 / 강남</td><td>약손명가 가격 5,510회 = OLLI 매장 모객 funnel 핵심</td><td><a href=\"data/yakson/listening-mind/lm-keyword-info-offline.json\" download>📥 offline</a></td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>📂 통합</strong></td><td colspan=\"3\"><a href=\"data/yakson/listening-mind/manifest.json\" target=\"_blank\"><strong>📥 manifest.json — 전체 데이터 인덱스 + 핵심 발견 요약</strong></a></td></tr>\n      </tbody>\n    </table>\n    <p><strong>💡 Raw 데이터 활용 안내</strong>: 모든 JSON 파일은 <code>data/yakson/listening-mind/</code> 경로에 저장됨. GitHub Pages 배포 URL에서도 직접 접근 가능 (예: <a href=\"https://ddolovely0919-ai.github.io/madup2525/data/yakson/listening-mind/manifest.json\" target=\"_blank\">manifest.json</a>). 동일 키워드로 리스닝마인드 MCP 재호출 시 raw 응답 재생성 가능.</p>"
@@ -462,21 +566,70 @@
         "title": "📊 시딩 점유율 비교 (블로그 시딩+체험단+광고표기 비율)",
         "subtitle": "메이크온 41% 시딩 강자 / 올리리라 26-29% 광고주 시딩 자산",
         "items": [
-          { "label": "메이크온 (직접 경쟁)", "value": "41.0% 시딩", "ratio": 1.0, "tone": "highlight" },
-          { "label": "올리리라 밴드 (광고주)", "value": "29.0% 시딩", "ratio": 0.71, "tone": "accent" },
-          { "label": "올리리라 패치 (광고주)", "value": "26.0% 시딩", "ratio": 0.63, "tone": "accent" },
-          { "label": "가뿐한 멀티패치 (광고주 신제품)", "value": "9.1% 시딩", "ratio": 0.22, "tone": "primary" },
-          { "label": "LG프라엘 (직접 경쟁)", "value": "5.0% 시딩", "ratio": 0.12, "tone": "muted" },
-          { "label": "셀리턴 (후발 경쟁)", "value": "5.0% 시딩", "ratio": 0.12, "tone": "muted" },
-          { "label": "약손명가 리프팅밴드 (광고주 PB)", "value": "4.0% 시딩", "ratio": 0.10, "tone": "muted" },
-          { "label": "메디큐브 부스터프로 (자연 34%)", "value": "3.0% 시딩", "ratio": 0.07, "tone": "success" }
+          {
+            "label": "메이크온 (직접 경쟁)",
+            "value": "41.0% 시딩",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "올리리라 밴드 (광고주)",
+            "value": "29.0% 시딩",
+            "ratio": 0.71,
+            "tone": "accent"
+          },
+          {
+            "label": "올리리라 패치 (광고주)",
+            "value": "26.0% 시딩",
+            "ratio": 0.63,
+            "tone": "accent"
+          },
+          {
+            "label": "가뿐한 멀티패치 (광고주 신제품)",
+            "value": "9.1% 시딩",
+            "ratio": 0.22,
+            "tone": "primary"
+          },
+          {
+            "label": "LG프라엘 (직접 경쟁)",
+            "value": "5.0% 시딩",
+            "ratio": 0.12,
+            "tone": "muted"
+          },
+          {
+            "label": "셀리턴 (후발 경쟁)",
+            "value": "5.0% 시딩",
+            "ratio": 0.12,
+            "tone": "muted"
+          },
+          {
+            "label": "약손명가 리프팅밴드 (광고주 PB)",
+            "value": "4.0% 시딩",
+            "ratio": 0.1,
+            "tone": "muted"
+          },
+          {
+            "label": "메디큐브 부스터프로 (자연 34%)",
+            "value": "3.0% 시딩",
+            "ratio": 0.07,
+            "tone": "success"
+          }
         ],
         "footnote": "* 메디큐브는 시딩 대신 자연 후기 34% (셀럽 IP 효과) → 인디 정면 추격 불가, 다른 차별화 필요"
       },
       "sources": [
-        { "label": "📥 [Index] manifest.json (18 키워드 인덱스)", "url": "data/yakson/naver-blog/manifest.json" },
-        { "label": "📥 [Summary] all-summary.json (통합 매트릭스)", "url": "data/yakson/naver-blog/all-summary.json" },
-        { "label": "Naver Search API (https://developers.naver.com)", "url": "https://developers.naver.com" }
+        {
+          "label": "📥 [Index] manifest.json (18 키워드 인덱스)",
+          "url": "data/yakson/naver-blog/manifest.json"
+        },
+        {
+          "label": "📥 [Summary] all-summary.json (통합 매트릭스)",
+          "url": "data/yakson/naver-blog/all-summary.json"
+        },
+        {
+          "label": "Naver Search API (https://developers.naver.com)",
+          "url": "https://developers.naver.com"
+        }
       ],
       "sourceNote": "* 출처: Naver Search API · 자체 수집·분류 (2026-05-28) · Raw 다운로드 ↓ <a href=\"data/yakson/naver-blog/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/naver-blog/all-summary.json\" target=\"_blank\">📥 통합 요약</a>"
     },
@@ -566,16 +719,42 @@
         "type": "compare",
         "title": "🎯 경쟁사 시딩 콘텐츠 메시지 차별화 매트릭스",
         "items": [
-          { "label": "🔥 메이크온 시딩 41%", "value": "탄력·보습·광채 + 매일 루틴", "sub": "스킨케어 중심 / KAIST 학습 모델 / LED·초음파 단일 기술", "tone": "highlight" },
-          { "label": "⭐ 올리리라 시딩 26-29%", "value": "리프팅·온열·붓기 + 무료체험·체험단", "sub": "광고주 자체 시딩 캠페인 진행 중 / EMS·웨이브·결합형 강조 / \"1위\" 자칭", "tone": "accent" },
-          { "label": "🎯 셀리턴 시딩 5%", "value": "여드름 케어 + 4주 챌린지", "sub": "트러블 카테고리 / \"꾸준히·4주\" 사용 가이드 명확 (s4-9 카피 ⑤ 정합)", "tone": "warning" },
-          { "label": "🟢 메디큐브 자연 34%", "value": "5종 기술 멀티 + 내돈내산", "sub": "셀럽 IP의 자연 입소문 / EMS·RF·초음파·고주파·미세전류 모두 언급 / 인디 추격 불가", "tone": "success" }
+          {
+            "label": "🔥 메이크온 시딩 41%",
+            "value": "탄력·보습·광채 + 매일 루틴",
+            "sub": "스킨케어 중심 / KAIST 학습 모델 / LED·초음파 단일 기술",
+            "tone": "highlight"
+          },
+          {
+            "label": "⭐ 올리리라 시딩 26-29%",
+            "value": "리프팅·온열·붓기 + 무료체험·체험단",
+            "sub": "광고주 자체 시딩 캠페인 진행 중 / EMS·웨이브·결합형 강조 / \"1위\" 자칭",
+            "tone": "accent"
+          },
+          {
+            "label": "🎯 셀리턴 시딩 5%",
+            "value": "여드름 케어 + 4주 챌린지",
+            "sub": "트러블 카테고리 / \"꾸준히·4주\" 사용 가이드 명확 (s4-9 카피 ⑤ 정합)",
+            "tone": "warning"
+          },
+          {
+            "label": "🟢 메디큐브 자연 34%",
+            "value": "5종 기술 멀티 + 내돈내산",
+            "sub": "셀럽 IP의 자연 입소문 / EMS·RF·초음파·고주파·미세전류 모두 언급 / 인디 추격 불가",
+            "tone": "success"
+          }
         ],
         "footnote": "* 4트랙 처방 = 임상(달바·메이크온) + 4주 챌린지(셀리턴) + 시딩 캠페인(올리리라 확장) + 자연 후기(메디큐브 학습)"
       },
       "sources": [
-        { "label": "📥 [Analysis] content-analysis.json (시딩 메시지 매트릭스)", "url": "data/yakson/naver-blog/content-analysis.json" },
-        { "label": "📥 [Raw] 18 키워드 별 description 데이터", "url": "data/yakson/naver-blog/raw/" }
+        {
+          "label": "📥 [Analysis] content-analysis.json (시딩 메시지 매트릭스)",
+          "url": "data/yakson/naver-blog/content-analysis.json"
+        },
+        {
+          "label": "📥 [Raw] 18 키워드 별 description 데이터",
+          "url": "data/yakson/naver-blog/raw/"
+        }
       ],
       "sourceNote": "* 출처: Naver Search API 시딩 포스트 description 텍스트 5차원 키워드 빈도 분석 (2026-05-28) · 데이터 다운로드 ↓ <a href=\"data/yakson/naver-blog/content-analysis.json\" download target=\"_blank\">📥 메시지 매트릭스 JSON</a>"
     },
@@ -638,19 +817,62 @@
         "title": "📈 2026-04 블로그 발행 폭증 배수 (vs 2026-03)",
         "subtitle": "광고주 약손명가 리프팅밴드 27배 폭증 (시딩 캠페인 정량 입증)",
         "items": [
-          { "label": "약손명가 리프팅밴드 (광고주)", "value": "1→27건 (27.0x)", "ratio": 1.0, "tone": "highlight" },
-          { "label": "듀얼소닉 (후발)", "value": "3→19건 (6.3x)", "ratio": 0.23, "tone": "primary" },
-          { "label": "골기 (광고주)", "value": "6→24건 (4.0x)", "ratio": 0.15, "tone": "accent" },
-          { "label": "LG프라엘 (직접 경쟁)", "value": "2→6건 (3.0x)", "ratio": 0.11, "tone": "primary" },
-          { "label": "메이크온 (직접 경쟁)", "value": "7→21건 (3.0x)", "ratio": 0.11, "tone": "primary" },
-          { "label": "셀리턴 (후발)", "value": "2→6건 (3.0x)", "ratio": 0.11, "tone": "muted" },
-          { "label": "약손명가 마사저 (광고주)", "value": "12→21건 (1.8x)", "ratio": 0.067, "tone": "accent" },
-          { "label": "메디큐브 부스터프로 (직접 경쟁)", "value": "22→15건 (-0.3x)", "ratio": 0.04, "tone": "danger" }
+          {
+            "label": "약손명가 리프팅밴드 (광고주)",
+            "value": "1→27건 (27.0x)",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "듀얼소닉 (후발)",
+            "value": "3→19건 (6.3x)",
+            "ratio": 0.23,
+            "tone": "primary"
+          },
+          {
+            "label": "골기 (광고주)",
+            "value": "6→24건 (4.0x)",
+            "ratio": 0.15,
+            "tone": "accent"
+          },
+          {
+            "label": "LG프라엘 (직접 경쟁)",
+            "value": "2→6건 (3.0x)",
+            "ratio": 0.11,
+            "tone": "primary"
+          },
+          {
+            "label": "메이크온 (직접 경쟁)",
+            "value": "7→21건 (3.0x)",
+            "ratio": 0.11,
+            "tone": "primary"
+          },
+          {
+            "label": "셀리턴 (후발)",
+            "value": "2→6건 (3.0x)",
+            "ratio": 0.11,
+            "tone": "muted"
+          },
+          {
+            "label": "약손명가 마사저 (광고주)",
+            "value": "12→21건 (1.8x)",
+            "ratio": 0.067,
+            "tone": "accent"
+          },
+          {
+            "label": "메디큐브 부스터프로 (직접 경쟁)",
+            "value": "22→15건 (-0.3x)",
+            "ratio": 0.04,
+            "tone": "danger"
+          }
         ],
         "footnote": "* 메디큐브 -30% 감소 = 시딩 둔화 시그널 / 광고주 27배·6.3배 폭증 = 후발 적극 진입 시점"
       },
       "sources": [
-        { "label": "📥 [Summary] all-summary.json (월별 시계열)", "url": "data/yakson/naver-blog/all-summary.json" }
+        {
+          "label": "📥 [Summary] all-summary.json (월별 시계열)",
+          "url": "data/yakson/naver-blog/all-summary.json"
+        }
       ],
       "sourceNote": "* 출처: Naver Search API 18 키워드 × 100건 × postdate 월별 집계 (2026-05-28)"
     },
@@ -704,15 +926,38 @@
         "type": "compare",
         "title": "🏗 메가·중상위·나노 3단 시딩 운영 모델 (벤치마크)",
         "items": [
-          { "label": "1차 메가 (월 10만+)", "value": "키비주얼·브랜드 인지", "sub": "천사의 알 (디바이스 카테고리 강자) · 립덕후 (약손명가 PB 친화) — 키비주얼 콘텐츠 빌드업", "tone": "highlight" },
-          { "label": "2차 중상위 (월 1-10만)", "value": "키워드 점유·SEO", "sub": "리스닝마인드 6축 클러스터 매핑 · 페르소나 맞춤 콘텐츠 · 리프팅/탄력/V라인 키워드 점유", "tone": "primary" },
-          { "label": "3차 나노·체험단 (월 1만 이하)", "value": "자연 SEO·롱테일", "sub": "올리리라 시딩 26-29% 패턴 확장 · 일반인 체험단 운영 · 광고 표기 컴플라이언스 검수", "tone": "accent" },
-          { "label": "📊 ROI 측정", "value": "월별 정량 리포트", "sub": "Naver API + 리스닝마인드 통합 모니터링 · 4월 27배 폭증 같은 정량 검증 · BS 전환 funnel 매핑", "tone": "success" }
+          {
+            "label": "1차 메가 (월 10만+)",
+            "value": "키비주얼·브랜드 인지",
+            "sub": "천사의 알 (디바이스 카테고리 강자) · 립덕후 (약손명가 PB 친화) — 키비주얼 콘텐츠 빌드업",
+            "tone": "highlight"
+          },
+          {
+            "label": "2차 중상위 (월 1-10만)",
+            "value": "키워드 점유·SEO",
+            "sub": "리스닝마인드 6축 클러스터 매핑 · 페르소나 맞춤 콘텐츠 · 리프팅/탄력/V라인 키워드 점유",
+            "tone": "primary"
+          },
+          {
+            "label": "3차 나노·체험단 (월 1만 이하)",
+            "value": "자연 SEO·롱테일",
+            "sub": "올리리라 시딩 26-29% 패턴 확장 · 일반인 체험단 운영 · 광고 표기 컴플라이언스 검수",
+            "tone": "accent"
+          },
+          {
+            "label": "📊 ROI 측정",
+            "value": "월별 정량 리포트",
+            "sub": "Naver API + 리스닝마인드 통합 모니터링 · 4월 27배 폭증 같은 정량 검증 · BS 전환 funnel 매핑",
+            "tone": "success"
+          }
         ],
         "footnote": "* 벤치마크 분석 기반 3단 운영 모델"
       },
       "sources": [
-        { "label": "📥 [Summary] all-summary.json (블로거 식별)", "url": "data/yakson/naver-blog/all-summary.json" }
+        {
+          "label": "📥 [Summary] all-summary.json (블로거 식별)",
+          "url": "data/yakson/naver-blog/all-summary.json"
+        }
       ],
       "sourceNote": "* 출처: Naver Search API 18 키워드 중복 포스트 블로거 분석 (2026-05-28)"
     },
@@ -759,28 +1004,94 @@
         }
       ],
       "sources": [
-        { "label": "📥 [Index] manifest.json", "url": "data/yakson/naver-blog/manifest.json" },
-        { "label": "📥 [Summary] all-summary.json (통합 매트릭스)", "url": "data/yakson/naver-blog/all-summary.json" },
-        { "label": "📥 [Analysis] content-analysis.json (시딩 메시지)", "url": "data/yakson/naver-blog/content-analysis.json" },
-        { "label": "📥 [Raw 1] 약손명가-리프팅밴드.json", "url": "data/yakson/naver-blog/raw/약손명가-리프팅밴드.json" },
-        { "label": "📥 [Raw 2] 가뿐한-포.json", "url": "data/yakson/naver-blog/raw/가뿐한-포.json" },
-        { "label": "📥 [Raw 3] 약손명가-마사저.json", "url": "data/yakson/naver-blog/raw/약손명가-마사저.json" },
-        { "label": "📥 [Raw 4] 가뿐한-복부패치.json", "url": "data/yakson/naver-blog/raw/가뿐한-복부패치.json" },
-        { "label": "📥 [Raw 5] 가뿐한-멀티패치.json", "url": "data/yakson/naver-blog/raw/가뿐한-멀티패치.json" },
-        { "label": "📥 [Raw 6] 약손-브이핏-패치.json", "url": "data/yakson/naver-blog/raw/약손-브이핏-패치.json" },
-        { "label": "📥 [Raw 7] 올리리라-밴드.json (시딩 29%)", "url": "data/yakson/naver-blog/raw/올리리라-밴드.json" },
-        { "label": "📥 [Raw 8] 올리리라-패치.json (시딩 26%)", "url": "data/yakson/naver-blog/raw/올리리라-패치.json" },
-        { "label": "📥 [Raw 9] 골기.json (31,952건 최대)", "url": "data/yakson/naver-blog/raw/골기.json" },
-        { "label": "📥 [Raw 10] 메디큐브-부스터프로.json (자연 34%)", "url": "data/yakson/naver-blog/raw/메디큐브-부스터프로.json" },
-        { "label": "📥 [Raw 11] LG프라엘.json", "url": "data/yakson/naver-blog/raw/LG프라엘.json" },
-        { "label": "📥 [Raw 12] 메이크온.json (시딩 41% 강자)", "url": "data/yakson/naver-blog/raw/메이크온.json" },
-        { "label": "📥 [Raw 13] 셀리턴.json (4주 챌린지)", "url": "data/yakson/naver-blog/raw/셀리턴.json" },
-        { "label": "📥 [Raw 14] 듀얼소닉.json", "url": "data/yakson/naver-blog/raw/듀얼소닉.json" },
-        { "label": "📥 [Raw 15] 달바-디바이스.json", "url": "data/yakson/naver-blog/raw/달바-디바이스.json" },
-        { "label": "📥 [Raw 16] 리프팅-디바이스.json (72,203건)", "url": "data/yakson/naver-blog/raw/리프팅-디바이스.json" },
-        { "label": "📥 [Raw 17] EMS-리프팅.json", "url": "data/yakson/naver-blog/raw/EMS-리프팅.json" },
-        { "label": "📥 [Raw 18] 홈케어-디바이스.json (121,098 최대)", "url": "data/yakson/naver-blog/raw/홈케어-디바이스.json" },
-        { "label": "Naver Search API (https://developers.naver.com)", "url": "https://developers.naver.com" }
+        {
+          "label": "📥 [Index] manifest.json",
+          "url": "data/yakson/naver-blog/manifest.json"
+        },
+        {
+          "label": "📥 [Summary] all-summary.json (통합 매트릭스)",
+          "url": "data/yakson/naver-blog/all-summary.json"
+        },
+        {
+          "label": "📥 [Analysis] content-analysis.json (시딩 메시지)",
+          "url": "data/yakson/naver-blog/content-analysis.json"
+        },
+        {
+          "label": "📥 [Raw 1] 약손명가-리프팅밴드.json",
+          "url": "data/yakson/naver-blog/raw/약손명가-리프팅밴드.json"
+        },
+        {
+          "label": "📥 [Raw 2] 가뿐한-포.json",
+          "url": "data/yakson/naver-blog/raw/가뿐한-포.json"
+        },
+        {
+          "label": "📥 [Raw 3] 약손명가-마사저.json",
+          "url": "data/yakson/naver-blog/raw/약손명가-마사저.json"
+        },
+        {
+          "label": "📥 [Raw 4] 가뿐한-복부패치.json",
+          "url": "data/yakson/naver-blog/raw/가뿐한-복부패치.json"
+        },
+        {
+          "label": "📥 [Raw 5] 가뿐한-멀티패치.json",
+          "url": "data/yakson/naver-blog/raw/가뿐한-멀티패치.json"
+        },
+        {
+          "label": "📥 [Raw 6] 약손-브이핏-패치.json",
+          "url": "data/yakson/naver-blog/raw/약손-브이핏-패치.json"
+        },
+        {
+          "label": "📥 [Raw 7] 올리리라-밴드.json (시딩 29%)",
+          "url": "data/yakson/naver-blog/raw/올리리라-밴드.json"
+        },
+        {
+          "label": "📥 [Raw 8] 올리리라-패치.json (시딩 26%)",
+          "url": "data/yakson/naver-blog/raw/올리리라-패치.json"
+        },
+        {
+          "label": "📥 [Raw 9] 골기.json (31,952건 최대)",
+          "url": "data/yakson/naver-blog/raw/골기.json"
+        },
+        {
+          "label": "📥 [Raw 10] 메디큐브-부스터프로.json (자연 34%)",
+          "url": "data/yakson/naver-blog/raw/메디큐브-부스터프로.json"
+        },
+        {
+          "label": "📥 [Raw 11] LG프라엘.json",
+          "url": "data/yakson/naver-blog/raw/LG프라엘.json"
+        },
+        {
+          "label": "📥 [Raw 12] 메이크온.json (시딩 41% 강자)",
+          "url": "data/yakson/naver-blog/raw/메이크온.json"
+        },
+        {
+          "label": "📥 [Raw 13] 셀리턴.json (4주 챌린지)",
+          "url": "data/yakson/naver-blog/raw/셀리턴.json"
+        },
+        {
+          "label": "📥 [Raw 14] 듀얼소닉.json",
+          "url": "data/yakson/naver-blog/raw/듀얼소닉.json"
+        },
+        {
+          "label": "📥 [Raw 15] 달바-디바이스.json",
+          "url": "data/yakson/naver-blog/raw/달바-디바이스.json"
+        },
+        {
+          "label": "📥 [Raw 16] 리프팅-디바이스.json (72,203건)",
+          "url": "data/yakson/naver-blog/raw/리프팅-디바이스.json"
+        },
+        {
+          "label": "📥 [Raw 17] EMS-리프팅.json",
+          "url": "data/yakson/naver-blog/raw/EMS-리프팅.json"
+        },
+        {
+          "label": "📥 [Raw 18] 홈케어-디바이스.json (121,098 최대)",
+          "url": "data/yakson/naver-blog/raw/홈케어-디바이스.json"
+        },
+        {
+          "label": "Naver Search API (https://developers.naver.com)",
+          "url": "https://developers.naver.com"
+        }
       ],
       "sourceNote": "* 출처: Naver Search API · 자체 수집·분류 (2026-05-28) · 18 raw JSON + 3 분석 JSON = 21개 파일 (총 약 600KB)"
     },
@@ -847,25 +1158,86 @@
         "title": "📊 5축 키워드 매트릭스 (132 리뷰 / 멘션 횟수)",
         "subtitle": "약손명가 \"붓기·혈액순환\" 10건 = 경쟁사 평균 1건 대비 압도적 차별화",
         "items": [
-          { "label": "약손명가 — 붓기·혈액순환 (USP)", "value": "10건 (압도적 1위)", "ratio": 1.0, "tone": "highlight" },
-          { "label": "약손명가 — 약손IP신뢰 (독점)", "value": "9건 (경쟁사 0-1)", "ratio": 0.9, "tone": "highlight" },
-          { "label": "약손명가 — 매일·루틴", "value": "12건", "ratio": 1.0, "tone": "accent" },
-          { "label": "약손명가 — 선물·구매 (효도)", "value": "8건", "ratio": 0.8, "tone": "accent" },
-          { "label": "LG프라엘 — 갈바닉·RF (기술)", "value": "7건 (광고주 0)", "ratio": 0.7, "tone": "primary" },
-          { "label": "메디큐브 — 시간언급 (5분·10분)", "value": "9건 (광고주 5)", "ratio": 0.9, "tone": "primary" },
-          { "label": "메디큐브 — 주름·탄력 (안티에이징)", "value": "5건 (광고주 1)", "ratio": 0.5, "tone": "muted" },
-          { "label": "메이크온 — 모든 축 평이", "value": "최대 3건", "ratio": 0.3, "tone": "muted" }
+          {
+            "label": "약손명가 — 붓기·혈액순환 (USP)",
+            "value": "10건 (압도적 1위)",
+            "ratio": 1.0,
+            "tone": "highlight"
+          },
+          {
+            "label": "약손명가 — 약손IP신뢰 (독점)",
+            "value": "9건 (경쟁사 0-1)",
+            "ratio": 0.9,
+            "tone": "highlight"
+          },
+          {
+            "label": "약손명가 — 매일·루틴",
+            "value": "12건",
+            "ratio": 1.0,
+            "tone": "accent"
+          },
+          {
+            "label": "약손명가 — 선물·구매 (효도)",
+            "value": "8건",
+            "ratio": 0.8,
+            "tone": "accent"
+          },
+          {
+            "label": "LG프라엘 — 갈바닉·RF (기술)",
+            "value": "7건 (광고주 0)",
+            "ratio": 0.7,
+            "tone": "primary"
+          },
+          {
+            "label": "메디큐브 — 시간언급 (5분·10분)",
+            "value": "9건 (광고주 5)",
+            "ratio": 0.9,
+            "tone": "primary"
+          },
+          {
+            "label": "메디큐브 — 주름·탄력 (안티에이징)",
+            "value": "5건 (광고주 1)",
+            "ratio": 0.5,
+            "tone": "muted"
+          },
+          {
+            "label": "메이크온 — 모든 축 평이",
+            "value": "최대 3건",
+            "ratio": 0.3,
+            "tone": "muted"
+          }
         ],
         "footnote": "* 132 리뷰 × 5축(효과·시나리오·기술·가격·소셜) 키워드 매칭. 광고주 강점은 USP·IP·재구매, 약점은 기술·안티에이징"
       },
       "sources": [
-        { "label": "📥 [Manifest] manifest.json (메타 + 핵심 발견)", "url": "data/yakson/brand-reviews/manifest.json" },
-        { "label": "📥 [Result] analysis-result.json (5축 매트릭스 + 132 리뷰 감정)", "url": "data/yakson/brand-reviews/analysis-result.json" },
-        { "label": "📥 [Raw] yakson-products.json (광고주 48건)", "url": "data/yakson/brand-reviews/yakson-products.json" },
-        { "label": "📥 [Raw] competitor-makeon.json (12건)", "url": "data/yakson/brand-reviews/competitor-makeon.json" },
-        { "label": "📥 [Raw] competitor-medicube.json (36건)", "url": "data/yakson/brand-reviews/competitor-medicube.json" },
-        { "label": "📥 [Raw] competitor-lgpral.json (36건)", "url": "data/yakson/brand-reviews/competitor-lgpral.json" },
-        { "label": "📥 [Script] analyze.py (재현 가능 분석)", "url": "data/yakson/brand-reviews/analyze.py" }
+        {
+          "label": "📥 [Manifest] manifest.json (메타 + 핵심 발견)",
+          "url": "data/yakson/brand-reviews/manifest.json"
+        },
+        {
+          "label": "📥 [Result] analysis-result.json (5축 매트릭스 + 132 리뷰 감정)",
+          "url": "data/yakson/brand-reviews/analysis-result.json"
+        },
+        {
+          "label": "📥 [Raw] yakson-products.json (광고주 48건)",
+          "url": "data/yakson/brand-reviews/yakson-products.json"
+        },
+        {
+          "label": "📥 [Raw] competitor-makeon.json (12건)",
+          "url": "data/yakson/brand-reviews/competitor-makeon.json"
+        },
+        {
+          "label": "📥 [Raw] competitor-medicube.json (36건)",
+          "url": "data/yakson/brand-reviews/competitor-medicube.json"
+        },
+        {
+          "label": "📥 [Raw] competitor-lgpral.json (36건)",
+          "url": "data/yakson/brand-reviews/competitor-lgpral.json"
+        },
+        {
+          "label": "📥 [Script] analyze.py (재현 가능 분석)",
+          "url": "data/yakson/brand-reviews/analyze.py"
+        }
       ],
       "sourceNote": "* 출처: 네이버 브랜드스토어 베스트 리뷰 (brand.naver.com/yaksonmall · /makeon · /medicube · /lgpral · 2026-05-28 수집) · Raw 다운로드 ↓ <a href=\"data/yakson/brand-reviews/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/brand-reviews/analysis-result.json\" target=\"_blank\">📥 분석 결과</a>"
     },
@@ -927,19 +1299,58 @@
         "type": "compare",
         "title": "🎯 약손명가 5축 강·약점 매트릭스 (132 리뷰 기반)",
         "items": [
-          { "label": "🔥 독점 자산 #1", "value": "붓기·혈액순환 10건", "sub": "경쟁사 평균 1건 / 약손 림프·경락 DNA / 광고 메시지 강조 가능", "tone": "highlight" },
-          { "label": "🔥 독점 자산 #2", "value": "약손IP 신뢰 9건", "sub": "경쟁사 0-1건 / \"46년 약손명가\" 후기 자산 / 매장→홈케어 funnel 검증", "tone": "highlight" },
-          { "label": "🟢 강점", "value": "선물·재구매 13건", "sub": "선물 8 + 재구매 5 = 가족·효도 페르소나(s1-13) 강력 지지", "tone": "accent" },
-          { "label": "⚠️ 약점 #1", "value": "기술 멘션 0-2건", "sub": "LG프라엘 갈바닉·RF 7건 대비 / s5-2 결합형 출시로 보강", "tone": "danger" },
-          { "label": "⚠️ 약점 #2", "value": "주름·탄력 1건", "sub": "메디큐브 5·LG프라엘 4 대비 / s4-9 슬로우에이징 카피 강화", "tone": "danger" },
-          { "label": "⚠️ 약점 #3", "value": "시간 메시지 5건", "sub": "메디큐브 9건 대비 / s4-9 \"매일 5분\" 카피로 보강", "tone": "muted" }
+          {
+            "label": "🔥 독점 자산 #1",
+            "value": "붓기·혈액순환 10건",
+            "sub": "경쟁사 평균 1건 / 약손 림프·경락 DNA / 광고 메시지 강조 가능",
+            "tone": "highlight"
+          },
+          {
+            "label": "🔥 독점 자산 #2",
+            "value": "약손IP 신뢰 9건",
+            "sub": "경쟁사 0-1건 / \"46년 약손명가\" 후기 자산 / 매장→홈케어 funnel 검증",
+            "tone": "highlight"
+          },
+          {
+            "label": "🟢 강점",
+            "value": "선물·재구매 13건",
+            "sub": "선물 8 + 재구매 5 = 가족·효도 페르소나(s1-13) 강력 지지",
+            "tone": "accent"
+          },
+          {
+            "label": "⚠️ 약점 #1",
+            "value": "기술 멘션 0-2건",
+            "sub": "LG프라엘 갈바닉·RF 7건 대비 / s5-2 결합형 출시로 보강",
+            "tone": "danger"
+          },
+          {
+            "label": "⚠️ 약점 #2",
+            "value": "주름·탄력 1건",
+            "sub": "메디큐브 5·LG프라엘 4 대비 / s4-9 슬로우에이징 카피 강화",
+            "tone": "danger"
+          },
+          {
+            "label": "⚠️ 약점 #3",
+            "value": "시간 메시지 5건",
+            "sub": "메디큐브 9건 대비 / s4-9 \"매일 5분\" 카피로 보강",
+            "tone": "muted"
+          }
         ],
         "footnote": "* 약손명가 48 / 경쟁사 84 = 132 리뷰 5축 분석 (효과·시나리오·기술·가격·소셜)"
       },
       "sources": [
-        { "label": "📥 [Result] analysis-result.json", "url": "data/yakson/brand-reviews/analysis-result.json" },
-        { "label": "📥 [Manifest] manifest.json", "url": "data/yakson/brand-reviews/manifest.json" },
-        { "label": "📥 [Script] analyze.py (재현)", "url": "data/yakson/brand-reviews/analyze.py" }
+        {
+          "label": "📥 [Result] analysis-result.json",
+          "url": "data/yakson/brand-reviews/analysis-result.json"
+        },
+        {
+          "label": "📥 [Manifest] manifest.json",
+          "url": "data/yakson/brand-reviews/manifest.json"
+        },
+        {
+          "label": "📥 [Script] analyze.py (재현)",
+          "url": "data/yakson/brand-reviews/analyze.py"
+        }
       ],
       "sourceNote": "* 출처: 네이버 브랜드스토어 132 리뷰 5축 분석 (2026-05-28) · Raw 다운로드 ↓ <a href=\"data/yakson/brand-reviews/manifest.json\" target=\"_blank\">📥 manifest</a> · <a href=\"data/yakson/brand-reviews/analysis-result.json\" target=\"_blank\">📥 분석 결과</a>"
     },
@@ -983,14 +1394,38 @@
       ],
       "body": "<p><strong>🖼️ 4사 히어로 이미지 (브랜드스토어 상세페이지 메인 USP)</strong></p>\n    <div style=\"display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0;\">\n      <figure style=\"margin:0;\">\n        <img src=\"data/yakson/product-pages/yakson-olliblira/hero.jpg\" alt=\"약손 올리리라밴드\" style=\"width:100%;height:auto;border:2px solid #0f766e;border-radius:6px;display:block;\">\n        <figcaption style=\"font-size:12px;color:#0f766e;font-weight:700;text-align:center;margin-top:6px;\">🏠 약손몰 (광고주)<br/>\"에스테틱 노하우\" 청정·서정</figcaption>\n      </figure>\n      <figure style=\"margin:0;\">\n        <img src=\"data/yakson/product-pages/medicube-booster/hero.jpg\" alt=\"메디큐브 부스터프로\" style=\"width:100%;height:auto;border:1px solid #ddd;border-radius:6px;display:block;\">\n        <figcaption style=\"font-size:12px;color:#555;text-align:center;margin-top:6px;\">메디큐브 부스터프로 X2<br/>\"2배 강력\" 임팩트·다기능</figcaption>\n      </figure>\n      <figure style=\"margin:0;\">\n        <img src=\"data/yakson/product-pages/lg-pral/hero.jpg\" alt=\"LG프라엘 써마샷\" style=\"width:100%;height:auto;border:1px solid #ddd;border-radius:6px;display:block;\">\n        <figcaption style=\"font-size:12px;color:#555;text-align:center;margin-top:6px;\">LG프라엘 써마샷<br/>\"콜라겐 1%/년 감소\" 학술</figcaption>\n      </figure>\n      <figure style=\"margin:0;\">\n        <img src=\"data/yakson/product-pages/makeon-skinlight/hero.jpg\" alt=\"메이크온 스킨라이트\" style=\"width:100%;height:auto;border:1px solid #ddd;border-radius:6px;display:block;\">\n        <figcaption style=\"font-size:12px;color:#555;text-align:center;margin-top:6px;\">메이크온 스킨라이트 3S<br/>\"1위/3초/4in1/x6.5\" 정량</figcaption>\n      </figure>\n    </div>\n    <p style=\"margin-top:18px;font-size:13px;color:#6b7280;\">* 각 브랜드스토어 상세페이지에서 추출한 메인 USP 이미지. 약손몰만 모델 포커스 (인물 베이스), 나머지 3사는 제품·정량·기술 베이스 — 카테고리 표준과의 톤 갭 확인 가능.</p>",
       "sources": [
-        { "label": "약손몰 상세페이지", "url": "https://brand.naver.com/yaksonmall/products/11923866815" },
-        { "label": "메디큐브 부스터프로", "url": "https://brand.naver.com/medicube/products/13155443679" },
-        { "label": "LG프라엘 써마샷", "url": "https://brand.naver.com/lgpral/products/12533459263" },
-        { "label": "메이크온 스킨라이트", "url": "https://brand.naver.com/makeon/products/10040180871" },
-        { "label": "📥 [Raw] yakson-olliblira images.json", "url": "data/yakson/product-pages/yakson-olliblira/images.json" },
-        { "label": "📥 [Raw] medicube-booster images.json", "url": "data/yakson/product-pages/medicube-booster/images.json" },
-        { "label": "📥 [Raw] lg-pral images.json", "url": "data/yakson/product-pages/lg-pral/images.json" },
-        { "label": "📥 [Raw] makeon-skinlight images.json", "url": "data/yakson/product-pages/makeon-skinlight/images.json" }
+        {
+          "label": "약손몰 상세페이지",
+          "url": "https://brand.naver.com/yaksonmall/products/11923866815"
+        },
+        {
+          "label": "메디큐브 부스터프로",
+          "url": "https://brand.naver.com/medicube/products/13155443679"
+        },
+        {
+          "label": "LG프라엘 써마샷",
+          "url": "https://brand.naver.com/lgpral/products/12533459263"
+        },
+        {
+          "label": "메이크온 스킨라이트",
+          "url": "https://brand.naver.com/makeon/products/10040180871"
+        },
+        {
+          "label": "📥 [Raw] yakson-olliblira images.json",
+          "url": "data/yakson/product-pages/yakson-olliblira/images.json"
+        },
+        {
+          "label": "📥 [Raw] medicube-booster images.json",
+          "url": "data/yakson/product-pages/medicube-booster/images.json"
+        },
+        {
+          "label": "📥 [Raw] lg-pral images.json",
+          "url": "data/yakson/product-pages/lg-pral/images.json"
+        },
+        {
+          "label": "📥 [Raw] makeon-skinlight images.json",
+          "url": "data/yakson/product-pages/makeon-skinlight/images.json"
+        }
       ],
       "sourceNote": "* 출처: 4사 브랜드스토어 상세페이지 풀스크롤 캡처 + 핵심 USP 이미지 추출 (2026-05-28)"
     },
@@ -1057,20 +1492,62 @@
         "type": "compare",
         "title": "🎯 약손몰 vs 경쟁 3사 상세페이지 강·약점",
         "items": [
-          { "label": "🟢 약손몰 강점 #1", "value": "세트 락인 (밴드+패치+겔)", "sub": "단일 페이지 3종 통합 / 객단가 + 재구매 funnel 자연 형성", "tone": "accent" },
-          { "label": "🟢 약손몰 강점 #2", "value": "FAQ 영역 강함", "sub": "신제품 카테고리 구매 진입 장벽 낮춤 / 경쟁사 대비 우위", "tone": "accent" },
-          { "label": "🟢 약손몰 강점 #3", "value": "본가 약손 IP 후광", "sub": "에스테틱 47년 노하우 / 후기 9건 정합 (br-1)", "tone": "accent" },
-          { "label": "⚠️ 약점 #1", "value": "정량 임상 수치 부재", "sub": "LG 1%/년·메이크온 x6.5·메디큐브 2배 대비 정성 톤만", "tone": "danger" },
-          { "label": "⚠️ 약점 #2", "value": "학술·논문 인용 부재", "sub": "LG Arch Dermatol 2010 대비 / 디바이스 신뢰 차별화 약함", "tone": "danger" },
-          { "label": "⚠️ 약점 #3", "value": "기술 표현 빈약", "sub": "EMS·진동 정도 / LG 고주파·메디큐브 AI 대비 / 후기 0-2건 정합", "tone": "danger" }
+          {
+            "label": "🟢 약손몰 강점 #1",
+            "value": "세트 락인 (밴드+패치+겔)",
+            "sub": "단일 페이지 3종 통합 / 객단가 + 재구매 funnel 자연 형성",
+            "tone": "accent"
+          },
+          {
+            "label": "🟢 약손몰 강점 #2",
+            "value": "FAQ 영역 강함",
+            "sub": "신제품 카테고리 구매 진입 장벽 낮춤 / 경쟁사 대비 우위",
+            "tone": "accent"
+          },
+          {
+            "label": "🟢 약손몰 강점 #3",
+            "value": "본가 약손 IP 후광",
+            "sub": "에스테틱 47년 노하우 / 후기 9건 정합 (br-1)",
+            "tone": "accent"
+          },
+          {
+            "label": "⚠️ 약점 #1",
+            "value": "정량 임상 수치 부재",
+            "sub": "LG 1%/년·메이크온 x6.5·메디큐브 2배 대비 정성 톤만",
+            "tone": "danger"
+          },
+          {
+            "label": "⚠️ 약점 #2",
+            "value": "학술·논문 인용 부재",
+            "sub": "LG Arch Dermatol 2010 대비 / 디바이스 신뢰 차별화 약함",
+            "tone": "danger"
+          },
+          {
+            "label": "⚠️ 약점 #3",
+            "value": "기술 표현 빈약",
+            "sub": "EMS·진동 정도 / LG 고주파·메디큐브 AI 대비 / 후기 0-2건 정합",
+            "tone": "danger"
+          }
         ],
         "footnote": "* 4사 브랜드스토어 상세페이지 풀 캡처 (244 이미지) + 섹션별 메시지 분석 (2026-05-28)"
       },
       "sources": [
-        { "label": "📥 약손몰 상세 풀페이지 PNG", "url": "data/yakson/product-pages/yakson-olliblira/fullpage.png" },
-        { "label": "📥 메디큐브 상세 풀페이지 PNG", "url": "data/yakson/product-pages/medicube-booster/fullpage.png" },
-        { "label": "📥 LG프라엘 상세 풀페이지 PNG", "url": "data/yakson/product-pages/lg-pral/fullpage.png" },
-        { "label": "📥 메이크온 상세 풀페이지 PNG", "url": "data/yakson/product-pages/makeon-skinlight/fullpage.png" }
+        {
+          "label": "📥 약손몰 상세 풀페이지 PNG",
+          "url": "data/yakson/product-pages/yakson-olliblira/fullpage.png"
+        },
+        {
+          "label": "📥 메디큐브 상세 풀페이지 PNG",
+          "url": "data/yakson/product-pages/medicube-booster/fullpage.png"
+        },
+        {
+          "label": "📥 LG프라엘 상세 풀페이지 PNG",
+          "url": "data/yakson/product-pages/lg-pral/fullpage.png"
+        },
+        {
+          "label": "📥 메이크온 상세 풀페이지 PNG",
+          "url": "data/yakson/product-pages/makeon-skinlight/fullpage.png"
+        }
       ],
       "sourceNote": "* 출처: 4사 브랜드스토어 상세페이지 분석 (2026-05-28) · 풀페이지 PNG + 핵심 섹션 이미지 60장 다운로드 · brand.naver.com/{yaksonmall, medicube, lgpral, makeon}"
     },
@@ -4470,6 +4947,219 @@
       "sourceNote": "* 출처: <a href=\"https://www.allurekorea.com/2025/08/04/\" target=\"_blank\">얼루어 코리아</a>, <a href=\"https://www.businessplus.kr/news/articleView.html?idxno=100093\" target=\"_blank\">비즈니스플러스</a>"
     },
     {
+      "id": "s2-real-1",
+      "chapter": "ch2",
+      "meta": "⭐ 경쟁사 재정의 (2026-05-28 실무진 시각 반영)",
+      "status": "auto",
+      "intro": false,
+      "title": "큰 시장(메디큐브 1강) ≠ 우리가 실제 경쟁할 카테고리 — <span class=\"highlight\">실무진이 짚은 4사(뷰앤디·에르고바디·95PROBLEM·리파)가 진짜 비교군</span>",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>발견 배경</strong>: 매드업 분석은 '뷰티 디바이스 시장(3.4조)' 큰 카테고리로 출발 → 자연스럽게 <strong>메디큐브 1강(점유율 32%)</strong>이 잡혔으나, 매드업 실무진이 짚은 경쟁사는 다른 4개"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>4사 공통점 — \"에스테틱·매장-홈케어 다리\" 카테고리</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>결합형/통합형</strong> — 단일 디바이스 X, 케어 라인업 결합 (뷰앤디·리파)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>EMS/바디 중심</strong> — 얼굴 안티에이징 단독 X (에르고바디·95PROBLEM 바디 / 뷰앤디 얼굴+바디)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>매장 X</strong> — 4사 모두 D2C 디바이스 브랜드 (오프라인 매장 자산 없음)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>셀럽보다 노하우·일상 루틴 톤</strong> — 메디큐브식 톱스타 IP가 아닌 \"15분 기적\"·\"가만히 있어도 운동\" 류 메시지"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>결정적 차이</strong>: 4사 중 <strong>오프라인 매장 130개 + 46년 에스테틱 시술 IP 보유한 곳은 0</strong> = 약손명가만의 진짜 자산 영역"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 시각 수정</strong>: <span class=\"highlight\">메디큐브 회피 논리는 유지(큰 시장 1강 정면 회피 명분)</span>, 그러나 <strong>실제 비교·차별화 작업은 4사와 진행</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>OLLI LIRA의 진짜 자리</strong>: \"에스테틱 매장 IP × 결합형 락인 × 30대 일상 루틴\" 조합은 4사 어디에도 없음 → 광고 메시지·매체 운영 전략이 이 차별화에 집중되어야 함"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>리서치 방향 권장</strong>: 카테고리어 \"EMS 디바이스\"·\"갈바닉 디바이스\" 검색 결과·쿠팡 리스팅·올영 매대에서 4사가 같이 노출되는지 확인 → 실제 \"매대 경쟁자\" 검증"
+        }
+      ],
+      "sources": [
+        {
+          "label": "뷰앤디 BEAUND 공식몰",
+          "url": "https://beaund.com/"
+        },
+        {
+          "label": "에르고바디 공식몰",
+          "url": "https://ergobody.co.kr/"
+        },
+        {
+          "label": "95PROBLEM 발란스핏 공식몰",
+          "url": "https://95problems.com/"
+        },
+        {
+          "label": "리파 ReFa 공식몰",
+          "url": "https://refa.kr/"
+        }
+      ],
+      "sourceNote": "* 출처: 4사 공식몰 + WebSearch 검증 (2026-05-28) · 매드업 실무진 경쟁사 시각 반영"
+    },
+    {
+      "id": "s2-real-2",
+      "chapter": "ch2",
+      "meta": "⭐ 4사 vs OLLI LIRA 매트릭스 (5축)",
+      "status": "auto",
+      "intro": false,
+      "title": "4사 매트릭스 — <span class=\"highlight\">OLLI LIRA의 유일 USP는 \"매장 IP × 결합형 락인\"</span>, 4사 어디도 못 가진 자산",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>가격대 분포</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ 에르고바디 3-10만원 (저가 바디) → 95PROBLEM 5-16만원 (직장인 바디) → 뷰앤디 6-33만원 (통합 미들) → OLLI LIRA 27-32만원 / 리파 21-33만원 (프리미엄)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>제품 본성 비교</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>리파</strong>: 얼굴 롤러 + 마이크로전류 단일, 일본 MTG 글로벌 IP (15년+), 백금 코팅 USP"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>뷰앤디</strong>: 얼굴(디써마·앤모드)+바디(슬렌웨이·레그씬) 통합형, \"15분 기적·착용만\" 메시지"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>95PROBLEM</strong>: 바디 EMS (슬림벨트·V라인밴드), \"가만히 있어도 운동\" 자세교정 30대 직장인"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>에르고바디</strong>: 저가 EMS 바디(쉐이피EMS 13만개 완판), 코어·V라인·슬림백 라인업"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>OLLI LIRA의 단독 점유 영역</strong> (4사 어디도 못 가진 조합): <span class=\"highlight\">① 약손명가 매장 130개 + 46년 에스테틱 IP / ② 결합형 락인(밴드+패치+겔 LTV 7.7배) / ③ 30대 EMS 진입기 메시지 프레임</span>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>4사 대비 차별 메시지</strong>: 리파(\"백금 롤러\")·뷰앤디(\"15분 기적\")·95P(\"가만히 운동\")·에르고바디(\"저가 코어\") 어느 것도 아닌 — <strong>\"매장에서 검증된 시술 노하우, 집에서 매일 5분\"</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매체 운영 시사점</strong>: 카테고리어 검색(EMS·갈바닉)에서 4사와 입찰 경합 / 메디큐브 키워드(부스터프로 등)는 정면 회피 / Lever Xpert로 4사 소재 별도 분석 필요"
+        }
+      ],
+      "sources": [
+        {
+          "label": "뷰앤디 BEAUND",
+          "url": "https://beaund.com/"
+        },
+        {
+          "label": "에르고바디",
+          "url": "https://ergobody.co.kr/"
+        },
+        {
+          "label": "95PROBLEM 발란스핏",
+          "url": "https://95problems.com/"
+        },
+        {
+          "label": "리파 ReFa (KOSHOP 한국 공식)",
+          "url": "https://koshop.co.kr"
+        }
+      ],
+      "sourceNote": "* 출처: 4사 공식몰 + 다나와·신세계몰 가격 (2026-05-28 기준)",
+      "body": "<table>\n<thead>\n<tr><th>구분</th><th>뷰앤디 BEAUND</th><th>에르고바디</th><th>95PROBLEM(발란스핏)</th><th>리파 ReFa (MTG)</th><th style=\"background:#fef3c7;\">OLLI LIRA</th></tr>\n</thead>\n<tbody>\n<tr>\n  <td><strong>주요 기술</strong></td>\n  <td>EMS + 고주파 + 갈바닉 통합 (앤모드·디써마)</td>\n  <td>EMS 저주파 바디 (쉐이피·코어 라인)</td>\n  <td>EMS 자세교정·코어 (슬림벨트·V라인밴드)</td>\n  <td>마이크로전류 + 백금 롤러 (캐럿·CAXA)</td>\n  <td style=\"background:#fef3c7;\"><strong>EMS 밴드 + (Pro 신제품: RF·갈바닉 어태치먼트)</strong></td>\n</tr>\n<tr>\n  <td><strong>가격대</strong></td>\n  <td>1.9~33만원 (세트 33만)</td>\n  <td>3.3~10만원 (저가)</td>\n  <td>4.9~16만원</td>\n  <td>21~33만원 (프리미엄)</td>\n  <td style=\"background:#fef3c7;\"><strong>27~32만원 / Pro 40-45만</strong></td>\n</tr>\n<tr>\n  <td><strong>핵심 페르소나</strong></td>\n  <td>2040 윤곽관리</td>\n  <td>3040 직장인 바디 케어</td>\n  <td>30대 자세 교정·코어</td>\n  <td>글로벌 프리미엄 4050</td>\n  <td style=\"background:#fef3c7;\"><strong>33-42 EMS 진입기 (Slow-aging Starter)</strong></td>\n</tr>\n<tr>\n  <td><strong>메시지 톤</strong></td>\n  <td>\"15분 기적·착용만\"</td>\n  <td>저가·완판·실용</td>\n  <td>\"가만히 있어도 운동\"</td>\n  <td>일본 MTG·백금·미세전류</td>\n  <td style=\"background:#fef3c7;\"><strong>\"매장 케어를 집에서 매일 5분\"</strong></td>\n</tr>\n<tr>\n  <td><strong>비즈니스 모델</strong></td>\n  <td>D2C + 자체 화장품 결합</td>\n  <td>D2C 단품</td>\n  <td>D2C 단품</td>\n  <td>D2C + 글로벌 백화점</td>\n  <td style=\"background:#fef3c7;\"><strong>D2C + 결합형 락인(밴드+패치+겔)</strong></td>\n</tr>\n<tr>\n  <td><strong>매장 자산</strong></td>\n  <td>❌ 없음</td>\n  <td>❌ 없음</td>\n  <td>❌ 없음</td>\n  <td>❌ 없음 (백화점 매대 일부)</td>\n  <td style=\"background:#fef3c7;color:var(--accent-rose);\"><strong>✅ 약손명가 130개 매장 + 46년 시술 IP</strong></td>\n</tr>\n<tr style=\"background:#fffbeb;\">\n  <td colspan=\"6\" style=\"text-align:center;color:#b5616f;\"><strong>→ OLLI LIRA만 가진 조합: 매장 IP × 결합형 락인 × 30대 일상 루틴 메시지</strong></td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "id": "s2-real-3",
+      "chapter": "ch2",
+      "meta": "⭐ 2-layer 포지셔닝 — 큰 시장 회피 + 진짜 자리 차별화",
+      "status": "auto",
+      "intro": false,
+      "title": "<span class=\"highlight\">2-layer 전략</span> — 큰 시장(메디큐브 1강)은 정면 회피, 진짜 자리(에스테틱 매장연계 카테고리)에서 4사와 차별화",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Layer 1 — 큰 시장 (3.4조 뷰티 디바이스 시장)</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>메디큐브 32% / LG프라엘 / 메이크온 / 셀리턴 / 듀얼소닉 등</strong>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ 톱스타 IP·셀럽 마케팅·물광/LED·고가 단일 디바이스"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>→ 매드업 답: 정면 추격 회피</strong> (Lever Xpert 분석상 비용 대비 효율 가장 낮은 영역)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>Layer 2 — 우리 진짜 자리 (에스테틱·매장연계·결합형 카테고리)</strong> ⭐:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>뷰앤디 · 에르고바디 · 95PROBLEM · 리파 · OLLI LIRA</strong>"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ 결합형/통합형 · 일상 루틴 메시지 · 30대 미들마켓 · 매장-홈케어 다리"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>→ 매드업 답: 직접 경쟁 + 차별화</strong> = 약손명가만의 매장 IP + 결합형 락인 + 시술 노하우"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>경쟁사별 회피·차별화 전략</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>vs 리파</strong> (가격 비슷, 글로벌 프리미엄): \"일본 글로벌 vs <strong>한국 46년 에스테틱 매장 노하우</strong>\" 차별 — 검증 자산 강조"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>vs 뷰앤디</strong> (통합형 미들마켓 직접 경쟁): \"15분 기적 vs <strong>매장 시술 → 집에서 매일 5분</strong>\" — 단순 효능 vs 신뢰 자산"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>vs 95PROBLEM·에르고바디</strong> (저가 바디 EMS 인접): 가격대·카테고리 분리 → 직접 경쟁 적음, <strong>4050 시즌(효도선물)에서 일부 겹침</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>Ch3 전략 결정 갱신 필요</strong>: 매체 운영(Ch4)·크리에이티브(Ch5)에서 메디큐브 회피 대신 <strong>4사와의 차별화 메시지</strong> 비중을 늘려야 함 — 별도 제안서 갱신 작업으로 후속 진행"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>다음 액션 권장</strong>: ① 4사 광고 소재 Lever Xpert 별도 분석 (현재 메디큐브 중심 58장 → 4사 추가) / ② 검색·BS·올영 매대에서 4사와 실제 노출 경합 확인 / ③ 광고주 미팅에서 4사 인지 확인 (실무진 시각의 출처)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "매드업 실무진 경쟁사 시각",
+          "url": "#internal"
+        }
+      ],
+      "sourceNote": "* 출처: 매드업 실무진 시각(2026-05-28) + 4사 공식몰 검증 · Ch3 이후 슬라이드 후속 갱신 필요",
+      "body": "<div style=\"margin:16px 0;padding:18px 22px;background:#f9fafb;border:2px solid #d6ccbe;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#6e655a;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;\">🌐 LAYER 1 — 큰 시장 (3.4조, 정면 회피)</div>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:11.5px;text-align:center;\">\n    <div style=\"padding:10px 6px;background:#e5e7eb;border-radius:6px;\"><strong>메디큐브</strong><br><span style=\"color:#9a3412;font-size:10px;\">32% 1강</span></div>\n    <div style=\"padding:10px 6px;background:#e5e7eb;border-radius:6px;\"><strong>LG프라엘</strong><br><span style=\"color:#1e40af;font-size:10px;\">인지도 1위</span></div>\n    <div style=\"padding:10px 6px;background:#e5e7eb;border-radius:6px;\"><strong>메이크온</strong><br><span style=\"color:#6b7280;font-size:10px;\">1020 진입</span></div>\n    <div style=\"padding:10px 6px;background:#e5e7eb;border-radius:6px;\"><strong>셀리턴</strong><br><span style=\"color:#6b7280;font-size:10px;\">LED 마스크</span></div>\n    <div style=\"padding:10px 6px;background:#e5e7eb;border-radius:6px;\"><strong>듀얼소닉</strong><br><span style=\"color:#6b7280;font-size:10px;\">HIFU 프리미엄</span></div>\n  </div>\n  <p style=\"margin:10px 0 0;font-size:11px;color:#6e655a;\">→ 톱스타 IP · 셀럽 마케팅 · 물광/LED 중심. <strong>매드업 답: 정면 회피</strong></p>\n</div>\n\n<div style=\"margin:16px 0;padding:18px 22px;background:linear-gradient(135deg,#fef3c7 0%,#fffbeb 100%);border:2px solid #b5616f;border-radius:8px;\">\n  <div style=\"font-size:11px;font-weight:800;color:#b5616f;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;\">⭐ LAYER 2 — 우리 진짜 자리 (에스테틱·매장연계·결합형 카테고리)</div>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:11.5px;text-align:center;\">\n    <div style=\"padding:10px 6px;background:#fef9c3;border-radius:6px;\"><strong>뷰앤디</strong><br><span style=\"color:#92400e;font-size:10px;\">통합 미들마켓</span></div>\n    <div style=\"padding:10px 6px;background:#fef9c3;border-radius:6px;\"><strong>에르고바디</strong><br><span style=\"color:#92400e;font-size:10px;\">저가 바디 EMS</span></div>\n    <div style=\"padding:10px 6px;background:#fef9c3;border-radius:6px;\"><strong>95PROBLEM</strong><br><span style=\"color:#92400e;font-size:10px;\">30대 자세교정</span></div>\n    <div style=\"padding:10px 6px;background:#fef9c3;border-radius:6px;\"><strong>리파 ReFa</strong><br><span style=\"color:#92400e;font-size:10px;\">글로벌 프리미엄</span></div>\n    <div style=\"padding:10px 6px;background:#b5616f;color:#fff;border-radius:6px;\"><strong>⭐ OLLI LIRA</strong><br><span style=\"font-size:10px;\">매장 IP × 결합형</span></div>\n  </div>\n  <p style=\"margin:10px 0 0;font-size:11px;color:#92400e;\">→ 결합형/통합형 · 일상 루틴 · 미들마켓. <strong>매드업 답: 직접 경쟁 + 약손명가 매장 IP·결합형 락인으로 차별화</strong></p>\n</div>\n\n<div style=\"margin:16px 0;padding:14px 18px;background:#eff6ff;border-left:4px solid #3b82f6;border-radius:6px;font-size:12px;color:#1e40af;line-height:1.7;\">\n<strong>🔑 핵심 발견</strong>: 4사 모두 D2C 디바이스 단독 — <strong>오프라인 매장 + 시술 노하우는 약손명가 단독 자산</strong>. 광고 메시지의 중심을 \"제품 효능 비교\"가 아니라 \"매장에서 검증된 노하우의 홈케어 이양\"으로 옮길 때 4사 어디와도 못 비교되는 위치를 점유 가능.\n</div>"
+    },
+    {
       "id": "s2-9",
       "chapter": "ch2",
       "meta": "경쟁사 매트릭스",
@@ -4824,6 +5514,10 @@
       "intro": true,
       "title": "Chapter 2 한 줄 요약 — <span class=\"highlight\">광고주 56억 사이즈 vs 메디큐브 1강 / 약손명가 IP는 \"부분 차용\" 4채널 정합성 부재가 가장 큰 약점</span>",
       "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>⭐ 2026-05-28 갱신 — 실무진 시각 반영</strong>: 큰 시장 1강(메디큐브)은 정면 회피, <strong>진짜 경쟁 카테고리는 4사(뷰앤디·에르고바디·95PROBLEM·리파)</strong> = 에스테틱·매장연계·결합형 미들마켓. 4사 모두 매장 자산 없음 → 약손명가 130개 매장 + 46년 시술 IP가 단독 USP"
+        },
         {
           "type": "indent-1",
           "html": "ㄴ <strong>광고주 정체</strong>: 빛채그룹 산하 (주)약손명가헬스케어 (2021설립, 4년차 / 매출 23년 15억 → 24년 56억 +273% / 골기 50만개 누적 / 올영 1020매장 입점)"
