@@ -832,3 +832,170 @@ body[data-edit="on"] .slide-actions { display: flex; }
   .chapter { page-break-before: always; }
   .chapter:first-child { page-break-before: auto; }
 }
+
+/* ===== 매드업 표준 카드 컴포넌트 (레퍼런스: 하루틴 v0.3 톤) ===== */
+:root {
+  --fb-primary: #0E5BFF;
+  --fb-primary-soft: #3A78FF;
+  --fb-primary-bg: #EAF0FF;
+  --fb-info-bg: #EAF3FC;
+  --fb-accent: #00B894;
+  --fb-accent-bg: #E6F7F2;
+  --fb-warn: #E74C3C;
+  --fb-warn-bg: #FFEFEC;
+  --fb-gold: #B8860B;
+  --fb-gold-bg: #FBF6E8;
+  --fb-purple: #7B5EA7;
+  --fb-purple-bg: #F1ECF8;
+  --fb-dark: #0F1626;
+  --fb-gray: #5B6473;
+  --fb-light: #9AA3B2;
+  --fb-border: #DFE3EC;
+  --fb-bg: #F7F9FC;
+}
+
+/* 카드 그리드 (3-column 기본 / phase 패턴) */
+.fb-grid { display: grid; gap: 14px; margin: 18px 0; }
+.fb-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.fb-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.fb-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.fb-grid-5 { grid-template-columns: repeat(5, 1fr); }
+.fb-grid-auto { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+@media (max-width: 900px) {
+  .fb-grid-3, .fb-grid-4, .fb-grid-5 { grid-template-columns: repeat(2, 1fr); }
+  .fb-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* 카드 (기본) */
+.fb-card {
+  background: #fff;
+  border: 1px solid var(--fb-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex; flex-direction: column;
+}
+.fb-card .fb-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--fb-light);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.fb-card .fb-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fb-primary);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+.fb-card .fb-keyword {
+  background: var(--fb-info-bg);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--fb-dark);
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+.fb-card ul {
+  margin: 0; padding: 0 0 0 18px;
+  list-style: disc;
+}
+.fb-card ul li {
+  font-size: 13px;
+  color: var(--fb-gray);
+  line-height: 1.7;
+  margin: 4px 0;
+}
+.fb-card ul li strong { color: var(--fb-dark); font-weight: 700; }
+
+/* 강조 카드 (메인 결정·앵글용 — gradient + 굵은 보더) */
+.fb-card-accent {
+  background: linear-gradient(135deg, #fff, var(--fb-primary-bg));
+  border: 1.5px solid var(--fb-primary);
+}
+.fb-card-warn { border-color: var(--fb-warn); }
+.fb-card-warn .fb-title { color: var(--fb-warn); }
+.fb-card-warn .fb-keyword { background: var(--fb-warn-bg); }
+.fb-card-accent-rose {
+  background: linear-gradient(135deg, #fff, #FFF0F2);
+  border: 1.5px solid #B5616F;
+}
+.fb-card-accent-rose .fb-title { color: #B5616F; }
+.fb-card-accent-rose .fb-keyword { background: #FEF3F4; }
+
+/* 콜아웃 박스 (전략적 함의·이기는 한 줄 등) */
+.fb-callout {
+  margin: 20px 0;
+  padding: 18px 22px;
+  border-radius: 10px;
+  background: var(--fb-info-bg);
+  border-left: 4px solid var(--fb-primary);
+}
+.fb-callout .fb-callout-title {
+  font-size: 14px; font-weight: 800;
+  color: var(--fb-primary);
+  margin: 0 0 10px;
+}
+.fb-callout p, .fb-callout div {
+  font-size: 13.5px;
+  color: var(--fb-dark);
+  line-height: 1.75;
+  margin: 4px 0;
+}
+.fb-callout strong { color: var(--fb-primary); }
+.fb-callout-rose { background: #FEF3F4; border-left-color: #B5616F; }
+.fb-callout-rose .fb-callout-title { color: #B5616F; }
+.fb-callout-rose strong { color: #B5616F; }
+.fb-callout-warn { background: var(--fb-warn-bg); border-left-color: var(--fb-warn); }
+.fb-callout-warn .fb-callout-title { color: var(--fb-warn); }
+.fb-callout-warn strong { color: var(--fb-warn); }
+.fb-callout-accent { background: var(--fb-accent-bg); border-left-color: var(--fb-accent); }
+.fb-callout-accent .fb-callout-title { color: var(--fb-accent); }
+.fb-callout-gold { background: var(--fb-gold-bg); border-left-color: var(--fb-gold); }
+.fb-callout-gold .fb-callout-title { color: var(--fb-gold); }
+
+/* 출처 링크 (하단) */
+.fb-sources {
+  font-size: 11px;
+  color: var(--fb-light);
+  margin: 14px 0 0;
+  line-height: 1.7;
+}
+.fb-sources a { color: var(--fb-primary); text-decoration: underline; }
+.fb-sources::before { content: "↗ "; color: var(--fb-light); }
+
+/* 표 (매드업 톤) */
+.fb-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 13px;
+}
+.fb-table th, .fb-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--fb-border);
+}
+.fb-table th {
+  background: var(--fb-bg);
+  color: var(--fb-gray);
+  font-weight: 700;
+  font-size: 12px;
+}
+.fb-table tr.fb-highlight td { background: #FEF3F4; font-weight: 600; }
+.fb-table td strong { color: var(--fb-dark); }
+
+/* KPI 박스 */
+.fb-kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 14px 0; }
+.fb-kpi {
+  background: var(--fb-bg);
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-align: center;
+}
+.fb-kpi .fb-kpi-label { font-size: 11px; color: var(--fb-gray); margin-bottom: 4px; }
+.fb-kpi .fb-kpi-value { font-size: 22px; font-weight: 800; color: var(--fb-primary); line-height: 1; }
+.fb-kpi .fb-kpi-unit { font-size: 13px; font-weight: 600; color: var(--fb-gray); }
+.fb-kpi-rose .fb-kpi-value { color: #B5616F; }
