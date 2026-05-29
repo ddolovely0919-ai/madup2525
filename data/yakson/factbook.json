@@ -6,13 +6,13 @@
     "variant": "변형 ② 다중 브랜드형",
     "ptDate": "2026-06-16(화)",
     "createdAt": "2026-04-26",
-    "updatedAt": "2026-05-28",
+    "updatedAt": "2026-05-29",
     "rfp": "연간 30억 예산, 3 브랜드(약손명가PB/OLLI LIRA/GOLKI) 통합 운영. KPI: 공식몰 ROAS 250%/브스 500%/외부몰 300%, 재구매율 10%, 카플친 +200%.",
     "owner": "매드업 비딩 TF",
-    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌) · A단계 연쇄 업데이트(s1-4·s1-10·s1-13·s4-9·s5-summary) · 실무진 시각 반영(뷰앤디·에르고바디·95P·리파 4사 진짜 경쟁사)"
+    "description": "RFP·미팅·외부 20+ 출처 + 리스닝마인드 + 사이트 캡처 + 시장 동반성장·IP 전략·5단 가격구조·연령변화·벤치마크 분석 보강 + 1.5 페르소나 결정(3040 코어+4050 시즌) · A단계 연쇄 업데이트(s1-4·s1-10·s1-13·s4-9·s5-summary) · 실무진 시각 반영(뷰앤디·에르고바디·95P·리파 4사 진짜 경쟁사) · 옵션 B 보강 (RFP·QnA·운영매체·PB·앵글TOP5)"
   },
   "stats": {
-    "auto": 88,
+    "auto": 93,
     "progress": 1,
     "client": 5,
     "madup": 20
@@ -60,6 +60,178 @@
     }
   ],
   "slides": [
+    {
+      "id": "rfp-summary",
+      "chapter": "sec-intro",
+      "meta": "📋 00. RFP Summary",
+      "status": "auto",
+      "intro": true,
+      "title": "약손명가헬스케어 2026 퍼포먼스 광고 대행 — RFP 핵심 요약 한 페이지",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>광고주</strong>: 빛채그룹 산하 약손명가헬스케어 (본가 약손명가와 별도 법인, 4년차 스타트업)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>3 브랜드 운영</strong>: 약손명가 PB · OLLI LIRA · GOLKI / 매출 15억(23) → 56억(24) +273% 폭증세"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>광고주 결정</strong> (PDF 2026-05-26): 약손명가 IP 축소 운영 / OLLI LIRA·GOLKI 독립 브랜딩 필요"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>RFP 7개 과업</strong>: ① 브랜딩 ② 퍼포먼스 광고 ③ 고객 리텐션 CRM ④ 광고 콘텐츠 ⑤ 미디어 믹스 ⑥ 성과 분석·리포팅 ⑦ 추가 제안 (IMC)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>도전적 KPI</strong>: BS ROAS 500% · 외부몰 ROAS 300% · 카플친 +200%"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>PT 일정</strong>: 2026-06-16 / <strong>참여 대행사 5곳</strong> (PM 통화 2026-05-29 확인)"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>광고주 평가 기준 3축</strong>: ① 커머스 중심 ② 뷰티 레퍼런스 ③ 콘텐츠 제작 역량 — 다음 슬라이드 상세"
+        }
+      ],
+      "sources": [
+        {
+          "label": "RFP 원본 xlsx",
+          "url": "#"
+        },
+        {
+          "label": "광고주 PDF 2026-05-26",
+          "url": "#"
+        },
+        {
+          "label": "PM 통화 2026-05-29",
+          "url": "#"
+        }
+      ],
+      "sourceNote": "* 출처: RFP·광고주 공유 PDF·PM 통화 종합"
+    },
+    {
+      "id": "qna-evaluation",
+      "chapter": "sec-intro",
+      "meta": "💬 00-2. QnA + 평가 기준 3축",
+      "status": "auto",
+      "intro": true,
+      "title": "PM 통화(2026-05-29) — <span class=\"highlight\">참여 5사 / 광고주 평가 기준 3축</span> 확인, 제안서는 이 3축에 직접 응답해야 합니다",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>참여 대행사 = 5곳</strong> (매드업 포함, 다른 4사 정보는 미공개)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>광고주가 직접 밝힌 선정 기준 3축</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>① 커머스 중심인지</strong> — e-커머스 운영 깊이"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>② 뷰티 레퍼런스가 있는지</strong> — 뷰티 카테고리 광고주 포트폴리오"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>③ 콘텐츠 제작 역량이 있는지</strong> — 크리에이티브 본부·자동화·심의 대응"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>질의응답 진행</strong>: 매드업 질의서 송부 완료 → 내일(2026-05-30) 회신 예정"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 매핑</strong>: ① 커머스 — 자사몰·BS·외부몰·협력광고 풀스택 / ② 뷰티 — 와이어트 등 뷰티·라이프 광고주 / ③ 콘텐츠 — 크리에이티브 본부 70+ · SPRAY AI · AI 심의봇"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업만의 4번째 축</strong>: <span class=\"highlight\">AI 솔루션 통합</span> (LEVER Xpert · MILOT · AI Navigator · SPRAY AI · AI 심의봇 5종) — 5사 중 매드업 단독 자산"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>제안서 모든 슬라이드</strong>는 이 3축에 직접 응답해야 — 평가 기준 매핑이 PT 성공의 핵심"
+        }
+      ],
+      "sources": [
+        {
+          "label": "PM 통화 2026-05-29",
+          "url": "#"
+        }
+      ],
+      "sourceNote": "* 출처: PM 통화록 (2026-05-29 13:30~)",
+      "body": "<table>\n<thead><tr><th>평가 기준</th><th>매드업 응답</th><th>제안서 슬라이드</th></tr></thead>\n<tbody>\n<tr><td><strong>① 커머스 중심</strong></td><td>e-커머스 풀스택 + ADVoost 베타 우선 적용</td><td>s-why-madup · s7-uplift · Ch4 매체 운영</td></tr>\n<tr><td><strong>② 뷰티 레퍼런스</strong></td><td>와이어트 등 뷰티·라이프 광고주 포트폴리오</td><td>s-why-madup · s7-references</td></tr>\n<tr><td><strong>③ 콘텐츠 제작 역량</strong></td><td>크리에이티브 본부 70+ · SPRAY AI 165개 변형 · AI 심의봇</td><td>s-why-madup · Ch5 크리에이티브</td></tr>\n<tr style=\"background:#fef3c7;\"><td><strong>⭐ ④ AI 솔루션 통합 (5사 단독)</strong></td><td>LEVER Xpert · MILOT · AI Navigator · SPRAY AI · AI 심의봇</td><td>s-why-madup · s7-dashboard · Ch7 전체</td></tr>\n</tbody>\n</table>"
+    },
+    {
+      "id": "client-channels",
+      "chapter": "sec-intro",
+      "meta": "🌐 00-3. 광고주 현재 운영 매체 풀스택",
+      "status": "auto",
+      "intro": true,
+      "title": "광고주 공유 자료(PDF p04) — <span class=\"highlight\">이미 풀스택 운영 중</span>, 매드업은 같은 매체에 새 layer를 얹어야 합니다",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>공식몰</strong>: 메타 · 구글 (검색 + 디멘드젠) · 카카오 (비즈보드)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>네이버 브랜드스토어</strong> 풀스택: 검색 · 쇼핑검색 · 브랜드검색 · GFA · ADVoost · N+쇼핑광고 · 쇼핑탭 광고"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>외부몰 인앱광고</strong>: 쿠팡 · 지그재그 (쿠팡 협력광고 25.12 종료 예정 - 페인포인트)"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>관찰</strong>: 매체 풀스택은 갖춰져 있지만, <strong>매드업이 더할 가치</strong>가 무엇인지가 PT 핵심 질문"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 Uplift Layer 6가지</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>BS</strong>: ADVoost 자동 소재 + 쇼핑 프로모션 베타 (Naver Premier 우선 적용)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>자사몰</strong>: SPRAY AI 165개 변형 + AI 심의봇 + Meta Badged Premium CSM 직접"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>외부몰</strong>: 쿠팡 종료 페인 정면 해결 — 메타 협력광고 신규 도입"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>검색</strong>: LEVER Xpert 자동 입찰 + 카테고리어 폭증(+1,762%) 자동 발굴"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>CRM</strong>: MILOT 1st-party + 5단 알림톡 시나리오 (카플친 +200% KPI 견인)"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ <strong>GEO (신규)</strong>: AI Navigator로 ChatGPT·Perplexity 응답 점유율 선점"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>핵심</strong>: 같은 매체·같은 예산에서 매드업이 추가하는 layer로 <strong>ROAS +30% 개선 가능</strong> (협력광고 + 검색 결합 사례)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "광고주 공유 PDF 2026-05-26 p04",
+          "url": "#"
+        }
+      ],
+      "sourceNote": "* 출처: 약손명가헬스케어 대행사 비딩 공유 자료 (2026-05-26) p04"
+    },
     {
       "id": "rfp-task",
       "chapter": "sec-intro",
@@ -4298,6 +4470,60 @@
       "body": "<table>\n      <thead><tr><th>신제품</th><th>분류</th><th>핵심 USP</th><th>전개 채널</th><th>광고 영역 (예시)</th></tr></thead>\n      <tbody>\n        <tr><td><strong>가뿐한 복부패치</strong></td><td>약손PB 리뉴얼</td><td>림프 수액형·0.5mm·온열</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr><td><strong>가뿐한 멀티패치</strong></td><td>약손PB NEW</td><td>승모근 지압·47년 테라피</td><td><strong>올영</strong></td><td>외부몰 인앱 + 올영 디스플레이</td></tr>\n        <tr style=\"background:#fef3c7;\"><td><strong>약손 브이핏 리프팅 패치</strong></td><td>약손PB 확장</td><td><strong>임상 검증 4대 효과</strong></td><td>공식몰·올영</td><td><strong>임상 정량 카피 직접 활용 영역</strong></td></tr>\n        <tr><td>듀얼 멜팅 클렌징 오일</td><td>신규 카테고리</td><td>스팀 히팅·78% 스킨케어</td><td>공식 채널</td><td>공식몰·메타·구글 검색 콘텐츠</td></tr>\n        <tr><td>포어 블러링 팩 클렌저</td><td>신규 카테고리</td><td>pH 4.85·살리실산·나이아신아마이드·알부틴</td><td>공식 채널</td><td>공식몰·성분 시각화 콘텐츠</td></tr>\n      </tbody>\n    </table>"
     },
     {
+      "id": "s2-pb-detail",
+      "chapter": "ch2",
+      "meta": "⭐ PB 5종 디테일 (광고주 PDF 2026-05-26)",
+      "status": "auto",
+      "intro": false,
+      "title": "약손명가 PB 5종 — <span class=\"highlight\">디바이스(OLLI LIRA·GOLKI)와 결합 cross-sell</span>로 LTV·객단가 동시 상승 가능한 라인업",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>PB 5종 라인업</strong> (광고주 공유 자료 p06-10):"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ① <strong>약손명가 가뿐한 복부패치</strong> — 온열 슬리밍 · YAKSON SLIMMING™ 자사 독자 컴플렉스 / 환절기·여름 시즌"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ② <strong>골기지압 (바디)</strong> — 바디 흐름 골기지압포인트 / 매장 시술 노하우 그대로 적용 / 상시 SKU"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ③ <strong>듀얼 멜팅 클렌징 오일</strong> — 78% 스킨케어 성분 / 2층상 클렌저 (W/O) / 무화과·파인애플·파파야 추출물"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ④ <strong>포어 블러링 팩 클렌저</strong> — 무화과 45% / 핑크 탄산 버블 / 약(미)산성 pH 4.85 / 각질 제거"
+        },
+        {
+          "type": "indent-2",
+          "html": "ㄴㄴ ⑤ <strong>약손 브이핏 리프팅 패치</strong> — 고탄력 스트레칭 면 시트 / 임상 검증 / 과라나·마테·커피 슬리밍 컴플렉스"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매드업 cross-sell funnel 설계</strong>: 디바이스 구매 → MILOT 자동 식별 → <strong>14일차 클렌징 → 30일차 패치 → 60일차 매장 OMO 쿠폰</strong> 알림톡 자동"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>객단가 효과</strong>: 디바이스 단독 32만 → PB 결합 LTV <strong>80만+ 전환 가능</strong>"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>매체 분리 운영</strong>: 클렌징·패치(올영·자사몰) · 바디 PB(BS·매장 OMO) · 슬리밍(여름 시즌 자사몰·BS) — SKU별 매체 효율 차등"
+        }
+      ],
+      "sources": [
+        {
+          "label": "광고주 공유 PDF p06-10",
+          "url": "#"
+        }
+      ],
+      "sourceNote": "* 출처: 약손명가헬스케어 대행사 비딩 공유 자료 (2026-05-26) p06-p10",
+      "body": "<table>\n<thead><tr><th style=\"width:24%;\">PB 제품</th><th>카테고리·USP</th><th>시즌·매체</th><th>디바이스 연결</th></tr></thead>\n<tbody>\n<tr><td><strong>가뿐한 복부패치</strong></td><td>온열 슬리밍 · YAKSON SLIMMING™</td><td>여름·환절기 · 자사몰·BS·인스타</td><td>디바이스 사용 4주 후 cross-sell</td></tr>\n<tr><td><strong>골기지압 (바디)</strong></td><td>바디 흐름 · 골기지압포인트</td><td>상시 · BS·매장 OMO 패키지</td><td>GOLKI 페이스 스톤과 결합</td></tr>\n<tr><td><strong>듀얼 멜팅 클렌징 오일</strong></td><td>78% 스킨케어 · 2층상</td><td>상시 · 올영·자사몰</td><td>디바이스 사용 전 루틴 (Hook)</td></tr>\n<tr><td><strong>포어 블러링 팩 클렌저</strong></td><td>탄산 버블 · 무화과 · 각질</td><td>여름·올영 · 시즌 SKU</td><td>\"세안→디바이스→패치\" 루틴</td></tr>\n<tr><td><strong>약손 브이핏 리프팅 패치</strong></td><td>고탄력 시트 · 임상 검증</td><td>상시 · 메타·BS</td><td>OLLI LIRA 정기구독 + 패치</td></tr>\n</tbody>\n</table>"
+    },
+    {
       "id": "s2-2",
       "chapter": "ch2",
       "meta": "자사 · 약손명가PB",
@@ -7689,6 +7915,35 @@
       "sources": [],
       "sourceNote": "* 본 팩트북 범위 밖 — 제안서 본문에서 별도 다룸",
       "body": "<p>비딩사 강점 매핑 (메타 협력광고·ADVoost·디자인 단가·CRM·IP 활용도 등)은 본 팩트북의 팩트 데이터 범위 밖이며, <strong>제안서 본문</strong>에서 별도 다룸.</p>\n    <p style=\"margin-top:12px;color:#6b7280;font-size:13px;\">본 팩트북은 시장·자사·경쟁·소비자 팩트 데이터에 집중함.</p>"
+    },
+    {
+      "id": "angles-top5",
+      "chapter": "ch6",
+      "meta": "🏆 99. 제안 앵글 TOP 5",
+      "status": "auto",
+      "intro": false,
+      "title": "🏆 매드업이 승부 볼 5가지 앵글 — <span class=\"highlight\">PT 평가 기준 3축 + 4사 차별화 + AI 통합</span>으로 5사 중 단독 선택 명분",
+      "subnotes": [
+        {
+          "type": "indent-1",
+          "html": "ㄴ <strong>광고주 평가 기준 3축 + 매드업 추가 자산 매핑</strong>:"
+        },
+        {
+          "type": "indent-1",
+          "html": "ㄴ 앵글 ① · ④번이 5사 차별 핵심 / 앵글 ②·③·⑤번은 운영 깊이 검증"
+        },
+        {
+          "type": "arrow",
+          "html": "▶ <strong>📌 매드업이 이기는 한 줄</strong>:"
+        },
+        {
+          "type": "indent-2",
+          "html": "<strong style=\"color:var(--accent-rose);\">\"메디큐브 1강 정면 회피 + 4사가 못 가진 매장 IP × 결합형 락인으로, RFP 3축(커머스·뷰티·콘텐츠) + AI 솔루션 통합으로 PT 5사 중 단독 차별화\"</strong>"
+        }
+      ],
+      "sources": [],
+      "sourceNote": "* 출처: 팩트북 99 슬라이드 종합 · 제안서 INDEX 연동",
+      "body": "<div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0;\">\n\n<div style=\"background:#fef3c7;border:2px solid #b5616f;border-radius:8px;padding:14px;\">\n  <div style=\"font-size:10px;font-weight:800;color:#b5616f;letter-spacing:0.1em;text-transform:uppercase;\">01 · CORE</div>\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;margin:4px 0;\">광고주 출제 문제 응답</div>\n  <div style=\"font-size:13px;font-weight:800;color:#111;margin:8px 0;\">\"IP 단계적 이양\"</div>\n  <p style=\"font-size:10.5px;color:#374151;line-height:1.55;margin:0;\">광고주 PDF 결정(2026-05-26) — 약손명가 IP 축소. 매드업 답: 폐기 X, 4 가드레일 (유지·축소·추상화·강화)로 단계적 이양. 닥터자르트 케이스 위험 회피.</p>\n</div>\n\n<div style=\"background:#fef3c7;border:2px solid #b5616f;border-radius:8px;padding:14px;\">\n  <div style=\"font-size:10px;font-weight:800;color:#b5616f;letter-spacing:0.1em;text-transform:uppercase;\">02 · EVALUATION</div>\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;margin:4px 0;\">평가 기준 3축 정면 응답</div>\n  <div style=\"font-size:13px;font-weight:800;color:#111;margin:8px 0;\">\"3축 + AI 통합\"</div>\n  <p style=\"font-size:10.5px;color:#374151;line-height:1.55;margin:0;\">PM 통화 확인 — ① 커머스 ② 뷰티 ③ 콘텐츠 + 매드업 단독 ④ AI 솔루션 통합 (LEVER Xpert·MILOT·AI Navigator·SPRAY AI·AI 심의봇). 5사 중 매드업만 4축 모두.</p>\n</div>\n\n<div style=\"background:#fef3c7;border:2px solid #b5616f;border-radius:8px;padding:14px;\">\n  <div style=\"font-size:10px;font-weight:800;color:#b5616f;letter-spacing:0.1em;text-transform:uppercase;\">03 · COMPETITOR</div>\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;margin:4px 0;\">진짜 경쟁사 4사 시각</div>\n  <div style=\"font-size:13px;font-weight:800;color:#111;margin:8px 0;\">\"매장 IP 단독\"</div>\n  <p style=\"font-size:10.5px;color:#374151;line-height:1.55;margin:0;\">큰 시장 1강(메디큐브) 회피 + 진짜 경쟁 4사(뷰앤디·에르고바디·95P·리파)와 차별화. 4사 모두 D2C 매장 자산 0 — <strong>약손명가 130개 매장 + 46년 시술 IP</strong>가 단독.</p>\n</div>\n\n<div style=\"background:#fef3c7;border:2px solid #b5616f;border-radius:8px;padding:14px;\">\n  <div style=\"font-size:10px;font-weight:800;color:#b5616f;letter-spacing:0.1em;text-transform:uppercase;\">04 · PRODUCT</div>\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;margin:4px 0;\">Pro 결합형 모드 확장</div>\n  <div style=\"font-size:13px;font-weight:800;color:#111;margin:8px 0;\">\"+1,762% 폭증 진입\"</div>\n  <p style=\"font-size:10.5px;color:#374151;line-height:1.55;margin:0;\">기존 밴드 + RF·갈바닉 어태치먼트 (2026 Q3 출시). 갈바닉 +1,762% / 고주파 +1,120% 폭증 카테고리 단독 진입 + 결합형 락인 강화. 카니발 0.</p>\n</div>\n\n<div style=\"background:#fef3c7;border:2px solid #b5616f;border-radius:8px;padding:14px;\">\n  <div style=\"font-size:10px;font-weight:800;color:#b5616f;letter-spacing:0.1em;text-transform:uppercase;\">05 · CRM·LTV</div>\n  <div style=\"font-size:11px;font-weight:800;color:#92400e;margin:4px 0;\">결합형 락인 LTV 7.7배</div>\n  <div style=\"font-size:13px;font-weight:800;color:#111;margin:8px 0;\">\"PB 5종 cross-sell\"</div>\n  <p style=\"font-size:10.5px;color:#374151;line-height:1.55;margin:0;\">밴드+패치+겔 결합형 락인 LTV 7.7배 / PB 5종 cross-sell funnel로 디바이스 32만 → LTV 80만+. MILOT 1st-party + 카플친 5단 자동 트리거.</p>\n</div>\n\n</div>\n\n<div style=\"margin:24px 0;padding:18px 24px;background:linear-gradient(135deg,#fef3c7 0%,#fffbeb 100%);border:2px solid #b5616f;border-radius:10px;text-align:center;\">\n  <div style=\"font-size:11px;font-weight:800;color:#b5616f;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;\">📌 매드업이 이기는 한 줄</div>\n  <p style=\"font-size:15px;font-weight:700;color:#111;line-height:1.6;margin:0;letter-spacing:-0.01em;\">\n    \"메디큐브 1강 정면 회피 + 4사가 못 가진 <strong style=\"color:#b5616f;\">매장 IP × 결합형 락인</strong>으로,<br>\n    RFP 3축(커머스·뷰티·콘텐츠) + <strong style=\"color:#b5616f;\">AI 솔루션 통합</strong>으로 PT 5사 중 단독 차별화\"\n  </p>\n</div>\n\n<div style=\"margin:18px 0;padding:14px 18px;background:#f3f4f6;border-left:4px solid #6b7280;border-radius:6px;font-size:12px;color:#374151;line-height:1.7;\">\n  <strong>📂 제안서 INDEX 연동</strong>:\n  앵글 ① → 제안서 s2-2 (광고주 PDF 결정) · Ch3 결정 ①\n  / 앵글 ② → s-why-madup\n  / 앵글 ③ → s2-4 (2-layer) · s2-real (4사 매트릭스)\n  / 앵글 ④ → s2-olli-newtech · s3-2 (Pro)\n  / 앵글 ⑤ → Ch6 CRM · s3-pb (PB cross-sell)\n</div>"
     }
   ]
 }
